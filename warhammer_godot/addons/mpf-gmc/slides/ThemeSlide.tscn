@@ -1,20 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbmwyjindlq7o"]
+[gd_scene load_steps=4 format=3 uid="uid://d2gde8qb36spj"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_w7pqp"]
-[ext_resource type="Texture2D" uid="uid://bsb8o17pf0tcg" path="res://addons/mpf-gmc/images/1320178.jpeg" id="2_i1xuc"]
-[ext_resource type="Texture2D" uid="uid://dnhn62e7esmpr" path="res://addons/mpf-gmc/images/Warhammer-Logo.png" id="3_coyac"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_pa8t2"]
+[ext_resource type="Texture2D" uid="uid://bsb8o17pf0tcg" path="res://addons/mpf-gmc/images/1320178.jpeg" id="2_qcrta"]
+[ext_resource type="Texture2D" uid="uid://dnhn62e7esmpr" path="res://addons/mpf-gmc/images/Warhammer-Logo.png" id="3_kgecr"]
 
 [node name="ThemeSlide" type="Control"]
 custom_minimum_size = Vector2(1920, 0)
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_w7pqp")
+script = ExtResource("1_pa8t2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(961.5, 540.25)
 scale = Vector2(0.50026, 0.498843)
-texture = ExtResource("2_i1xuc")
+texture = ExtResource("2_qcrta")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
@@ -30,5 +30,5 @@ anchor_bottom = 1.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_coyac")
+texture = ExtResource("3_kgecr")
 expand_mode = 1

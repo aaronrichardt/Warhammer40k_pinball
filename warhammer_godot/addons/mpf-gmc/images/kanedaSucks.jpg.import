@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnu7lavuohoyf"
-path="res://.godot/imported/kanedaSucks.jpg-e12f7b00f220b1b5f951ad0e2a08fc8f.ctex"
+path="res://.godot/imported/kanedaSucks.jpg-90963753e3183b2006477cd0ad1d9c66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/mpf-gmc/slides/kanedaSucks.jpg"
-dest_files=["res://.godot/imported/kanedaSucks.jpg-e12f7b00f220b1b5f951ad0e2a08fc8f.ctex"]
+source_file="res://addons/mpf-gmc/images/kanedaSucks.jpg"
+dest_files=["res://.godot/imported/kanedaSucks.jpg-90963753e3183b2006477cd0ad1d9c66.ctex"]
 
 [params]
 

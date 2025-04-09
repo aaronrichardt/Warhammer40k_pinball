@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://baf8eg0d8gp4d"]
+[gd_scene load_steps=11 format=3 uid="uid://baf8eg0d8gp4d"]
 
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="1_oppno"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ya6r8"]
@@ -8,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://dlqx7vyxh86ek" path="res://addons/mpf-gmc/slides/PoweredBy.tscn" id="6_dx5i2"]
 [ext_resource type="PackedScene" uid="uid://dbmwyjindlq7o" path="res://addons/mpf-gmc/slides/attract2.tscn" id="7_akq5y"]
 [ext_resource type="PackedScene" uid="uid://cxpsk5thhmudh" path="res://addons/mpf-gmc/slides/kanedaSucks.tscn" id="8_8d7rx"]
+[ext_resource type="PackedScene" uid="uid://bntlvfc8kk4jo" path="res://addons/mpf-gmc/slides/ThankYou.tscn" id="9_xigc1"]
+[ext_resource type="PackedScene" uid="uid://d2gde8qb36spj" path="res://addons/mpf-gmc/slides/ThemeSlide.tscn" id="10_ntyy0"]
 
 [node name="attract" type="Control"]
 layout_mode = 3
@@ -112,39 +114,17 @@ variable_type = 2
 variable_name = "grandChampionScore"
 comma_separate = true
 
-[node name="ThankYou" type="Node2D" parent="MPFCarousel"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="MPFCarousel/ThankYou"]
-anchors_preset = -1
-anchor_right = 48.0
-anchor_bottom = 27.0
-offset_right = -0.00012207
-offset_bottom = -0.00012207
-color = Color(0, 0, 0, 1)
-
-[node name="Label" type="Label" parent="MPFCarousel/ThankYou"]
-offset_left = 185.0
-offset_top = 55.0
-offset_right = 1758.0
-offset_bottom = 956.0
-theme_override_font_sizes/font_size = 80
-text = "A special thank you to all who helped:
-
-John \"Lin\" Manuelian
-Brian Doughty
-Ernie Silverberg
-Mark Seiden
-Ryan McQuaid
-Aaron Davis
-"
-horizontal_alignment = 1
-
 [node name="PoweredBy" parent="MPFCarousel" instance=ExtResource("6_dx5i2")]
 visible = false
 
-[node name="init" parent="MPFCarousel" instance=ExtResource("7_akq5y")]
+[node name="attract2" parent="MPFCarousel" instance=ExtResource("7_akq5y")]
 visible = false
 
-[node name="MPFSlide" parent="MPFCarousel" instance=ExtResource("8_8d7rx")]
+[node name="kanedaSucks" parent="MPFCarousel" instance=ExtResource("8_8d7rx")]
+visible = false
+
+[node name="ThankYou" parent="MPFCarousel" instance=ExtResource("9_xigc1")]
+visible = false
+
+[node name="ThemeSlide" parent="MPFCarousel" instance=ExtResource("10_ntyy0")]
 visible = false

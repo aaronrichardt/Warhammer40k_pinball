@@ -9,7 +9,6 @@
 color = Color(1, 1, 1, 1)
 
 [node name="Label" parent="." index="1"]
-visible = false
 offset_right = 1728.0
 offset_bottom = 255.0
 text = "Powered By:
@@ -20,3 +19,11 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_cqf25")
+
+[node name="ColorRect2" type="ColorRect" parent="." index="3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_left = 1546.0
+offset_top = 451.0

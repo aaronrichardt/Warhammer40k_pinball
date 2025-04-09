@@ -9,10 +9,12 @@ mode:
 mode_settings:
   selectable_items:
     #- gameover
-    - init
+    #- init
+    - ThemeSlide
     - ThankYou
     - PoweredBy
-    - attract2
+    #- attract2
+    - kanedaSucks
   next_item_events: s_right_flipper_active, timer_attract_slide_timer_complete
   previous_item_events: s_left_flipper_active
 #event_player: 
