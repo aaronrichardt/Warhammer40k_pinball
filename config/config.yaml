@@ -41,7 +41,7 @@ game:
  
 machine: 
   balls_installed: 6
-  min_balls: 1
+  min_balls: 0
   
 config: 
   - lights.yaml
@@ -106,9 +106,9 @@ ball_devices:
       eject_coil: c_scoop
       eject_timeouts: 3s 
 
-    bd_necron_lock:
-      mechanical_eject: True
-      ball_switches: s_droptarget_opto
+    #bd_necron_lock:
+    #  mechanical_eject: True
+    #  ball_switches: s_droptarget_opto
 
     bd_droppod:
       mechanical_eject: false
@@ -132,15 +132,15 @@ autofire_coils:
   ac_slingshot_right:
     coil: c_right_slingshot
     switch: s_right_slingshot
-  ac_popbumper_left:
-    coil: c_pop_left
-    switch: s_pop_left
-  ac_popbumper_center:
-    coil: c_pop_center
-    switch: s_pop_center
-  ac_popbumper_right:
-    coil: c_pop_right
-    switch: s_pop_right
+  #ac_popbumper_left:
+  #  coil: c_pop_left
+  #  switch: s_pop_left
+  #ac_popbumper_center:
+  #  coil: c_pop_center
+  #  switch: s_pop_center
+  #ac_popbumper_right:
+  #  coil: c_pop_right
+  #  switch: s_pop_right
 
 slides: 
   #welcome_slide:

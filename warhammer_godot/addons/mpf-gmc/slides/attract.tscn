@@ -147,3 +147,4 @@ visible = false
 visible = false
 
 [node name="MPFSlide" parent="MPFCarousel" instance=ExtResource("8_8d7rx")]
+visible = false

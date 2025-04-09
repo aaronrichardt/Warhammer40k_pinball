@@ -61,8 +61,8 @@ variable_player:
     score: 500
   s_pop_left_active:
     score: 500 
-  s_pop_center_active:
-    score: 500
+ #s_pop_center_active:
+ #  score: 500
   s_pop_right_active:
     score: 500
   s_rollover_mork_active:
@@ -141,7 +141,7 @@ shots:
 #
 #  drop_target_lock:
 #    switch: s_droptarget_lock
-#  center_spinner_target:
+#  center_spinner_target:s
 #    switch: #s_center_spinner
 
 sequence_shots: 
