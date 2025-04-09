@@ -130,19 +130,19 @@ shots:
   left_deadend_shot: 
    switch: s_left_deadend
   #pops
-  left_pop:
-    switch: s_pop_left
-  right_pop:
-    switch: s_pop_right
-  center_pop:
-    switch: s_pop_center
-  drop_target:
-    switch: s_droptarget_down
-
-  drop_target_lock:
-    switch: s_droptarget_lock
-  center_spinner_target:
-    switch: #s_center_spinner
+#  left_pop:
+#    switch: s_pop_left
+#  right_pop:
+#    switch: s_pop_right
+#  center_pop:
+#    switch: s_pop_center
+#  drop_target:
+#    switch: s_droptarget_down
+#
+#  drop_target_lock:
+#    switch: s_droptarget_lock
+#  center_spinner_target:
+#    switch: #s_center_spinner
 
 sequence_shots: 
   right_orbit:

@@ -8,15 +8,15 @@ fast:
   net:
     controller: neuron
     io_loop: 
-            3208:
-                model: FP-I/O-3208
-                order: 1
             32082:
                 model: FP-I/O-3208
-                order: 2 
+                order: 1
+            3208:
+                model: FP-I/O-3208
+                order: 3
             io0804:
                 model: FP-I/O-0804
-                order: 3 
+                order: 2
     baud: 921600
     debug: false
     console_log: none
@@ -41,7 +41,7 @@ game:
  
 machine: 
   balls_installed: 6
-  min_balls: 1
+  min_balls: 0
   
 config: 
   - lights.yaml
@@ -100,15 +100,23 @@ ball_devices:
       ball_switches: s_upperscoop
       eject_coil: c_upperscoop
       eject_timeouts: 3s
+    bd_left_vuk:
+      ball_switches: s_left_vuk
+      eject_coil: c_droppod
+      eject_timeouts: 3s
+    bd_right_vuk:
+      ball_switches: s_left_orbit
+      eject_coil: c_upperscoop
+      eject_timeouts: 3s
 
     bd_lowerscoop:
       ball_switches: s_scoop
       eject_coil: c_scoop
       eject_timeouts: 3s 
 
-    bd_necron_lock:
-      mechanical_eject: True
-      ball_switches: s_droptarget_opto
+    #bd_necron_lock:
+    #  mechanical_eject: True
+    #  ball_switches: s_droptarget_opto
 
     bd_droppod:
       mechanical_eject: false
@@ -132,15 +140,15 @@ autofire_coils:
   ac_slingshot_right:
     coil: c_right_slingshot
     switch: s_right_slingshot
-  ac_popbumper_left:
-    coil: c_pop_left
-    switch: s_pop_left
-  ac_popbumper_center:
-    coil: c_pop_center
-    switch: s_pop_center
-  ac_popbumper_right:
-    coil: c_pop_right
-    switch: s_pop_right
+# ac_popbumper_left:
+#   coil: c_pop_left
+#   switch: s_pop_left
+# ac_popbumper_center:
+#   coil: c_pop_center
+#   switch: s_pop_center
+# ac_popbumper_right:
+#   coil: c_pop_right
+#   switch: s_pop_right
 
 slides: 
   welcome_slide:
@@ -203,13 +211,10 @@ keyboard:
     switch: s_start_button
   a:
     switch: s_left_slingshot
-  p:
-    coil: c_droppod_release
-  t:
-    switch: s_droptarget_down
   i:
-    switch: s_droptarget_lock
-
+    switch: s_droptarget_locks
+  t: 
+    coil: s_right_slingshot
 virtual_platform_start_active_switches:
   #- s_trough1
   #- s_trough2
