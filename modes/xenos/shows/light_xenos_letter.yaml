@@ -2,11 +2,11 @@
 ##! show: light_xenos_letter
 - time: 0
   lights:
-    (l_xenos_x): (green)
+    (gadget_letter_made_led): (green)
 
 - time: "+.05"
   lights:
-    (l_xenos_x): off
+    (gadget_letter_made_led): off
 
 - time: "+.05"
   lights:

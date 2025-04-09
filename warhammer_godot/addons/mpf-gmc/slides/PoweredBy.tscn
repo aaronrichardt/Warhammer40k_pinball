@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlqx7vyxh86ek"]
+
+[ext_resource type="PackedScene" uid="uid://bntlvfc8kk4jo" path="res://addons/mpf-gmc/slides/ThankYou.tscn" id="1_5h2g7"]
+[ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_cckmo"]
+[ext_resource type="Texture2D" uid="uid://yxhfm3odr6g4" path="res://addons/mpf-gmc/images/FastLogo.jpeg" id="3_be1p6"]
+
+[node name="MPFSlide" instance=ExtResource("1_5h2g7")]
+
+[node name="Label" parent="." index="1"]
+offset_right = 1728.0
+offset_bottom = 255.0
+text = "Powered By:
+"
+
+[node name="TextureRect" type="TextureRect" parent="." index="2"]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 333.0
+offset_right = 840.0
+offset_bottom = 758.0
+texture = ExtResource("2_cckmo")
+
+[node name="TextureRect2" type="TextureRect" parent="." index="3"]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 177.0
+offset_right = 1758.0
+offset_bottom = 920.0
+texture = ExtResource("3_be1p6")

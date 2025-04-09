@@ -7,10 +7,8 @@
     "\\modes\\attract\\shows",
     "\\modes\\base",
     "\\modes\\base\\config",
-    "\\modes\\base\\shows",
-    "\\sounds\\sfx",
-    "\\sounds\\voice"
+    "\\modes\\base\\shows"
   ],
-  "SelectedNode": "\\modes\\attract\\shows\\gi_test.yaml",
+  "SelectedNode": "\\config\\config.yaml",
   "PreviewInSolutionExplorer": false
 }

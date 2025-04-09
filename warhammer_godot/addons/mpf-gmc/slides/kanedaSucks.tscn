@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxpsk5thhmudh"]
+
+[ext_resource type="PackedScene" uid="uid://bntlvfc8kk4jo" path="res://addons/mpf-gmc/slides/ThankYou.tscn" id="1_yk3oo"]
+[ext_resource type="Texture2D" uid="uid://tgopdso34cok" path="res://addons/mpf-gmc/slides/Artboard 1.png" id="2_cqf25"]
+
+[node name="MPFSlide" instance=ExtResource("1_yk3oo")]
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(1, 1, 1, 1)
+
+[node name="Label" parent="." index="1"]
+visible = false
+offset_right = 1728.0
+offset_bottom = 255.0
+text = "Powered By:
+"
+
+[node name="TextureRect" type="TextureRect" parent="." index="2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_cqf25")

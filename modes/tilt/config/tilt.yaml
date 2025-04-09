@@ -1,31 +1,31 @@
 #config_version=6
 
-##! mode: tilt
-# in your tilt mode
-tilt:    # the following are the defaults only copy those if you want to change them
-  multiple_hit_window: 300ms
-  settle_time: 5s
-  warnings_to_tilt: 3
+# ##! mode: tilt
+# # in your tilt mode
+# tilt:    # the following are the defaults only copy those if you want to change them
+#   multiple_hit_window: 300ms
+#   settle_time: 5s
+#   warnings_to_tilt: 3
 
-slides:
-  _overwrite: true   # this is important to overwrite the existing slides
-  tilt_warning_1:
-    widgets:
-      - type: text
-        text: "STOP IT"
-    expire: 1s
-  tilt_warning_2:
-    widgets:
-      - type: text
-        text: WARNING
-        y: top-2
-        anchor_y: top
-      - type: text
-        text: "SERIOUSLY STOP IT"
-        y: top-18
-        anchor_y: top
-        expire: 1s
-    expire: 2s
-  tilt:
-    - type: text
-      text: TILT
+# slides:
+#   _overwrite: true   # this is important to overwrite the existing slides
+#   tilt_warning_1:
+#     widgets:
+#       - type: text
+#         text: "STOP IT"
+#     expire: 1s
+#   tilt_warning_2:
+#     widgets:
+#       - type: text
+#         text: WARNING
+#         y: top-2
+#         anchor_y: top
+#       - type: text
+#         text: "SERIOUSLY STOP IT"
+#         y: top-18
+#         anchor_y: top
+#         expire: 1s
+#     expire: 2s
+#   tilt:
+#     - type: text
+#       text: TILT

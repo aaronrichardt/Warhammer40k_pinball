@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwbqg1bdq2vbl"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ifiep"]
+[ext_resource type="Texture2D" uid="uid://dkp57m6amnmka" path="res://addons/mpf-gmc/images/Warhammer Translite.png" id="2_l8le3"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_4w4lw"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="4_c4bpu"]
+
+[node name="base" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ifiep")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(960.5, 540.5)
+scale = Vector2(0.542196, 0.403086)
+texture = ExtResource("2_l8le3")
+
+[node name="score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 460.0
+offset_right = 1918.0
+offset_bottom = 717.0
+theme_override_font_sizes/font_size = 120
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4w4lw")
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -2.0
+offset_right = 862.0
+offset_bottom = 126.0
+
+[node name="player" type="Label" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("4_c4bpu")
+text = "Player 1
+"
+script = ExtResource("3_4w4lw")
+variable_name = "number"
+template_string = "Player %s "
+min_players = 2
+
+[node name="ball" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_c4bpu")
+theme_override_font_sizes/font_size = 0
+script = ExtResource("3_4w4lw")
+variable_name = "ball"
+template_string = "Ball %s"

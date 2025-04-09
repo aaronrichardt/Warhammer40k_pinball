@@ -1,0 +1,71 @@
+#show_version=6
+##! show: light_xenos_letter
+- time: 0
+  lights:
+    (letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made-led): off
+
+- time: "+.05"
+  lights:
+    (letter_made-led): (gadget_letter_final_color)
+
+  duration: -1

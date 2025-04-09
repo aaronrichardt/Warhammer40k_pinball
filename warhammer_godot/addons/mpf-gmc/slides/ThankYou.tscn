@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://bntlvfc8kk4jo"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_sqpm6"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sqpm6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_right = -0.00012207
+offset_bottom = -0.00012207
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 55.0
+offset_right = 1758.0
+offset_bottom = 956.0
+theme_override_font_sizes/font_size = 80
+text = "A special thank you to all who helped:
+
+John \"Lin\" Manuelian
+Brian Doughty
+Ernie Silverberg
+Ryan McQuaid
+Mark Seiden
+Aaron Davis
+"
+horizontal_alignment = 1

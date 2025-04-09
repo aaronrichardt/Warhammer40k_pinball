@@ -1,9 +1,0 @@
-#show_version=6
-
-- duration: 15s
-  slides:
-    ultramar:
-      widgets:
-      - type: video
-        video: flippercodeultramar
-

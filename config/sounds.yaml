@@ -3,27 +3,28 @@
 sounds:
   sound_slinghit:
     file: Kicker_bolter.wav
-    track: sfx
+    bus: effects
     #priority: 50
     max_queue_time: None
   sound_scoop:
     file: scoop_eject.wav
-    track: sfx
+    bus: effects
   music_warp_traveler:
     file: Warp Traveler.wav
-    track: music
+    #bus: music
   music_emporer:
     file: The Emperor of Mankind.wav
-  xenos_spotted:
-    file: xenos-spotted.wav
-    track: voice
+    #bus: music
+  #xenos_spotted:
+   # file: xenos-spotted.wav
+    #bus: voice
   lazgun:
     file: lazgun.wav
-    track: sfx
+    bus: effects
     #priority: 50
     max_queue_time: None 
   door_open:
     file: sfx-door-open.wav
-    track: sfx
+    bus: effects
     #priority: 50
     max_queue_time: None

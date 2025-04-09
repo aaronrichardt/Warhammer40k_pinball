@@ -1,0 +1,94 @@
+#config_version=6
+##! mode: xenos
+
+
+
+mode:
+  #this mode starts when the ball starts
+  start_events: ball_started
+  priority: 200
+
+
+sound_player:
+  #xenosspot: xenos_spotted
+
+
+#config_version=6
+event_player:
+  #plus one gadget when accrual is complete
+  award_xenos:
+    - eye_of_terror_opened
+    - xenosspot
+    #- gadgets_available
+  s_xenos_x_active:
+    #if the x is hit, and unlit
+    - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False}
+    #award a if we already have g1
+    - xenos_e_complete{device.accruals.xenos_accrual.value[0]==True}
+  s_xenos_e_active:
+    #if a is hit and unlit
+    - xenos_e_complete{device.accruals.xenos_accrual.value[1]==False}
+    #award g1 if we already have a
+    - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False and device.accruals.xenos_accrual.value[1]==True}
+    #award d if we already have a and g1
+    - xenos_n_complete{device.accruals.xenos_accrual.value[0]==True and device.accruals.xenos_accrual.value[1]==True and device.accruals.xenos_accrual.value[2]==False}
+  s_xenos_n_active:
+    - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False}
+    - xenos_e_complete{device.accruals.xenos_accrual.value[1]==False and device.accruals.xenos_accrual.value[2]==True}
+    - xenos_o_complete{device.accruals.xenos_accrual.value[1]==True and device.accruals.xenos_accrual.value[2]==True  and device.accruals.xenos_accrual.value[3]==False}
+  s_xenos_o_active:
+    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False}
+    - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False and device.accruals.xenos_accrual.value[3]==True}
+    - xenos_s_complete{device.accruals.xenos_accrual.value[2]==True and device.accruals.xenos_accrual.value[3]==True and device.accruals.xenos_accrual.value[4]==False}
+  s_xenos_s_active:
+    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False and device.accruals.xenos_accrual.value[4]==True}
+    - xenos_s_complete{device.accruals.xenos_accrual.value[4]==False }
+
+
+
+#config_version=6
+##! mode: xenos
+accruals:
+  xenos_accrual:
+    events:
+      - eye_complete # index [0]
+      - of_complete # index [1]
+      - terror_complete # index [2]
+    reset_on_complete: true
+    disable_on_complete: false
+    reset_events: mode_xenos_started
+    events_when_complete: award_xenos, reset_xenos_lights, xenos_spotted
+
+#config_version=6
+show_player:
+  xenos_x_complete:
+    light_xenos_letter:
+      priority: 10
+      key: xenos_x_hit_show
+      show_tokens:
+        gadget_letter_made_led: l_xenos_x
+        gadget_letter_made_color: purple
+        gadget_letter_final_color: purple
+  xenos_e_complete:
+    light_xenos_letter:
+      priority: 10
+      key: xenos_e_hit_show
+      show_tokens:
+        gadget_letter_made_led: l_xenos_e
+        gadget_letter_made_color: purple
+        gadget_letter_final_color: purple
+  xenos_n_complete:
+    light_xenos_letter:
+      priority: 10
+      key: xenos_n_hit_show
+      show_tokens:
+        gadget_letter_made_led: l_xenos_n
+        gadget_letter_made_color: purple
+        gadget_letter_final_color: purple
+  reset_xenos_lights:
+    light_xenos_letter:
+      priority: 10
+      show_tokens:
+        gadget_letter_made_led: xenos_letter
+        gadget_letter_made_color: purple
+        gadget_letter_final_color: 000000

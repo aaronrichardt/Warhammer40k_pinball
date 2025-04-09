@@ -1,65 +1,74 @@
 #config_version=6
 
 mode:
-  code: attract.MyAttract
-
+  start_events: reset_complete, game_end
+  stop_events: game_start
+  game_mode: false
+  code: mpf.modes.attract.code.attract.Attract
+      
+mode_settings:
+  selectable_items:
+    #- gameover
+    - init
+    - ThankYou
+    - PoweredBy
+    - attract2
+  next_item_events: s_right_flipper_active, timer_attract_slide_timer_complete
+  previous_item_events: s_left_flipper_active
 #event_player: 
  # mode_attract_started: play_main_attract_light_show, play_attract_lcd_slide, play_attract_dmd_slide_1, tractorbeam_stepper_startpos, backboard_stepper_startpos, start_attract_random_video_play_timer, reset_drop_target_bank_request
-show_player:
-  mode_attract_started:
-    attract_light_show:
-      manual_advance: false
-    attract_display_loop:
-      priority: 100
-      speed: .8
-      manual_advance: false
-  s_right_flipper_active:
-    attract_display_loop:
-      action: advance
-      manual_advance: false
-  s_left_flipper_active:
-    attract_display_loop:
-       action: step_back
-       manual_advance: false
-  flipper_code_ultramar:
-    flipper_code_ultramar:
-      priority: 200
-      loops: 0
+slide_player:
+  mode_attract_started: attract
 
-high_score:
-  _overwrite: True
-  categories: 
-  - score:
-      - GRAND CHAMPION
-      - HIGH SCORE 1
-      - HIGH SCORE 2
-      - HIGH SCORE 3
-      - HIGH SCORE 4
-  - loops:
-      - LOOP CHAMP
-  - hits:
-      - MOST HITS
-  defaults:
-    score:
-      - BRI: 4242
-      - GHK: 2323
-      - JK: 1337
-      - QC: 42
-      - MPF: 23
-    loops:
-      - JK: 42
-    hits:
-      - A: 1
-  vars:
-    loops:
-      - player: number
-    hits:
-      - player: number
-      - machine: credits_string
 
-#  slide_player:
-#    dead_flip_code_successfully_activated:
-#      dead_flip_mode_activated:
-#        target: dmd
-#        expire: 1s
-#        priority: 2
+timers:
+    attract_slide_timer: 
+        start_value: 0
+        end_value: 8
+        direction: up
+        tick_interval: 1s
+        restart_on_complete: true
+        start_running: true
+
+        
+
+
+#slides: 
+# attract:
+#   expire: 5s
+#   transition_out:
+#     type: wipe
+#     duration: 5s
+# base:
+#   expire: 5s
+#   transition_out:
+#     type: wipe
+#     duration: 5s
+# ThankYou: 
+#   expire: 5s
+#   transition_out:
+#     type: wipe
+#     duration: 5s
+
+
+#show_player:
+ # mode_attract_started:
+  #  attract_light_show:
+   #   manual_advance: false
+   # attract_display_loop:
+    #  priority: 100
+    #  speed: .8
+    #  manual_advance: false
+  # s_right_flipper_active:
+  #   attract_display_loop:
+  #     action: advance
+  #     manual_advance: false
+  # s_left_flipper_active:
+  #   attract_display_loop:
+  #      action: step_back
+  #      manual_advance: false
+  # flipper_code_ultramar:
+  #   flipper_code_ultramar:
+  #     priority: 200
+  #     loops: 0
+

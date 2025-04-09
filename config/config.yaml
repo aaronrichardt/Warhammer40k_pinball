@@ -59,14 +59,14 @@ config:
 
 displays:
   window:
-    width: 900
-    height: 900
+    width: 1920
+    height: 1080
     default: true
     #fullscreen: true
 
 window:
-  height: 900
-  width: 1080
+  height: 1080
+  width: 1920
   title: Mission Pinball Framework
   resizable: true
   fullscreen: false
@@ -143,24 +143,81 @@ autofire_coils:
     switch: s_pop_right
 
 slides: 
-  welcome_slide:
-    widgets:
-      - type: text
-        text: INITALIZING.....
-        font_size: 60
-        color: red
-      - type: rectangle
-        width: 460
-        height: 60
-  attract_started: 
-    widgets:
-      - text: ATTRACT MODE
-        type: text 
+  #welcome_slide:
 
+#    widgets:
+#      - type: text
+#        text: INITALIZING.....
+#        font_size: 60
+#        color: red
+#      - type: rectangle
+#        width: 460
+#        height: 60
+#  attract_started: 
+#    widgets:
+#      - text: ATTRACT MODE
+#        type: text 
+#
 slide_player:
-    init_done: welcome_slide
-    mode_attract_started: attract_started
+    mode_base_started: base
+    #init_done: welcome_slide
+    #mode_attract_started: attract
 
+
+machine_vars:
+    grandChampion_1_label:
+        initial_value: 'THE EMPORERS CHOSEN'
+        value_type: str
+        persist: true
+    highScore1_label: 
+        initial_value: "HIGH SCORE #1"
+        value_type: str
+    highScore2_label: 
+        initial_value: "HIGH SCORE #2"
+        value_type: str
+    highScore3_label:
+        initial_value: "HIGH SCORE #3"
+        value_type: str
+    highScore4_label:        
+        initial_value: "HIGH SCORE #4"
+        value_type: str
+    grandChampion_name:
+        initial_value: guilliman
+        persist: true
+        value_type: str
+    highScore1_name: 
+        initial_value: Horus
+        value_type: str
+        persist: true
+    highScore2_name:
+        initial_value: Horus
+        value_type: str
+        persist: true
+    highScore3_name: 
+        initial_value: Horus
+        value_type: str
+        persist: true
+    highScore4_name:
+        initial_value: Horus
+        value_type: str
+        persist: true
+    grandChampion_value: 
+        initial_value: 1000004
+        persist: true
+    highScore1_value: 
+        initial_value: 1000004
+        persist: true
+    highScore2_value:
+        initial_value: 1000004
+        persist: true
+    highScore3_value: 
+        initial_value: 1000004
+        persist: true
+    highScore4_value: 
+        initial_value: 1000004
+        persist: true
+    
+    
 shot_profiles: 
   my_first_profile:
     states:
@@ -172,43 +229,6 @@ shot_profiles:
         show: on
     loop: true
 
-keyboard:
-  z:
-    switch: s_left_flipper
-  m:
-    switch: s_right_flipper
-  x:
-    switch: s_trough1
-    toggle: true
-  c:
-    switch: s_trough2
-    toggle: true
-  v:
-    switch: s_trough3
-    toggle: true
-  b:
-    switch: s_trough4
-    toggle: true
-  n:
-    switch: s_trough5
-    toggle: true
-  q: 
-    switch: s_trough6
-    toggle: true
-  s:
-    switch: s_start_button
-  o:
-    switch: s_right_outlane
-  w:
-    switch: s_start_button
-  a:
-    switch: s_left_slingshot
-  p:
-    coil: c_droppod_release
-  t:
-    switch: s_droptarget_down
-  i:
-    switch: s_droptarget_lock
 
 virtual_platform_start_active_switches:
   #- s_trough1

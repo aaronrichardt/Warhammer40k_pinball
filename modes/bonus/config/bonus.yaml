@@ -3,13 +3,17 @@
 
 mode_settings:
   bonus_entries:
-    - event: bonus_switches
+    - entry: bonus_switches
+      text: "Switches Hit"
       score: (current_player.switch_hits )
-    - event: bonus_holy_relics
+    - entry: bonus_holy_relics
+      text: "Holy Relics Collected"
       score: (current_player.holy_relics) * (current_player.holy_relic_value)
-    - event: bonus_modes_started
+    - entry: bonus_modes_started
+      text: "Battles Started"
       score: 750000
       player_score_entry: current_player.modes_started
-    - event: bonus_warpjumps
+    - entry: bonus_warpjumps
+      text: "Warp Jumps Made"
       score: 150000
       player_score_entry: current_player.warp_jumps
