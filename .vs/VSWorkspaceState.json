@@ -1,15 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\config",
     "\\modes",
     "\\modes\\attract",
-    "\\modes\\attract\\code",
-    "\\modes\\attract\\config",
     "\\modes\\attract\\shows",
-    "\\modes\\high_score\\config",
-    "\\sounds\\voice",
-    "\\videos"
+    "\\modes\\base",
+    "\\modes\\base\\config",
+    "\\modes\\base\\shows",
+    "\\sounds\\sfx",
+    "\\sounds\\voice"
   ],
-  "SelectedNode": "\\videos\\flippercodeultramar.mp4",
+  "SelectedNode": "\\modes\\attract\\shows\\gi_test.yaml",
   "PreviewInSolutionExplorer": false
 }
