@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://baf8eg0d8gp4d"]
+[gd_scene load_steps=12 format=3 uid="uid://baf8eg0d8gp4d"]
 
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="1_oppno"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ya6r8"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cxpsk5thhmudh" path="res://addons/mpf-gmc/slides/kanedaSucks.tscn" id="8_8d7rx"]
 [ext_resource type="PackedScene" uid="uid://bntlvfc8kk4jo" path="res://addons/mpf-gmc/slides/ThankYou.tscn" id="9_xigc1"]
 [ext_resource type="PackedScene" uid="uid://d2gde8qb36spj" path="res://addons/mpf-gmc/slides/ThemeSlide.tscn" id="10_ntyy0"]
+[ext_resource type="PackedScene" uid="uid://qiekkjvtbygi" path="res://credit.tscn" id="11_rhc4m"]
 
 [node name="attract" type="Control"]
 layout_mode = 3
@@ -62,6 +63,7 @@ text = "WARHAMMER 40k"
 visible = false
 
 [node name="Label" type="Label" parent="MPFCarousel/last_game_scores"]
+visible = false
 offset_left = 710.0
 offset_top = 180.0
 offset_right = 1787.0
@@ -71,6 +73,12 @@ text = "100,000"
 
 [node name="Grand Champion" type="Node2D" parent="MPFCarousel"]
 visible = false
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel/Grand Champion"]
+visible = false
+custom_minimum_size = Vector2(1920, 1080)
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="MPFCarousel/Grand Champion"]
 anchors_preset = 8
@@ -100,6 +108,7 @@ vertical_alignment = 1
 script = ExtResource("5_nje2r")
 variable_type = 2
 variable_name = "grandChampionName"
+comma_separate = true
 
 [node name="Grand Champion Score" type="Label" parent="MPFCarousel/Grand Champion"]
 offset_left = 453.0
@@ -127,4 +136,7 @@ visible = false
 visible = false
 
 [node name="ThemeSlide" parent="MPFCarousel" instance=ExtResource("10_ntyy0")]
+visible = false
+
+[node name="credits" parent="MPFCarousel" instance=ExtResource("11_rhc4m")]
 visible = false

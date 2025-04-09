@@ -12,9 +12,12 @@ mode_settings:
     #- init
     - ThemeSlide
     - ThankYou
+    - credits
+
     - PoweredBy
     #- attract2
     - kanedaSucks
+    #- Grand Champion
   next_item_events: s_right_flipper_active, timer_attract_slide_timer_complete
   previous_item_events: s_left_flipper_active
 #event_player: 

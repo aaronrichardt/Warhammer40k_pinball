@@ -142,22 +142,6 @@ autofire_coils:
   #  coil: c_pop_right
   #  switch: s_pop_right
 
-slides: 
-  #welcome_slide:
-
-#    widgets:
-#      - type: text
-#        text: INITALIZING.....
-#        font_size: 60
-#        color: red
-#      - type: rectangle
-#        width: 460
-#        height: 60
-#  attract_started: 
-#    widgets:
-#      - text: ATTRACT MODE
-#        type: text 
-#
 slide_player:
     mode_base_started: base
     #init_done: welcome_slide

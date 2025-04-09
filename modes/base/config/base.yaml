@@ -234,6 +234,9 @@ counters:
     reset_on_complete: true
     disable_on_complete: true
 
+sound_player:
+    mode_base_started: Admonition
+        
 
 event_player:
   mode_base_started: warp_traveler
@@ -265,7 +268,8 @@ event_player:
   
   
 
-sound_player:
+
+
   #warp_traveler: music_emporer
   #mode_base_started{game.num_players == 1}: evenindeath 
   #base_sound_player_1: evenindeath

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://qiekkjvtbygi"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_p3v2g"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_p3v2g")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 1918.0
+offset_bottom = 1067.0
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 100
+text = "Designed, Built and Programmed by:
+
+Aaron Richardt"
+horizontal_alignment = 1
+vertical_alignment = 1
