@@ -1,28 +1,39 @@
 #config_version=6
 
 switches:
-  s_trough6:
-    number: 3208-6
-  s_autoplunger:
-    number: 3208-7
-  s_trough5:
-    number: 3208-1
-  s_trough4:
-    number: 3208-4
-  s_trough3:
-    number: 3208-3
-  s_trough2:
-    number: 3208-5
-  s_spinner:
-    number: 32082-27
-    #type: "NC"
-    debounce: quick
   s_trough_jam:
     number: 3208-0
     type: "NC"
+  s_trough5:
+    number: 3208-1
+    type: "nc"
   s_trough1:
     number: 3208-2
+    type: "nc"
+  s_trough3:
+    number: 3208-3
+    type: "nc"
+  s_trough4:
+    number: 3208-4
+    type: "nc"
+  s_trough2:
+    number: 3208-5
+    type: "nc"
+  s_trough6:
+    number: 3208-6
+    type: "nc"
+  s_autoplunger:
+    number: 3208-7
+  s_pop_left:
+    number: 3208-23  
+  s_right_outlane:
+    number: 3208-9
+  s_right_inlane:
+    number: 3208-8
+  s_left_vuk:
+    number: 32082-27
     type: "NC"
+    debounce: quick
   s_27:
     number: 3208-27
   s_26:
@@ -33,109 +44,94 @@ switches:
     number: 3208-24
   s_right_EOS:
     number: 3208-22
-  s_left_EOS:
+  s_rollover_gork:
     number: 3208-20
-  s_left_inlane:
+  s_rollover_mork:
     number: 3208-18
   s_left_outlane: 
     number: 3208-19
 
-  s_lower_bigtarget:
-   number: 3208-31
-  s_upper_bigtarget:
+  s_left_flipper:
+    number: 3208-31
+    tags: left_flipper
+  s_right_flipper:
     number: 3208-29
-
-    type: "NC"
-  s_left_slingshot: 
+    tags: right_flipper
+  s_right_orbit: 
     number: 3208-21
+    
   s_right_slingshot: 
-    number: 3208-23
-  s_pop_left:
     number: 3208-10
-  s_pop_right:
-    number: 3208-9
-  s_pop_center:
-    number: 3208-8
-  s_rollover_gork:
+    
+  s_left_EOS:
     number: 3208-14
-
-  s_right_orbit:
+  s_left_slingshot: 
     number: 3208-11
-  s_upperscoop:
+  s_leftoutlane:
     number: 3208-12
-  s_rollover_mork: 
+  s_left_inlane: 
     number: 3208-13
   s_15:
     number: 3208-15
-  s_right_outlane:
-    number: 3208-16
+  s_right_16:
+    number: 32082-14
+    
     #tags: playfield_active
-  s_right_inlane:
+  s_1:
     number: 3208-17
     #tags: playfield_active
   s_scoop:
-    number: 3208-30
-    type: "NC"  
+    number: 3208-16
+    type: "NC"
+  s_upperscoop:
+    number: io0804-0
 
 
 #BOARD 2
 
-  s_right_flipper:
-    number: 32082-13
-    tags: right_flipper
   s_start_button:
-    number: 32082-14
+    number:  3208-30
     tags: start
   
 
   s_xenos_x:
-    number: 32082-4
-  s_xenos_e:
-    number: 32082-3
-  s_xenos_n:
-    number: 32082-2
-  s_xenos_o:
-    number: 32082-1
-  s_xenos_s:
     number: 32082-0
-  s_kickback1:
+  s_xenos_e:
     number: 32082-7
-  s_upperflipper_eos:
+  s_xenos_s:
+    number: 32082-2
+  s_xenos_n:
+    number: 32082-1
+  s_xenos_o:
     number: 32082-6
+  s_lowerloop:
+    number: 32082-4
+  s_upperflipper_eos:
+    number: 32082-3
     type: "NC"
   s_disk_backtarget:
     number: 32082-5
-  s_droptarget_down:
-    number: 3208-28
-    debounce: normal
-
-
-
-
 
   s_center_spinner:
     number: 32082-16
     type: "NC"
   s_inner_loop_lower:
     number: 32082-17
-  s_dropramp_home:
+  s_left_spinner:
     number: 32082-18
   s_dropramp_away:
     number: 32082-19
  
     
-  s_droptarget_lock:
-    number: 32082-24
-  s_snikt: 
-    number: 32082-23
+ 
 
-  s_droptarget_opto:
+  s_necron_target:
     number: 32082-8
   s_upperleft_flipper:
-    number: 32082-12
-  s_left_flipper: 
-    number: 32082-15
-    tags: left_flipper
+    number: 3208-28
+#  s_left_flipper: 
+#    number: 32082-15
+#    tags: left_flipper
   s_tilt_bob: 
     number: 32082-11
     tags: tilt_warning
@@ -145,15 +141,22 @@ switches:
     number: 32082-21
   s_2_22:
     number: 32082-22
+  s_snikt: 
+    number: 32082-23
+  s_droptarget_lock:
+    number: 32082-24
   s_left_orbit: 
     number: 32082-25
+    type: "NC"
   s_unknown: 
     number: 32082-26
   s_left_deadend:
     number: 32082-28
-  s_lockopto3:
-    number: 32082-30  
   s_lockopto2:
     number: 32082-29
+  s_lockopto3:
+    number: 32082-30 
   s_lockopto1:
     number: 32082-31
+  s_droptarget_down:
+    number: 32082-9
