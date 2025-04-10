@@ -234,8 +234,8 @@ counters:
     reset_on_complete: true
     disable_on_complete: true
 
-sound_player:
-    mode_base_started: Admonition
+#sound_player:
+ #   mode_base_started: Admonition
         
 
 event_player:

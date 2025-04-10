@@ -27,13 +27,13 @@ coils:
   c_flipper_right_hold:
     number: 3208-7
     allow_enable: true
-  c_pop_left:
+  c_pop_top:
     number: 32082-0
     default_pulse_ms: 17
-  c_pop_center:
+  c_pop_bottom:
     number: 32082-2
     default_pulse_ms: 17
-  c_pop_right:
+  c_uppost:
     number: 32082-5
     default_pulse_ms: 17
   c_upperscoop:

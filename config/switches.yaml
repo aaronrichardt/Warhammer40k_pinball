@@ -77,22 +77,23 @@ switches:
     number: 32082-14
     
     #tags: playfield_active
-  s_1:
+  s_17:
     number: 3208-17
     #tags: playfield_active
   s_scoop:
     number: 3208-16
     type: "NC"
+  s_upperleft_flipper:
+    number: 3208-28
+  s_start_button:
+    number:  3208-30
+    tags: start
   s_upperscoop:
     number: io0804-0
 
 
 #BOARD 2
 
-  s_start_button:
-    number:  3208-30
-    tags: start
-  
 
   s_xenos_x:
     number: 32082-0
@@ -121,18 +122,23 @@ switches:
     number: 32082-18
   s_dropramp_away:
     number: 32082-19
- 
+  s_u13:
+    number: 32082-13
+  s_u12:
+    number: 32082-12
+  s_U10:
+    number: 32082-10
     
  
 
   s_necron_target:
     number: 32082-8
-  s_upperleft_flipper:
-    number: 3208-28
+  s_u15:
+    number: 32082-15
 #  s_left_flipper: 
 #    number: 32082-15
 #    tags: left_flipper
-  s_tilt_bob: 
+  s_right-orbit: 
     number: 32082-11
     tags: tilt_warning
   s_unused:

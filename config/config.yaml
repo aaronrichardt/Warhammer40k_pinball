@@ -5,18 +5,19 @@ hardware:
     platform: fast 
 
 fast:
+
   net:
     controller: neuron
     io_loop: 
             3208:
                 model: FP-I/O-3208
-                order: 1
+                order: 3
             32082:
                 model: FP-I/O-3208
-                order: 2 
+                order: 1
             io0804:
                 model: FP-I/O-0804
-                order: 3 
+                order: 2
     baud: 921600
     debug: false
     console_log: none
@@ -106,8 +107,17 @@ ball_devices:
       eject_coil: c_scoop
       eject_timeouts: 3s 
 
+    bd_left_vuk:
+        ball_switches: s_left_vuk
+        eject_coil: c_droppod
+        eject_timeouts: 3s
+
+    bd_right_vuk:
+        ball_switches: s_left_orbit
+        eject_coil: c_upperscoop
+        eject_timeouts: 3s
     #bd_necron_lock:
-    #  mechanical_eject: True
+    #  mechanical_eject: Trues
     #  ball_switches: s_droptarget_opto
 
     bd_droppod:

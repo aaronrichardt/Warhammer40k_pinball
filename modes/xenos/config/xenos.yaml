@@ -12,5 +12,5 @@ mode:
   priority: 200
 
 
-sound_player:
+#sound_player:
   #xenosspot: xenos_spotted
