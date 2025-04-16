@@ -1,15 +1,3 @@
-fast_audio_headphones_volume:
-  expire: null
-  expire_secs: null
-  value: 10
-fast_audio_main_volume:
-  expire: null
-  expire_secs: null
-  value: 10
-fast_audio_sub_volume:
-  expire: null
-  expire_secs: null
-  value: 10
 grandChampion_1_label:
   expire: null
   expire_secs: null
@@ -61,8 +49,4 @@ master_volume:
 player1_score:
   expire: null
   expire_secs: null
-  value: 0
-player2_score:
-  expire: null
-  expire_secs: null
-  value: 0
+  value: 493000

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://csnu3cvhust4c"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_s5k0h"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_bnnb2"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_s5k0h")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_left = 29.0
+offset_top = -17.0
+offset_right = 1949.0
+offset_bottom = 1063.0
+color = Color(0, 0, 0, 1)
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 592.0
+offset_top = 342.0
+offset_right = 1329.0
+offset_bottom = 666.0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_bnnb2")

@@ -2,18 +2,21 @@
 ##! show: base_light_show
 - duration: 2
   lights:
-    GI_light1: white
-    GI_light2: white
-    GI_light3: white
-    GI_light4: white
-    GI_light5: white
-    GI_light6: white
-    GI_light7: white
-    GI_light8: white
-    GI_light9: white
-    GI_light10: white
-    GI_light11: white
-    backboard: white
-    head: white
+    GI: white
+   # GI_light2: white
+   # GI_light3: white
+   # GI_light4: white
+   # GI_light5: white
+   # GI_light6: white
+   # GI_light7: white
+   # GI_light8: white
+   # GI_light9: white
+   # GI_light10: W
+   # GI_light11: white
+   # GI : white
+   # UI: white
+   # backboard: white
+   # head: white
     
   
+

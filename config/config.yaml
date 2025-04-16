@@ -5,7 +5,6 @@ hardware:
     platform: fast 
 
 fast:
-
   net:
     controller: neuron
     io_loop: 
@@ -42,7 +41,7 @@ game:
  
 machine: 
   balls_installed: 6
-  min_balls: 0
+  min_balls: 1
   
 config: 
   - lights.yaml
@@ -63,15 +62,15 @@ displays:
     width: 1920
     height: 1080
     default: true
-    #fullscreen: true
+    fullscreen: true
 
 window:
   height: 1080
   width: 1920
   title: Mission Pinball Framework
   resizable: true
-  fullscreen: false
-  borderless: false
+  fullscreen: true
+  borderless: true
   exit_on_escape: true
   source_display: window
 
@@ -142,12 +141,12 @@ autofire_coils:
   ac_slingshot_right:
     coil: c_right_slingshot
     switch: s_right_slingshot
-  #ac_popbumper_left:
-  #  coil: c_pop_left
-  #  switch: s_pop_left
-  #ac_popbumper_center:
-  #  coil: c_pop_center
-  #  switch: s_pop_center
+  ac_popbumper_top:
+    coil: c_pop_top
+    switch: s_pop_top
+  ac_popbumper_bottom:
+    coil: c_pop_bottom
+    switch: s_pop_bottom
   #ac_popbumper_right:
   #  coil: c_pop_right
   #  switch: s_pop_right
@@ -232,7 +231,7 @@ virtual_platform_start_active_switches:
 modes: 
   - base
   #- high_score
-  - xenos
+  #- xenos
   - warp
   - nurgle
   - khorne
@@ -242,13 +241,13 @@ modes:
   #- inquisition_multiball
   #- horus
   - tilt  
-  - bonus
+  #- bonus
   #- necron_lock
   #- necron_lock_qualified
   #- necron_multiball
-  - gorkmorkrollovers
+  #- gorkmorkrollovers
   #- skillshot
   #- super_skillshot
 
-
+ 
 

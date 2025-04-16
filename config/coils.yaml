@@ -40,10 +40,13 @@ coils:
     number: 32082-3
     default_pulse_ms: 8
   c_droptarget_reset:
-    number: 32082-7
+    number: 32082-4
     default_pulse_ms: 18
   c_scoop:
     number: 32082-1
+
+  c_droptarget_smartdrop:
+    number: 32082-7
   c_droppod:
     number: 32082-6
     default_pulse_ms: 18

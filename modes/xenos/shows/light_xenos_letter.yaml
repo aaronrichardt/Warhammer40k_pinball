@@ -2,7 +2,7 @@
 ##! show: light_xenos_letter
 - time: 0
   lights:
-    (gadget_letter_made_led): (green)
+    (gadget_letter_made_led): (00A2E8)
 
 - time: "+.05"
   lights:

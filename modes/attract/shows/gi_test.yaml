@@ -1,21 +1,7 @@
 #show_version=6
 - duration: 2
   lights:
-    GI_light1: white
-    GI_light2: white
-    GI_light3: white
-    GI_light4: white
-    GI_light5: white
-    GI_light6: white
-    GI_light7: white
-    GI_light8: white
-    GI_light9: white
-    GI_light10: white
-    GI_light11: white
-    GI: white
-    UI: white
-    l_UI_rec_1: white
-    tron_spinner: white
-    3-bank: white
-    backboard: white
-    head: white
+    #GI: blue
+    Chain1: blue
+    Chain2: yellow
+    Chain3: purple

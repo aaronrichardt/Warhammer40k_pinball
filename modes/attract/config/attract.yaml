@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: reset_complete, game_end
+  start_events: reset_complete, game_ended
   stop_events: game_start
   game_mode: false
   code: mpf.modes.attract.code.attract.Attract
@@ -56,10 +56,10 @@ timers:
 #     duration: 5s
 
 
-#show_player:
- # mode_attract_started:
-  #  attract_light_show:
-   #   manual_advance: false
+show_player:
+  mode_attract_started:
+    attract_light_show:
+      manual_advance: false
    # attract_display_loop:
     #  priority: 100
     #  speed: .8

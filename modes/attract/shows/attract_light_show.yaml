@@ -2,20 +2,6 @@
 ##! show: attract_light_show
 - duration: 10
   shows: 
-      rainbow360:
-        speed: 10
       gi_test:
         speed: 10 
-- duration: 10
-  shows: 
-      color_sweeps:
-        speed: 10
-      gi_test:
-        speed: 10
-- duration: 10
-  shows: 
-      rings_expanding: 
-        speed: 10
-      gi_test:
-        speed: 10
   

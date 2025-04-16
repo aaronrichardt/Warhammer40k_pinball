@@ -1,0 +1,5 @@
+2025-04-09 19:33:39,272 : INFO : root : Loading config.
+2025-04-09 19:33:39,272 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2025-04-09 19:33:39,272 : INFO : ConfigProcessor : Loading config from file C:\Users\Aaron\AppData\Local\Programs\Python\Python311\Lib\site-packages\mpf\mpfconfig.yaml.
+2025-04-09 19:33:39,287 : INFO : ConfigProcessor : Loading config: C:\Users\Aaron\AppData\Local\Programs\Python\Python311\Lib\site-packages\mpf\mpfconfig.yaml
+2025-04-09 19:33:39,287 : INFO : ConfigProcessor : Loading config from file C:\Warhammer40k\warhammer_godot\config\config.yaml.

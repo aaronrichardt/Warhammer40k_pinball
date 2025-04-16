@@ -2,29 +2,29 @@
 
 switches:
   s_trough_jam:
-    number: 3208-0
+    number: 3208-6
     type: "NC"
   s_trough5:
-    number: 3208-1
-    type: "nc"
-  s_trough1:
-    number: 3208-2
-    type: "nc"
-  s_trough3:
-    number: 3208-3
-    type: "nc"
-  s_trough4:
     number: 3208-4
-    type: "nc"
+    type: "NC"
+  s_trough1:
+    number: 3208-0
+    type: "NC"
+  s_trough3:
+    number: 3208-2
+    type: "NC"
+  s_trough4:
+    number: 3208-3
+    type: "NC"
   s_trough2:
-    number: 3208-5
-    type: "nc"
+    number: 3208-1
+    type: "NC"
   s_trough6:
-    number: 3208-6
-    type: "nc"
+    number: 3208-5
+    type: "NC"
   s_autoplunger:
     number: 3208-7
-  s_pop_left:
+  s_droptarget_down:
     number: 3208-23  
   s_right_outlane:
     number: 3208-9
@@ -126,7 +126,7 @@ switches:
     number: 32082-13
   s_u12:
     number: 32082-12
-  s_U10:
+  s_pop_top:
     number: 32082-10
     
  
@@ -140,7 +140,7 @@ switches:
 #    tags: left_flipper
   s_right-orbit: 
     number: 32082-11
-    tags: tilt_warning
+    #tags: tilt_warning
   s_unused:
     number: 32082-20
   s_right_poptarget:
@@ -164,5 +164,5 @@ switches:
     number: 32082-30 
   s_lockopto1:
     number: 32082-31
-  s_droptarget_down:
+  s_pop_bottom:
     number: 32082-9

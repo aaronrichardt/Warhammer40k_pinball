@@ -6,44 +6,44 @@ show_player:
       key: xenos_x_hit_show
       show_tokens:
         gadget_letter_made_led: l_xenos_x
-        gadget_letter_made_color: green
-        gadget_letter_final_color: green
+        gadget_letter_made_color: 00A2E8
+        gadget_letter_final_color: 00A2E8
   xenos_e_complete:
     light_xenos_letter:
       priority: 10
       key: xenos_e_hit_show
       show_tokens:
         gadget_letter_made_led: l_xenos_e
-        gadget_letter_made_color: green
-        gadget_letter_final_color: green
+        gadget_letter_made_color: 00A2E8
+        gadget_letter_final_color: 00A2E8
   xenos_n_complete:
     light_xenos_letter:
       priority: 10
       key: xenos_n_hit_show
       show_tokens:
         gadget_letter_made_led: l_xenos_n
-        gadget_letter_made_color: green
-        gadget_letter_final_color: green
+        gadget_letter_made_color: 00A2E8
+        gadget_letter_final_color: 00A2E8
   xenos_o_complete:
     light_xenos_letter:
       priority: 10
       key: xenos_o_hit_show
       show_tokens:
         gadget_letter_made_led: l_xenos_o
-        gadget_letter_made_color: green
-        gadget_letter_final_color: green
+        gadget_letter_made_color: 00A2E8
+        gadget_letter_final_color: 00A2E8
   xenos_s_complete:
     light_xenos_letter:
       priority: 10
       key: xenos_s_hit_show
       show_tokens:
         gadget_letter_made_led: l_xenos_s
-        gadget_letter_made_color: green
-        gadget_letter_final_color: green
+        gadget_letter_made_color: 00A2E8
+        gadget_letter_final_color: 00A2E8
   reset_xenos_lights:
     light_xenos_letter:
       priority: 10
       show_tokens:
         gadget_letter_made_led: xenos_letter
-        gadget_letter_made_color: green
+        gadget_letter_made_color: 00A2E8
         gadget_letter_final_color: 000000

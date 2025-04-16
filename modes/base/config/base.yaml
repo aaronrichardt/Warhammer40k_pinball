@@ -110,7 +110,7 @@ shots:
   my_first_shot: 
     switch: s_left_orbit
     show_tokens: 
-      led: l_UI_rec_1
+      led: l_left_orbit_arrow
     profile: my_first_profile
   
   #3_bank_shot:
@@ -151,9 +151,9 @@ sequence_shots:
 
 
 slide_player:
-  player_added:
-    new_player_slide:
-      priority: 1000
+  #player_added:
+   # new_player_slide:
+   #   priority: 1000
 
 slides:
   score_slide:
@@ -235,7 +235,7 @@ counters:
     disable_on_complete: true
 
 #sound_player:
- #   mode_base_started: Admonition
+ #  mode_base_started: Admonition
         
 
 event_player:
