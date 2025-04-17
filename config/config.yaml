@@ -26,6 +26,11 @@ fast:
     default_quick_debounce_close: 1ms
     default_normal_debounce_open: 4ms
     default_normal_debounce_close: 4ms
+  aud:
+    optional: true
+    headphones_amp_enabled: false
+    link_main_to_main: false
+    link_sub_to_main: false
 
   exp:
     #port: com5
@@ -245,7 +250,7 @@ modes:
   #- necron_lock
   #- necron_lock_qualified
   #- necron_multiball
-  #- gorkmorkrollovers
+  - gorkmorkrollovers
   #- skillshot
   #- super_skillshot
 

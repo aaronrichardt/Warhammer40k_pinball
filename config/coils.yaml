@@ -55,7 +55,7 @@ coils:
     default_hold_power: 0.250
     allow_enable: true
   c_flipper_upperleft_main:
-    default_pulse_ms: 12
+    default_pulse_ms: 13
     number: io0804-0
   c_flipper_upperleft_hold:
     number: io0804-1

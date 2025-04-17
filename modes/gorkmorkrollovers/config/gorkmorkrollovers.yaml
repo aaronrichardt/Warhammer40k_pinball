@@ -10,14 +10,14 @@ shots:
     switch: s_rollover_gork
     profile: top_lane_profile
     show_tokens: 
-      rollover_made_led: l_gork
+      rollover_made_led: l_rollover_gork
       rollover_made_color: yellow
       rollover_made_final_color: cyan
   top_lane_mork:
     switch: s_rollover_mork
     profile: top_lane_profile
     show_tokens: 
-      rollover_made_led: l_mork
+      rollover_made_led: l_rollover_mork
       rollover_made_color: yellow
       rollover_made_final_color: cyan
 

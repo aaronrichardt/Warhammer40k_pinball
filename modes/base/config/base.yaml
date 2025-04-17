@@ -234,8 +234,21 @@ counters:
     reset_on_complete: true
     disable_on_complete: true
 
-#sound_player:
- #  mode_base_started: Admonition
+sound_player:
+    mode_base_started: 
+        Admonition:
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
+             #target: sfx
+             #delay: 0
+                
+             
+             
+             
         
 
 event_player:
