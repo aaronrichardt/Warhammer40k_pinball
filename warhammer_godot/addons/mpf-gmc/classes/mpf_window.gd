@@ -1,4 +1,3 @@
-@tool
 class_name MPFWindow extends Control
 
 ## Root node for the entire GMC display screen. Hosts one or more MPFDisplay child nodes for rendering slides.
@@ -103,6 +102,7 @@ func _check_config() -> void:
 				if prop == "filter":
 					continue
 				filter.material.set_shader_parameter(prop, MPF.get_config_value("filter", prop))
+			filter_parent.show()
 	# For safety, disable all filters
 	elif filter_parent:
 		filter_parent.hide()

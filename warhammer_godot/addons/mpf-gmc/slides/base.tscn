@@ -11,6 +11,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_ifiep")
+mask_from_active = null
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(960.5, 540.5)

@@ -2,12 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://b5iy846mwpk7j"
-valid=false
+uid="uid://bo4m7ls3u5w55"
+path="res://.godot/imported/limited-space.wav-df88f5c69c73a279ccc9e77058a5d7b8.sample"
 
 [deps]
 
 source_file="res://addons/mpf-gmc/sounds/sfx/limited-space.wav"
+dest_files=["res://.godot/imported/limited-space.wav-df88f5c69c73a279ccc9e77058a5d7b8.sample"]
 
 [params]
 

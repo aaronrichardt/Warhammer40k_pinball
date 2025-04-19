@@ -24,12 +24,17 @@ var _global_level: LogLevel = LogLevel.INFO
 var log_name: String = ""
 
 func _init(name: String = "", level: LogLevel = LogLevel.USE_GLOBAL_LEVEL, set_global: bool = false) -> void:
-	self.log_name = "%s : " % name if name else ""
+	self.rename(name)
 	self.setLevel(level)
 	if set_global:
 		_global_level = level
 
-func setLevel(level: LogLevel) -> void:
+func rename(new_name: String = ""):
+	self.log_name = "%s : " % new_name if new_name else ""
+
+func setLevel(level: LogLevel, set_global: bool = false) -> void:
+	if set_global:
+		_global_level = level
 	# GMC panel doesn't allow -1 as an index, so 0 counts as -1.
 	if level <=0:
 		level = _global_level
@@ -56,10 +61,10 @@ func log(message: String, args=null) -> void:
 
 func warning(message: String, args=null) -> void:
 	if _level <= LogLevel.WARNING:
-		push_warning(GMCLogger._log(self.log_name, "WARNING", message, args))
+		print_rich("[color=yellow]%s[/color]" % GMCLogger._log(self.log_name, "WARNING", message, args))
 
 func error(message: String, args=null) -> void:
-	push_error(GMCLogger._log(self.log_name, "ERROR", message, args))
+	printerr(GMCLogger._log(self.log_name, "ERROR", message, args))
 
 func fail(message: String, args=null) -> void:
 	self.error(message, args)

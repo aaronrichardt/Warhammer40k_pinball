@@ -2,12 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://c3332ww45kktt"
-valid=false
+uid="uid://dldx1j4wspps"
+path="res://.godot/imported/whispering-man.wav-d8f848a3fff04a190a521f116ab8f951.sample"
 
 [deps]
 
 source_file="res://addons/mpf-gmc/sounds/sfx/whispering-man.wav"
+dest_files=["res://.godot/imported/whispering-man.wav-d8f848a3fff04a190a521f116ab8f951.sample"]
 
 [params]
 

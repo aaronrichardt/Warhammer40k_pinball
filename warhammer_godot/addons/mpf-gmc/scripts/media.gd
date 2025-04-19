@@ -1,6 +1,5 @@
 # Base singleton for managing all MC-related references,
 # including windows, displays, slides, and widgets
-@tool
 extends LoggingNode
 class_name GMCMedia
 
@@ -20,7 +19,7 @@ func _enter_tree() -> void:
 			for k in traversal[m]:
 				self[m][k] = traversal[m][k]
 	else:
-		self.log.info("Manually traversing tree for media.")
+		self.log.info("Traversing directory tree for media.")
 		self.generate_traversal()
 
 	self.log.debug("Generated slide lookups: %s", slides)
@@ -39,6 +38,8 @@ func register_window(inst: Node) -> void:
 func play(payload: Dictionary) -> void:
 	var command = payload.name
 	match command:
+		"buses_play":
+			self.sound.play_bus(payload)
 		"slides_play":
 			self.window.play_slides(payload)
 		"widgets_play":
@@ -65,7 +66,7 @@ func generate_traversal() -> void:
 	self.traverse_tree_for("slides", slides)
 	self.traverse_tree_for("widgets", widgets)
 	# Always do TRES files last so they'll supersede WAV/OGG files of the same name
-	for ext in ["wav", "ogg", "tres"]:
+	for ext in ["mp3", "wav", "ogg", "tres"]:
 		self.traverse_tree_for("sounds", sounds, ext)
 
 func _get_scene(scene_name: String, collection: Dictionary, preload_only: bool = false):
@@ -81,7 +82,7 @@ func _get_scene(scene_name: String, collection: Dictionary, preload_only: bool =
 func traverse_tree_for(obj_type: String, acc: Dictionary, ext="tscn") -> void:
 	# Look for a specified content root
 	var content_root: String = "res://%s" % obj_type
-	if MPF.has_config_section("settings"):
+	if MPF.has_config_section("gmc"):
 		var root = MPF.get_config_value("gmc", "content_root", "")
 		if root:
 			content_root = "res://%s/%s" % [root, obj_type]

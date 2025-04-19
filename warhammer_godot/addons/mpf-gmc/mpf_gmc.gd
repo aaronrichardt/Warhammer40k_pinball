@@ -1,4 +1,3 @@
-@tool
 extends LoggingNode
 
 const CONFIG_PATH = "res://gmc.cfg"
@@ -15,27 +14,43 @@ var keyboard: = {}
 var config
 var local_config
 
+var _suppress_input := true
+
 func _init():
+
+	# Configure logging with the value from the config, if provided.
+	# Otherwise will default to INFO for debug builds and LOG for production.
+	var default_log_level = 20 if OS.has_feature("debug") else 25
+	# Set the GMC level as global log level before instantiating other loggers
+	self.configure_logging("GMC", default_log_level, true)
+
+	var plugin_config = ConfigFile.new()
+	var perr = plugin_config.load("res://addons/mpf-gmc/plugin.cfg")
+	if perr != OK:
+		self.log.error("Error loading GMC plugin file.")
+	self.log.log("Initializing GMC version %s" % plugin_config.get_value("plugin", "version", "UNKNOWN"))
+
 	for cfg in [[CONFIG_PATH, "config"], [LOCAL_CONFIG_PATH, "local_config"]]:
 		self[cfg[1]] = ConfigFile.new()
 		var err = self[cfg[1]].load(cfg[0])
 		if err == OK:
 			if cfg[1] == "local_config":
-				print("Found local GMC config override file: %s" % ProjectSettings.globalize_path(cfg[0]))
+				self.log.log("Found local GMC config override file: %s" % ProjectSettings.globalize_path(cfg[0]))
 			else:
-				print("Found GMC configuration file %s." % ProjectSettings.globalize_path(cfg[0]))
+				self.log.log("Found GMC configuration file %s." % ProjectSettings.globalize_path(cfg[0]))
 		if err != OK:
 			# Error 7 is file not found, that's okay
 			if err == ERR_FILE_NOT_FOUND:
+				# But still, everybody *should* have a gmc.cfg
+				if cfg[0] == CONFIG_PATH:
+					self.log.warning("Unable to find gmc.cfg in the project root.")
 				pass
 			else:
-				printerr("Error loading config file '%s': %s" % [cfg[0],err])
-	# Configure logging with the value from the config, if provided.
-	# Otherwise will default to INFO for debug builds and LOG for production.
-	var default_log_level = 20 if OS.has_feature("debug") else 25
+				self.log.error("Error loading GMC config file '%s': %s" % [cfg[0], error_string(err)])
+
+	# Now that configs are loaded, update the global log level
 	var global_log_level = self.get_config_value("gmc", "logging_global", default_log_level)
-	# Set the GMC level as global log level before instantiating other loggers
-	self.configure_logging("GMC", global_log_level, true)
+	self.log.setLevel(global_log_level, true)
 
 	# Any default script can be overridden with a custom one
 	# This is done explicitly line-by-line for optimized preload and relative paths
@@ -67,10 +82,20 @@ func _init():
 
 func _enter_tree():
 	# self._process() is only called on children in the tree, so add the children
-	# that need to call _process() or that have _enter_tree() methods
+	# that need to call _process() or that have _enter_tree() methods. Also children
+	# will be automatically freed on exit, so it's good to add them anyway.
 	self.add_child(server)
 	self.add_child(media)
 	self.add_child(process)
+	self.add_child(game)
+
+	# Initialize window parameters
+	var scale = self.get_config_value("window", "scale", 1.0)
+	if scale != 1.0:
+		get_window().content_scale_factor = scale
+	var size = self.get_config_value("window", "size", 0)
+	if size:
+		get_window().size = size
 
 func _ready():
 	if self.config.has_section("keyboard"):
@@ -112,12 +137,30 @@ func _explode_version_string(version: String) -> int:
 	bits[3] = bits[3].trim_prefix("dev")
 	return int(bits[0]) * 1_000_000 + int(bits[1]) * 10_000 + int(bits[2]) * 100 + int(bits[3])
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not event.is_class("InputEventKey"):
+func ignore_input() -> void:
+	self._suppress_input = false
+
+func _input(event: InputEvent) -> void:
+	if not self._suppress_input:
 		return
+
+	# Don't accept any non-keyboard input
+	if not event.is_class("InputEventKey"):
+		get_tree().get_root().set_input_as_handled()
+		return
+
+	# ALWAYS set the input as handled to prevent Godot default InputMap
+	# from trying to manage UI. The only input that should propagate to
+	# handlers is from BCP (which has key_label -1)
+	if event.key_label != -1:
+		get_tree().get_root().set_input_as_handled()
+	else:
+		return
+
 	# Don't support holding down a key
 	if event.is_echo():
 		return
+
 	var keycode = OS.get_keycode_string(event.get_key_label_with_modifiers()).to_upper()
 	#print(keycode)
 	if keycode == "ESCAPE" and self.get_config_value("gmc", "exit_on_esc", false):
@@ -136,7 +179,11 @@ func _unhandled_input(event: InputEvent) -> void:
 				# Only handle events on the press, not the release
 				if not event.is_pressed():
 					return
-				MPF.server.send_event(cfg[1])
+				# If a kwarg dict is provided, include it
+				if cfg.size() > 2:
+					MPF.server.send_event_with_args(cfg[1], cfg[2])
+				else:
+					MPF.server.send_event(cfg[1])
 			"switch":
 				var action
 				var state
@@ -156,4 +203,3 @@ func _unhandled_input(event: InputEvent) -> void:
 				MPF.server.send_switch(cfg[1], state)
 			_:
 				return
-		get_tree().get_root().set_input_as_handled()

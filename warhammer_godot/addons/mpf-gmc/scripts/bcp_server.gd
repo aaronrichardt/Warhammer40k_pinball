@@ -3,7 +3,6 @@
 # Original code © 2021 Anthony van Winkle / Paradigm Tilt
 # Released under the MIT License
 
-@tool
 extends LoggingNode
 class_name GMCServer
 
@@ -11,13 +10,14 @@ class_name GMCServer
 enum ServerStatus { IDLE, WAITING, LAUNCHING, CONNECTED, ERROR }
 
 signal bonus(payload)
+signal clear(mode_name)
+signal item_highlighted(payload)
 signal mpf_timer(payload)
 signal options(payload)
-signal item_highlighted(payload)
 signal player_var(value, prev_value, change, player_num)
 signal service(payload)
-signal clear(mode_name)
 signal status_changed(status)
+signal text_input(payload)
 
 # A list of events that trigger their own automatic signals
 var auto_signals := []
@@ -49,6 +49,8 @@ var _thread: Thread
 ###
 
 func _ready() -> void:
+	# Set the port for BCP connections
+	port = MPF.get_config_value("gmc", "bcp_port", port)
 	# Wait until a server is actively listening before polling for clients
 	set_process(false)
 
@@ -61,7 +63,7 @@ func _process(_delta: float) -> void:
 		_client = _server.take_connection()
 		var err = _thread.start(self._thread_poll, Thread.Priority.PRIORITY_LOW)
 		if err != OK:
-			self.log.error("Error spawning BCP poll thread: %s", err)
+			self.log.error("Error spawning BCP poll thread: %s", error_string(err))
 			self.status = ServerStatus.ERROR
 		else:
 			self.log.log("Client connected from %s:%s", [_client.get_connected_host(), _client.get_connected_port()])
@@ -118,7 +120,7 @@ func listen() -> void:
 	_thread = Thread.new()
 	var err = _server.listen(port)
 	if err != OK:
-		self.log.error("Unable to start GMC: %s", err)
+		self.log.error("Unable to start GMC: %s", error_string(err))
 		# The _process() method polls for client connections. If the server
 		# isn't listening, there's no reason to poll for clients.
 		set_process(false)
@@ -127,28 +129,33 @@ func listen() -> void:
 	set_process(true)
 
 ## Post an event to MPF
-func send_event(event_name: String) -> void:
+func send_event(event_name: String, bounceback: bool = true) -> void:
 	_send("trigger?name=%s" % event_name)
+	if bounceback:
+		self._bounceback(event_name)
 
-func send_event_with_args(event_name: String, args: Dictionary) -> void:
+func send_event_with_args(event_name: String, args: Dictionary, bounceback: bool = true) -> void:
 	if not args or args.is_empty():
 		return self.send_event(event_name)
-	args["name"] = event_name
-	var params = []
-	for k in args.keys():
-		if args[k] is String:
-			var v = args[k]
-			# Can't send back context because it interferes with triggering players
-			if k == "context":
-				k = "original_context"
-			elif k == "calling_context":
-				k = "original_calling_context"
-			params.append("%s=%s" % [k,v])
-	_send("trigger?%s" % ["&".join(params)])
+	if args.has("name") and args['name'] != event_name:
+		self.log.warning("'name' is a reserved key in send_event_with_args(). Arg value '%s' for event '%s' will be discarded.", [args['name'], event_name])
+	var event_string = _bcp_parse.encode_event_args(event_name, args)
+	_send("trigger?%s" % event_string)
+	if bounceback:
+		self._bounceback(event_name, args)
 
 func send_switch(switch_name: String, state: int = -1) -> void:
 	var message = "switch?name=%s&state=%s" % [switch_name, state]
 	_send(message)
+
+func send_bytes(trigger_name: String, data: PackedByteArray, kwargs: Dictionary = {}) -> void:
+	var params = []
+	for k in kwargs.keys():
+		params.append("%s=%s" % [k, kwargs[k]])
+	# !!! Due to MPF BCP parsing limitations 'bytes' MUST be the last arg
+	params.append("bytes=%d" % data.size())
+	self._send("%s?%s" % [trigger_name, "&".join(params)])
+	self._client.put_data(data)
 
 ## Send a specialized Service Mode command to MPF
 func send_service(subcommand: String, values: PackedStringArray = []) -> void:
@@ -156,8 +163,13 @@ func send_service(subcommand: String, values: PackedStringArray = []) -> void:
 	self._send("service?subcommand=%s&sort=bool:false%s" % [subcommand, suffix])
 
 ## Set a machine variable in MPF
-func set_machine_var(var_name: String, value) -> void:
-	self._send("set_machine_var?name=%s&value=%s" % [var_name, self.wrap_value_type(value)])
+func set_machine_var(var_name: String, value, persist=null) -> void:
+	# Only send the persist flag if explicitly passed, otherwise let the
+	# MPF config value take precedent
+	var persist_string = ""
+	if persist != null:
+		persist_string = "&persist=%s" % persist
+	self._send("set_machine_var?name=%s&value=%s%s" % [var_name, self.wrap_value_type(value), persist_string])
 
 ## Register an event handler for an MPFVariable
 func add_event_handler(event: String, handler: Callable) -> void:
@@ -182,19 +194,21 @@ func remove_event_handler(event: String, handler: Callable) -> void:
 
 ## Disconnect the BCP server
 func stop(is_exiting: bool = false) -> void:
-	self.log.log("Shutting down BCP Server and %s", "will not restart" if is_exiting else "awaiting new connection")
+	self.log.info("Shutting down BCP Server and %s", "will not restart" if is_exiting else "awaiting new connection")
 	# Lock the mutex to prevent the BCP thread from polling
-	_mutex.lock()
+	var did_lock = _mutex.try_lock()
 	_server.stop()
 	if _client:
 		# Say goodbye to MPF!
 		_send("goodbye")
 		_client.disconnect_from_host()
 		_client = null
-	_mutex.unlock()
+	if did_lock:
+		_mutex.unlock()
 
 	if _thread and _thread.is_started():
 		_thread.wait_to_finish()
+	_thread = null
 
 	if not is_exiting:
 		self.on_disconnect()
@@ -250,9 +264,17 @@ func on_stop() -> void:
 func _send(message: String) -> void:
 	if not _client:
 		return
-	self.log.verbose("Sending: %s" % message)
+	self.log.verbose("Sending: %s", message)
 	_client.put_data(("%s\n" % message).to_ascii_buffer())
 
+func _bounceback(event_name: String, args = null):
+	# If any handlers are registered for this event, call them directly
+	if event_name in self.registered_handlers:
+		for h in self.registered_handlers[event_name]:
+			if args:
+				h.call_deferred(args)
+			else:
+				h.call_deferred()
 
 func _thread_poll(_userdata=null) -> void:
 	# TBD: What is the optimal polling rate for the BCP client?
@@ -262,114 +284,137 @@ func _thread_poll(_userdata=null) -> void:
 		# If the mutex is locked, the system is shutting down
 		if not _mutex.try_lock():
 			return
+		var err = _client.poll()
+		if err != OK:
+			self.log.error("BCP client error: %s" % error_string(err))
+			_mutex.unlock()
+			call_deferred("stop")
+			return
+
+		if not _client or _client.get_status() != StreamPeerTCP.Status.STATUS_CONNECTED:
+			self.log.info("BCP client disconnected.")
+			_mutex.unlock()
+
+			call_deferred("stop")
+			return
+
 		var bytes = _client.get_available_bytes()
 		if not bytes:
 			OS.delay_msec(delay)
-		else:
-			var messages := _client.get_string(bytes).split("\n")
-			for message_raw in messages:
-				if message_raw.is_empty():
-					continue
-				self.log.verbose("Received: %s", message_raw)
-				var message: Dictionary = _bcp_parse.parse(message_raw)
-				# Log any errors
-				if message.has("error"):
-					self.log.error(message.error)
+			continue
 
-				# Known signals can be broadcast with arbitrary payloads
-				if message.cmd in auto_signals:
-					message.cmd = "signal"
+		var messages := _client.get_string(bytes).split("\n")
+		for message_raw in messages:
+			if message_raw.is_empty():
+				continue
+			self.log.verbose("Received: %s", message_raw)
+			var message: Dictionary = _bcp_parse.parse(message_raw)
+			# Log any errors
+			if message.has("error"):
+				self.log.error(message.error)
 
-				# If on_message() returns null, the message has been handled
-				# and no further action is necessary.
-				if self.on_message(message) == null:
-					continue
+			# Known signals can be broadcast with arbitrary payloads
+			if message.cmd in auto_signals:
+				message.cmd = "signal"
 
-				match message.cmd:
-					"ball_end":
-						call_deferred("on_ball_end")
-					"ball_start":
-						call_deferred("on_ball_start", message.ball, message.player_num)
-					"goodbye":
-						_send("goodbye")
-						call_deferred("stop")
-						# Resume polling for new client connections
-						call_deferred("set_process", true)
-					"hello":
-						_send("hello")
-						call_deferred("_on_connect", message)
-					"item_highlighted":
-						call_deferred("emit_signal", "item_highlighted", message)
-					"list_coils":
-						call_deferred("emit_signal", "service", message)
-					"list_lights":
-						call_deferred("emit_signal", "service", message)
-					"list_switches":
-						call_deferred("emit_signal", "service", message)
-					"machine_variable":
-						call_deferred("deferred_game", "update_machine", message)
-					"mode_list":
-						call_deferred("deferred_game", "update_modes", message)
-					"mode_start":
-						if message.name == "game":
-							call_deferred("deferred_game", "reset")
-						call_deferred("on_mode_start", message.name)
-					"mode_stop":
-						pass
-					"player_added":
-						call_deferred("deferred_game", "add_player", message)
-					"player_turn_start":
-						call_deferred("deferred_game", "start_player_turn", message)
-					"player_variable":
-						call_deferred("deferred_game_player", message)
-					"reset":
-						self.log.info("Resetting connection with BCP client")
-						_send("reset_complete")
-						# Core MPF events
-						_send("monitor_start?category=core_events")
-						_send("monitor_start?category=service_events")
-						_send("monitor_start?category=modes")
-						_send("monitor_start?category=player_vars")
-						_send("monitor_start?category=machine_vars")
-						# Standard events
-						_send("register_trigger?event=item_highlighted")
-						_send("register_trigger?event=bonus_entry")
-						_send("register_trigger?event=high_score_enter_initials")
-						_send("register_trigger?event=high_score_award_display")
-						# Custom events
-						for e in self.registered_events + self.auto_signals:
-							_send("register_trigger?event=%s" % e)
-					"service":
-						call_deferred("emit_signal", "service", message)
-					"service_mode_entered":
-						call_deferred("deferred_scene", "res://modes/Service.tscn")
-					"settings":
-						call_deferred("deferred_game", "update_settings", message)
-					"signal":
-						call_deferred("emit_signal", message.name, message)
-					"slides_play":
-						call_deferred("deferred_mc", "play", message)
-					"slides_clear":
-						# TBD: Need to distinguish slides/widgets/sounds?
-						# Don't think so, all config_players have the same callback
-						# so all three will post at the same time.
-						call_deferred("emit_signal", "clear", message.context)
-					"sounds_clear":
-						pass
-					"sounds_play":
-						call_deferred("deferred_mc", "play", message)
-					"timer":
-						call_deferred("emit_signal", "mpf_timer", message)
-					"widgets_play":
-						call_deferred("deferred_mc", "play", message)
-					_:
-						if message.get("name") not in self.registered_handlers:
-							self.log.warning("No handler defined for BCP action %s" % message_raw)
+			# If on_message() returns null, the message has been handled
+			# and no further action is necessary.
+			if self.on_message(message) == null:
+				continue
 
-				# If any handlers are registered for this event, post them
-				if message.get("name") in self.registered_handlers:
-					for h in self.registered_handlers[message.name]:
-						h.call_deferred(message)
+			self.log.debug("%s", message)
+			match message.cmd:
+				"ball_end":
+					call_deferred("on_ball_end")
+				"ball_start":
+					call_deferred("on_ball_start", message.ball, message.player_num)
+				"bonus_entry":
+					# We are subscribed for bonus handlers, but no explicit action
+					pass
+				"buses_play":
+					call_deferred("deferred_mc", "play", message)
+				"goodbye":
+					_send("goodbye")
+					call_deferred("stop")
+					# Resume polling for new client connections
+					call_deferred("set_process", true)
+				"hello":
+					_send("hello")
+					call_deferred("_on_connect", message)
+				"item_highlighted":
+					item_highlighted.emit.call_deferred(message)
+				"list_coils":
+					service.emit.call_deferred(message)
+				"list_lights":
+					service.emit.call_deferred(message)
+				"list_switches":
+					service.emit.call_deferred(message)
+				"machine_variable":
+					call_deferred("deferred_game", "update_machine", message)
+				"mode_list":
+					call_deferred("deferred_game", "update_modes", message)
+				"mode_start":
+					if message.name == "game":
+						call_deferred("deferred_game", "reset")
+					call_deferred("on_mode_start", message.name)
+				"mode_stop":
+					pass
+				"player_added":
+					call_deferred("deferred_game", "add_player", message)
+				"player_turn_start":
+					call_deferred("deferred_game", "start_player_turn", message)
+				"player_variable":
+					call_deferred("deferred_game_player", message)
+				"reset":
+					self.log.info("Resetting connection with BCP client")
+					_send("reset_complete")
+					# Core MPF events
+					_send("monitor_start?category=core_events")
+					_send("monitor_start?category=service_events")
+					_send("monitor_start?category=modes")
+					_send("monitor_start?category=player_vars")
+					_send("monitor_start?category=machine_vars")
+					# Standard events
+					_send("register_trigger?event=item_highlighted")
+					_send("register_trigger?event=text_input")
+					_send("register_trigger?event=bonus_entry")
+					# Custom events
+					for e in self.registered_events + self.auto_signals:
+						_send("register_trigger?event=%s" % e)
+				"service":
+					service.emit.call_deferred(message)
+				"service_mode_entered":
+					# The default service.yaml includes a slide_player for service slide
+					pass
+				"settings":
+					call_deferred("deferred_game", "update_settings", message)
+				"signal":
+					call_deferred("emit_signal", message.name, message)
+				"slides_play":
+					call_deferred("deferred_mc", "play", message)
+				"slides_clear", "widgets_clear":
+					# TBD: Need to distinguish slides/widgets/sounds?
+					# Don't think so, all config_players have the same callback
+					# so all three will post at the same time.
+					clear.emit.call_deferred(message.context)
+				"sounds_clear":
+					pass
+				"sounds_play":
+					call_deferred("deferred_mc", "play", message)
+				"text_input":
+					text_input.emit.call_deferred(message)
+				"timer":
+					mpf_timer.emit.call_deferred(message)
+				"widgets_play":
+					call_deferred("deferred_mc", "play", message)
+				_:
+					if message.get("name") not in self.registered_handlers:
+						self.log.warning("No handler defined for BCP action %s", message_raw)
+
+			# If any handlers are registered for this event, post them
+			if message.get("name") in self.registered_handlers:
+				for h in self.registered_handlers[message.name]:
+					h.call_deferred(message)
 
 		# Free the mutex in case the main thread is trying to shut down
 		_mutex.unlock()

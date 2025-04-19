@@ -58,8 +58,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
@@ -70,8 +74,7 @@
               "RelativeToolTip": "config\\drop_targets.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-17T18:34:44.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:34:44.322Z"
             },
             {
               "$type": "Document",
@@ -83,8 +86,7 @@
               "RelativeToolTip": "config\\coils.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-17T18:34:43.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:34:43.461Z"
             },
             {
               "$type": "Document",
@@ -96,8 +98,7 @@
               "RelativeToolTip": "config\\assets.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-17T18:34:42.687Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:34:42.687Z"
             },
             {
               "$type": "Document",
@@ -109,8 +110,7 @@
               "RelativeToolTip": "config\\player_variables.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-17T18:21:57.374Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-17T18:21:57.374Z"
             },
             {
               "$type": "Document",
@@ -122,8 +122,7 @@
               "RelativeToolTip": "warhammer_godot\\addons\\mpf-gmc\\scripts\\mpf_game.gd",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-16T23:01:39.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T23:01:39.645Z"
             },
             {
               "$type": "Document",
@@ -135,8 +134,7 @@
               "RelativeToolTip": "warhammer_godot\\addons\\mpf-gmc\\scripts\\bcp_server.gd",
               "ViewState": "AgIAADsBAAAAAAAAAAAQwEwBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-16T23:01:38.894Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T23:01:38.894Z"
             },
             {
               "$type": "Document",
@@ -148,8 +146,7 @@
               "RelativeToolTip": "warhammer_godot\\addons\\mpf-gmc\\classes\\mpf_variable.gd",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwCoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-16T23:01:37.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T23:01:37.43Z"
             },
             {
               "$type": "Document",
@@ -174,8 +171,7 @@
               "RelativeToolTip": "modes\\base\\config\\base.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-16T21:20:33.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-16T21:20:33.455Z"
             },
             {
               "$type": "Document",
@@ -200,8 +196,7 @@
               "RelativeToolTip": "config\\lights.yaml",
               "ViewState": "AgIAADEBAAAAAAAQ1XDtv1EBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2024-04-11T02:52:07.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-11T02:52:07.041Z"
             },
             {
               "$type": "Document",
@@ -213,8 +208,7 @@
               "RelativeToolTip": "modes\\high_score\\config\\high_score.yaml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2023-07-23T02:09:37.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2023-07-23T02:09:37.128Z"
             },
             {
               "$type": "Bookmark",

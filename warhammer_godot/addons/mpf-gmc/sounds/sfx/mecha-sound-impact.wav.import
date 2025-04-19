@@ -2,12 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bam511h8mc05o"
-valid=false
+uid="uid://druyf1ma0bqpt"
+path="res://.godot/imported/mecha-sound-impact.wav-d4ac36cc9ca9b263a8cfc6016d4096fc.sample"
 
 [deps]
 
 source_file="res://addons/mpf-gmc/sounds/sfx/mecha-sound-impact.wav"
+dest_files=["res://.godot/imported/mecha-sound-impact.wav-d4ac36cc9ca9b263a8cfc6016d4096fc.sample"]
 
 [params]
 

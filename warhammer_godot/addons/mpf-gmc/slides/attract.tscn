@@ -1,10 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://baf8eg0d8gp4d"]
+[gd_scene load_steps=10 format=3 uid="uid://baf8eg0d8gp4d"]
 
-[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="1_oppno"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ya6r8"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_logger.gd" id="2_4of0r"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_inhvb"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="5_nje2r"]
 [ext_resource type="PackedScene" uid="uid://dlqx7vyxh86ek" path="res://addons/mpf-gmc/slides/PoweredBy.tscn" id="6_dx5i2"]
 [ext_resource type="PackedScene" uid="uid://dbmwyjindlq7o" path="res://addons/mpf-gmc/slides/attract2.tscn" id="7_akq5y"]
 [ext_resource type="PackedScene" uid="uid://cxpsk5thhmudh" path="res://addons/mpf-gmc/slides/kanedaSucks.tscn" id="8_8d7rx"]
@@ -20,123 +18,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ya6r8")
+mask_from_active = null
 
 [node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
 script = ExtResource("2_4of0r")
 log_level = 10
-loggers = [NodePath(".."), NodePath("../MPFCarousel"), NodePath("../MPFCarousel/gameover"), NodePath("../MPFCarousel/title")]
+loggers = [NodePath(".."), NodePath("../MPFCarousel"), NodePath(""), NodePath("")]
 
 [node name="MPFCarousel" type="Node2D" parent="."]
 script = ExtResource("2_inhvb")
 carousel_name = "attract"
-
-[node name="ColorRect" type="ColorRect" parent="MPFCarousel"]
-visible = false
-custom_minimum_size = Vector2(1920, 1080)
-offset_right = 1921.0
-offset_bottom = 1080.0
-color = Color(0.0895249, 0.199466, 0.341508, 1)
-
-[node name="gameover" type="Node2D" parent="MPFCarousel"]
-visible = false
-
-[node name="Label" type="Label" parent="MPFCarousel/gameover"]
-visible = false
-offset_right = 977.0
-offset_bottom = 610.0
-theme = ExtResource("1_oppno")
-text = "GAME OVER "
-
-[node name="title" type="Node2D" parent="MPFCarousel"]
-visible = false
-
-[node name="Label" type="Label" parent="MPFCarousel/title"]
-visible = false
-offset_left = 479.0
-offset_top = 375.0
-offset_right = 1346.0
-offset_bottom = 512.0
-theme = ExtResource("1_oppno")
-text = "WARHAMMER 40k"
-
-[node name="last_game_scores" type="Node2D" parent="MPFCarousel"]
-visible = false
-
-[node name="Label" type="Label" parent="MPFCarousel/last_game_scores"]
-visible = false
-offset_left = 710.0
-offset_top = 180.0
-offset_right = 1787.0
-offset_bottom = 801.0
-theme = ExtResource("1_oppno")
-text = "100,000"
-
-[node name="Grand Champion" type="Node2D" parent="MPFCarousel"]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="MPFCarousel/Grand Champion"]
-visible = false
-custom_minimum_size = Vector2(1920, 1080)
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="MPFCarousel/Grand Champion"]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 264.0
-offset_top = 215.0
-offset_right = 1620.0
-offset_bottom = 516.0
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_oppno")
-text = "The Emporer's Chosen"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Inital" type="Label" parent="MPFCarousel/Grand Champion"]
-offset_left = 571.0
-offset_top = 465.0
-offset_right = 1332.0
-offset_bottom = 728.0
-theme = ExtResource("1_oppno")
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("5_nje2r")
-variable_type = 2
-variable_name = "grandChampionName"
-comma_separate = true
-
-[node name="Grand Champion Score" type="Label" parent="MPFCarousel/Grand Champion"]
-offset_left = 453.0
-offset_top = 733.0
-offset_right = 1488.0
-offset_bottom = 937.0
-theme = ExtResource("1_oppno")
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("5_nje2r")
-variable_type = 2
-variable_name = "grandChampionScore"
-comma_separate = true
 
 [node name="PoweredBy" parent="MPFCarousel" instance=ExtResource("6_dx5i2")]
 visible = false
 
 [node name="attract2" parent="MPFCarousel" instance=ExtResource("7_akq5y")]
 visible = false
+mask_from_active = null
 
 [node name="kanedaSucks" parent="MPFCarousel" instance=ExtResource("8_8d7rx")]
 visible = false
 
 [node name="ThankYou" parent="MPFCarousel" instance=ExtResource("9_xigc1")]
 visible = false
+mask_from_active = null
 
 [node name="ThemeSlide" parent="MPFCarousel" instance=ExtResource("10_ntyy0")]
 visible = false
+mask_from_active = null
 
 [node name="credits" parent="MPFCarousel" instance=ExtResource("11_rhc4m")]
 visible = false
+mask_from_active = null

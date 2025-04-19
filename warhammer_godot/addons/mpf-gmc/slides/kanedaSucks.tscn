@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://tgopdso34cok" path="res://addons/mpf-gmc/slides/Artboard 1.png" id="2_cqf25"]
 
 [node name="MPFSlide" instance=ExtResource("1_yk3oo")]
+mask_from_active = null
 
 [node name="ColorRect" parent="." index="0"]
 color = Color(1, 1, 1, 1)

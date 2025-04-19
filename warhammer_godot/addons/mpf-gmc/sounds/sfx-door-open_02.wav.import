@@ -2,12 +2,12 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dqsr28n8j4geg"
+uid="uid://exv14ubcy0tn"
 valid=false
 
 [deps]
 
-source_file="res://addons/mpf-gmc/sounds/voice/xenos-spotted.wav"
+source_file="res://addons/mpf-gmc/sounds/sfx-door-open_02.wav"
 
 [params]
 

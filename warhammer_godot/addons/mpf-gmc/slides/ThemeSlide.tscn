@@ -9,6 +9,7 @@ custom_minimum_size = Vector2(1920, 0)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_pa8t2")
+mask_from_active = null
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 visible = false

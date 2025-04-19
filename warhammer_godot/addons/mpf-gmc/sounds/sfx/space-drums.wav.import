@@ -2,12 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://ccoknxsghhknj"
-valid=false
+uid="uid://bcvpvn6rwbsre"
+path="res://.godot/imported/space-drums.wav-789873958c59ed87f33529891458b008.sample"
 
 [deps]
 
 source_file="res://addons/mpf-gmc/sounds/sfx/space-drums.wav"
+dest_files=["res://.godot/imported/space-drums.wav-789873958c59ed87f33529891458b008.sample"]
 
 [params]
 

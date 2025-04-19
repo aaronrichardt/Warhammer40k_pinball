@@ -2,12 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dbvth6rjkpeb4"
-valid=false
+uid="uid://djfqv1dakb35l"
+path="res://.godot/imported/sfx-door-open.wav-364978f36b79bab59a83d8ee63a48497.sample"
 
 [deps]
 
 source_file="res://addons/mpf-gmc/sounds/sfx/sfx-door-open.wav"
+dest_files=["res://.godot/imported/sfx-door-open.wav-364978f36b79bab59a83d8ee63a48497.sample"]
 
 [params]
 

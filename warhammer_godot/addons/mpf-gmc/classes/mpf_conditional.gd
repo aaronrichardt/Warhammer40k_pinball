@@ -1,6 +1,5 @@
-@tool
 class_name MPFConditional
-extends Node2D
+extends Control
 ## A node that conditionally appears or hides based on a condition.
 
 
@@ -28,26 +27,31 @@ const VariableType = preload("const.gd").VariableType
 ## If set, this nod will only render if the number of players is less than or equal to this value.
 @export var max_players: int
 
-var initialized = false
+var initialized := false
 
 @warning_ignore("shadowed_global_identifier")
 var log: GMCLogger
-var operator
+var operator: Callable
 var true_variable_name: String
 var target
 
 func _enter_tree() -> void:
 	self.log = preload("res://addons/mpf-gmc/scripts/log.gd").new("Conditional<%s>" % self.name)
+	if self.min_players or self.max_players:
+		MPF.game.player_added.connect(self._on_player_added)
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
 		self._initialize()
-	var parent_slide = MPF.util.find_parent_slide_or_widget(self)
+	var parent_slide: MPFSceneBase = MPF.util.find_parent_slide_or_widget(self)
 	parent_slide.register_updater(self)
 
 func _exit_tree() -> void:
-	var parent_slide = MPF.util.find_parent_slide_or_widget(self)
+	var parent_slide: MPFSceneBase = MPF.util.find_parent_slide_or_widget(self)
 	parent_slide.remove_updater(self)
+
+func _on_player_added(_num_players) -> void:
+	self.show_or_hide()
 
 @warning_ignore("native_method_override")
 func show():
@@ -56,7 +60,7 @@ func show():
 	if not self.initialized:
 		self._initialize()
 	else:
-		self._show_or_hide()
+		self.show_or_hide()
 
 func update(settings: Dictionary, kwargs: Dictionary = {}):
 	if self.variable_type == VariableType.EVENT_ARG:
@@ -68,7 +72,7 @@ func update(settings: Dictionary, kwargs: Dictionary = {}):
 	self.show_or_hide()
 
 ## Override this method to pass in the correct value and set visibility
-func _show_or_hide():
+func show_or_hide():
 	if self.min_players and MPF.game.num_players < self.min_players:
 		self.log.info("Minimum players not met, hiding")
 		self.visible = false
@@ -76,25 +80,41 @@ func _show_or_hide():
 		self.log.info("Maximum players exceeded, hiding")
 		self.visible = false
 	elif self.target:
-		self.show_or_hide()
+		self.show_or_hide_from_condition()
 
-func show_or_hide():
-	self.visible = self.evaluate(self.condition_value)
+func show_or_hide_from_condition():
+	var do_show:bool = self.evaluate(self.condition_value)
+	self.log.info("Condition evaluates to %s, will %s", [do_show, "show" if do_show else "hide"])
+	self.visible = do_show
 
 func evaluate(value):
+	# If there is no target, evaluate false
+	if not self.target:
+		self.log.debug("Cannot evaluate value '%s' because no conditional target exists.", value)
+		return false
 	var t = self.target.get(self.true_variable_name)
 	self.log.debug("Evaluating value '%s' against current %s value '%s'", [value, self.true_variable_name, t])
-	# If there is no target, evaluate false
-	if not t:
-		return false
 	var v = type_convert(value, typeof(t))
-	return self.operator.call(t, v)
+	# For production builds, just evaluate and return
+	if OS.has_feature("template"):
+		return self.operator.call(t, v)
+	# For development, this block will test case-sensitivity
+	var result: bool = self.operator.call(t, v)
+	if not result and typeof(v) in [TYPE_STRING, TYPE_STRING_NAME]:
+		if self.operator.call(t.to_lower(), v.to_lower()):
+			self.log.warning("Conditional %s didn't match target value '%s' to conditional value '%s'. Matches are case-sensitive!." %
+				[self.name, t, v])
+	return result
 
 func _initialize():
 	# Look up the operator
 	self.operator = self._find_operator()
 	self.target = self._find_target()
-	self._show_or_hide()
+
+func _on_slide_changed(active_slide):
+	# For ACTIVE_SLIDE conditionals, re-evaluate when the slide changes
+	self.target = active_slide
+	self.show_or_hide_from_condition()
 
 func _find_target():
 	var base
@@ -102,7 +122,7 @@ func _find_target():
 		VariableType.CURRENT_PLAYER:
 			base = MPF.game.player
 		VariableType.MACHINE_VAR:
-			base = MPF.game.machine
+			base = MPF.game.machine_vars
 		VariableType.SETTING:
 			base = MPF.game.settings
 		VariableType.EVENT_ARG:
@@ -116,8 +136,14 @@ func _find_target():
 			if MPF.game.players.size() > 2:
 				base = MPF.game.players[2]
 		VariableType.PLAYER_4:
-			if MPF.game.players.size() > 4:
-				base = MPF.game.players[4]
+			if MPF.game.players.size() > 3:
+				base = MPF.game.players[3]
+		VariableType.ACTIVE_SLIDE:
+			var display: MPFDisplay = MPF.util.find_parent_display(self)
+			if not display:
+				return
+			display.slide_changed.connect(self._on_slide_changed)
+			base = display.get_slide()
 	if "." in self.variable_name and base != null:
 		var nested = self.variable_name.split(".")
 		while nested.size() > 1:
