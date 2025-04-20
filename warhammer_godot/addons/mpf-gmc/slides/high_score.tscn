@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://lqeoxevsy0ex"]
+[gd_scene load_steps=3 format=3 uid="uid://bhb8sx68danr6"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_adeqt"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_text_input.gd" id="2_6uslk"]
@@ -33,3 +33,4 @@ offset_right = 1264.0
 offset_bottom = 332.0
 theme_override_font_sizes/normal_font_size = 60
 bbcode_enabled = true
+text = "[pulse freq=3.0 color=#ff00ffff ease=-1.0]A[/pulse]"

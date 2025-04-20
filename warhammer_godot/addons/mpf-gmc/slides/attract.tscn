@@ -23,9 +23,10 @@ mask_from_active = null
 [node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
 script = ExtResource("2_4of0r")
 log_level = 10
-loggers = [NodePath(".."), NodePath("../MPFCarousel"), NodePath(""), NodePath("")]
+loggers = [NodePath(".."), NodePath(""), null, null]
 
-[node name="MPFCarousel" type="Node2D" parent="."]
+[node name="MPFCarousel" type="Control" parent="."]
+anchors_preset = 0
 script = ExtResource("2_inhvb")
 carousel_name = "attract"
 
@@ -41,11 +42,9 @@ visible = false
 
 [node name="ThankYou" parent="MPFCarousel" instance=ExtResource("9_xigc1")]
 visible = false
-mask_from_active = null
 
 [node name="ThemeSlide" parent="MPFCarousel" instance=ExtResource("10_ntyy0")]
 visible = false
-mask_from_active = null
 
 [node name="credits" parent="MPFCarousel" instance=ExtResource("11_rhc4m")]
 visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhy8ilap4a45x"]
+[gd_scene load_steps=6 format=3 uid="uid://cf4hhrhlwn67h"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/slides/service.gd" id="1"]
 [ext_resource type="Theme" uid="uid://ergwdj4cg7t1" path="res://addons/mpf-gmc/slides/service/service_theme.tres" id="1_fyx83"]
@@ -39,36 +39,44 @@ theme_override_constants/margin_top = 20
 [node name="TabContainer" type="TabContainer" parent="MarginContainer"]
 layout_mode = 2
 focus_mode = 2
+current_tab = 0
 
 [node name="Standard" parent="MarginContainer/TabContainer" instance=ExtResource("2")]
-visible = false
 layout_mode = 2
+metadata/_tab_index = 0
 
 [node name="Features" parent="MarginContainer/TabContainer" instance=ExtResource("2")]
 visible = false
 layout_mode = 2
 settingType = "feature"
+metadata/_tab_index = 1
 
 [node name="Game" parent="MarginContainer/TabContainer" instance=ExtResource("2")]
 visible = false
 layout_mode = 2
 settingType = "game"
+metadata/_tab_index = 2
 
 [node name="Coin" parent="MarginContainer/TabContainer" instance=ExtResource("2")]
 visible = false
 layout_mode = 2
 settingType = "coin"
+metadata/_tab_index = 3
 
 [node name="Utilities" parent="MarginContainer/TabContainer" instance=ExtResource("3")]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 4
 
 [node name="Sound" parent="MarginContainer/TabContainer" instance=ExtResource("4")]
 visible = false
 layout_mode = 2
+metadata/_tab_index = 5
 
 [node name="Exit" type="CenterContainer" parent="MarginContainer/TabContainer"]
+visible = false
 layout_mode = 2
+metadata/_tab_index = 6
 
 [node name="Label" type="Label" parent="MarginContainer/TabContainer/Exit"]
 layout_mode = 2

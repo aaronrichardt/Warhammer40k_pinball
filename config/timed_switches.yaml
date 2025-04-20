@@ -1,7 +1,7 @@
 #config_version=6
 
-timed_switches:
-  game_cancel:
-    switch_tags: start, left_flipper
-    time: 5s
-    events_when_active: end_game
+#timed_switches:
+#  game_cancel:
+#    switch_tags: start, left_flipper
+#    time: 515s
+#    events_when_active: end_game

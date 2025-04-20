@@ -3,9 +3,12 @@
     "",
     "\\config",
     "\\data",
-    "\\warhammer_godot\\addons",
-    "\\warhammer_godot\\addons\\mpf-gmc"
+    "\\modes",
+    "\\modes\\attract",
+    "\\modes\\attract\\config",
+    "\\modes\\carousel2",
+    "\\modes\\carousel2\\config"
   ],
-  "SelectedNode": "\\data\\machine_vars.yaml",
+  "SelectedNode": "\\modes\\attract\\config\\attract.yaml",
   "PreviewInSolutionExplorer": false
 }
