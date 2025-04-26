@@ -23,7 +23,7 @@ mask_from_active = null
 [node name="MPFLogger" type="Node" parent="." node_paths=PackedStringArray("loggers")]
 script = ExtResource("2_4of0r")
 log_level = 10
-loggers = [NodePath(".."), NodePath(""), null, null]
+loggers = [NodePath(".."), null, null, null]
 
 [node name="MPFCarousel" type="Control" parent="."]
 anchors_preset = 0

@@ -1,14 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\config",
-    "\\data",
     "\\modes",
     "\\modes\\attract",
     "\\modes\\attract\\config",
-    "\\modes\\carousel2",
-    "\\modes\\carousel2\\config"
+    "\\modes\\attract\\shows",
+    "\\modes\\gorkmorkrollovers",
+    "\\modes\\gorkmorkrollovers\\config",
+    "\\modes\\gorkmorkrollovers\\shows"
   ],
-  "SelectedNode": "\\modes\\attract\\config\\attract.yaml",
   "PreviewInSolutionExplorer": false
 }

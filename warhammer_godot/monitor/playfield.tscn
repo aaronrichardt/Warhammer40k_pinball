@@ -1,0 +1,1476 @@
+[gd_scene load_steps=13 format=3 uid="uid://nbyvgvjyt7yl"]
+
+[ext_resource type="Texture2D" uid="uid://bmohtlqb0ukf1" path="res://monitor/playfield.jpg" id="1_5r7ph"]
+[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCPlayfield.gd" id="1_25o1r"]
+[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCLight.gd" id="3_lapcf"]
+[ext_resource type="Texture2D" uid="uid://u5hp0m0sfd0a" path="res://addons/gmc-toolbox/playfield/inserts/circle-insert.svg" id="3_meo0c"]
+[ext_resource type="Script" path="res://addons/gmc-toolbox/playfield/GMCSwitch.gd" id="4_iyige"]
+[ext_resource type="Texture2D" uid="uid://cjkprj1v0u8up" path="res://addons/gmc-toolbox/playfield/inserts/long-triangle-insert.svg" id="5_dctvr"]
+[ext_resource type="Texture2D" uid="uid://dnyvyrnbf1qpv" path="res://addons/gmc-toolbox/playfield/icons/switch-inactive.svg" id="5_nc38d"]
+[ext_resource type="Texture2D" uid="uid://dty6coaegtiyf" path="res://addons/gmc-toolbox/playfield/icons/switch-active.svg" id="6_41o5i"]
+[ext_resource type="Texture2D" uid="uid://c6g8gmrlmn307" path="res://addons/gmc-toolbox/show_creator/shapes/circle-outline.svg" id="9_ghmpn"]
+
+[sub_resource type="Animation" id="Animation_m7chs"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Circle-outline:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.0444017, 0.0444017)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Circle-outline:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_36txl"]
+resource_name = "rings"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Circle-outline:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.0416183, 0.489536, 0.169028, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationPlayer/Circle-outline:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.0444017, 0.0444017), Vector2(2.24594, 2.24594)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fyvs4"]
+_data = {
+"RESET": SubResource("Animation_m7chs"),
+"rings": SubResource("Animation_36txl")
+}
+
+[node name="playfield" type="TextureRect" node_paths=PackedStringArray("animation_player")]
+texture = ExtResource("1_5r7ph")
+script = ExtResource("1_25o1r")
+animation_player = NodePath("AnimationPlayer")
+monitor_size = Vector2(577, 1203)
+
+[node name="lights" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="l_omega_1" type="Sprite2D" parent="lights"]
+position = Vector2(245, 652)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_2" type="Sprite2D" parent="lights"]
+position = Vector2(235, 673)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_3" type="Sprite2D" parent="lights"]
+position = Vector2(235, 695)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_4" type="Sprite2D" parent="lights"]
+position = Vector2(249, 710)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_5" type="Sprite2D" parent="lights"]
+position = Vector2(277, 708)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_6" type="Sprite2D" parent="lights"]
+position = Vector2(292, 690)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_7" type="Sprite2D" parent="lights"]
+position = Vector2(293, 669)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_omega_8" type="Sprite2D" parent="lights"]
+position = Vector2(276, 651)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_Solemnace_circle" type="Sprite2D" parent="lights"]
+position = Vector2(353, 620)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_adeptus_mechanicius" type="Sprite2D" parent="lights"]
+position = Vector2(449, 643)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_mystery" type="Sprite2D" parent="lights"]
+position = Vector2(434, 661)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_light_outlanes" type="Sprite2D" parent="lights"]
+position = Vector2(395, 675)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_nurgle5" type="Sprite2D" parent="lights"]
+position = Vector2(457, 677)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_warp_p" type="Sprite2D" parent="lights"]
+position = Vector2(476, 762)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_warp_r" type="Sprite2D" parent="lights"]
+position = Vector2(437, 749)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_2xscoring" type="Sprite2D" parent="lights"]
+position = Vector2(371, 705)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_addaball" type="Sprite2D" parent="lights"]
+position = Vector2(357, 667)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_necron_ui" type="Sprite2D" parent="lights"]
+position = Vector2(318, 750)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_nurgle_ui" type="Sprite2D" parent="lights"]
+position = Vector2(290, 751)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_chaos_ui" type="Sprite2D" parent="lights"]
+position = Vector2(261, 750)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_tzeench_ui" type="Sprite2D" parent="lights"]
+position = Vector2(235, 751)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_tyranid_ui" type="Sprite2D" parent="lights"]
+position = Vector2(206, 750)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_warp_a" type="Sprite2D" parent="lights"]
+position = Vector2(92, 749)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_warp_w" type="Sprite2D" parent="lights"]
+position = Vector2(52, 761)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_left_sling_upper" type="Sprite2D" parent="lights"]
+position = Vector2(126, 792)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_left_sling_lower" type="Sprite2D" parent="lights"]
+position = Vector2(139, 840)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_left_inlane_upper" type="Sprite2D" parent="lights"]
+position = Vector2(92, 901)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_left_inlane_lower" type="Sprite2D" parent="lights"]
+position = Vector2(133, 927)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_ballsave" type="Sprite2D" parent="lights"]
+position = Vector2(263, 1017)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1"]
+
+[node name="l_right_inlane_lower" type="Sprite2D" parent="lights"]
+position = Vector2(384, 938)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_right_inlane_upper" type="Sprite2D" parent="lights"]
+position = Vector2(426, 904)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_right_sling_lower" type="Sprite2D" parent="lights"]
+position = Vector2(382, 855)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain1", "GI"]
+
+[node name="l_xenos_s" type="Sprite2D" parent="lights"]
+position = Vector2(122, 631)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_xenos_o" type="Sprite2D" parent="lights"]
+position = Vector2(123, 600)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_xenos_n" type="Sprite2D" parent="lights"]
+position = Vector2(123, 569)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_xenos_e" type="Sprite2D" parent="lights"]
+position = Vector2(124, 539)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_xenos_x" type="Sprite2D" parent="lights"]
+position = Vector2(124, 506)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_orkface1" type="Sprite2D" parent="lights"]
+position = Vector2(201, 467)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_orkface2" type="Sprite2D" parent="lights"]
+position = Vector2(231, 460)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_orkface3" type="Sprite2D" parent="lights"]
+position = Vector2(197, 442)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_orkface4" type="Sprite2D" parent="lights"]
+position = Vector2(228, 431)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_left_orbit_circle" type="Sprite2D" parent="lights"]
+position = Vector2(96, 421)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_left_innerloop_circle" type="Sprite2D" parent="lights"]
+position = Vector2(140, 391)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_left_orbit_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(83, 386)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_left_innerloop_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(134, 347)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_H" type="Sprite2D" parent="lights"]
+position = Vector2(204, 400)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_G" type="Sprite2D" parent="lights"]
+position = Vector2(196, 378)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_A" type="Sprite2D" parent="lights"]
+position = Vector2(192, 358)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_A2" type="Sprite2D" parent="lights"]
+position = Vector2(186, 337)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_W" type="Sprite2D" parent="lights"]
+position = Vector2(181, 318)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_waagh_!" type="Sprite2D" parent="lights"]
+position = Vector2(174, 292)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_nurgle1" type="Sprite2D" parent="lights"]
+position = Vector2(213, 269)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_center_ramp_circle" type="Sprite2D" parent="lights"]
+position = Vector2(246, 251)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_center_ramp_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(247, 204)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_nurgle2" type="Sprite2D" parent="lights"]
+position = Vector2(271, 193)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_right_innerloop_circle" type="Sprite2D" parent="lights"]
+position = Vector2(301, 231)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_upper_lightingbolt1" type="Sprite2D" parent="lights"]
+position = Vector2(297, 306)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_upper_lightingbolt2" type="Sprite2D" parent="lights"]
+position = Vector2(328, 317)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_lower_lightingbolt" type="Sprite2D" parent="lights"]
+position = Vector2(316, 359)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_lightlock" type="Sprite2D" parent="lights"]
+position = Vector2(347, 386)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_light_spinners" type="Sprite2D" parent="lights"]
+position = Vector2(339, 417)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_bonusx" type="Sprite2D" parent="lights"]
+position = Vector2(336, 445)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_light_mystery" type="Sprite2D" parent="lights"]
+position = Vector2(331, 475)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain2"]
+
+[node name="l_solemnace_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(369, 576)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_right_orbit_cicle" type="Sprite2D" parent="lights"]
+position = Vector2(413, 582)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_right_orbit_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(438, 540)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_necron_lock1" type="Sprite2D" parent="lights"]
+position = Vector2(420, 449)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_necron_lock2" type="Sprite2D" parent="lights"]
+position = Vector2(438, 397)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_nurgle4" type="Sprite2D" parent="lights"]
+position = Vector2(457, 312)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_pop_flasher" type="Sprite2D" parent="lights"]
+position = Vector2(418, 269)
+scale = Vector2(0.18963, 0.18963)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.3
+tags = ["Chain3"]
+
+[node name="l_jackpot" type="Sprite2D" parent="lights"]
+position = Vector2(466, 222)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_super_jackpot" type="Sprite2D" parent="lights"]
+position = Vector2(477, 175)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_rollover_right" type="Sprite2D" parent="lights"]
+position = Vector2(449, 123)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3", "GI"]
+
+[node name="l_rollover_center" type="Sprite2D" parent="lights"]
+position = Vector2(403, 123)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3", "GI"]
+
+[node name="l_rollover_mork" type="Sprite2D" parent="lights"]
+position = Vector2(427, 71)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_rollover_gork" type="Sprite2D" parent="lights"]
+position = Vector2(378, 73)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_rollover_left" type="Sprite2D" parent="lights"]
+position = Vector2(355, 123)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3", "GI"]
+
+[node name="l_nurgle3" type="Sprite2D" parent="lights"]
+position = Vector2(340, 282)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_rollover" type="Sprite2D" parent="lights"]
+position = Vector2(-72, 199)
+scale = Vector2(0.316049, 0.316049)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+tags = ["Chain3"]
+
+[node name="l_innerloop_arrow" type="Sprite2D" parent="lights"]
+position = Vector2(323, 187)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("5_dctvr")
+script = ExtResource("3_lapcf")
+shape = 2
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="l_innerloop_flasher" type="Sprite2D" parent="lights"]
+position = Vector2(323, 141)
+scale = Vector2(0.12642, 0.12642)
+texture = ExtResource("3_meo0c")
+script = ExtResource("3_lapcf")
+width_inches = 0.2
+tags = ["Chain3"]
+
+[node name="switches" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="s_trough_jam" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough5" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough4" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_trough6" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_autoplunger" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_droptarget_down" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_outlane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_inlane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_vuk" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_27" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_26" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_25" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_24" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_EOS" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_rollover_gork" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_rollover_mork" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_outlane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_flipper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+tags = ["left_flipper"]
+
+[node name="s_right_flipper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+tags = ["right_flipper"]
+
+[node name="s_right_orbit" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_slingshot" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_EOS" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_slingshot" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_leftoutlane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_inlane" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_15" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_16" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_17" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_scoop" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_upperleft_flipper" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_start_button" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+tags = ["start"]
+
+[node name="s_upperscoop" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_xenos_x" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_xenos_e" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_xenos_s" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_xenos_n" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_xenos_o" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_lowerloop" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_upperflipper_eos" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_disk_backtarget" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_center_spinner" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_inner_loop_lower" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_spinner" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_dropramp_away" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_u13" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_u12" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_pop_top" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_necron_target" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_u15" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right-orbit" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_unused" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_right_poptarget" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_2_22" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_snikt" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_droptarget_lock" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_orbit" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_unknown" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_left_deadend" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_lockopto2" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_lockopto3" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_lockopto1" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -1.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="s_pop_bottom" type="TextureButton" parent="switches"]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 147.0
+offset_bottom = 147.0
+texture_normal = ExtResource("5_nc38d")
+texture_pressed = ExtResource("6_41o5i")
+stretch_mode = 4
+script = ExtResource("4_iyige")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fyvs4")
+}
+
+[node name="Circle-outline" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(264, 682)
+scale = Vector2(0.0444017, 0.0444017)
+texture = ExtResource("9_ghmpn")

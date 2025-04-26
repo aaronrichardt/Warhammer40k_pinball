@@ -37,7 +37,7 @@ lights:
   l_light_outlanes:
    number: playfield-1-12
    tags:  Chain1
-  l_nugle5:
+  l_nurgle5:
    number: playfield-1-13
    tags:  Chain1
   l_warp_p:
@@ -243,9 +243,6 @@ lights:
     tags: Chain3
   l_innerloop_flasher:
     number: playfield-3-18
-    tags: Chain3
-  l_nurgle5:
-    number: playfield-3-19
     tags: Chain3
 
 
