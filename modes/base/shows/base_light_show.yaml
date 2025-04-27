@@ -3,6 +3,7 @@
 - duration: 2
   lights:
     GI: white
+    right_lightbar: white
    # GI_light2: white
    # GI_light3: white
    # GI_light4: white

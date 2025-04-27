@@ -244,8 +244,102 @@ lights:
   l_innerloop_flasher:
     number: playfield-3-18
     tags: Chain3
-
-
+  l_right_lightbar1:
+    number: playfield-5-1
+    tags: right_lightbar
+  l_right_lightbar2:
+    number: playfield-5-2
+    tags: right_lightbar
+  l_right_lightbar3:
+    number: playfield-5-3
+    tags: right_lightbar
+  l_right_lightbar4:
+    number: playfield-5-4
+    tags: right_lightbar
+  l_right_lightbar5:
+    number: playfield-5-5
+    tags: right_lightbar
+  l_right_lightbar6:
+    number: playfield-5-6
+    tags: right_lightbar
+  l_right_lightbar7:
+    number: playfield-5-7
+    tags: right_lightbar
+  l_right_lightbar8:
+    number: playfield-5-8
+    tags: right_lightbar
+  l_right_lightbar9:
+    number: playfield-5-9
+    tags: right_lightbar
+  l_right_lightbar10:
+    number: playfield-5-10
+    tags: right_lightbar
+  l_right_lightbar11:
+    number: playfield-5-11
+    tags: right_lightbar
+  l_right_lightbar12:
+    number: playfield-5-12
+    tags: right_lightbar
+  l_right_lightbar13:
+    number: playfield-5-13
+    tags: right_lightbar
+  l_right_lightbar14:
+    number: playfield-5-14
+    tags: right_lightbar
+  l_right_lightbar15:
+    number: playfield-5-15
+    tags: right_lightbar
+  l_right_lightbar16:
+    number: playfield-5-16
+    tags: right_lightbar
+  l_right_lightbar17:
+    number: playfield-5-17
+    tags: right_lightbar
+  l_right_lightbar18:
+    number: playfield-5-18
+    tags: right_lightbar
+  l_right_lightbar19:
+    number: playfield-5-19
+    tags: right_lightbar
+  l_right_lightbar20:
+    number: playfield-5-20
+    tags: right_lightbar
+  l_right_lightbar21:
+    number: playfield-5-21
+    tags: right_lightbar
+  l_right_lightbar22:
+    number: playfield-5-22
+    tags: right_lightbar
+  l_right_lightbar23:
+    number: playfield-5-23
+    tags: right_lightbar
+  l_right_lightbar24:
+    number: playfield-5-24
+    tags: right_lightbar
+  l_right_lightbar25:
+    number: playfield-5-25
+    tags: right_lightbar
+  l_right_lightbar26:
+    number: playfield-5-26
+    tags: right_lightbar
+  l_right_lightbar27:
+    number: playfield-5-27
+    tags: right_lightbar
+  l_right_lightbar28:
+    number: playfield-5-28
+    tags: right_lightbar
+  l_right_lightbar29:
+    number: playfield-5-29
+    tags: right_lightbar
+  l_right_lightbar30:
+    number: playfield-5-30
+    tags: right_lightbar
+  l_right_lightbar31:
+    number: playfield-5-31
+    tags: right_lightbar
+  l_right_lightbar32:
+    number: playfield-5-32
+    tags: right_lightbar
 #  Chain1_light3:
 #   number: playfield-1-3
 #   tags:  Chain1
