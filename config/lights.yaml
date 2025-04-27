@@ -340,6 +340,71 @@ lights:
   l_right_lightbar32:
     number: playfield-5-32
     tags: right_lightbar
+  l_left_lightbar1:
+    number: playfield-6-1
+  l_left_lightbar2:
+    number: playfield-6-2
+  l_left_lightbar3:
+    number: playfield-6-3
+  l_left_lightbar4:
+    number: playfield-6-4
+  l_left_lightbar5:
+    number: playfield-6-5
+  l_left_lightbar6:
+    number: playfield-6-6
+  l_left_lightbar7:
+    number: playfield-6-7
+  l_left_lightbar8:
+    number: playfield-6-8
+  l_left_lightbar9:
+    number: playfield-6-9
+  l_left_lightbar10:
+    number: playfield-6-10
+  l_left_lightbar11:
+    number: playfield-6-11
+  l_left_lightbar12:
+    number: playfield-6-12
+  l_left_lightbar13:
+    number: playfield-6-13
+  l_left_lightbar14:
+    number: playfield-6-14
+  l_left_lightbar15:
+    number: playfield-6-15
+  l_left_lightbar16:
+    number: playfield-6-16
+  l_left_lightbar17:
+    number: playfield-6-17
+  l_left_lightbar18:
+    number: playfield-6-18
+  l_left_lightbar19:
+    number: playfield-6-19
+  l_left_lightbar20:
+    number: playfield-6-20
+  l_left_lightbar21:
+    number: playfield-6-21
+  l_left_lightbar22:
+    number: playfield-6-22
+  l_left_lightbar23:
+    number: playfield-6-23
+  l_left_lightbar24:
+    number: playfield-6-24
+  l_left_lightbar25:
+    number: playfield-6-25
+  l_left_lightbar26:
+    number: playfield-6-26
+  l_left_lightbar27:
+    number: playfield-6-27
+  l_left_lightbar28:
+    number: playfield-6-28
+  l_left_lightbar29:
+    number: playfield-6-29
+  l_left_lightbar30:
+    number: playfield-6-30
+  l_left_lightbar31:
+    number: playfield-6-31
+  l_left_lightbar32:
+    number: playfield-6-32
+
 #  Chain1_light3:
 #   number: playfield-1-3
 #   tags:  Chain1
