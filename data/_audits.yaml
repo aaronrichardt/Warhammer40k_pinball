@@ -101,7 +101,7 @@ switches:
   s_dropramp_away: 81
   s_dropramp_home: 82
   s_droptarget: 91
-  s_droptarget_down: 660
+  s_droptarget_down: 662
   s_droptarget_lock: 17266
   s_droptarget_opto: 100
   s_inner_loop_lower: 90

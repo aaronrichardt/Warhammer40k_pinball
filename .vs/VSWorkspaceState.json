@@ -1,13 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\logs",
     "\\modes",
-    "\\modes\\attract",
-    "\\modes\\attract\\config",
-    "\\modes\\attract\\shows",
-    "\\modes\\gorkmorkrollovers",
-    "\\modes\\gorkmorkrollovers\\config",
-    "\\modes\\gorkmorkrollovers\\shows"
+    "\\modes\\xenos",
+    "\\modes\\xenos\\config",
+    "\\modes\\xenos\\shows"
   ],
   "PreviewInSolutionExplorer": false
 }
