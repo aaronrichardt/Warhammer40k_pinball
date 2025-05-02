@@ -1,0 +1,18 @@
+#show_version=6
+##! show: light_warpqualify
+- time: 0
+  lights:
+    (letter_made_led): (letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made_led): off
+
+    
+- time: "+.05"
+  lights:
+    (letter_made_led): (letter_made_color)
+
+- time: "+.05"
+  lights:
+    (letter_made_led): off

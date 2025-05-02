@@ -1,13 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\config",
     "\\modes",
-    "\\modes\\attract",
-    "\\modes\\attract\\config",
-    "\\modes\\attract\\shows",
     "\\modes\\gorkmorkrollovers",
-    "\\modes\\gorkmorkrollovers\\config",
-    "\\modes\\gorkmorkrollovers\\shows"
+    "\\modes\\warp\\config",
+    "\\modes\\warp_qualify",
+    "\\modes\\warp_qualify\\config",
+    "\\modes\\warp_qualify\\shows",
+    "\\modes\\xenos",
+    "\\modes\\xenos\\config"
   ],
+  "SelectedNode": "\\modes\\warp_qualify\\config\\warp_qualify.yaml",
   "PreviewInSolutionExplorer": false
 }

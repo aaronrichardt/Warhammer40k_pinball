@@ -1,0 +1,79 @@
+#config_version=6
+##! mode: warp_qualify
+
+config:
+  - logic.yaml
+  - event_player.yaml
+  - show_player.yaml
+
+mode:
+  #this mode starts when the ball starts
+  start_events: ball_started
+  priority: 200
+
+shots:
+  warp_outlane_left:
+    switch: s_left_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+  warp_inlane_left:
+    switch: s_left_inlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+  warp_inlane_right:
+    switch:  s_right_inlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_r
+  warp_outlane_right:
+    switch:  s_right_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_p
+
+shot_groups:
+  inlane_lane_group:
+    shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
+    reset_events: inlane_lane_group_hit_complete
+    rotate_left_events: s_flipper_left_active
+    rotate_right_events: s_flipper_right_active
+
+shot_profiles:
+  inlane_lane_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: hit
+        show: on
+
+variable_player:
+  inlane_lane_group_hit_complete:
+    score: 10000
+    bonus_multiplier: 1
+
+
+event_player:
+  warp_outlane_left:
+    -warp_w_complete
+  warp_inlane_left:
+    -warp_a_complete
+  warp_inlane_right:
+    -warp_r_complete
+  warp_outlane_right:
+    -warp_p_complete
+
+
+accruals:
+  warp_accrual:
+    events:
+      - warp_w_complete # index [0]
+      - warp_a_complete # index [1]
+      - warp_r_complete # index [2]
+      - warp_p_complete # index [3]
+    reset_on_complete: true
+    disable_on_complete: false
+    reset_events: mode_warp_qualify_started
+    events_when_complete: award_warp, reset_warp_lights
+
