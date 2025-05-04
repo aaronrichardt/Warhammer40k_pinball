@@ -48,7 +48,7 @@ switches:
     number: 3208-20
   s_rollover_mork:
     number: 3208-18
-  s_left_outlane: 
+  s_left_outlane?????: 
     number: 3208-19
 
   s_left_flipper:
@@ -67,7 +67,7 @@ switches:
     number: 3208-14
   s_left_slingshot: 
     number: 3208-11
-  s_leftoutlane:
+  s_left_outlane:
     number: 3208-12
   s_left_inlane: 
     number: 3208-13

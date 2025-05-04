@@ -1,11 +1,11 @@
 #config_version=6
 ##! mode: warp_qualify
 
-config:
-  - logic.yaml
-  - event_player.yaml
-  - show_player.yaml
-
+#config:
+#  - logic.yaml
+#  - event_player.yaml
+#  - show_player.yaml
+#
 mode:
   #this mode starts when the ball starts
   start_events: ball_started
@@ -16,7 +16,7 @@ shots:
     switch: s_left_outlane
     profile: inlane_lane_profile
     show_tokens:
-      led: l_warp_a
+      led: l_warp_w
   warp_inlane_left:
     switch: s_left_inlane
     profile: inlane_lane_profile
@@ -37,8 +37,8 @@ shot_groups:
   inlane_lane_group:
     shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
     reset_events: inlane_lane_group_hit_complete
-    rotate_left_events: s_flipper_left_active
-    rotate_right_events: s_flipper_right_active
+    rotate_left_events: s_right_flipper_active
+    rotate_right_events: s_left_flipper_active
 
 shot_profiles:
   inlane_lane_profile:
