@@ -99,19 +99,19 @@ lights:
     tags:  Chain1, GI
   l_xenos_s:
     number: playfield-2-1
-    tags: Chain2
+    tags: Chain2, xenos_letter
   l_xenos_o:
     number: playfield-2-2
-    tags: Chain2
+    tags: Chain2, xenos_letter
   l_xenos_n:
     number: playfield-2-3
-    tags: Chain2
+    tags: Chain2, xenos_letter
   l_xenos_e:
     number: playfield-2-4
-    tags: Chain2
+    tags: Chain2, xenos_letter
   l_xenos_x:
     number: playfield-2-5
-    tags: Chain2
+    tags: Chain2, xenos_letter
   l_orkface1:
     number: playfield-2-6
     tags: Chain2
@@ -342,68 +342,100 @@ lights:
     tags: right_lightbar
   l_left_lightbar1:
     number: playfield-6-1
+    tags: left_lightbar
   l_left_lightbar2:
     number: playfield-6-2
+    tags: left_lightbar
   l_left_lightbar3:
     number: playfield-6-3
+    tags: left_lightbar
   l_left_lightbar4:
     number: playfield-6-4
+    tags: left_lightbar
   l_left_lightbar5:
     number: playfield-6-5
+    tags: left_lightbar
   l_left_lightbar6:
     number: playfield-6-6
+    tags: left_lightbar
   l_left_lightbar7:
     number: playfield-6-7
+    tags: left_lightbar
   l_left_lightbar8:
     number: playfield-6-8
+    tags: left_lightbar
   l_left_lightbar9:
     number: playfield-6-9
+    tags: left_lightbar
   l_left_lightbar10:
     number: playfield-6-10
+    tags: left_lightbar
   l_left_lightbar11:
     number: playfield-6-11
+    tags: left_lightbar
   l_left_lightbar12:
     number: playfield-6-12
+    tags: left_lightbar
   l_left_lightbar13:
     number: playfield-6-13
+    tags: left_lightbar
   l_left_lightbar14:
     number: playfield-6-14
+    tags: left_lightbar
   l_left_lightbar15:
     number: playfield-6-15
+    tags: left_lightbar
   l_left_lightbar16:
     number: playfield-6-16
+    tags: left_lightbar
   l_left_lightbar17:
     number: playfield-6-17
+    tags: left_lightbar
   l_left_lightbar18:
     number: playfield-6-18
+    tags: left_lightbar
   l_left_lightbar19:
     number: playfield-6-19
+    tags: left_lightbar
   l_left_lightbar20:
     number: playfield-6-20
+    tags: left_lightbar
   l_left_lightbar21:
     number: playfield-6-21
+    tags: left_lightbar
   l_left_lightbar22:
     number: playfield-6-22
+    tags: left_lightbar
   l_left_lightbar23:
     number: playfield-6-23
+    tags: left_lightbar
   l_left_lightbar24:
     number: playfield-6-24
+    tags: left_lightbar
   l_left_lightbar25:
     number: playfield-6-25
+    tags: left_lightbar
   l_left_lightbar26:
     number: playfield-6-26
+    tags: left_lightbar
   l_left_lightbar27:
     number: playfield-6-27
+    tags: left_lightbar
   l_left_lightbar28:
     number: playfield-6-28
+    tags: left_lightbar
   l_left_lightbar29:
     number: playfield-6-29
+    tags: left_lightbar
   l_left_lightbar30:
     number: playfield-6-30
+    tags: left_lightbar
   l_left_lightbar31:
     number: playfield-6-31
+    tags: left_lightbar
   l_left_lightbar32:
     number: playfield-6-32
+    tags: left_lightbar
 
 #  Chain1_light3:
 #   number: playfield-1-3
