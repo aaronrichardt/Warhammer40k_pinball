@@ -4,3 +4,4 @@ logs/*.log
 /.vs/Warhammer40k/v17
 /modes/attract/code/__pycache__
 /.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json

@@ -42,13 +42,13 @@ switches:
     number: 3208-25
   s_24:
     number: 3208-24
-  s_right_EOS:
+  s_light_lock:
     number: 3208-22
-  s_rollover_gork:
+  s_bonus_x:
     number: 3208-20
   s_rollover_mork:
     number: 3208-18
-  s_left_outlane?????: 
+  s_light_mystery: 
     number: 3208-19
 
   s_left_flipper:
@@ -57,7 +57,7 @@ switches:
   s_right_flipper:
     number: 3208-29
     tags: right_flipper
-  s_right_orbit: 
+  s_light_spinners: 
     number: 3208-21
     
   s_right_slingshot: 
@@ -71,9 +71,9 @@ switches:
     number: 3208-12
   s_left_inlane: 
     number: 3208-13
-  s_15:
+  s_right_eos:
     number: 3208-15
-  s_right_16:
+  s_rollover_gork:
     number: 32082-14
     
     #tags: playfield_active
