@@ -3,14 +3,11 @@
     "",
     "\\config",
     "\\modes",
-    "\\modes\\gorkmorkrollovers",
-    "\\modes\\warp\\config",
+    "\\modes\\base",
+    "\\modes\\base\\config",
     "\\modes\\warp_qualify",
-    "\\modes\\warp_qualify\\config",
-    "\\modes\\warp_qualify\\shows",
-    "\\modes\\xenos",
-    "\\modes\\xenos\\config"
+    "\\modes\\warp_qualify\\shows"
   ],
-  "SelectedNode": "\\modes\\warp_qualify\\config\\warp_qualify.yaml",
+  "SelectedNode": "\\config\\player_variables.yaml",
   "PreviewInSolutionExplorer": false
 }
