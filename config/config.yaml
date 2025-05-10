@@ -242,6 +242,7 @@ modes:
   - khorne
   - tzeench
   - slannesh
+  - warp_qualify
   - rewardbank
   #- waagh_multiball
   #- inquisition_multiball
