@@ -1,0 +1,8 @@
+#show_version=6
+
+- time: 0
+  lights:
+    l_pop_flasher: FFFFFF
+- time: "+50ms"
+  lights:
+    l_pop_flasher: off

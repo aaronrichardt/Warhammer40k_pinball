@@ -3,11 +3,12 @@
     "",
     "\\config",
     "\\modes",
+    "\\modes\\attract",
+    "\\modes\\attract\\shows",
     "\\modes\\base",
     "\\modes\\base\\config",
-    "\\modes\\warp_qualify",
-    "\\modes\\warp_qualify\\shows"
+    "\\modes\\base\\shows"
   ],
-  "SelectedNode": "\\config\\player_variables.yaml",
+  "SelectedNode": "\\config\\config.yaml",
   "PreviewInSolutionExplorer": false
 }

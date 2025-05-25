@@ -1,0 +1,53 @@
+#config_version=6
+
+mode:
+  start_events: start_mode_mystery_mode
+  priority: 300
+
+shots:
+  rewardbank_lightlock:
+    switch: s_left_outlane
+    profile: mystery_mode_profile
+    show_tokens:
+      shot_led: l_lightlock
+  rewardbank_lightspinners:
+    switch: s_left_outlane
+    profile: mystery_mode_profile
+    show_tokens:
+      shot_led: l_light_spinners
+  rewardbank_bonusx:
+    switch: s_left_outlane
+    profile: mystery_mode_profile
+    show_tokens:
+      shot_led: l_bonusx
+  rewardbank_lightmystery:
+    switch: s_left_outlane
+    profile: mystery_mode_profile
+    show_tokens:
+      shot_led: l_light_mystery
+
+shot_groups:
+  reward_bank_group:
+    shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
+    reset_events: reward_bank_group
+
+shot_profiles:
+  mystery_mode_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: light_rewardbank
+        show_tokens:
+          shot_color: FF00FF
+          shot_final_color: FF00FF
+      - name: hit
+        show: light_rewardbank
+        show_tokens:
+          shot_color: FFFFFF
+          shot_final_color: FF00FF
+
+event_player:
+  rewardbank_lightmystery_hit:
+    - mystery_achieved  # Unique reward event
+    - stop_mode_mystery_mode

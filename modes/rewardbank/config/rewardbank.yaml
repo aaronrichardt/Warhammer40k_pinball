@@ -4,6 +4,7 @@
 mode:
   #this mode starts when the ball starts
   start_events: ball_started
+  end_events: rewardbank_mode_stop
   priority: 200
 
 shots:
@@ -13,19 +14,22 @@ shots:
     show_tokens:
       led: l_warp_a
 
-
 shot_groups:
   reward_bank_group:
     shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
     reset_events: reward_bank_group
-    rotate_right_events: 
+    rotate_right_events: rotate_rewardbank
 
 timers:
-  skillshot_rotate:
-    tick_interval: 500ms
+
+  rewardbank_rotation:
+    start_value: 0
+    tick_interval: 1s
     start_running: true
     control_events:
-      - event: s_plunger_lane_inactive
+      - event: mode_rewardbank_started
+        action: start
+      - event: reward_bank_group_hit
         action: stop
 
 shot_profiles:
@@ -43,25 +47,20 @@ variable_player:
 
 
 event_player:
-  warp_outlane_left:
-    -warp_w_complete
-  warp_inlane_left:
-    -warp_a_complete
-  warp_inlane_right:
-    -warp_r_complete
-  warp_outlane_right:
-    -warp_p_complete
+  timer_rewardbank_rotation_tick:
+    - rotate_rewardbank  
+  rewardbank_lightlock_hit:
+    - start_mode_lock_mode
+    - stop_mode_rewardbank
+  rewardbank_lightspinners_hit:
+    - start_mode_spinners_mode
+    - stop_mode_rewardbank
+  rewardbank_bonusx_hit:
+    - start_mode_bonus_mode
+    - stop_mode_rewardbank
+  rewardbank_lightmystery_hit:
+    - start_mode_mystery_mode
+    - stop_mode_rewardbank
+    
 
-
-accruals:
-  warp_accrual:
-    events:
-      - warp_w_complete # index [0]
-      - warp_a_complete # index [1]
-      - warp_r_complete # index [2]
-      - warp_p_complete # index [3]
-    reset_on_complete: true
-    disable_on_complete: false
-    reset_events: mode_warp_qualify_started
-    events_when_complete: award_warp, reset_warp_lights
 
