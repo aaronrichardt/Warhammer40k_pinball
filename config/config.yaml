@@ -60,6 +60,8 @@ config:
   - player_variables.yaml
   - sound_system.yaml
   - drop_targets.yaml
+  - waagh_multiball.yaml
+  - waagh_qualifier.yaml
 
 
 displays:

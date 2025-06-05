@@ -1,0 +1,84 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  priority: 300
+
+shot_profiles:
+    waagh_qualify_profile:
+      states:
+        - name: off
+          show: off
+        - name: available
+          show: flash
+          show_tokens:
+            color: yellow
+        - name: completed
+          show: on
+          show_tokens:
+            color: yellow
+            
+    waagh_final_profile:
+      states:
+        - name: off
+          show: off
+        - name: available
+          show: flash
+          show_tokens:
+            color: red
+            speed: 4
+        - name: completed
+          show: on
+          show_tokens:
+            color: red
+
+shots:
+  waagh_qualify_shot:
+    switch: s_upper_bigtarget  # Adjust this to your target switch
+    profile: waagh_qualify_profile
+    show_tokens:
+      led: l_upper_bigtarget  # Adjust this to your target LED
+
+shot_groups:
+  waagh_spelling:
+    shots: waagh_qualify_shot
+    rotation_enabled: false
+    reset_events: waagh_spelling_reset
+
+counters:
+  waagh_letter_counter:
+    count_events: waagh_qualify_shot_hit
+    starting_count: 0
+    count_interval: 1
+    direction: up
+    persist_state: false
+    events_when_hit: 
+      - waagh_advance_letter
+    count_complete_value: 6
+    events_when_complete: start_mode_waagh_multiball
+    reset_on_complete: true
+
+variable_player:
+  waagh_advance_letter:
+    waagh_letters:
+      int: 1
+      action: add
+
+event_player:
+  waagh_advance_letter{current_player.waagh_letters == 1}: letter_w
+  waagh_advance_letter{current_player.waagh_letters == 2}: letter_a1
+  waagh_advance_letter{current_player.waagh_letters == 3}: letter_a2
+  waagh_advance_letter{current_player.waagh_letters == 4}: letter_g
+  waagh_advance_letter{current_player.waagh_letters == 5}: letter_h
+  waagh_advance_letter{current_player.waagh_letters == 6}: letter_exclaim
+
+# Reset the letters on ball start
+  ball_started:
+    - waagh_spelling_reset
+    - reset_waagh_letters
+
+variable_player:
+  reset_waagh_letters:
+    waagh_letters:
+      int: 0
+      action: set
