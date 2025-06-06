@@ -138,7 +138,7 @@ switches:
 #  s_left_flipper: 
 #    number: 32082-15
 #    tags: left_flipper
-  s_right-orbit: 
+  s_right_orbit: 
     number: 32082-11
     #tags: tilt_warning
   s_unused:
