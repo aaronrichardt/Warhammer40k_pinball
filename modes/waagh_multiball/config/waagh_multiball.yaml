@@ -1,1 +1,4 @@
 #config_version=6
+
+multiballs:
+	ball_count: 3

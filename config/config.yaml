@@ -60,6 +60,8 @@ config:
   - player_variables.yaml
   - sound_system.yaml
   - drop_targets.yaml
+  - waagh_multiball.yaml
+  - waagh_qualifier.yaml
 
 
 displays:
@@ -227,6 +229,14 @@ shot_profiles:
         show: on
     loop: true
 
+  pop_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: hit
+        show: pop_flash
+        speed: 1
+    loop: true
 
 virtual_platform_start_active_switches:
   #- s_trough1
@@ -243,6 +253,7 @@ modes:
   - tzeench
   - slannesh
   - warp_qualify
+  - rewardbank
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
@@ -255,5 +266,7 @@ modes:
   #- skillshot
   #- super_skillshot
 
- 
+
+
+
 

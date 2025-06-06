@@ -1,0 +1,66 @@
+#config_version=6
+##! mode: warp_qualify
+
+mode:
+  #this mode starts when the ball starts
+  start_events: ball_started
+  end_events: rewardbank_mode_stop
+  priority: 200
+
+shots:
+  rewardbank_lightlock:
+    switch: s_left_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+
+shot_groups:
+  reward_bank_group:
+    shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
+    reset_events: reward_bank_group
+    rotate_right_events: rotate_rewardbank
+
+timers:
+
+  rewardbank_rotation:
+    start_value: 0
+    tick_interval: 1s
+    start_running: true
+    control_events:
+      - event: mode_rewardbank_started
+        action: start
+      - event: reward_bank_group_hit
+        action: stop
+
+shot_profiles:
+  inlane_lane_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: hit
+        show: on
+
+variable_player:
+  inlane_lane_group_hit_complete:
+    score: 10000
+    bonus_multiplier: 1
+
+
+event_player:
+  timer_rewardbank_rotation_tick:
+    - rotate_rewardbank  
+  rewardbank_lightlock_hit:
+    - start_mode_lock_mode
+    - stop_mode_rewardbank
+  rewardbank_lightspinners_hit:
+    - start_mode_spinners_mode
+    - stop_mode_rewardbank
+  rewardbank_bonusx_hit:
+    - start_mode_bonus_mode
+    - stop_mode_rewardbank
+  rewardbank_lightmystery_hit:
+    - start_mode_mystery_mode
+    - stop_mode_rewardbank
+    
+
+

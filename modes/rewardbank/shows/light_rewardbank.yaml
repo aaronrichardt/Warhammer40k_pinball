@@ -1,0 +1,39 @@
+#show_version=6
+
+- time: "+.05"
+  lights:
+    (shot_led): (shot_color)
+
+- time: "+.05"
+  lights:
+    (shot_led): off
+
+- time: "+.05"
+  lights:
+    (shot_led): (shot_color)
+
+- time: "+.05"
+  lights:
+    (shot_led): off
+
+- time: "+.05"
+  lights:
+    (shot_led): (shot_color)
+
+- time: "+.05"
+  lights:
+    (shot_led): off
+
+- time: "+.05"
+  lights:
+    (shot_led): (shot_color)
+
+- time: "+.05"
+  lights:
+    (shot_led): off
+
+- time: "+.05"
+  lights:
+    (shot_led): (shot_final_color)
+
+  duration: -1

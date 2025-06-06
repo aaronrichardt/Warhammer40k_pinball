@@ -8,6 +8,14 @@ show_player:
   mode_base_started:
     base_light_show:
       speed: 1
+  s_pop_top_active:
+    pop_flash:
+      speed: 1
+      loops: 0
+  s_pop_bottom_active:
+    pop_flash:
+      speed: 1
+      loops: 0
   #base_start_single_player:
     #base:
      # key: base_score_loop
@@ -129,6 +137,14 @@ shots:
   
   left_deadend_shot: 
    switch: s_left_deadend
+
+  pop_top:
+    switch: s_pop_top
+    profile: pop_profile
+  pop_bottom:
+    switch: s_pop_bottom
+    profile: pop_profile
+
   #pops
 #  left_pop:
 #    switch: s_pop_left
@@ -155,35 +171,8 @@ slide_player:
    # new_player_slide:
    #   priority: 1000
 
-slides:
-  score_slide:
-    widgets:
-    - type: text
-      text: (score)
-      number_grouping: true
-      min_digits: 2
-      #style: dmd_big
-      y: 18
-    - type: text
-      text: PLAYER (number)
-      y: 0
-      x: 10
-      #style: dmd_med
-      anchor_x: left
-      anchor_y: bottom
-    - type: text
-      text: BALL (ball)
-      y: 0
-      x: right-10
-      anchor_x: right
-      anchor_y: bottom
-      #style: dmd_med
-  new_player_slide:
-    expire: 1s
-    widgets:
-      - type: text
-        text: PLAYER (num) ADDED
-        #style: dmd_med
+
+
 
 accruals:
   qualify_main_mode:
@@ -279,7 +268,6 @@ event_player:
       direction: up
   mode_bonus_will_start: stop_all_music
   
-  
 
 
 
@@ -304,3 +292,5 @@ event_player:
   #scoop_hit: sound_scoop
   #sling_hit: sound_slinghit
   #spinner_hit: lazgun
+
+
