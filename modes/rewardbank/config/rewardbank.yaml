@@ -4,7 +4,7 @@
 mode:
   #this mode starts when the ball starts
   start_events: ball_started
-  end_events: rewardbank_mode_stop
+  stop_events: rewardbank_mode_stop
   priority: 200
 
 shots:

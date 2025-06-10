@@ -60,8 +60,7 @@ config:
   - player_variables.yaml
   - sound_system.yaml
   - drop_targets.yaml
-  - waagh_multiball.yaml
-  - waagh_qualifier.yaml
+
 
 
 displays:
@@ -128,7 +127,7 @@ ball_devices:
 
     bd_droppod:
       mechanical_eject: false
-      ball_switches: s_lockopto1, s_lockopto2, s_lockopto3
+      ball_switches: s_lockopto1, s_lockopto3
       eject_coil: c_droppod
       eject_timeouts: 3s
       
@@ -253,7 +252,7 @@ modes:
   - tzeench
   - slannesh
   - warp_qualify
-  - rewardbank
+  #- rewardbank
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
@@ -263,6 +262,8 @@ modes:
   #- necron_lock_qualified
   #- necron_multiball
   - gorkmorkrollovers
+  #- waagh_multiball
+  - waagh_qualifier
   #- skillshot
   #- super_skillshot
 

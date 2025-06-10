@@ -1,0 +1,71 @@
+#show_version=6
+##! show: light_xenos_letter
+- time: 0
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_made_color)
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): off
+
+- time: "+.05"
+  lights:
+    (gadget_letter_made_led): (gadget_letter_final_color)
+
+  duration: -1

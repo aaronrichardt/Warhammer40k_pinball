@@ -7,8 +7,6 @@ mode:
 shot_profiles:
     waagh_qualify_profile:
       states:
-        - name: off
-          show: off
         - name: available
           show: flash
           show_tokens:
@@ -20,8 +18,6 @@ shot_profiles:
             
     waagh_final_profile:
       states:
-        - name: off
-          show: off
         - name: available
           show: flash
           show_tokens:
@@ -33,52 +29,155 @@ shot_profiles:
             color: red
 
 shots:
-  waagh_qualify_shot:
-    switch: s_upper_bigtarget  # Adjust this to your target switch
+  waagh_qualify_shot_w:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
     profile: waagh_qualify_profile
+    disable_events: waagh_qualify_shot_w_completed_hit
+    start_enabled: True
+    #enable_events: mode_waagh_qualifier_started
     show_tokens:
-      led: l_upper_bigtarget  # Adjust this to your target LED
+      led: l_waagh_W  # Adjust this to your target LED
+      show_led_color: Yellow`  # Adjust this to your target color
+      show_led_color_final_color: Yellow  # Adjust this to your target final color
+  waagh_qualify_shot_a:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
+    profile: waagh_qualify_profile
+    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_a
+    enable_events: waagh_qualify_shot_w_completed_hit
+    show_tokens:
+      led: l_waagh_A  # Adjust this to your target LED
+      show_led_color: Yellow`  # Adjust this to your target color
+      show_led_color_final_color: Yellow  # Adjust this to your target final color
+  waagh_qualify_shot_a2:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
+    profile: waagh_qualify_profile
+    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_a2 
+    enable_events: player_shot_waagh_qualify_shot_a
+    show_tokens:
+      led: l_waagh_A2  # Adjust this to your target LED
+      show_led_color: Yellow`  # Adjust this to your target color
+      show_led_color_final_color: Yellow  # Adjust this to your target final color
+  waagh_qualify_shot_g:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
+    profile: waagh_qualify_profile
+    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_g 
+    enable_events: player_shot_waagh_qualify_shot_a2
+    show_tokens:
+      led: l_waagh_G  # Adjust this to your target LED
+      show_led_color: Yellow`  # Adjust this to your target color
+      show_led_color_final_color: Yellow  # Adjust this to your target final color
+  waagh_qualify_shot_h:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
+    profile: waagh_qualify_profile
+    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_h 
+    enable_events: player_shot_waagh_qualify_shot_g
+    show_tokens:
+      led: l_waagh_H  # Adjust this to your target LE
+      show_led_color: Yellow`  # Adjust this to your target color
+      show_led_color_final_color: Yellow  # Adjust this to your target final color
+  waagh_qualify_shot_!:
+    switch: s_waagh_newton_ball  # Adjust this to your target switch
+    profile: waagh_final_profile
+    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_h
+    enable_events: player_shot_waagh_qualify_shot_h
+    show_tokens:
+      led: l_waagh_!  # Adjust this to your target LED
 
 shot_groups:
-  waagh_spelling:
-    shots: waagh_qualify_shot
-    rotation_enabled: false
+  waagh_w:
+    shots: waagh_qualify_shot_w, waagh_qualify_shot_a,  waagh_qualify_shot_a2, waagh_qualify_shot_g, waagh_qualify_shot_h, waagh_qualify_shot_!
+    #rotate_right_events: waagh_rotate
+    
     reset_events: waagh_spelling_reset
+ # waagh_a:
+ #   shots: waagh_qualify_shot_a
+ #   #rotate_right_events: waagh_rotate
+ #   enable_events:
+ #   disable_events:
+ #   reset_events: waagh_spelling_reset
 
-counters:
-  waagh_letter_counter:
-    count_events: waagh_qualify_shot_hit
-    starting_count: 0
-    count_interval: 1
-    direction: up
-    persist_state: false
-    events_when_hit: 
-      - waagh_advance_letter
-    count_complete_value: 6
-    events_when_complete: start_mode_waagh_multiball
-    reset_on_complete: true
-
-variable_player:
-  waagh_advance_letter:
-    waagh_letters:
-      int: 1
-      action: add
+#accruals:
+#  waagh_accrual:
+#    events:
+#      - waagh_qualify_shot_w_complete # index [0]
+#      - waagh_qualify_shot_a_complete # index [0]- warp_a_complete # index [1]
+#      - waagh_qualify_shot_a2_complete # index [0]- warp_r_complete # index [2]
+#      - waagh_qualify_shot_g_complete # index [0]- warp_p_complete # index [3]
+#      - waagh_qualify_shot_h_complete # index [0]- warp_p_complete # index [3]
+#      - waagh_qualify_shot_exc_complete # index [0]- warp_p_complete # index [3]
+#    reset_on_complete: true
+#    disable_on_complete: true
+#    reset_events: mode_warp_qualify_started
+#    events_when_complete: reset_waagh_letters
+#
+#variable_player:
+#  waagh_advance_letter:
+#    waagh_letters:
+#      int: 1
+#      action: add
+#  reset_waagh_letters:
+#    waagh_letters:
+#      int: 0
+#      action: set
 
 event_player:
-  waagh_advance_letter{current_player.waagh_letters == 1}: letter_w
-  waagh_advance_letter{current_player.waagh_letters == 2}: letter_a1
-  waagh_advance_letter{current_player.waagh_letters == 3}: letter_a2
-  waagh_advance_letter{current_player.waagh_letters == 4}: letter_g
-  waagh_advance_letter{current_player.waagh_letters == 5}: letter_h
-  waagh_advance_letter{current_player.waagh_letters == 6}: letter_exclaim
-
-# Reset the letters on ball start
-  ball_started:
-    - waagh_spelling_reset
-    - reset_waagh_letters
-
-variable_player:
-  reset_waagh_letters:
-    waagh_letters:
-      int: 0
-      action: set
+    #s_waagh_newton_ball_active:
+    #    - waagh_qualify_shot_w_complete{device.accruals.waagh_accrual.value[0]==False}
+    #    - waagh_qualify_shot_a_complete{device.accruals.waagh_accrual.value[1]==False}
+    #    - waagh_qualify_shot_a2_complete{device.accruals.waagh_accrual.value[2]==True}
+    #    - waagh_qualify_shot_g_complete{device.accruals.waagh_accrual.value[3]==True}
+    #    - waagh_qualify_shot_h_complete{device.accruals.waagh_accrual.value[4]==True}
+    #    - waagh_qualify_shot_exc_complete{device.accruals.waagh_accrual.value[5]==True}
+    mode_waagh_qualifier_started:
+      - waagh_spelling_reset
+      - reset_waagh_letters
+    
+#show_player:
+#  waagh_qualify_shot_w_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      key: waagh_w_hit_show
+#      show_tokens:
+#        show_led: l_waagh_W
+#        show_led_color: Yellow
+#        show_led_color_final_color: Yellow
+#  waagh_qualify_shot_a_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      key: waagh_a_hit_show
+#      show_tokens:
+#        show_led: l_waagh_A
+#        show_led_color: Yellow
+#        show_led_color_final_color: Yellow
+#  waagh_qualify_shot_a2_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      key: waagh_a2_hit_show
+#      show_tokens:
+#        show_led: l_waagh_A2
+#        show_led_color: Yellow
+#        show_led_color_final_color: Yellow
+#  waagh_qualify_shot_g_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      key: xenos_o_hit_show
+#      show_tokens:
+#        show_led: l_waagh_G
+#        show_led_color: Yellow
+#        show_led_color_final_color: Yellow
+#  waagh_qualify_shot_h_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      key: xenos_s_hit_show
+#      show_tokens:
+#        show_led: l_waagh_H
+#        show_led_color: Yellow
+#        show_led_color_final_color: Yellow
+#  waagh_qualify_shot_exc_complete:
+#    light_waagh_letter:
+#      priority: 10
+#      show_tokens:
+#        show_led: l_waagh_!
+#        show_led_color: Red
+#        show_led_color_final_color: Red
+#    
