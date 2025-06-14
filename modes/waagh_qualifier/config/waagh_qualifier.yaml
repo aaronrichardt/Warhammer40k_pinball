@@ -4,111 +4,19 @@ mode:
   start_events: ball_started
   priority: 300
 
-shot_profiles:
-    waagh_qualify_profile:
-      states:
-        - name: available
-          show: flash
-          show_tokens:
-            color: yellow
-        - name: completed
-          show: on
-          show_tokens:
-            color: yellow
-            
-    waagh_final_profile:
-      states:
-        - name: available
-          show: flash
-          show_tokens:
-            color: red
-            speed: 4
-        - name: completed
-          show: on
-          show_tokens:
-            color: red
-
-shots:
-  waagh_qualify_shot_w:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_qualify_profile
-    disable_events: waagh_qualify_shot_w_completed_hit
-    start_enabled: True
-    #enable_events: mode_waagh_qualifier_started
-    show_tokens:
-      led: l_waagh_W  # Adjust this to your target LED
-      show_led_color: Yellow`  # Adjust this to your target color
-      show_led_color_final_color: Yellow  # Adjust this to your target final color
-  waagh_qualify_shot_a:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_qualify_profile
-    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_a
-    enable_events: waagh_qualify_shot_w_completed_hit
-    show_tokens:
-      led: l_waagh_A  # Adjust this to your target LED
-      show_led_color: Yellow`  # Adjust this to your target color
-      show_led_color_final_color: Yellow  # Adjust this to your target final color
-  waagh_qualify_shot_a2:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_qualify_profile
-    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_a2 
-    enable_events: player_shot_waagh_qualify_shot_a
-    show_tokens:
-      led: l_waagh_A2  # Adjust this to your target LED
-      show_led_color: Yellow`  # Adjust this to your target color
-      show_led_color_final_color: Yellow  # Adjust this to your target final color
-  waagh_qualify_shot_g:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_qualify_profile
-    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_g 
-    enable_events: player_shot_waagh_qualify_shot_a2
-    show_tokens:
-      led: l_waagh_G  # Adjust this to your target LED
-      show_led_color: Yellow`  # Adjust this to your target color
-      show_led_color_final_color: Yellow  # Adjust this to your target final color
-  waagh_qualify_shot_h:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_qualify_profile
-    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_h 
-    enable_events: player_shot_waagh_qualify_shot_g
-    show_tokens:
-      led: l_waagh_H  # Adjust this to your target LE
-      show_led_color: Yellow`  # Adjust this to your target color
-      show_led_color_final_color: Yellow  # Adjust this to your target final color
-  waagh_qualify_shot_!:
-    switch: s_waagh_newton_ball  # Adjust this to your target switch
-    profile: waagh_final_profile
-    disable_events: mode_waagh_qualifier_started, player_shot_waagh_qualify_shot_h
-    enable_events: player_shot_waagh_qualify_shot_h
-    show_tokens:
-      led: l_waagh_!  # Adjust this to your target LED
-
-shot_groups:
-  waagh_w:
-    shots: waagh_qualify_shot_w, waagh_qualify_shot_a,  waagh_qualify_shot_a2, waagh_qualify_shot_g, waagh_qualify_shot_h, waagh_qualify_shot_!
-    #rotate_right_events: waagh_rotate
-    
-    reset_events: waagh_spelling_reset
- # waagh_a:
- #   shots: waagh_qualify_shot_a
- #   #rotate_right_events: waagh_rotate
- #   enable_events:
- #   disable_events:
- #   reset_events: waagh_spelling_reset
-
-#accruals:
-#  waagh_accrual:
-#    events:
-#      - waagh_qualify_shot_w_complete # index [0]
-#      - waagh_qualify_shot_a_complete # index [0]- warp_a_complete # index [1]
-#      - waagh_qualify_shot_a2_complete # index [0]- warp_r_complete # index [2]
-#      - waagh_qualify_shot_g_complete # index [0]- warp_p_complete # index [3]
-#      - waagh_qualify_shot_h_complete # index [0]- warp_p_complete # index [3]
-#      - waagh_qualify_shot_exc_complete # index [0]- warp_p_complete # index [3]
-#    reset_on_complete: true
-#    disable_on_complete: true
-#    reset_events: mode_warp_qualify_started
-#    events_when_complete: reset_waagh_letters
+accruals:
+  waagh_accrual:
+    events:
+      - waagh_qualify_shot_w_complete # index [0]
+      - waagh_qualify_shot_a_complete # index [0]- warp_a_complete # index [1]
+      - waagh_qualify_shot_a2_complete # index [0]- warp_r_complete # index [2]
+      - waagh_qualify_shot_g_complete # index [0]- warp_p_complete # index [3]
+      - waagh_qualify_shot_h_complete # index [0]- warp_p_complete # index [3]
+      - waagh_qualify_shot_exc_complete # index [0]- warp_p_complete # index [3]
+    reset_on_complete: true
+    disable_on_complete: true
+    reset_events: mode_warp_qualify_started
+    events_when_complete: reset_waagh_lights, waagh_multiball_start
 #
 #variable_player:
 #  waagh_advance_letter:
@@ -121,63 +29,145 @@ shot_groups:
 #      action: set
 
 event_player:
-    #s_waagh_newton_ball_active:
-    #    - waagh_qualify_shot_w_complete{device.accruals.waagh_accrual.value[0]==False}
-    #    - waagh_qualify_shot_a_complete{device.accruals.waagh_accrual.value[1]==False}
-    #    - waagh_qualify_shot_a2_complete{device.accruals.waagh_accrual.value[2]==True}
-    #    - waagh_qualify_shot_g_complete{device.accruals.waagh_accrual.value[3]==True}
-    #    - waagh_qualify_shot_h_complete{device.accruals.waagh_accrual.value[4]==True}
-    #    - waagh_qualify_shot_exc_complete{device.accruals.waagh_accrual.value[5]==True}
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==False}: 
+        - waagh_qualify_shot_w_complete
+        - waagh_qualify_shot_a_enable
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==False}:
+        - waagh_qualify_shot_a_complete
+        - waagh_qualify_shot_a2_enable
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==True and device.accruals.waagh_accrual.value[2]==False}:
+        - waagh_qualify_shot_a2_complete
+        - waagh_qualify_shot_g_enable
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==True and device.accruals.waagh_accrual.value[2]==True and device.accruals.waagh_accrual.value[3]==False}:
+        - waagh_qualify_shot_g_complete
+        - waagh_qualify_shot_h_enable
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==True and device.accruals.waagh_accrual.value[2]==True and device.accruals.waagh_accrual.value[3]==True and device.accruals.waagh_accrual.value[4]==False}:  
+        - waagh_qualify_shot_h_complete
+        - waagh_qualify_shot_exc_enable
+        - waagh_face_enable
+    s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==True and device.accruals.waagh_accrual.value[2]==True and device.accruals.waagh_accrual.value[3]==True and device.accruals.waagh_accrual.value[4]==True and device.accruals.waagh_accrual.value[5]==False }:
+        - waagh_qualify_shot_exc_complete
+
     mode_waagh_qualifier_started:
-      - waagh_spelling_reset
-      - reset_waagh_letters
+      #- waagh_spelling_reset
+      #- reset_waagh_letters
+      - waagh_qualify_shot_w_enable
     
-#show_player:
-#  waagh_qualify_shot_w_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      key: waagh_w_hit_show
-#      show_tokens:
-#        show_led: l_waagh_W
-#        show_led_color: Yellow
-#        show_led_color_final_color: Yellow
-#  waagh_qualify_shot_a_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      key: waagh_a_hit_show
-#      show_tokens:
-#        show_led: l_waagh_A
-#        show_led_color: Yellow
-#        show_led_color_final_color: Yellow
-#  waagh_qualify_shot_a2_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      key: waagh_a2_hit_show
-#      show_tokens:
-#        show_led: l_waagh_A2
-#        show_led_color: Yellow
-#        show_led_color_final_color: Yellow
-#  waagh_qualify_shot_g_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      key: xenos_o_hit_show
-#      show_tokens:
-#        show_led: l_waagh_G
-#        show_led_color: Yellow
-#        show_led_color_final_color: Yellow
-#  waagh_qualify_shot_h_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      key: xenos_s_hit_show
-#      show_tokens:
-#        show_led: l_waagh_H
-#        show_led_color: Yellow
-#        show_led_color_final_color: Yellow
-#  waagh_qualify_shot_exc_complete:
-#    light_waagh_letter:
-#      priority: 10
-#      show_tokens:
-#        show_led: l_waagh_!
-#        show_led_color: Red
-#        show_led_color_final_color: Red
-#    
+show_player:
+  waagh_face_enable:
+      light_waagh_flash:
+        priority: 20
+        key: waagh_face
+        loops: -1
+        show_tokens:
+          show_led: waagh_face
+          show_led_color: Yellow
+          show_led_color_final_color: Yellow
+  waagh_qualify_shot_w_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_W
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_a_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_A
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_a2_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_A2
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_g_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_G
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_h_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_H
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_exc_enable:
+    light_waagh_shot:
+      priority: 20
+      key: waagh_lit
+      loops: -1
+      show_tokens:
+        show_led: l_waagh_!
+        show_led_color: Red
+        show_led_color_final_color: Red
+  waagh_qualify_shot_w_complete:
+    light_waagh_letter:
+      priority: 10
+      key: waagh_w_hit_show
+      show_tokens:
+        show_led: l_waagh_W
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_a_complete:
+    light_waagh_letter:
+      priority: 10
+      key: waagh_a_hit_show
+      show_tokens:
+        show_led: l_waagh_A
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_a2_complete:
+    light_waagh_letter:
+      priority: 10
+      key: waagh_a2_hit_show
+      show_tokens:
+        show_led: l_waagh_A2
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_g_complete:
+    light_waagh_letter:
+      priority: 10
+      key: xenos_o_hit_show
+      show_tokens:
+        show_led: l_waagh_G
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_h_complete:
+    light_waagh_letter:
+      priority: 10
+      key: xenos_s_hit_show
+      show_tokens:
+        show_led: l_waagh_H
+        show_led_color: Yellow
+        show_led_color_final_color: Yellow
+  waagh_qualify_shot_exc_complete:
+    light_waagh_letter:
+      priority: 10
+      show_tokens:
+        show_led: l_waagh_!
+        show_led_color: Red
+        show_led_color_final_color: Red
+  reset_waagh_lights:
+    light_waagh_letter:
+      priority: 10
+      show_tokens:
+        gadget_letter_made_led: waaagh_letter
+        gadget_letter_made_color: Yellow
+        gadget_letter_final_color: 000000

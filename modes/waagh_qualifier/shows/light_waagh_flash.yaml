@@ -1,0 +1,8 @@
+#show_version=6
+##! show: light_waagh
+- time: 0
+  lights:
+    (show_led): (show_led_color)
+
+
+

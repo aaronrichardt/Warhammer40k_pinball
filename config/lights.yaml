@@ -114,16 +114,16 @@ lights:
     tags: Chain2, xenos_letter
   l_orkface1:
     number: playfield-2-6
-    tags: Chain2
+    tags: Chain2, waagh_face
   l_orkface2:
     number: playfield-2-7
-    tags: Chain2
+    tags: Chain2, waagh_face
   l_orkface3:
     number: playfield-2-8
-    tags: Chain2
+    tags: Chain2, waagh_face
   l_orkface4:
     number: playfield-2-9
-    tags: Chain2
+    tags: Chain2, waagh_face
   l_left_orbit_circle:
     number: playfield-2-10
     tags: Chain2
@@ -143,10 +143,10 @@ lights:
     number: playfield-2-15
     tags: Chain2
   l_waagh_A:
-    number: playfield-2-16
+    number: playfield-2-17
     tags: Chain2
   l_waagh_A2:
-    number: playfield-2-17
+    number: playfield-2-16
     tags: Chain2
   l_waagh_W:
     number: playfield-2-18
@@ -225,10 +225,10 @@ lights:
     tags: Chain3, GI
   l_rollover_mork:
     number: playfield-3-12
-    tags: Chain3
+    tags: Chain3, rollovers
   l_rollover_gork:
     number: playfield-3-13
-    tags: Chain3
+    tags: Chain3, rollovers
   l_rollover_left:
     number: playfield-3-14
     tags: Chain3, GI
