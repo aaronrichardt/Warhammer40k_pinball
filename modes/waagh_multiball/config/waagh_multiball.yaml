@@ -2,15 +2,16 @@
 
 mode:
   start_events: waagh_multiball_mode_start
+  stop_events: multiball_waagh_multiball_ended
   events_when_started: waagh_multiball_start
-  events_when_ended: mode_warp_qualify_started
-  end_events: multiball_waagh_multiball_ended
+  events_when_stopped: mode_warp_qualify_started
+
   priority: 300
 
 
 multiballs:
   waagh_multiball:
-    ball_count: 300
+    ball_count: 3
     ball_count_type: total
     shoot_again: 20s # 20 seconds to shoot again
     start_events:

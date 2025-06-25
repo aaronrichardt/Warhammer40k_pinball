@@ -46,7 +46,7 @@ game:
  
 machine: 
   balls_installed: 6
-  min_balls: 0
+  min_balls: 3
   
 config: 
   - lights.yaml
@@ -252,6 +252,7 @@ modes:
   - tzeench
   - slannesh
   - warp_qualify
+  - waagh_multiball
   #- rewardbank
   #- waagh_multiball
   #- inquisition_multiball
