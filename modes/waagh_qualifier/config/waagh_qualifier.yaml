@@ -13,20 +13,10 @@ accruals:
       - waagh_qualify_shot_g_complete # index [0]- warp_p_complete # index [3]
       - waagh_qualify_shot_h_complete # index [0]- warp_p_complete # index [3]
       - waagh_qualify_shot_exc_complete # index [0]- warp_p_complete # index [3]
-    reset_on_complete: true
+    reset_on_complete: false
     disable_on_complete: true
     reset_events: mode_warp_qualify_started
-    events_when_complete: reset_waagh_lights, waagh_multiball_start
-#
-#variable_player:
-#  waagh_advance_letter:
-#    waagh_letters:
-#      int: 1
-#      action: add
-#  reset_waagh_letters:
-#    waagh_letters:
-#      int: 0
-#      action: set
+    events_when_complete: reset_waagh_lights, waagh_multiball_mode_start
 
 event_player:
     s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==False}: 
@@ -49,8 +39,6 @@ event_player:
         - waagh_qualify_shot_exc_complete
 
     mode_waagh_qualifier_started:
-      #- waagh_spelling_reset
-      #- reset_waagh_letters
       - waagh_qualify_shot_w_enable
     
 show_player:
