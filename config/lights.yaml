@@ -1,8 +1,5 @@
 #config_version=6
 
-light_settings:
-  default_fade_ms: 40
-
 lights:
   l_omega_1:
     number: playfield-1-1
