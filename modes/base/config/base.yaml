@@ -10,11 +10,11 @@ show_player:
       speed: 1
   s_pop_top_active:
     pop_flash:
-      speed: 1
+      speed: 2
       loops: 0
   s_pop_bottom_active:
     pop_flash:
-      speed: 1
+      speed: 2
       loops: 0
   #base_start_single_player:
     #base:
@@ -109,17 +109,23 @@ variable_player:
     score: 1000
   s_3bank_shot_flashProfile_flashing_hit:
     score: 10000
-  my_first_shot_my_first_profile_unlit_hit:
-    score: 100
-  my_first_shot_my_first_profile_flashing_hit:
-    score: 10000
+
+shot_profiles: 
+  pop_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: hit
+        show: pop_flash
+        speed: 1
+    loop: true
 
 shots: 
-  my_first_shot: 
-    switch: s_left_orbit
-    show_tokens: 
-      led: l_left_orbit_arrow
-    profile: my_first_profile
+ #my_first_shot: 
+ #  switch: s_left_orbit
+ #  show_tokens: 
+ #    led: l_left_orbit_arrow
+ #  profile: my_first_profile
   
   #3_bank_shot:
   #  switch: s_3bank

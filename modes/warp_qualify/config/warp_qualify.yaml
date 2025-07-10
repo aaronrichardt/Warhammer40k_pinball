@@ -45,8 +45,10 @@ shot_profiles:
     states:
       - name: unlit
         show: off
-      - name: hit
+      - name: lit
         show: on
+        show_tokens:
+          color: purple
 
 variable_player:
   inlane_lane_group_hit_complete:
@@ -55,16 +57,15 @@ variable_player:
 
 
 event_player:
-  warp_outlane_left:
-    -warp_w_complete
-  warp_inlane_left:
-    -warp_a_complete
-  warp_inlane_right:
-    -warp_r_complete
-  warp_outlane_right:
-    -warp_p_complete
-
-
+  warp_outlane_left_unlit_hit:
+    - warp_w_complete
+  warp_inlane_left_unlit_hit:
+    - warp_a_complete
+  warp_inlane_right_unlit_hit:
+    - warp_r_complete
+  warp_outlane_right_unlit_hit:
+    - warp_p_complete
+  
 accruals:
   warp_accrual:
     events:
@@ -72,8 +73,9 @@ accruals:
       - warp_a_complete # index [1]
       - warp_r_complete # index [2]
       - warp_p_complete # index [3]
-    reset_on_complete: true
-    disable_on_complete: false
+    reset_on_complete: false
+    disable_on_complete: true
     reset_events: mode_warp_qualify_started
     events_when_complete: award_warp, reset_warp_lights
+
 

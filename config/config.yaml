@@ -59,6 +59,7 @@ config:
   - sounds.yaml
   - player_variables.yaml
   - sound_system.yaml
+  - modes.yaml
   - drop_targets.yaml
 
 
@@ -90,7 +91,7 @@ ball_devices:
       mechanical_eject: True
       ball_switches: s_autoplunger
       eject_coil: c_autoplunger
-      eject_timeouts: 19s
+      eject_timeouts: 5s
       eject_targets: playfield
     bd_trough:
       ball_switches: s_trough1, s_trough2, s_trough3, s_trough4, s_trough5, s_trough6, s_trough_jam
@@ -99,12 +100,6 @@ ball_devices:
       jam_switch: s_trough_jam
       eject_coil_jam_pulse: 15ms
       eject_targets: bd_plunger
-      eject_timeouts: 3s
-      debug: true
-
-    bd_upperscoop:
-      ball_switches: s_upperscoop
-      eject_coil: c_upperscoop
       eject_timeouts: 3s
 
     bd_lowerscoop:
@@ -216,57 +211,13 @@ machine_vars:
         initial_value: 1000004
         persist: true
     
-    
-shot_profiles: 
-  my_first_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: flashing
-        show: flash
-      - name: lit
-        show: on
-    loop: true
-
-  pop_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: hit
-        show: pop_flash
-        speed: 1
-    loop: true
+   
 
 virtual_platform_start_active_switches:
   #- s_trough1
   #- s_trough2
   #- s_trough3
 
-modes: 
-  - base
-  #- high_score
-  - xenos
-  - warp
-  - nurgle
-  - khorne
-  - tzeench
-  - slannesh
-  - warp_qualify
-  - waagh_multiball
-  #- rewardbank
-  #- waagh_multiball
-  #- inquisition_multiball
-  #- horus
-  - tilt  
-  #- bonus
-  #- necron_lock
-  #- necron_lock_qualified
-  #- necron_multiball
-  - gorkmorkrollovers
-  #- waagh_multiball
-  - waagh_qualifier
-  #- skillshot
-  #- super_skillshot
 
 
 

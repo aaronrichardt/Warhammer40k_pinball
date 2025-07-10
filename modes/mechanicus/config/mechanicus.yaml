@@ -1,0 +1,68 @@
+#config_version=6
+
+mode:
+  start_events: start_mechanicus_mode
+  stop_events: carousel_item_selected, carousel_item_canceled
+  code: mpf.modes.carousel.code.carousel.Carousel
+  use_wait_queue: True
+  events_when_started: balldevice_bd_scoop_ball_eject_attempt
+mode_settings:
+  selectable_items: khorne, nurgle, slannesh, tzeench, backInTheFight
+  select_item_events: s_start_inactive
+  next_item_events: s_left_flipper_active
+  previous_item_events: s_right_flipper_active
+slide_player:
+  carousel_khorne_highlighted: select_khorne
+  carousel_nurgle_highlighted: select_nurgle
+  carousel_slannesh_highlighted: select_slannesh
+  carousel_tzeench_highlighted: select_tzeench
+  carousel_backInTheFight_highlighted: select_backInTheFight
+slides:
+  select_khorne:
+    widgets:
+      - type: text
+        text: Khorne
+        font_size: 200
+        color: red
+    transition:
+      type: move_in
+      direction: right
+  select_nurgle:
+    widgets:
+      - type: text
+        text: Nurgle
+        font_size: 200
+        color: green
+    transition:
+      type: move_in
+      direction: right
+  select_tzeench:
+    widgets:
+      - type: text
+        text: Tzeench
+        font_size: 200
+        color: blue
+    transition:
+      type: move_in
+      direction: right
+  select_slannesh:
+    widgets:
+      - type: text
+        text: Slannesh
+        font_size: 200
+        color: pink
+    transition:
+      type: move_in
+      direction: right
+  select_backInTheFight:
+    widgets:
+      - type: text
+        text: Get Back To The Fight!
+        font_size: 200
+        color: white
+
+
+queue_relay_player:
+  balldevice_bd_scoop_ball_eject_attempt:
+    post: start_mode_success_show
+    wait_for: carousel_item_selected, carousel_item_canceled

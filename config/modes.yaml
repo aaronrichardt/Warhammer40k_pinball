@@ -1,0 +1,31 @@
+#config_version=6
+
+
+modes: 
+  - base
+  #- high_score
+  - xenos
+  - warp
+  - nurgle
+  - khorne
+  - tzeench
+  - slannesh
+  - warp_qualify
+
+  - mechanicus
+  - mechanicus_qualifier
+  #- rewardbank
+  #- waagh_multiball
+  #- inquisition_multiball
+  #- horus
+  - tilt  
+  #- bonus
+  #- necron_lock
+  #- necron_lock_qualified
+  #- necron_multiball
+  - gorkmorkrollovers
+  #- waagh_multiball
+  - waagh_qualifier
+  - waagh_multiball
+  #- skillshot
+  #- super_skillshot

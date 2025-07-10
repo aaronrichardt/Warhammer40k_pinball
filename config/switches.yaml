@@ -24,20 +24,27 @@ switches:
     type: "NC"
   s_autoplunger:
     number: 3208-7
+    #tags: playfield_active
   s_droptarget_down:
     number: 3208-23  
+
   s_right_outlane:
     number: 3208-9
+    tags: playfield_active
   s_right_inlane:
     number: 3208-8
+    tags: playfield_active
   s_left_vuk:
     number: 32082-27
     type: "NC"
     debounce: quick
+    
   s_27:
     number: 3208-27
+    tags: playfield_active
   s_26:
     number: 3208-26
+    tags: playfield_active
   s_25:
     number: 3208-25
   s_24:
@@ -46,10 +53,13 @@ switches:
     number: 3208-22
   s_bonus_x:
     number: 3208-20
+    tags: playfield_active
   s_rollover_mork:
     number: 3208-18
+    tags: playfield_active
   s_light_mystery: 
     number: 3208-19
+    tags: playfield_active
 
   s_left_flipper:
     number: 3208-31

@@ -44,6 +44,7 @@ coils:
     default_pulse_ms: 18
   c_scoop:
     number: 32082-1
+    default_pulse_ms: 18
 
   c_droptarget_smartdrop:
     number: 32082-7

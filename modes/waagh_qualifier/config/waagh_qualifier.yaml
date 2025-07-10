@@ -37,7 +37,6 @@ event_player:
         - waagh_face_enable
     s_waagh_newton_ball_active{device.accruals.waagh_accrual.value[0]==True and device.accruals.waagh_accrual.value[1]==True and device.accruals.waagh_accrual.value[2]==True and device.accruals.waagh_accrual.value[3]==True and device.accruals.waagh_accrual.value[4]==True and device.accruals.waagh_accrual.value[5]==False }:
         - waagh_qualify_shot_exc_complete
-
     mode_waagh_qualifier_started:
       - waagh_qualify_shot_w_enable
     
@@ -47,6 +46,7 @@ show_player:
         priority: 20
         key: waagh_face
         loops: -1
+
         show_tokens:
           show_led: waagh_face
           show_led_color: Yellow
@@ -154,8 +154,8 @@ show_player:
         show_led_color_final_color: Red
   reset_waagh_lights:
     light_waagh_letter:
-      priority: 10
+      priority: 20
       show_tokens:
-        gadget_letter_made_led: waaagh_letter
-        gadget_letter_made_color: Yellow
-        gadget_letter_final_color: 000000
+        show_led: waagh_letter, waagh_face
+        show_led_color: Yellow
+        show_led_color_final_color: 000000

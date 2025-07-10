@@ -1,0 +1,42 @@
+#config_version=6
+##! mode: mechanicus_qualifier
+
+
+mode:
+  #this mode starts when the ball starts
+  start_events: award_warp
+  priority: 20
+
+
+
+shots:
+  mechanicus_scoop_shot:
+    switch: s_scoop
+    profile: generic_flash_profile
+    show_tokens:
+      led: l_adeptus_mechanicius
+
+shot_profiles:
+  generic_flash_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: generic_flash
+        show_tokens:
+          color: yellow
+
+event_player:
+  mechanicus_scoop_shot_lit_hit:
+    - mechanicus_scoop_shot_complete
+  
+accruals:
+  mechanicus_accrual:
+    events:
+      - mechanicus_scoop_shot_complete # index [0]
+    reset_on_complete: false
+    disable_on_complete: true
+    reset_events: mode_warp_qualify_started
+    events_when_complete: start_mechanicus_mode
+
+

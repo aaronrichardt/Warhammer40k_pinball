@@ -1,62 +1,12 @@
 #show_version=6
 ##! show: light_waagh
-- time: 0
+
+
+- time: "+.06"
   lights:
     (show_led): (show_led_color)
 
-- time: "+.05"
+- time: "+.06"
   lights:
     (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
-
-- time: "+.05"
-  lights:
-    (show_led): off
-
-- time: "+.05"
-  lights:
-    (show_led): (show_led_color)
 
