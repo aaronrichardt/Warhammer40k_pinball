@@ -73,7 +73,6 @@ missing_switches:
   s_upper_bigtarget: 8
   s_upperscoop: 449
   s_waagh_newton_ball: 1
-  s_xenos_e: 1
   s_xenos_n: 1
   s_xenos_o: 1
   s_xenos_s: 2
@@ -147,7 +146,7 @@ switches:
   s_dropramp_home: 82
   s_droptarget: 91
   s_droptarget_down: 718
-  s_droptarget_lock: 20457
+  s_droptarget_lock: 20472
   s_droptarget_opto: 100
   s_inner_loop_lower: 90
   s_kickback1: 306
@@ -224,7 +223,7 @@ switches:
   s_upperleft_flipper: 14685
   s_upperscoop: 159
   s_waagh_newton_ball: 374
-  s_xenos_e: 551
+  s_xenos_e: 552
   s_xenos_n: 667
   s_xenos_o: 817
   s_xenos_s: 624

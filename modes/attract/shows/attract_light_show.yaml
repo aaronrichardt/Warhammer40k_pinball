@@ -4,4 +4,18 @@
   shows: 
       gi_test:
         speed: 10 
+- duration: 10
+  shows: 
+      2toneflash:
+        show_tokens:
+          odd_color: Yellow
+          even_color: Purple
+        speed: 10
+- duration: 10
+  shows: 
+      2toneflash:
+        show_tokens:
+          odd_color: Green
+          even_color: orange
+        speed: 10
   

@@ -2,11 +2,11 @@
 ##! show: light_waagh
 
 
-- time: "+.06"
+- time: "+.2"
   lights:
     (show_led): (show_led_color)
 
-- time: "+.06"
+- time: "+.1"
   lights:
     (show_led): off
 

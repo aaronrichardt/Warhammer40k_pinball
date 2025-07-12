@@ -42,18 +42,17 @@ event_player:
     
 show_player:
   waagh_face_enable:
-      light_waagh_flash:
+      light_waagh_shot:
         priority: 20
         key: waagh_face
         loops: -1
-
         show_tokens:
           show_led: waagh_face
           show_led_color: Yellow
           show_led_color_final_color: Yellow
   waagh_qualify_shot_w_enable:
     light_waagh_shot:
-      priority: 20
+      priority: 30
       key: waagh_lit
       loops: -1
       show_tokens:

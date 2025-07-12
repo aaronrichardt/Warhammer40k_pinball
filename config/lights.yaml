@@ -1,865 +1,441 @@
 #config_version=6
 
+light_settings:
+  default_fade_ms: 0
+
 lights:
   l_omega_1:
     number: playfield-1-1
-    tags:  Chain1
+    tags:  Chain1, odd
   l_omega_2:
-   number: playfield-1-2
-   tags:  Chain1
+    number: playfield-1-2
+    tags:  Chain1, even
   l_omega_3:
-   number: playfield-1-3
-   tags:  Chain1
+    number: playfield-1-3
+    tags:  Chain1, odd
   l_omega_4:
-   number: playfield-1-4
-   tags:  Chain1
+    number: playfield-1-4
+    tags:  Chain1, even
   l_omega_5:
-   number: playfield-1-5
-   tags:  Chain1
+    number: playfield-1-5
+    tags:  Chain1, odd
   l_omega_6:
-   number: playfield-1-6
-   tags:  Chain1
+    number: playfield-1-6
+    tags:  Chain1, even
   l_omega_7:
-   number: playfield-1-7
-   tags:  Chain1
+    number: playfield-1-7
+    tags:  Chain1, odd
   l_omega_8:
-   number: playfield-1-8
-   tags:  Chain1
+    number: playfield-1-8
+    tags:  Chain1, even
   l_Solemnace_circle:
-   number: playfield-1-9
-   tags:  Chain1
+    number: playfield-1-9
+    tags:  Chain1, odd
   l_adeptus_mechanicius:
-   number: playfield-1-10
-   tags:  Chain1
+    number: playfield-1-10
+    tags:  Chain1, even
   l_mystery:
-   number: playfield-1-11
-   tags:  Chain1
+    number: playfield-1-11
+    tags:  Chain1, odd
   l_light_outlanes:
-   number: playfield-1-12
-   tags:  Chain1
+    number: playfield-1-12
+    tags:  Chain1, even
   l_nurgle5:
-   number: playfield-1-13
-   tags:  Chain1
+    number: playfield-1-13
+    tags:  Chain1, odd
   l_warp_p:
     number: playfield-1-14
-    tags:  Chain1
+    tags:  Chain1, even
   l_warp_r:
     number: playfield-1-15
-    tags:  Chain1
+    tags:  Chain1, odd
   l_2xscoring:
     number: playfield-1-16
-    tags:  Chain1
+    tags:  Chain1, even
   l_addaball:
     number: playfield-1-17
-    tags:  Chain1
+    tags:  Chain1, odd
   l_necron_ui:
     number: playfield-1-18
-    tags:  Chain1
+    tags:  Chain1, even
   l_nurgle_ui:
     number: playfield-1-19
-    tags:  Chain1
+    tags:  Chain1, odd
   l_chaos_ui:
     number: playfield-1-20
-    tags:  Chain1
+    tags:  Chain1, even
   l_tzeench_ui:
     number: playfield-1-21
-    tags:  Chain1
+    tags:  Chain1, odd
   l_tyranid_ui:
     number: playfield-1-22
-    tags:  Chain1
+    tags:  Chain1, even
   l_warp_a:
     number: playfield-1-23
-    tags:  Chain1
+    tags:  Chain1, odd
   l_warp_w:
     number: playfield-1-24
-    tags:  Chain1
+    tags:  Chain1, even
   l_left_sling_upper:
     number: playfield-1-25
-    tags:  Chain1, GI
+    tags:  Chain1, GI, odd
   l_left_sling_lower:
     number: playfield-1-26
-    tags:  Chain1, GI
+    tags:  Chain1, GI, even
   l_left_inlane_upper:
     number: playfield-1-27
-    tags:  Chain1, GI
+    tags:  Chain1, GI, odd
   l_left_inlane_lower:
     number: playfield-1-28
-    tags:  Chain1, GI
+    tags:  Chain1, GI, even
   l_ballsave:
     number: playfield-1-29
-    tags:  Chain1
+    tags:  Chain1, odd
   l_right_inlane_lower:
     number: playfield-1-30
-    tags:  Chain1, GI
+    tags:  Chain1, GI, even
   l_right_inlane_upper:
     number: playfield-1-31
-    tags:  Chain1, GI
+    tags:  Chain1, GI, odd
   l_right_sling_lower:
     number: playfield-1-32
-    tags:  Chain1, GI
+    tags:  Chain1, GI, even
   l_xenos_s:
     number: playfield-2-1
-    tags: Chain2, xenos_letter
+    tags: Chain2, xenos_letter, odd
   l_xenos_o:
     number: playfield-2-2
-    tags: Chain2, xenos_letter
+    tags: Chain2, xenos_letter, even
   l_xenos_n:
     number: playfield-2-3
-    tags: Chain2, xenos_letter
+    tags: Chain2, xenos_letter, odd
   l_xenos_e:
     number: playfield-2-4
-    tags: Chain2, xenos_letter
+    tags: Chain2, xenos_letter, even
   l_xenos_x:
     number: playfield-2-5
-    tags: Chain2, xenos_letter
+    tags: Chain2, xenos_letter, odd
   l_orkface1:
     number: playfield-2-6
-    
-    tags: Chain2, waagh_face
+    tags: Chain2, waagh_face, even
   l_orkface2:
     number: playfield-2-7
-    tags: Chain2, waagh_face
+    tags: Chain2, waagh_face, odd
   l_orkface3:
     number: playfield-2-8
-    tags: Chain2, waagh_face
+    tags: Chain2, waagh_face, even
   l_orkface4:
     number: playfield-2-9
-    tags: Chain2, waagh_face
+    tags: Chain2, waagh_face, odd
   l_left_orbit_circle:
     number: playfield-2-10
-    tags: Chain2
+    tags: Chain2, even
   l_left_innerloop_circle:
     number: playfield-2-11
-    tags: Chain2
+    tags: Chain2, odd
   l_left_orbit_arrow:
     number: playfield-2-12
-    tags: Chain2
+    tags: Chain2, even
   l_left_innerloop_arrow:
     number: playfield-2-13
-    tags: Chain2
+    tags: Chain2, odd
   l_waagh_H:
     number: playfield-2-14
-    tags: Chain2, waagh_letter
+    tags: Chain2, waagh_letter, even
   l_waagh_G:
     number: playfield-2-15
-    tags: Chain2, waagh_letter
-  l_waagh_A:
-    number: playfield-2-17
-    tags: Chain2, waagh_letter
+    tags: Chain2, waagh_letter, odd
   l_waagh_A2:
     number: playfield-2-16
-    tags: Chain2, waagh_letter
+    tags: Chain2, waagh_letter, even
+  l_waagh_A:
+    number: playfield-2-17
+    tags: Chain2, waagh_letter, odd
   l_waagh_W:
     number: playfield-2-18
-    tags: Chain2, waagh_letter
+    tags: Chain2, waagh_letter, even
   l_waagh_!:
     number: playfield-2-19
-    tags: Chain2, waagh_letter
+    tags: Chain2, waagh_letter, odd
   l_nurgle1:
     number: playfield-2-20
-    tags: Chain2
+    tags: Chain2, even
   l_center_ramp_circle:
     number: playfield-2-21
-    tags: Chain2
+    tags: Chain2, odd
   l_center_ramp_arrow:
     number: playfield-2-22
-    tags: Chain2
+    tags: Chain2, even
   l_nurgle2:
     number: playfield-2-23
-    tags: Chain2
+    tags: Chain2, odd
   l_right_innerloop_circle:
     number: playfield-2-24
-    tags: Chain2
+    tags: Chain2, even
   l_upper_lightingbolt1:
     number: playfield-2-25
-    tags: Chain2
+    tags: Chain2, odd
   l_upper_lightingbolt2:
     number: playfield-2-26
-    tags: Chain2 
+    tags: Chain2, even
   l_lower_lightingbolt:
     number: playfield-2-27
-    tags: Chain2 
+    tags: Chain2, odd
   l_lightlock:
     number: playfield-2-28
-    tags: Chain2 
+    tags: Chain2, even
   l_light_spinners:
     number: playfield-2-29
-    tags: Chain2
+    tags: Chain2, odd
   l_bonusx:
     number: playfield-2-30
-    tags: Chain2
+    tags: Chain2, even
   l_light_mystery:
     number: playfield-2-31
-    tags: Chain2
+    tags: Chain2, odd
   l_solemnace_arrow:
     number: playfield-3-1
-    tags: Chain3
+    tags: Chain3, odd
   l_right_orbit_cicle:
     number: playfield-3-2
-    tags: Chain3
+    tags: Chain3, even
   l_right_orbit_arrow:
     number: playfield-3-3
-    tags: Chain3
+    tags: Chain3, odd
   l_necron_lock1:
     number: playfield-3-4
-    tags: Chain3
+    tags: Chain3, even
   l_necron_lock2:
     number: playfield-3-5
-    tags: Chain3
+    tags: Chain3, odd
   l_nurgle4:
     number: playfield-3-6
-    tags: Chain3
+    tags: Chain3, even
   l_pop_flasher:
     number: playfield-3-7
-    tags: Chain3
+    tags: Chain3, odd
   l_jackpot:
     number: playfield-3-8
-    tags: Chain3
+    tags: Chain3, even
   l_super_jackpot:
     number: playfield-3-9
-    tags: Chain3
+    tags: Chain3, odd
   l_rollover_right:
     number: playfield-3-10
-    tags: Chain3, GI
+    tags: Chain3, GI, even
   l_rollover_center:
     number: playfield-3-11
-    tags: Chain3, GI
+    tags: Chain3, GI, odd
   l_rollover_mork:
     number: playfield-3-12
-    tags: Chain3, rollovers
+    tags: Chain3, rollovers, even
   l_rollover_gork:
     number: playfield-3-13
-    tags: Chain3, rollovers
+    tags: Chain3, rollovers, odd
   l_rollover_left:
     number: playfield-3-14
-    tags: Chain3, GI
+    tags: Chain3, GI, even
   l_nurgle3:
     number: playfield-3-15
-    tags: Chain3
+    tags: Chain3, odd
   l_rollover:
     number: playfield-3-16
-    tags: Chain3
+    tags: Chain3, even
   l_innerloop_arrow:
     number: playfield-3-17
-    tags: Chain3
+    tags: Chain3, odd
   l_innerloop_flasher:
     number: playfield-3-18
-    tags: Chain3
+    tags: Chain3, even
   l_right_lightbar1:
     number: playfield-5-1
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar2:
     number: playfield-5-2
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar3:
     number: playfield-5-3
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar4:
     number: playfield-5-4
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar5:
     number: playfield-5-5
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar6:
     number: playfield-5-6
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar7:
     number: playfield-5-7
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar8:
     number: playfield-5-8
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar9:
     number: playfield-5-9
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar10:
     number: playfield-5-10
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar11:
     number: playfield-5-11
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar12:
     number: playfield-5-12
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar13:
     number: playfield-5-13
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar14:
     number: playfield-5-14
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar15:
     number: playfield-5-15
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar16:
     number: playfield-5-16
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar17:
     number: playfield-5-17
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar18:
     number: playfield-5-18
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar19:
     number: playfield-5-19
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar20:
     number: playfield-5-20
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar21:
     number: playfield-5-21
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar22:
     number: playfield-5-22
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar23:
     number: playfield-5-23
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar24:
     number: playfield-5-24
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar25:
     number: playfield-5-25
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar26:
     number: playfield-5-26
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar27:
     number: playfield-5-27
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar28:
     number: playfield-5-28
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar29:
     number: playfield-5-29
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar30:
     number: playfield-5-30
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_right_lightbar31:
     number: playfield-5-31
-    tags: right_lightbar
+    tags: right_lightbar, odd
   l_right_lightbar32:
     number: playfield-5-32
-    tags: right_lightbar
+    tags: right_lightbar, even
   l_left_lightbar1:
     number: playfield-6-1
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar2:
     number: playfield-6-2
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar3:
     number: playfield-6-3
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar4:
     number: playfield-6-4
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar5:
     number: playfield-6-5
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar6:
     number: playfield-6-6
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar7:
     number: playfield-6-7
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar8:
     number: playfield-6-8
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar9:
     number: playfield-6-9
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar10:
     number: playfield-6-10
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar11:
     number: playfield-6-11
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar12:
     number: playfield-6-12
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar13:
     number: playfield-6-13
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar14:
     number: playfield-6-14
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar15:
     number: playfield-6-15
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar16:
     number: playfield-6-16
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar17:
     number: playfield-6-17
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar18:
     number: playfield-6-18
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar19:
     number: playfield-6-19
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar20:
     number: playfield-6-20
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar21:
     number: playfield-6-21
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar22:
     number: playfield-6-22
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar23:
     number: playfield-6-23
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar24:
     number: playfield-6-24
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar25:
     number: playfield-6-25
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar26:
     number: playfield-6-26
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar27:
     number: playfield-6-27
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar28:
     number: playfield-6-28
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar29:
     number: playfield-6-29
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar30:
     number: playfield-6-30
-    tags: left_lightbar
+    tags: left_lightbar, even
   l_left_lightbar31:
     number: playfield-6-31
-    tags: left_lightbar
+    tags: left_lightbar, odd
   l_left_lightbar32:
     number: playfield-6-32
-    tags: left_lightbar
-
-#  Chain1_light3:
-#   number: playfield-1-3
-#   tags:  Chain1
-#  Chain1_light4: 
-#   number: playfield-1-4
-#   tags:  Chain1
-#  Chain1_light5:a
-#   number: playfield-1-5
-#   tags:  Chain1
-#  Chain1_light6:
-#   number: playfield-1-6
-#   tags:  Chain1
-#  Chain1_light7:
-#   number: playfield-1-7
-#   tags:  Chain1
-#  Chain1_light8:
-#   number: playfield-1-8
-#   tags:  Chain1
-#  Chain1_light9:
-#   number: playfield-1-9
-#   tags:  Chain1
-#  Chain1_light10:
-#   number: playfield-5-1
-#   tags:  Chain1
-#  Chain1_light11:
-#   number: playfield-5-2
-#   tags:  Chain1
-#  Chain1_light12:
-#   number: playfield-5-3
-#   tags: UI
-#  Chain1_light13:
-#   number: playfield-5-4
-#   tags: UI
-# l_xenos_x:
-#   number: playfield-2-3
-#   tags: xenos_letter, insert, UI
-# l_xenos_e:
-#   number: playfield-2-4
-#   tags: xenos_letter , insert, UI
-# l_xenos_n:
-#   number: playfield-2-5
-#   tags: xenos_letter , insert, UI
-# l_xenos_o:
-#   number: playfield-2-6
-#   tags: xenos_letter , insert, UI
-# l_xenos_s:
-#   number: playfield-2-7
-#   tags: xenos_letter, insert, UI
-# l_left_outlane:
-#   number: playfield-2-2
-#   tags: rolloverlights, insert, UI
-# l_left_inlane:
-#   number: playfield-2-1
-#   tags: rolloverlights, insert, UI
-# l_left_orbit_circle1:
-#   number: playfield-2-8
-#   tags: insert, UI
-# l_left_orbit_circle2:
-#   number: playfield-2-9
-#   tags: insert, UI
-# l_left_orbit_arrow: 
-#   number: playfield-2-10
-#   tags: insert, UI
-# l_spinner_circle1:
-#   number: playfield-2-11
-#   tags: insert, UI
-# l_spinner_circle2:
-#   number: playfield-2-12
-#   tags: insert, UI
-# l_spinner_arrow: 
-#   number: playfield-2-13
-#   tags: insert, UI
-# l_left_ramp_circle1:
-#   number: playfield-2-14
-#   tags: insert, UI
-# l_left_ramp_circle2:
-#   number: playfield-2-15
-#   tags: insert, UI
-# l_left_ramp_arrow:
-#   number: playfield-2-16
-#   tags: insert, UI
-# l-threeBank_bottom:
-#   number: playfield-3-1
-#   tags: 3-bank, UI
-# l_threeBank_middle: 
-#   number: playfield-3-2
-#   tags: 3-bank, UI
-# l_threeBank_top:
-#   number : playfield-3-3
-#   tags: 3-bank, UI
-# l_motor1:
-#   number: playfield-3-4
-#   tags: insert, tron_spinner, UI
-# l_motor2:
-#   number: playfield-3-5
-#   tags: insert, tron_spinner, UI
-# l_motor3:
-#   number: playfield-3-6
-#   tags: insert, tron_spinner, UI
-# l_motor4:
-#   number: playfield-3-7
-#   tags: insert, tron_spinner, UI
-# l_motor5:
-#   number: playfield-3-8
-#   tags: insert, tron_spinner, UI
-# l_motor6:
-#   number: playfield-3-9
-#   tags: insert, tron_spinner, UI
-# l_gork:
-#   number: playfield-2-17
-#   tags: insert, rollovers, UI
-# l_mork:
-#   number: playfield-2-18
-#   tags: insert, rollovers, UI
-# l_locklight:
-#   number: playfield-2-19
-#   tags: insert, UI
-# l_right_ramp_arrow:
-#   number: playfield-2-20
-#   tags: insert, UI
-# l_right_ramp_circle2:
-#   number: playfield-2-21
-#   tags: insert, UI
-# l_right_ramp_circle1:
-#   number: playfield-2-22
-#   tags: insert, UI
-# l_right_orbit_arrow:
-#   number: playfield-2-23
-#   tags: insert, UI
-# l_right_orbit_circle2:
-#   number: playfield-2-24
-#   tags: insert, UI
-# l_right_orbit_circle1:
-#   number: playfield-2-25
-#   tags: insert, UI
-# l_scoop:
-#   number: playfield-2-26
-#   tags: insert, UI
-# l_right_outlane:
-#   number: playfield-2-27
-#   tags: insert, UI
-# l_right_inlane:
-#   number: playfield-2-28
-#   tags: insert, UI
-# l_ball_save:
-#   number: playfield-4-10
-#   tags: insert, UI
-# l_UI_rec_1:
-#   number: playfield-4-1
-#   tags: UI
-# l_UI_rec_2:
-#   number: playfield-4-2
-#   tags: UI
-# l_UI_rec_3:
-#   number: playfield-4-3
-#   tags: UI
-# l_UI_rec_4:
-#   number: playfield-4-4
-#   tags: UI
-# l_UI_rec_5:
-#   number: playfield-4-5
-#   tags: UI
-# l_UI_circle_1:
-#   number: playfield-4-6
-#   tags: UI
-# l_UI_circle_2:
-#   number: playfield-4-7
-#   tags: UI
-# l_UI_circle_3:
-#   number: playfield-4-8
-#   tags: UI
-# l_UI_circle_4:
-#   number: playfield-4-9
-#   tags: UI
-#
-#  Chain1_11:
-#   number: playfield-4-11
-#   tags: UI
-#  Chain1_12:
-#   number: playfield-4-12
-#   tags: UI
-#  Chain1_13:
-#   number: playfield-4-13
-#   tags:  Chain1
-#  Chain1_14:
-#   number: playfield-4-14
-#   tags:  Chain1
-#  Chain1_15:
-#   number: playfield-4-15
-#   tags: UI
-#  Chain1_16:
-#   number: playfield-4-16
-#   tags: UI
-#
-#  Chain1_17:
-#   number: playfield-4-17
-#   tags: UI
-#  Chain1_18:
-#   number: playfield-4-18
-#   tags: UI
-#  Chain1_19:
-#   number: playfield-4-19
-#   tags: UI
-#  Chain1_20:
-#   number: playfield-4-20
-#   tags: UI
-#  Chain1_21:
-#   number: playfield-4-21
-#   tags: UI
-#  Chain1_22:
-#   number: playfield-4-22
-#   tags: UI
-#  Chain1_23:
-#   number: playfield-4-23
-#   tags: UI
-#  Chain1_24:
-#   number: playfield-4-24
-#   tags: UI
-#  Chain1_25:
-#   number: playfield-4-25
-#   tags: UI
-#  Chain1_26:
-#   number: playfield-4-26
-#   tags: UI
-#  Chain1_27:
-#   number: playfield-4-27
-#   tags: UI
-#  Chain1_28:
-#   number: playfield-4-28
-#   tags: UI
-#  Chain1_29:
-#   number: playfield-4-29
-#   tags: UI
-#  Chain1_30:
-#   number: playfield-4-30
-#   tags: UI
-#  Chain1_31:
-#   number: playfield-4-31
-#   tags: UI
-#  Chain1_32:
-#   number: playfield-4-32
-#   tags: UI
-#
-#
-# l_backboard_1:
-#   number: playfield-6-1
-#   tags: backboard
-# l_backboard_2:
-#   number: playfield-6-2
-#   tags: backboard
-# l_backboard_3:
-#   number: playfield-6-3
-#   tags: backboard
-# l_backboard_4:
-#   number: playfield-6-4
-#   tags: backboard
-# l_backboard_5:
-#   number: playfield-6-5
-#   tags: backboard
-# l_backboard_6:
-#   number: playfield-6-6
-#   tags: backboard
-# l_backboard_7:
-#   number: playfield-6-7
-#   tags: backboard
-# l_backboard_8:
-#   number: playfield-6-8
-#   tags: backboard
-# l_backboard_9:
-#   number: playfield-6-9
-#   tags: backboard
-# l_backboard_10:
-#   number: playfield-6-10
-#   tags: backboard
-# l_backboard_11:
-#   number: playfield-6-11
-#   tags: backboard
-# l_backboard_12:
-#   number: playfield-6-12
-#   tags: backboard
-# l_backboard_13:
-#   number: playfield-6-13
-#   tags: backboard
-# l_backboard_14:
-#   number: playfield-6-14
-#   tags: backboard
-# l_backboard_15:
-#   number: playfield-6-15
-#   tags: backboard
-# l_backboard_16:
-#   number: playfield-6-16
-#   tags: backboard
-# l_backboard_17:
-#   number: playfield-6-17
-#   tags: backboard
-# l_backboard_18:
-#   number: playfield-6-18
-#   tags: backboard
-# l_backboard_19:
-#   number: playfield-6-19
-#   tags: backboard
-# l_backboard_20:
-#   number: playfield-6-20
-#   tags: backboard
-# l_backboard_21:
-#   number: playfield-6-21
-#   tags: backboard
-# l_backboard_22:
-#   number: playfield-6-22
-#   tags: backboard
-# l_backboard_23:
-#   number: playfield-6-23
-#   tags: backboard
-# l_backboard_24:
-#   number: playfield-6-24
-#   tags: backboard
-# l_backboard_25:
-#   number: playfield-6-25
-#   tags: backboard
-# l_backboard_26:
-#   number: playfield-6-26
-#   tags: backboard
-# l_backboard_27:
-#   number: playfield-6-27
-#   tags: backboard
-# l_backboard_28:
-#   number: playfield-6-28
-#   tags: backboard
-# l_neron_1:
-#   number: neuron-1-1
-#   tags: head
-# l_neron_2:
-#   number: neuron-1-2
-#   tags: head
-# l_neron_3:
-#   number: neuron-1-3
-#   tags: head
-# l_neron_4:
-#   number: neuron-1-4
-#   tags: head
-# l_neron_5:
-#   number: neuron-1-5
-#   tags: head
-# l_neron_6:
-#   number: neuron-1-6
-#   tags: head
-# l_neron_7:
-#   number: neuron-1-7
-#   tags: head
-# l_neron_8:
-#   number: neuron-1-8
-#   tags: head
-# l_neron_9:
-#   number: neuron-1-9
-#   tags: head
-# l_neron_10:
-#   number: neuron-1-10
-#   tags: head
-# l_neron_11:
-#   number: neuron-1-11
-#   tags: head
-# l_neron_12:
-#   number: neuron-1-12
-#   tags: head
-# l_neron_13:
-#   number: neuron-1-13
-#   tags: head
-# l_neron_14:
-#   number: neuron-1-14
-#   tags: head
-# l_neron_15:
-#   number: neuron-1-15
-#   tags: head
-# l_neron_16:
-#   number: neuron-1-16
-#   tags: head
-# l_neron_17:
-#   number: neuron-1-17
-#   tags: head
-#
-# l_neron_18:
-#   number: neuron-1-18
-#   tags: head
-# l_neron_19:
-#   number: neuron-1-19
-#   tags: head
-# l_neron_20:
-#   number: neuron-1-20
-#   tags: head
-# l_neron_21:
-#   number: neuron-1-21
-#   tags: head
-# l_neron_22:
-#   number: neuron-1-22
-#   tags: head
-# l_neron_23:
-#   number: neuron-1-23
-#   tags: head
-# l_neron_24:
-#   number: neuron-1-24
-#   tags: head
-# l_neron_25:
-#   number: neuron-1-25
-#   tags: head
-# l_neron_26:
-#   number: neuron-1-26
-#   tags: head
-# l_neron_27:
-#   number: neuron-1-27
-#   tags: head
-# l_neron_28:
-#   number: neuron-1-28
-#   tags: head
-# l_neron_29:
-#   number: neuron-1-29
-#   tags: head
-# l_neron_30:
-#   number: neuron-1-30
-#   tags: head
-# l_neron_31:
-#   number: neuron-1-31
-#   tags: head
-# l_neron_32:
-#   number: neuron-1-32
-#   tags: head
+    tags: left_lightbar, even

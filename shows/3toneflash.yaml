@@ -1,0 +1,17 @@
+#show_version=6
+
+
+- time: "+1"
+  lights:
+    odd: (odd_color)
+    even: (even_color)
+
+- time: "+1"
+  lights:
+    odd: (even_color)
+    even: (odd_color)
+
+- time: "+1"
+  lights:
+    odd: (third_color)
+    even: (even_color)

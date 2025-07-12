@@ -46,7 +46,7 @@ shot_profiles:
       - name: unlit
         show: off
       - name: lit
-        show: on
+        show: generic_flash
         show_tokens:
           color: purple
 
