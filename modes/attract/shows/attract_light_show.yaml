@@ -1,6 +1,6 @@
 #show_version=6
 ##! show: attract_light_show
-- duration: 10
+- duration: 5
   shows: 
       3toneflash:
         show_tokens:
@@ -8,23 +8,51 @@
           second_color: FC1ACB
           third_color: EDC207
         speed: 10
-  
+ 
 
-- duration: 10
-  shows: 
-      gi_test:
-        speed: 10 
-- duration: 10
+#- duration: 10
+#  shows: 
+#      gi_test:
+#        speed: 10 
+- duration: 5
   shows: 
       2toneflash:
         show_tokens:
           odd_color: Yellow
           even_color: Purple
         speed: 10
-- duration: 10
+
+- duration: 5
+  shows: 
+      3toneflash:
+        show_tokens:
+          first_color: teal
+          second_color: pink    
+          third_color: Purple
+        speed: 10
+
+- duration: 5
   shows: 
       2toneflash:
         show_tokens:
           odd_color: Green
-          even_color: orange
+          even_color: F7D84E
+        speed: 10
+
+
+- duration: 8
+  shows: 
+      3toneflash:
+        show_tokens:
+          first_color: 0359F8 #ultramarine blue
+          second_color: gold    
+          third_color: white
+        speed: 10
+
+- duration: 5
+  shows: 
+      2toneflash:
+        show_tokens:
+          odd_color: red
+          even_color: gold
         speed: 10
