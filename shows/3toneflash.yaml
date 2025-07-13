@@ -3,15 +3,206 @@
 
 - time: "+1"
   lights:
-    odd: (odd_color)
-    even: (even_color)
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
 
 - time: "+1"
   lights:
-    odd: (even_color)
-    even: (odd_color)
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
 
 - time: "+1"
   lights:
-    odd: (third_color)
-    even: (even_color)
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)
+- time: "+1"
+  lights:
+    first: (first_color)
+    second: (second_color)
+    third: (third_color)
+
+- time: "+1"
+  lights:
+    first: (third_color)
+    second: (first_color)
+    third: (second_color)
+
+- time: "+1"
+  lights:
+    first: (second_color)
+    second: (third_color)
+    third: (first_color)

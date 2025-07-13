@@ -2,6 +2,16 @@
 ##! show: attract_light_show
 - duration: 10
   shows: 
+      3toneflash:
+        show_tokens:
+          first_color: teal
+          second_color: FC1ACB
+          third_color: EDC207
+        speed: 10
+  
+
+- duration: 10
+  shows: 
       gi_test:
         speed: 10 
 - duration: 10
@@ -18,4 +28,3 @@
           odd_color: Green
           even_color: orange
         speed: 10
-  
