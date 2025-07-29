@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bovylwjst15s1"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_pkhtu"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pkhtu")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 826.0
+offset_bottom = 332.0
+color = Color(0.839217, 0.217557, 0.908014, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 311.0
+offset_right = 1268.0
+offset_bottom = 622.0
+theme_override_font_sizes/font_size = 132
+text = "SLANNESH
+"
+horizontal_alignment = 1
+vertical_alignment = 1

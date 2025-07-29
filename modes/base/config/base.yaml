@@ -3,6 +3,10 @@ mode:
   start_events: ball_started
   priority: 100
 
+slide_player:
+    mode_base_started: base
+    #init_done: welcome_slide
+    #mode_attract_started: attract
 
 show_player:
   mode_base_started:
@@ -121,18 +125,7 @@ shot_profiles:
     loop: true
 
 shots: 
- #my_first_shot: 
- #  switch: s_left_orbit
- #  show_tokens: 
- #    led: l_left_orbit_arrow
- #  profile: my_first_profile
-  
-  #3_bank_shot:
-  #  switch: s_3bank
-   # show_tokens:
-   #   led: tron_spinner
-   # profile: my_first_profile
-  
+
   left_orbit:
     switch: s_left_orbit
 
@@ -151,34 +144,11 @@ shots:
     switch: s_pop_bottom
     profile: pop_profile
 
-  #pops
-#  left_pop:
-#    switch: s_pop_left
-#  right_pop:
-#    switch: s_pop_right
-#  center_pop:
-#    switch: s_pop_center
-#  drop_target:
-#    switch: s_droptarget_down
-#
-#  drop_target_lock:
-#    switch: s_droptarget_lock
-#  center_spinner_target:s
-#    switch: #s_center_spinner
 
 sequence_shots: 
   right_orbit:
     switch_sequence: s_right_orbit, s_left_orbit
     sequence_timeout: 3s
-
-
-slide_player:
-  #player_added:
-   # new_player_slide:
-   #   priority: 1000
-
-
-
 
 accruals:
   qualify_main_mode:
@@ -274,29 +244,5 @@ event_player:
       direction: up
   mode_bonus_will_start: stop_all_music
   
-
-
-
-  #warp_traveler: music_emporer
-  #mode_base_started{game.num_players == 1}: evenindeath 
-  #base_sound_player_1: evenindeath
-  ##base_start_single_player: player_ones
-  #base_sound_player_2: player_two
-  #base_sound_player_3: player_three
-  #base_sound_player_4: player_four
-  #left_sling_shot_hit: left_sling
-  #right_sling_shot_hit: right_sling
-  #upper_left_sling_shot_hit: mid_sling
-  #side_ramp_shot_hit: ramp_sound_4
-  #secret_passage_shot_hit: ramp_sound_2
-  #rollover_shot_hit: mini_loop
-  #scoop_shot_hit: scoop_eject
-  #thin_orange_shot_hit: energy_target
-  #shatz_shot_hit: zero_suit_target
-  #left_orbit_hit: left_orbit
-  #right_orbit_hit: right_orbit
-  #scoop_hit: sound_scoop
-  #sling_hit: sound_slinghit
-  #spinner_hit: lazgun
 
 

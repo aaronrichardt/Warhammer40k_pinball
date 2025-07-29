@@ -148,14 +148,6 @@ autofire_coils:
   ac_popbumper_bottom:
     coil: c_pop_bottom
     switch: s_pop_bottom
-  #ac_popbumper_right:
-  #  coil: c_pop_right
-  #  switch: s_pop_right
-
-slide_player:
-    mode_base_started: base
-    #init_done: welcome_slide
-    #mode_attract_started: attract
 
 
 machine_vars:

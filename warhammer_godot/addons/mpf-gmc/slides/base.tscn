@@ -18,7 +18,7 @@ position = Vector2(960.5, 540.5)
 scale = Vector2(0.542196, 0.403086)
 texture = ExtResource("2_l8le3")
 
-[node name="score" type="Label" parent="."]
+[node name="active score" type="Label" parent="."]
 layout_mode = 0
 offset_left = 442.0
 offset_top = 424.0
@@ -48,32 +48,6 @@ script = ExtResource("3_4w4lw")
 variable_name = "number"
 template_string = "Player %s "
 min_players = 2
-
-[node name="ball" type="Label" parent="HBoxContainer"]
-layout_mode = 2
-theme = ExtResource("4_c4bpu")
-theme_override_font_sizes/font_size = 0
-text = "Ball 1"
-script = ExtResource("3_4w4lw")
-variable_type = 2
-variable_name = "ball"
-template_string = "Ball %s"
-
-[node name="MPFVariable" type="Label" parent="."]
-layout_mode = 0
-offset_left = 823.0
-offset_top = 18.0
-offset_right = 1096.0
-offset_bottom = 93.0
-scale = Vector2(1.43693, 1.34795)
-theme_override_font_sizes/font_size = 50
-text = "Bonus : 2X 
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-script = ExtResource("3_4w4lw")
-variable_name = "bonus_multiplier"
-template_string = "Bonus : %sX"
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 2
@@ -119,7 +93,7 @@ offset_bottom = 938.88
 scale = Vector2(5.44, 1.32)
 color = Color(0, 0, 0, 1)
 
-[node name="MPFVariable2" type="Label" parent="."]
+[node name="Player 1 score" type="Label" parent="."]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 971.0
@@ -133,5 +107,87 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_4w4lw")
 variable_type = 4
+variable_name = "score"
 comma_separate = true
+min_digits = 2
+
+[node name="Player 2 score" type="Label" parent="."]
+offset_left = 14.6216
+offset_top = 2279.86
+offset_right = 340.622
+offset_bottom = 2354.86
+scale = Vector2(1.43693, 1.34795)
+theme_override_font_sizes/font_size = 50
+text = "1,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4w4lw")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="Player 3 score" type="Label" parent="."]
+offset_left = 23.2432
+offset_top = 3588.72
+offset_right = 349.243
+offset_bottom = 3663.72
+scale = Vector2(1.43693, 1.34795)
+theme_override_font_sizes/font_size = 50
+text = "1,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4w4lw")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="Player 4 score" type="Label" parent="."]
+offset_left = 31.8647
+offset_top = 4897.58
+offset_right = 357.865
+offset_bottom = 4972.58
+scale = Vector2(1.43693, 1.34795)
+theme_override_font_sizes/font_size = 50
+text = "1,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4w4lw")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 17.9999
+offset_right = 1096.0
+offset_bottom = 92.9999
+scale = Vector2(1.43693, 1.34795)
+theme_override_font_sizes/font_size = 50
+text = "Bonus : 2X 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_4w4lw")
+variable_name = "bonus_multiplier"
 template_string = "Bonus : %sX"
+
+[node name="ball" type="Label" parent="."]
+layout_mode = 2
+offset_left = 1641.0
+offset_top = -2.0
+offset_right = 1904.0
+offset_bottom = 135.0
+theme = ExtResource("4_c4bpu")
+theme_override_font_sizes/font_size = 0
+text = "Ball 1"
+script = ExtResource("3_4w4lw")
+variable_type = 2
+variable_name = "ball"
+template_string = "Ball %s"

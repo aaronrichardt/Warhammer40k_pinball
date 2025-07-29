@@ -13,6 +13,7 @@ shots:
   mechanicus_scoop_shot:
     switch: s_scoop
     profile: generic_flash_profile
+    start_enabled: true
     show_tokens:
       led: l_adeptus_mechanicius
 
@@ -40,3 +41,10 @@ accruals:
     events_when_complete: start_mechanicus_mode
 
 
+ball_holds:
+  mystery_scoop:
+    balls_to_hold: 1
+    hold_devices: bd_lowerscoop
+    enable_events: start_mechanicus_qualifier_mode
+    disable_events: carousel_item_selected, carousel_item_canceled
+    release_one_events: carousel_item_selected, carousel_item_canceled

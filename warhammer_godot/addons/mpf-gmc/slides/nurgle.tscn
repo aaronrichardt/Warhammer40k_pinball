@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://eckmd4yb5lal"]
+
+[ext_resource type="PackedScene" uid="uid://cxpsk5thhmudh" path="res://addons/mpf-gmc/slides/kanedaSucks.tscn" id="1_a54eo"]
+
+[node name="MPFSlide" instance=ExtResource("1_a54eo")]
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(0.275021, 0.461247, 0.386806, 1)
+
+[node name="Label" parent="." index="1"]
+offset_left = 187.0
+offset_top = 426.0
+offset_right = 1730.0
+offset_bottom = 626.0
+text = "NURGLE
+"
+vertical_alignment = 1
+
+[node name="TextureRect" parent="." index="2"]
+visible = false
+
+[node name="ColorRect2" parent="." index="3"]
+visible = false
