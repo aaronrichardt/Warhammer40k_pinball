@@ -102,10 +102,10 @@ ball_devices:
       eject_targets: bd_plunger
       eject_timeouts: 3s
 
-    bd_lowerscoop:
+    bd_scoop:
       ball_switches: s_scoop
       eject_coil: c_scoop
-      eject_timeouts: 3s 
+      eject_timeouts: 2s 
 
     bd_left_vuk:
         ball_switches: s_left_vuk

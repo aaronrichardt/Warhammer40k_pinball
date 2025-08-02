@@ -20,7 +20,8 @@ mode_settings:
   next_item_events: s_right_flipper_active
   previous_item_events: s_left_flipper_active
 
-
+slide_player:
+  mode_attract_started: ModeSelect
 #slide_player:
 #  carousel_khorne_highlighted: select_khorne
 #  carousel_nurgle_highlighted: select_nurgle

@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://daf2wedvyveni"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_q3aif"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_quvjl"]
+[ext_resource type="PackedScene" uid="uid://eckmd4yb5lal" path="res://addons/mpf-gmc/slides/nurgle.tscn" id="3_a187r"]
+[ext_resource type="PackedScene" uid="uid://bovylwjst15s1" path="res://addons/mpf-gmc/slides/slannesh.tscn" id="4_n8hg1"]
+[ext_resource type="PackedScene" uid="uid://bl8i8irwq43b1" path="res://addons/mpf-gmc/slides/tzeench.tscn" id="5_dghpq"]
+[ext_resource type="PackedScene" uid="uid://cd1e13qg24kiw" path="res://addons/mpf-gmc/slides/necrons.tscn" id="6_ioc8j"]
+[ext_resource type="PackedScene" uid="uid://bp1cdam4grnfo" path="res://addons/mpf-gmc/slides/khorne.tscn" id="7_880kj"]
+
+[node name="ModeSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_q3aif")
+
+[node name="MPFCarousel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("2_quvjl")
+
+[node name="nurgle" parent="MPFCarousel" instance=ExtResource("3_a187r")]
+visible = false
+
+[node name="slannesh" parent="MPFCarousel" instance=ExtResource("4_n8hg1")]
+visible = false
+
+[node name="tzeench" parent="MPFCarousel" instance=ExtResource("5_dghpq")]
+visible = false
+
+[node name="necrons" parent="MPFCarousel" instance=ExtResource("6_ioc8j")]
+visible = false
+
+[node name="khorne" parent="MPFCarousel" instance=ExtResource("7_880kj")]
+visible = false
