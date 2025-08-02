@@ -53,7 +53,6 @@ missing_switches:
   s_right_ramp: 4
   s_rollover_gork: 13
   s_rollover_mork: 53
-  s_scoop: 3
   s_snikt: 461
   s_spinner: 60
   s_start_button: 6
@@ -192,7 +191,7 @@ switches:
   s_right_slingshot: 3627
   s_rollover_gork: 539
   s_rollover_mork: 251
-  s_scoop: 653
+  s_scoop: 654
   s_shooter_lane: 12
   s_snikt: 848
   s_spinner: 7973

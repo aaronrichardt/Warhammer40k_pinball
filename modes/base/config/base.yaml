@@ -210,10 +210,38 @@ sound_player:
                 release: 1.0 sec
              #target: sfx
              #delay: 0
+    mode_waagh_multiball_started:
+        Rise_of_the_WAAAGH:
+            action: play
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
+        Admonition:
+            action: stop
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
+
+             #target: sfx
+             #delay: 0
                 
-             
-             
-             
+sound_pools:
+  drain_callout:
+    type: random_force_all
+    track: voice
+    sounds:
+      - drain_01
+      - drain_02
+      - drain_03
+      - drain_04
+
+            
         
 
 event_player:

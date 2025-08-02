@@ -19,6 +19,8 @@ mode_settings:
   select_item_events: s_start_inactive
   next_item_events: s_right_flipper_active
   previous_item_events: s_left_flipper_active
+
+
 #slide_player:
 #  carousel_khorne_highlighted: select_khorne
 #  carousel_nurgle_highlighted: select_nurgle

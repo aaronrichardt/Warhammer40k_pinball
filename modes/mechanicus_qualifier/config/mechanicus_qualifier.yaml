@@ -46,6 +46,6 @@ ball_holds:
   mystery_scoop:
     balls_to_hold: 1
     hold_devices: bd_lowerscoop
-    enable_events: start_mechanicus_qualifier_mode
+    enable_events: award_warp
     disable_events: mode_mechanicus_stopped
     release_one_events: carousel_item_selected, carousel_item_canceled
