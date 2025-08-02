@@ -8,7 +8,6 @@ mode:
   priority: 20
 
 
-
 shots:
   mechanicus_scoop_shot:
     switch: s_scoop
@@ -28,6 +27,7 @@ shot_profiles:
           color: yellow
 
 event_player:
+  ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
   mechanicus_scoop_shot_lit_hit:
     - mechanicus_scoop_shot_complete
   
