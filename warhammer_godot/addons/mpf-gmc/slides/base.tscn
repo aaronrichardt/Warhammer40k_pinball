@@ -112,6 +112,7 @@ comma_separate = true
 min_digits = 2
 
 [node name="Player 2 score" type="Label" parent="."]
+layout_mode = 0
 offset_left = 14.6216
 offset_top = 2279.86
 offset_right = 340.622
@@ -129,6 +130,7 @@ comma_separate = true
 min_digits = 2
 
 [node name="Player 3 score" type="Label" parent="."]
+layout_mode = 0
 offset_left = 23.2432
 offset_top = 3588.72
 offset_right = 349.243
@@ -146,6 +148,7 @@ comma_separate = true
 min_digits = 2
 
 [node name="Player 4 score" type="Label" parent="."]
+layout_mode = 0
 offset_left = 31.8647
 offset_top = 4897.58
 offset_right = 357.865

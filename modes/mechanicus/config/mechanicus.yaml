@@ -7,6 +7,7 @@ mode:
   use_wait_queue: True
   game_mode: true
   events_when_started: balldevice_bd_scoop_ball_eject_attempt
+  events_when_stopped: mode_mechanicus_stopped
 mode_settings:
   selectable_items: 
     - khorne
@@ -25,8 +26,3 @@ mode_settings:
 #  carousel_tzeench_highlighted: select_tzeench
 #  carousel_backInTheFight_highlighted: select_backInTheFight
 
-
-queue_relay_player:
-  balldevice_bd_scoop_ball_eject_attempt:
-    post: start_mode_success_show
-    wait_for: carousel_item_selected, carousel_item_canceled
