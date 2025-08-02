@@ -45,6 +45,7 @@ show_player:
       light_waagh_shot:
         priority: 20
         key: waagh_face
+        speed: 10
         loops: -1
         show_tokens:
           show_led: waagh_face
@@ -99,6 +100,7 @@ show_player:
     light_waagh_shot:
       priority: 20
       key: waagh_lit
+      speed: 10
       loops: -1
       show_tokens:
         show_led: l_waagh_!
@@ -147,6 +149,7 @@ show_player:
   waagh_qualify_shot_exc_complete:
     light_waagh_letter:
       priority: 10
+      speed: 5
       show_tokens:
         show_led: l_waagh_!
         show_led_color: Red
