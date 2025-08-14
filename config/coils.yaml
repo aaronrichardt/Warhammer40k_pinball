@@ -62,23 +62,3 @@ coils:
     number: io0804-1
     allow_enable: true
 
-
-
-#digital_outputs:
-#  c_liftramp: 
-#    number: 32082-6
-#    type: driver
-
-#motors:
-#  motorized_drop_target_bank:
-#    motor_left_output: c_liftramp
-##    position_switches: 
-  #    up: s_dropramp_home
-   #   down: s_dropramp_away
-    #reset_position: up
-    #go_to_position:
-    #  go_up: up
-     # go_down: down
-
-    ##enable_event: warp_mode_enable
-    ##disable_event: 

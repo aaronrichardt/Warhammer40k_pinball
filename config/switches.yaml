@@ -25,12 +25,14 @@ switches:
   s_autoplunger:
     number: 3208-7
     #tags: playfield_active
+
   s_droptarget_down:
-    number: 3208-23  
+    number: 3208-23
 
   s_right_outlane:
     number: 3208-9
     tags: playfield_active
+
   s_right_inlane:
     number: 3208-8
     tags: playfield_active

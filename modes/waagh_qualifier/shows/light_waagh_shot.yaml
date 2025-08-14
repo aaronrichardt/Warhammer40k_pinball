@@ -2,11 +2,156 @@
 ##! show: light_waagh
 
 
-- time: "+.2"
+- time: "+1"
   lights:
     (show_led): (show_led_color)
 
-- time: "+.1"
+- time: "+1"
   lights:
     (show_led): off
 
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
+
+- time: "+1"
+  lights:
+    (show_led): (show_led_color)
+
+- time: "+1"
+  lights:
+    (show_led): off
