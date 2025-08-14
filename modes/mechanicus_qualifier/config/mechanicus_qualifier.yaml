@@ -28,8 +28,7 @@ shot_profiles:
 
 event_player:
   ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
-  mechanicus_scoop_shot_lit_hit:
-    - mechanicus_scoop_shot_complete
+  mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
   
 accruals:
   mechanicus_accrual:
@@ -45,6 +44,6 @@ ball_holds:
   mystery_scoop:
     balls_to_hold: 1
     hold_devices: bd_scoop
-    enable_events: award_warp
-    disable_events: mode_mechanicus_stopped
-    release_one_events: carousel_item_selected, carousel_item_canceled
+    enable_events: mode_ModeSelect_enable_started
+    disable_events: mode_ModeSelect_enable_stopping
+    release_one_events: ModeSelect_item_selected

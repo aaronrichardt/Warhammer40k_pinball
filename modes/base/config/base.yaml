@@ -37,16 +37,16 @@ show_player:
   #   key: base_score_loop
   #   #loops: -1
 
-ball_saves:
-  default:
-    active_time: 10s
-    hurry_up_time: 2s
-    grace_period: 2s
-    enable_events: mode_base_started
-    timer_start_events: balldevice_bd_plunger_ball_eject_success
-    auto_launch: true
-    balls_to_save: 1
-    debug: true
+# ball_saves:
+#   default:
+#     active_time: 10s
+#     hurry_up_time: 2s
+#     grace_period: 2s
+#     enable_events: mode_base_started
+#     timer_start_events: balldevice_bd_plunger_ball_eject_success
+#     auto_launch: true
+#     balls_to_save: 1
+#     debug: true
 
 variable_player:
   s_3bank_top_active:
@@ -143,7 +143,11 @@ shots:
   pop_bottom:
     switch: s_pop_bottom
     profile: pop_profile
-
+  
+  left_drain:
+    switch: s_left_outlane
+  right_drain:
+    switch: s_right_outlane
 
 sequence_shots: 
   right_orbit:
@@ -227,17 +231,23 @@ sound_player:
                 attenuation: 18
                 release_point: 2.0 sec
                 release: 1.0 sec
-
-             #target: sfx
-             #delay: 0
+    left_drain_hit:
+        drain_callout:
+            action: play
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
                 
 sound_pools:
   drain_callout:
     type: random_force_all
     track: voice
     sounds:
-      - drain_01
-      - drain_02
+      - drain1
+      - drain2
       - drain_03
       - drain_04
 

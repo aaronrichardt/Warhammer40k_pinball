@@ -1,76 +1,86 @@
 events:
   game_ended: 317
-  game_started: 1003
+  game_started: 1024
 missing_switches:
-  s_17: 3
+  s_17: 24
   s_1_11: 16
-  s_24: 45
-  s_25: 461
-  s_26: 461
-  s_27: 11
-  s_2_22: 461
+  s_24: 66
+  s_25: 482
+  s_26: 482
+  s_27: 32
+  s_2_22: 482
   s_3bank: 2
   s_3bank_away: 2
   s_3bank_bottom: 2
   s_3bank_home: 2
   s_3bank_mid: 2
   s_3bank_top: 2
-  s_center_spinner: 461
-  s_dropramp_away: 259
+  s_autoplunger: 21
+  s_bonus_x: 21
+  s_center_spinner: 482
+  s_disk_backtarget: 21
+  s_dropramp_away: 280
   s_dropramp_home: 9
-  s_droptarget_down: 53
-  s_droptarget_lock: 1
+  s_droptarget_down: 74
+  s_droptarget_lock: 22
   s_droptarget_opto: 113
-  s_inner_loop_lower: 461
+  s_inner_loop_lower: 482
   s_kickback1: 8
-  s_left_deadend: 564
-  s_left_inlane: 3
-  s_left_orbit: 13
-  s_left_outlane: 3
+  s_left_EOS: 21
+  s_left_deadend: 585
+  s_left_orbit: 34
   s_left_outlane????: 1
   s_left_outlane?????: 2
   s_left_ramp: 3
-  s_left_spinner: 13
-  s_left_vuk: 13
-  s_light_lock: 13
-  s_light_mystery: 3
-  s_light_spinners: 13
-  s_lockopto1: 2
-  s_lockopto3: 471
+  s_left_slingshot: 21
+  s_left_spinner: 34
+  s_left_vuk: 34
+  s_light_lock: 34
+  s_light_mystery: 24
+  s_light_spinners: 34
+  s_lockopto1: 23
+  s_lockopto3: 492
   s_lower_bigtarget: 8
-  s_lowerloop: 13
-  s_necron_target: 28
+  s_lowerloop: 34
+  s_necron_target: 49
+  s_pop_bottom: 21
   s_pop_center: 8
   s_pop_right: 8
-  s_pop_top: 3
+  s_pop_top: 24
   s_random1: 44
   s_random2: 44
   s_right_16: 3
-  s_right_eos: 11
-  s_right_flipper: 5
-  s_right_orbit: 1
-  s_right_poptarget: 461
+  s_right_eos: 32
+  s_right_orbit: 22
+  s_right_poptarget: 482
   s_right_ramp: 4
-  s_rollover_gork: 13
-  s_rollover_mork: 53
-  s_scoop: 3
-  s_snikt: 461
+  s_right_slingshot: 21
+  s_rollover_gork: 34
+  s_rollover_mork: 74
+  s_snikt: 482
   s_spinner: 60
-  s_start_button: 6
   s_tilt: 2
   s_tiltbob: 12
-  s_trough5: 10
-  s_trough6: 10
-  s_u12: 419
-  s_u15: 419
-  s_unknown: 13
-  s_unused: 28
+  s_trough3: 21
+  s_trough4: 21
+  s_trough5: 31
+  s_trough6: 31
+  s_trough_jam: 21
+  s_u12: 440
+  s_u13: 21
+  s_u15: 440
+  s_unknown: 34
+  s_unused: 49
   s_upper_bigtarget: 8
-  s_upperscoop: 461
-  s_xenos_e: 3
-  s_xenos_n: 3
-  s_xenos_s: 3
-  s_xenos_x: 3
+  s_upperflipper_eos: 21
+  s_upperleft_flipper: 21
+  s_upperscoop: 482
+  s_waagh_newton_ball: 21
+  s_xenos_e: 24
+  s_xenos_n: 24
+  s_xenos_o: 21
+  s_xenos_s: 24
+  s_xenos_x: 24
 player:
   score:
     average: 368455
@@ -93,7 +103,7 @@ shots:
   left_pop: 425
   left_ramp_shot: 115
   left_sling_shot: 2947
-  mechanicus_scoop_shot: 28
+  mechanicus_scoop_shot: 106
   my_first_shot: 209
   pop_bottom: 1675
   pop_top: 465
@@ -109,10 +119,10 @@ shots:
   waagh_qualify_shot_g: 19
   waagh_qualify_shot_h: 17
   waagh_qualify_shot_w: 34
-  warp_inlane_left: 170
-  warp_inlane_right: 104
-  warp_outlane_left: 51
-  warp_outlane_right: 92
+  warp_inlane_left: 194
+  warp_inlane_right: 127
+  warp_outlane_left: 78
+  warp_outlane_right: 115
 switches:
   s_1: 1
   s_12: 1
@@ -150,10 +160,10 @@ switches:
   s_kickback_opto3: 0
   s_left_EOS: 15851
   s_left_deadend: 0
-  s_left_flipper: 19280
-  s_left_inlane: 1174
+  s_left_flipper: 19372
+  s_left_inlane: 1198
   s_left_orbit: 211
-  s_left_outlane: 944
+  s_left_outlane: 971
   s_left_outlane????: 0
   s_left_outlane?????: 9
   s_left_ramp: 122
@@ -183,25 +193,25 @@ switches:
   s_right_16: 560
   s_right_EOS: 3856
   s_right_eos: 773
-  s_right_flipper: 17633
-  s_right_inlane: 829
+  s_right_flipper: 17638
+  s_right_inlane: 852
   s_right_orbit: 382
-  s_right_outlane: 896
+  s_right_outlane: 919
   s_right_poptarget: 90
   s_right_ramp: 19
   s_right_slingshot: 3627
   s_rollover_gork: 539
   s_rollover_mork: 251
-  s_scoop: 653
+  s_scoop: 732
   s_shooter_lane: 12
   s_snikt: 848
   s_spinner: 7973
-  s_start_button: 663
+  s_start_button: 700
   s_tilt: 0
   s_tilt_bob: 96
   s_tiltbob: 0
-  s_trough1: 2375
-  s_trough2: 2088
+  s_trough1: 2377
+  s_trough2: 2089
   s_trough3: 2043
   s_trough4: 2027
   s_trough5: 1942

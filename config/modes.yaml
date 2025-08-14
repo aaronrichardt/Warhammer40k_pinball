@@ -11,8 +11,8 @@ modes:
   - tzeench
   - slannesh
   - warp_qualify
-
-  - mechanicus
+  - ball_save
+  - ModeSelect
   - mechanicus_qualifier
   #- rewardbank
   #- waagh_multiball

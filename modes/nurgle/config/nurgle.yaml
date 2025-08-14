@@ -1,5 +1,16 @@
 #config_version=6
 
 mode:
-  start_events: carousel_nurgle_selected
+  start_events: ModeSelect_nurgle_selected
+  stop_events: timer_khorne_mode_timer_complete
   priority: 200
+
+
+timers:
+    nurgle_mode_timer: 
+        start_value: 60 # seconds
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: true

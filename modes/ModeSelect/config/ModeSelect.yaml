@@ -2,12 +2,12 @@
 
 mode:
   start_events: start_mechanicus_mode
-  stop_events: carousel_item_selected, carousel_item_canceled
+  stop_events: ModeSelect_item_selected, ModeSelect_item_cancelled
   code: mpf.modes.carousel.code.carousel.Carousel
-  use_wait_queue: True
+  events_when_stopped: ModeSelect_item_selected
   game_mode: true
-  events_when_started: balldevice_bd_scoop_ball_eject_attempt
-  events_when_stopped: mode_mechanicus_stopped
+  priority: 501
+
 mode_settings:
   selectable_items: 
     - khorne
@@ -15,13 +15,16 @@ mode_settings:
     - slannesh 
     - tzeench 
     - necrons
+    - tyranids
     - backInTheFight
-  select_item_events: s_start_inactive
+  select_item_events: s_start_button_active
   next_item_events: s_right_flipper_active
   previous_item_events: s_left_flipper_active
 
 slide_player:
-  mode_attract_started: ModeSelect
+  mode_ModeSelect_started: ModeSelect
+
+
 #slide_player:
 #  carousel_khorne_highlighted: select_khorne
 #  carousel_nurgle_highlighted: select_nurgle

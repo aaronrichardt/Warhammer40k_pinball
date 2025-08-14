@@ -15,24 +15,24 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_q3aif")
 
-[node name="MPFCarousel" type="Control" parent="."]
+[node name="Carousel" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("2_quvjl")
+carousel_name = "ModeSelect"
 
-[node name="nurgle" parent="MPFCarousel" instance=ExtResource("3_a187r")]
+[node name="nurgle" parent="Carousel" instance=ExtResource("3_a187r")]
+
+[node name="slannesh" parent="Carousel" instance=ExtResource("4_n8hg1")]
 visible = false
 
-[node name="slannesh" parent="MPFCarousel" instance=ExtResource("4_n8hg1")]
+[node name="tzeench" parent="Carousel" instance=ExtResource("5_dghpq")]
 visible = false
 
-[node name="tzeench" parent="MPFCarousel" instance=ExtResource("5_dghpq")]
+[node name="necrons" parent="Carousel" instance=ExtResource("6_ioc8j")]
 visible = false
 
-[node name="necrons" parent="MPFCarousel" instance=ExtResource("6_ioc8j")]
-visible = false
-
-[node name="khorne" parent="MPFCarousel" instance=ExtResource("7_880kj")]
+[node name="khorne" parent="Carousel" instance=ExtResource("7_880kj")]
 visible = false
