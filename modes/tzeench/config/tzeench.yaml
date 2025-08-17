@@ -13,3 +13,60 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
+
+counters: 
+
+    
+    center_tzeench_spinner:
+        count_events: s_center_spinner
+        starting_count: 50
+        count_interval: 1
+        count_complete_value: 100
+    left_tzeench_spinner:
+        count_events: s_left_spinner
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 30
+    right_tzeench_spinner: 
+        count_events: s_right_spinner
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 50
+
+event_player:
+    center_tzeench_spinner_complete: 
+
+    left_tzeench_spinner_complete:
+
+    right_tzeench_spinner_complete:
+        
+#config_version=6
+##! mode: xenos
+accruals:
+  tzeench_accrual:
+    events:
+      - center_tzeench_spinner_complete # index [0]
+      - left_tzeench_spinner_completed # index [1]
+      - right_tzeench_spinner_completed # index [2]
+    reset_on_complete: false
+    disable_on_complete: true 
+    events_when_complete: award_tzeench_mode_complete 
+
+
+
+shots:
+    center_spinner_shot:
+        switch: 
+    left_spinner_shot:
+        switch:
+    right_spinner_shot:
+        switch: 
+# Make a false switch entry and then user the counters
+# complete to throw the switch hit logic that ends the shot and rewards completing each shot
+
+shot_groups:
+
+shot_profiles:     
+
+accurals:
+        
