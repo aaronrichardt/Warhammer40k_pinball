@@ -7,7 +7,7 @@ mode:
   
 
 timers:
-    nurgle_mode_timer: 
+    slannesh_mode_timer: 
         start_value: 60 # seconds
         end_value: 0
         direction: down 
