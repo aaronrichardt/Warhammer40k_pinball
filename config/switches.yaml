@@ -1,14 +1,12 @@
 #config_version=6
 
 switches:
-  s_trough_jam:
-    number: 3208-6
-    type: "NC"
-  s_trough5:
-    number: 3208-4
-    type: "NC"
+  # Board 3208 (0-31)
   s_trough1:
     number: 3208-0
+    type: "NC"
+  s_trough2:
+    number: 3208-1
     type: "NC"
   s_trough3:
     number: 3208-2
@@ -16,115 +14,111 @@ switches:
   s_trough4:
     number: 3208-3
     type: "NC"
-  s_trough2:
-    number: 3208-1
+  s_trough5:
+    number: 3208-4
     type: "NC"
   s_trough6:
     number: 3208-5
     type: "NC"
+  s_trough_jam:
+    number: 3208-6
+    type: "NC"
   s_autoplunger:
     number: 3208-7
-    #tags: playfield_active
-
-  s_droptarget_down:
-    number: 3208-23
-
-  s_right_outlane:
-    number: 3208-9
-    tags: playfield_active
-
   s_right_inlane:
     number: 3208-8
     tags: playfield_active
-  s_left_vuk:
-    number: 32082-27
-    type: "NC"
-    debounce: quick
-    
-  s_27:
-    number: 3208-27
+  s_right_outlane:
+    number: 3208-9
     tags: playfield_active
-  s_26:
-    number: 3208-26
-    tags: playfield_active
-  s_25:
-    number: 3208-25
-  s_24:
-    number: 3208-24
-  s_light_lock:
-    number: 3208-22
-  s_bonus_x:
-    number: 3208-20
-    tags: playfield_active
-  s_rollover_mork:
-    number: 3208-18
-    tags: playfield_active
-  s_light_mystery: 
-    number: 3208-19
-    tags: playfield_active
-
-  s_left_flipper:
-    number: 3208-31
-    tags: left_flipper
-  s_right_flipper:
-    number: 3208-29
-    tags: right_flipper
-  s_light_spinners: 
-    number: 3208-21
-    
   s_right_slingshot: 
     number: 3208-10
-    
-  s_left_EOS:
-    number: 3208-14
   s_left_slingshot: 
     number: 3208-11
   s_left_outlane:
     number: 3208-12
   s_left_inlane: 
     number: 3208-13
+  s_left_EOS:
+    number: 3208-14
   s_right_eos:
     number: 3208-15
-  s_rollover_gork:
-    number: 32082-14
-    
-    #tags: playfield_active
-  s_17:
-    number: 3208-17
-    #tags: playfield_active
   s_scoop:
     number: 3208-16
     type: "NC"
+  s_17:
+    number: 3208-17
+  s_rollover_mork:
+    number: 3208-18
+    tags: playfield_active
+  s_light_mystery: 
+    number: 3208-19
+    tags: playfield_active
+  s_bonus_x:
+    number: 3208-20
+    tags: playfield_active
+  s_light_spinners: 
+    number: 3208-21
+  s_light_lock:
+    number: 3208-22
+  s_droptarget_down:
+    number: 3208-23
+  s_24:
+    number: 3208-24
+  s_25:
+    number: 3208-25
+  s_26:
+    number: 3208-26
+    tags: playfield_active
+  s_27:
+    number: 3208-27
+    tags: playfield_active
   s_upperleft_flipper:
     number: 3208-28
+  s_right_flipper:
+    number: 3208-29
+    tags: right_flipper
   s_start_button:
-    number:  3208-30
+    number: 3208-30
     tags: start
-  s_upperscoop:
-    number: io0804-0
+  s_left_flipper:
+    number: 3208-31
+    tags: left_flipper
 
-
-#BOARD 2
-
-
+  # Board 32082 (0-31)
   s_xenos_x:
     number: 32082-0
-  s_xenos_e:
-    number: 32082-7
-  s_xenos_s:
-    number: 32082-2
   s_xenos_n:
     number: 32082-1
-  s_xenos_o:
-    number: 32082-6
-  s_lowerloop:
-    number: 32082-4
+  s_xenos_s:
+    number: 32082-2
   s_upperflipper_eos:
     number: 32082-3
     type: "NC"
+  s_lowerloop:
+    number: 32082-4
   s_disk_backtarget:
     number: 32082-5
-
+  s_xenos_o:
+    number: 32082-6
+  s_xenos_e:
+    number: 32082-7
+  s_necron_target:
+    number: 32082-8
+  s_pop_bottom:
+    number: 32082-9
+  s_pop_top:
+    number: 32082-10
+  s_right_orbit: 
+    number: 32082-11
+  s_u12:
+    number: 32082-12
+  s_u13:
+    number: 32082-13
+  s_rollover_gork:
+    number: 32082-14
+  s_u15:
+    number: 32082-15
   s_center_spinner:
     number: 32082-16
     type: "NC"
@@ -134,25 +128,6 @@ switches:
     number: 32082-18
   s_dropramp_away:
     number: 32082-19
-  s_u13:
-    number: 32082-13
-  s_u12:
-    number: 32082-12
-  s_pop_top:
-    number: 32082-10
-    
- 
-
-  s_necron_target:
-    number: 32082-8
-  s_u15:
-    number: 32082-15
-#  s_left_flipper: 
-#    number: 32082-15
-#    tags: left_flipper
-  s_right_orbit: 
-    number: 32082-11
-    #tags: tilt_warning
   s_unused:
     number: 32082-20
   s_right_poptarget:
@@ -168,13 +143,25 @@ switches:
     type: "NC"
   s_unknown: 
     number: 32082-26
+  s_left_vuk:
+    number: 32082-27
+    type: "NC"
+    debounce: quick
   s_left_deadend:
     number: 32082-28
   s_waagh_newton_ball:
     number: 32082-29
   s_lockopto3:
-    number: 32082-30 
+    number: 32082-30
   s_lockopto1:
     number: 32082-31
-  s_pop_bottom:
-    number: 32082-9
+
+  # Other boards
+  s_upperscoop:
+    number: io0804-0
+  s_tempholder1:
+    number: io0804-1
+  s_tempholder2:
+    number: io0804-2
+  s_tempholder3:
+    number: io0804-3

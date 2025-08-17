@@ -35,38 +35,59 @@ counters:
 
 event_player:
     center_tzeench_spinner_complete: 
-
+        s_tempholder1_active
     left_tzeench_spinner_complete:
-
+        s_tempholder2_active
     right_tzeench_spinner_complete:
-        
+        s_tempholder3_active
 #config_version=6
 ##! mode: xenos
 accruals:
   tzeench_accrual:
     events:
-      - center_tzeench_spinner_complete # index [0]
-      - left_tzeench_spinner_completed # index [1]
-      - right_tzeench_spinner_completed # index [2]
+      - center_spinner_shot_completed # index [0]
+      - left_spinner_shot_completed # index [1]
+      - right_spinner_shot_completed # index [2]
     reset_on_complete: false
     disable_on_complete: true 
     events_when_complete: award_tzeench_mode_complete 
 
-
-
 shots:
     center_spinner_shot:
-        switch: 
+        switch: s_tempholder1
+        profile: generic_flash
+        show_tokens:
+             light: l_center_ramp_arrow
     left_spinner_shot:
-        switch:
+        switch: s_tempholder2
+        profile: generic_flash
+        show_tokens:
+             light: l_left_orbit_arrow
     right_spinner_shot:
-        switch: 
+        switch: s_tempholder3
+        profile: generic_flash
+        show_tokens:
+             light: l_right_orbit_arrow
 # Make a false switch entry and then user the counters
 # complete to throw the switch hit logic that ends the shot and rewards completing each shot
 
 shot_groups:
+    tzeench_spinners:
+        shots: 
+            - center_spinner_shot
+            - left_spinner_shot
+            - right_spinner_shot
+        enable_events: ball_started
+        disable_events: ball_ending
 
-shot_profiles:     
+shot_profiles:
+    generic_flash:
+        states:
+            - name: unlit
+              show: off
+            - name: lit
+              show: "flash"
+            - name: hit
+              show: "on"
 
-accurals:
-        
+
