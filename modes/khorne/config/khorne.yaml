@@ -5,6 +5,10 @@ mode:
   stop_events: timer_khorne_mode_timer_complete
   priority: 200 
 
+#stage 1
+#Two Ramps are like make each ramp 3 times to light super jackpot and relight all major shots 
+#hit as many of the major shots before scoring super jackpot at the scoop
+# 
 
 
 timers:
@@ -15,3 +19,15 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
+
+shots:
+    left_ramp_shot:
+        switch:
+    center_ramp_shot: 
+        switch: 
+shot_groups: 
+    
+    
+
+shot_profiles: 
+    

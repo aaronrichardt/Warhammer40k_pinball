@@ -5,6 +5,11 @@ mode:
   stop_events: timer_khorne_mode_timer_complete
   priority: 200
 
+#Ring the bells of nurgle 
+#Ring 5 Bells to finish nurgle in order
+# first shot scores 4, 7, 10 ,15 and final is 20 million 
+# each right spinner rip scores 1 million and adds 500k to the next shot 
+# hitting 3 shots lights ally 
 
 timers:
     nurgle_mode_timer: 
