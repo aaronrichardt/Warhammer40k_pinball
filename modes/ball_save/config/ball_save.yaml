@@ -45,7 +45,6 @@ show_player:
     ball_save: stop
     
   
-      
   ball_save_random_ball_save_timer_start:
     flash_color:
       key: ball_save

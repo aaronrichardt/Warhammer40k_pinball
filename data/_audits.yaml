@@ -78,7 +78,7 @@ shots:
   left_sling_shot: 2949
   mechanicus_scoop_shot: 118
   my_first_shot: 209
-  pop_bottom: 1695
+  pop_bottom: 1697
   pop_top: 493
   right_drain: 3
   right_pop: 614
@@ -157,7 +157,7 @@ switches:
   s_mork3: 1
   s_necron_target: 272
   s_plunger_lane: 40
-  s_pop_bottom: 5644
+  s_pop_bottom: 5646
   s_pop_center: 15169
   s_pop_left: 23277
   s_pop_right: 13407
