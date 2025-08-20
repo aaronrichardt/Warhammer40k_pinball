@@ -4,7 +4,7 @@
 
 mode:
   #this mode starts when the ball starts
-  start_events: award_warp
+  start_events: start_modeselect
   priority: 20
 
 
@@ -22,7 +22,7 @@ shot_profiles:
       - name: unlit
         show: off
       - name: lit
-        show: generic_flash
+        show: on
         show_tokens:
           color: yellow
 
