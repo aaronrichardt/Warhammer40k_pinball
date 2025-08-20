@@ -48,7 +48,7 @@ switches:
     type: "NC"
   s_17:
     number: 3208-17
-  s_mork3:
+  s_18:
     number: 3208-18
     tags: playfield_active
   s_light_mystery: 

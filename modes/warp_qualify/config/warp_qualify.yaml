@@ -1,11 +1,6 @@
 #config_version=6
 ##! mode: warp_qualify
 
-#config:
-#  - logic.yaml
-#  - event_player.yaml
-#  - show_player.yaml
-#
 mode:
   #this mode starts when the ball starts
   start_events: ball_started
@@ -33,12 +28,26 @@ shots:
     show_tokens:
       led: l_warp_p
 
+  mechanicus_scoop_shot:
+    switch: s_scoop
+    profile: generic_flash_profile
+    start_enabled: false
+    show_tokens:
+      led: l_adeptus_mechanicius
+
 shot_groups:
   inlane_lane_group:
     shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
     reset_events: inlane_lane_group_hit_complete
     rotate_left_events: s_right_flipper_active
     rotate_right_events: s_left_flipper_active
+
+
+  start_select_mode_group:
+    shots: mechanicus_scoop_shot
+    reset_events: 
+    enable_events: inlane_lane_group_hit_complete
+    disable_events: mechanicus_scoop_shot_hit_complete
 
 shot_profiles:
   inlane_lane_profile:
@@ -49,6 +58,16 @@ shot_profiles:
         show: on
         show_tokens:
           color: purple
+
+  generic_flash_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: lit
+        show: on
+        show_tokens:
+          color: yellow
+
 
 variable_player:
   inlane_lane_group_hit_complete:
@@ -66,6 +85,11 @@ event_player:
   warp_outlane_right_unlit_hit:
     - warp_p_complete
   
+  ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
+  mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
+
+
+
 accruals:
   warp_accrual:
     events:
@@ -78,4 +102,19 @@ accruals:
     reset_events: mode_warp_qualify_started
     events_when_complete: start_modeselect , reset_warp_lights
 
+  mechanicus_accrual:
+    events:
+      - mechanicus_scoop_shot_complete # index [0]
+    reset_on_complete: false
+    disable_on_complete: true
+    reset_events: mode_warp_qualify_started
+    events_when_complete: start_mechanicus_mode
 
+
+ball_holds:
+  mystery_scoop:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: start_modeselect
+    disable_events: mode_ModeSelect_enable_stopping
+    release_one_events: ModeSelect_item_selected

@@ -10,6 +10,18 @@ mode:
 #hit as many of the major shots before scoring super jackpot at the scoop
 # 
 
+counter: 
+    center_ramp:
+        count_events: center_ramp_shot_hit
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 3
+    left_ramp:
+        count_events: left_ramp_shot_hit
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 3
+
 
 timers:
     khorne_mode_timer: 
@@ -22,12 +34,19 @@ timers:
 
 shots:
     left_ramp_shot:
-        switch:
+        switch: 
     center_ramp_shot: 
         switch: 
+
+
+
 shot_groups: 
     
     
 
 shot_profiles: 
-    
+  
+
+show_player:
+    ModeSelect_khorne_selected:
+    #light both ramp shots
