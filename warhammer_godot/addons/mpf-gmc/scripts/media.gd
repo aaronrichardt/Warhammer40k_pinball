@@ -56,7 +56,6 @@ func get_widget_instance(widget_name: String, preload_only: bool = false) -> MPF
 	return self._get_scene(widget_name, self.widgets, preload_only) as MPFWidget
 
 func get_sound_instance(sound_name: String, preload_only: bool = false):
-	assert(sound_name in sounds, "Unknown sound name '%s'" % sound_name)
 	return self._get_scene(sound_name, self.sounds, preload_only)
 
 func generate_traversal() -> void:

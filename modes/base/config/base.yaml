@@ -232,7 +232,7 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
     left_drain_hit:
-        drain_callout:
+        drain1:
             action: play
             ducking:
                 bus: voice
@@ -241,15 +241,13 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
                 
-sound_pools:
-  drain_callout:
-    type: random_force_all
-    track: voice
-    sounds:
-      - drain1
-      - drain2
-      - drain_03
-      - drain_04
+# sound_pools:
+#   drain_callout:
+#     type: random_force_all
+#     track: voice
+#     sounds:
+#       - drain1
+#       - drain2
 
             
         

@@ -68,7 +68,6 @@ func play_sounds(s: Dictionary) -> void:
 	for asset in s.settings.keys():
 		var settings: Dictionary = s.settings[asset]
 
-		assert(MPF.media.sounds.has(asset), "Unknown sound file or resource '%s'" % asset)
 		# A key can override the default value
 		if not settings.get("key"):
 			settings["key"] = asset
