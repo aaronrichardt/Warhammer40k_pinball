@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://q85p3oo6vnhe"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_slf4j"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_slf4j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 0
+offset_right = 826.0
+offset_bottom = 332.0
+color = Color(0.403408, 0.557164, 0.821531, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 232.0
+offset_right = 1559.0
+offset_bottom = 543.0
+theme_override_font_sizes/font_size = 132
+text = "BACK TO THE FIGHT
+"
+horizontal_alignment = 1
+vertical_alignment = 1

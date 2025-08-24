@@ -3,7 +3,8 @@
 
 mode:
   #this mode starts when the ball starts
-  start_events: ball_started
+  start_events: ball_started, 
+  end_events: warp_qualify_stop, mode_slannesh_stopped, mode_knorne_stopped, mode_nurgle_stopped, mode_tzeentch_stopped
   priority: 200
 
 shots:
@@ -46,7 +47,7 @@ shot_groups:
   start_select_mode_group:
     shots: mechanicus_scoop_shot
     reset_events: 
-    enable_events: inlane_lane_group_hit_complete
+    enable_events: inlane_lane_group_hit_complete, 
     disable_events: mechanicus_scoop_shot_hit_complete
 
 shot_profiles:
@@ -87,7 +88,6 @@ event_player:
   
   ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
   mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
-
 
 
 accruals:

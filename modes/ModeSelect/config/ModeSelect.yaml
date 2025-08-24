@@ -16,19 +16,10 @@ mode_settings:
     - tzeench 
     - necrons
     - tyranids
-    - backInTheFight
+    - backToTheFight
   select_item_events: s_start_button_active
   next_item_events: s_right_flipper_active
   previous_item_events: s_left_flipper_active
 
 slide_player:
   mode_ModeSelect_started: ModeSelect
-
-
-#slide_player:
-#  carousel_khorne_highlighted: select_khorne
-#  carousel_nurgle_highlighted: select_nurgle
-#  carousel_slannesh_highlighted: select_slannesh
-#  carousel_tzeench_highlighted: select_tzeench
-#  carousel_backInTheFight_highlighted: select_backInTheFight
-
