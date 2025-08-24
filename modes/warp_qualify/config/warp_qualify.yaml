@@ -4,7 +4,7 @@
 mode:
   #this mode starts when the ball starts
   start_events: ball_started, 
-  end_events: warp_qualify_stop, mode_slannesh_stopped, mode_knorne_stopped, mode_nurgle_stopped, mode_tzeentch_stopped
+  stop_events: warp_qualify_stop, mode_slannesh_stopped, mode_knorne_stopped, mode_nurgle_stopped, mode_tzeentch_stopped
   priority: 200
 
 shots:
