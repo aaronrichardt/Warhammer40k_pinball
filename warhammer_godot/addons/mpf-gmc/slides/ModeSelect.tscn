@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://daf2wedvyveni"]
+[gd_scene load_steps=9 format=3 uid="uid://daf2wedvyveni"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_q3aif"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_quvjl"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bl8i8irwq43b1" path="res://addons/mpf-gmc/slides/tzeench.tscn" id="5_dghpq"]
 [ext_resource type="PackedScene" uid="uid://cd1e13qg24kiw" path="res://addons/mpf-gmc/slides/necrons.tscn" id="6_ioc8j"]
 [ext_resource type="PackedScene" uid="uid://bp1cdam4grnfo" path="res://addons/mpf-gmc/slides/khorne.tscn" id="7_880kj"]
+[ext_resource type="PackedScene" uid="uid://q85p3oo6vnhe" path="res://addons/mpf-gmc/slides/backToTheFight.tscn" id="8_altxb"]
 
 [node name="ModeSelect" type="Control"]
 layout_mode = 3
@@ -36,3 +37,9 @@ visible = false
 
 [node name="khorne" parent="Carousel" instance=ExtResource("7_880kj")]
 visible = false
+
+[node name="backToTheFight" parent="Carousel" instance=ExtResource("8_altxb")]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 41.0

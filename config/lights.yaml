@@ -84,19 +84,19 @@ lights:
     tags:  Chain1, GI, even, second
   l_left_inlane_upper:
     number: playfield-1-27
-    tags:  Chain1, GI, odd, third
+    tags:  Chain1, GI, odd, third, lane
   l_left_inlane_lower:
     number: playfield-1-28
-    tags:  Chain1, GI, even, first
+    tags:  Chain1, GI, even, first, lane
   l_ballsave:
     number: playfield-1-29
     tags:  Chain1, odd, second
   l_right_inlane_lower:
     number: playfield-1-30
-    tags:  Chain1, GI, even, third
+    tags:  Chain1, GI, even, third, lane
   l_right_inlane_upper:
     number: playfield-1-31
-    tags:  Chain1, GI, odd, first
+    tags:  Chain1, GI, odd, first, lane
   l_right_sling_lower:
     number: playfield-1-32
     tags:  Chain1, GI, even, second

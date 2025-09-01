@@ -15,8 +15,6 @@ timers:
         start_running: true
 
 counters: 
-
-    
     center_tzeench_spinner:
         count_events: s_center_spinner
         starting_count: 50
