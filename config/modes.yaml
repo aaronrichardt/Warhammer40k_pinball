@@ -14,6 +14,7 @@ modes:
   - ball_save
   - ModeSelect
   - mechanicus_qualifier
+  - necrons
   #- rewardbank
   #- waagh_multiball
   #- inquisition_multiball

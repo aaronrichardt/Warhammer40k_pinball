@@ -33,21 +33,23 @@ shots:
     switch: s_scoop
     profile: generic_flash_profile
     start_enabled: false
+    enable_events: inlane_lane_group_lit_complete
+    restart_events: inlane_lane_group_lit_complete
     show_tokens:
-      led: l_adeptus_mechanicius
+        led: l_adeptus_mechanicius
+        color: purple
 
 shot_groups:
   inlane_lane_group:
     shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
     reset_events: inlane_lane_group_hit_complete
-    rotate_left_events: s_right_flipper_active
-    rotate_right_events: s_left_flipper_active
-
-
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+   
   start_select_mode_group:
     shots: mechanicus_scoop_shot
     reset_events: 
-    enable_events: inlane_lane_group_hit_complete, 
+    enable_events: inlane_lane_group_hit_complete
     disable_events: mechanicus_scoop_shot_hit_complete
 
 shot_profiles:
@@ -62,12 +64,11 @@ shot_profiles:
 
   generic_flash_profile:
     states:
+      - name: lit
+        show: generic_flash
       - name: unlit
         show: off
-      - name: lit
-        show: on
-        show_tokens:
-          color: yellow
+
 
 
 variable_player:
@@ -77,30 +78,15 @@ variable_player:
 
 
 event_player:
-  warp_outlane_left_unlit_hit:
-    - warp_w_complete
-  warp_inlane_left_unlit_hit:
-    - warp_a_complete
-  warp_inlane_right_unlit_hit:
-    - warp_r_complete
-  warp_outlane_right_unlit_hit:
-    - warp_p_complete
-  
-  ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
-  mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
+    inlane_lane_group_lit_complete:
+        - start_modeselect
+
+    ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
+    mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
 
 
 accruals:
-  warp_accrual:
-    events:
-      - warp_w_complete # index [0]
-      - warp_a_complete # index [1]
-      - warp_r_complete # index [2]
-      - warp_p_complete # index [3]
-    reset_on_complete: false
-    disable_on_complete: true
-    reset_events: mode_warp_qualify_started
-    events_when_complete: start_modeselect, reset_warp_lights
+
 
   mechanicus_accrual:
     events:
@@ -108,7 +94,6 @@ accruals:
     reset_on_complete: false
     disable_on_complete: true
     reset_events: mode_warp_qualify_started
-    events_when_complete: start_mechanicus_mode
 
 
 ball_holds:
