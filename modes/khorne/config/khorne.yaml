@@ -32,11 +32,11 @@ timers:
         restart_on_complete: false
         start_running: true
 
-shots:
-    left_ramp_shot:
-        switch: 
-    center_ramp_shot: 
-        switch: 
+# shots:
+#     left_ramp_shot:
+#         switch: 
+#     center_ramp_shot: 
+#         switch: 
 
 
 

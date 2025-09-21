@@ -1,0 +1,17 @@
+#config_version=6
+
+mode:
+  start_events: ModeSelect_necrons_selected
+  stop_events: timer_necrons_mode_timer_complete
+  priority: 200
+  
+
+timers:
+    necrons_mode_timer: 
+        start_value: 60 # seconds
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: true
+

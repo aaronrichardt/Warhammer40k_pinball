@@ -15,7 +15,6 @@ mode_settings:
     - slannesh 
     - tzeench 
     - necrons
-    - tyranids
     - backToTheFight
   select_item_events: s_start_button_active
   next_item_events: s_right_flipper_active

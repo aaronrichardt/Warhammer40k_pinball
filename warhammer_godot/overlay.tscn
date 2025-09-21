@@ -1,0 +1,195 @@
+[gd_scene load_steps=4 format=3 uid="uid://cng4ptqrfcnaf"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_qya6u"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_mqwct"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_wjpwf"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_qya6u")
+
+[node name="HBoxContainer" type="BoxContainer" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -241.0
+offset_top = 6.0
+offset_right = 956.0
+offset_bottom = 75.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 0
+
+[node name="player" type="Label" parent="HBoxContainer/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_mqwct")
+theme_override_font_sizes/font_size = 50
+text = "Player 1
+"
+script = ExtResource("3_wjpwf")
+variable_name = "number"
+template_string = "Player %s "
+min_players = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 30
+
+[node name="ball" type="Label" parent="HBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0.175, 0)
+layout_mode = 2
+theme = ExtResource("2_mqwct")
+theme_override_font_sizes/font_size = 50
+text = "Ball 1
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_type = 2
+variable_name = "ball"
+template_string = "Ball %s"
+
+[node name="MarginContainer3" type="MarginContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="BoxContainer/MarginContainer"]
+layout_direction = 2
+layout_mode = 2
+
+[node name="Player 1 score" type="Label" parent="BoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "00,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_right = 100
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="BoxContainer/MarginContainer2"]
+layout_mode = 2
+
+[node name="Player 4 score" type="Label" parent="BoxContainer/MarginContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "00,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="MarginContainer3" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="BoxContainer/MarginContainer3"]
+layout_mode = 2
+
+[node name="Player 2 score" type="Label" parent="BoxContainer/MarginContainer3/HBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "00,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="MarginContainer4" type="MarginContainer" parent="BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 0
+
+[node name="BoxContainer2" type="BoxContainer" parent="BoxContainer/MarginContainer4"]
+layout_mode = 2
+
+[node name="Player 3 score" type="Label" parent="BoxContainer/MarginContainer4/BoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "00,000,000,000
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_type = 4
+variable_name = "score"
+comma_separate = true
+min_digits = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -280.0
+offset_bottom = 95.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="MPFVariable" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Bonus : 2X 
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_wjpwf")
+variable_name = "bonus_multiplier"
+template_string = "Bonus : %sX"

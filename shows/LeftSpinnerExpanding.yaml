@@ -1,0 +1,341 @@
+#show_version=6
+- time: 0
+  lights:
+    l_left_innerloop_circle: '19A9DB'
+    
+- time: '+1'
+  lights:
+    l_left_innerloop_circle: '000000'
+    l_left_lightbar22: '010709'
+    l_left_lightbar28: '0D5872'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar22: '000000'
+    l_left_lightbar28: '000000'
+    l_waagh_!: '189ECD'
+    l_waagh_G: '000304'
+    l_waagh_H: '1DC3FD'
+    l_waagh_W: '000101'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar31: '1DC3FD'
+    l_rollover: '1DC3FD'
+    l_waagh_!: '000000'
+    l_waagh_G: '000000'
+    l_waagh_H: '000000'
+    l_waagh_W: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar18: '0C546C'
+    l_left_lightbar31: '000000'
+    l_left_lightbar32: '0B4D63'
+    l_orkface4: '1487AF'
+    l_rollover: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar17: '1DC3FD'
+    l_left_lightbar18: '000000'
+    l_left_lightbar32: '000000'
+    l_orkface4: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar16: '1DC3FD'
+    l_left_lightbar17: '000000'
+    l_xenos_o: '010507'
+    
+- time: '+1'
+  lights:
+    l_bonusx: '1EC3FD'
+    l_left_lightbar15: '1EC3FD'
+    l_left_lightbar16: '000000'
+    l_light_mystery: '0C4C62'
+    l_light_spinners: '1EC3FD'
+    l_lightlock: '1EC3FD'
+    l_nurgle2: '04171E'
+    l_nurgle3: '1EC3FD'
+    l_right_innerloop_circle: '093A4B'
+    l_xenos_o: '000000'
+    l_xenos_s: '0C4C62'
+    
+- time: '+1'
+  lights:
+    l_bonusx: '000000'
+    l_left_lightbar14: '0F6380'
+    l_left_lightbar15: '000000'
+    l_light_mystery: '000000'
+    l_light_spinners: '000000'
+    l_lightlock: '000000'
+    l_nurgle2: '000000'
+    l_nurgle3: '000000'
+    l_right_innerloop_circle: '000000'
+    l_xenos_s: '000000'
+    
+- time: '+1'
+  lights:
+    l_innerloop_flasher: '1EC3FD'
+    l_left_lightbar12: '158CB5'
+    l_left_lightbar14: '000000'
+    l_omega_1: '083443'
+    l_omega_2: '1EC3FD'
+    l_omega_8: '0B495E'
+    
+- time: '+1'
+  lights:
+    l_Solemnace_circle: '158BB4'
+    l_innerloop_flasher: '000000'
+    l_left_lightbar11: '1EC3FD'
+    l_left_lightbar12: '000000'
+    l_necron_lock2: '1EC3FD'
+    l_omega_1: '000000'
+    l_omega_2: '000000'
+    l_omega_3: '1EC3FD'
+    l_omega_7: '1EC3FD'
+    l_omega_8: '000000'
+    l_pop_flasher: '1EC3FD'
+    l_rollover_left: '1483AA'
+    l_solemnace_arrow: '1EC3FD'
+    
+- time: '+1'
+  lights:
+    l_Solemnace_circle: '000000'
+    l_addaball: '021015'
+    l_left_lightbar10: '1EC3FD'
+    l_left_lightbar11: '000000'
+    l_necron_lock2: '000000'
+    l_nurgle4: '1EC3FD'
+    l_omega_3: '000000'
+    l_omega_4: '020B0F'
+    l_omega_5: '1EC3FD'
+    l_omega_6: '1EC3FD'
+    l_omega_7: '000000'
+    l_pop_flasher: '000000'
+    l_right_orbit_arrow: '1EC3FD'
+    l_right_orbit_cicle: '1EC3FD'
+    l_rollover_center: '062733'
+    l_rollover_left: '000000'
+    l_solemnace_arrow: '000000'
+    l_tyranid_ui: '1EC3FD'
+    l_warp_a: '083747'
+    l_warp_w: '1EC3FD'
+    
+- time: '+1'
+  lights:
+    l_addaball: '189DCB'
+    l_chaos_ui: '1EC3FD'
+    l_jackpot: '1EC3FD'
+    l_left_lightbar10: '000000'
+    l_left_lightbar9: '1EC3FD'
+    l_left_sling_upper: '1EC3FD'
+    l_nurgle4: '000000'
+    l_nurgle_ui: '04171E'
+    l_omega_4: '000000'
+    l_omega_5: '000000'
+    l_omega_6: '000000'
+    l_right_orbit_arrow: '000000'
+    l_right_orbit_cicle: '000000'
+    l_rollover_center: '000000'
+    l_rollover_gork: '1EC3FD'
+    l_tyranid_ui: '000000'
+    l_tzeench_ui: '1EC3FD'
+    l_warp_a: '000000'
+    l_warp_w: '000000'
+    
+- time: '+1'
+  lights:
+    l_2xscoring: '19A1D1'
+    l_addaball: '000000'
+    l_adeptus_mechanicius: '1EC3FD'
+    l_chaos_ui: '000000'
+    l_jackpot: '000000'
+    l_left_lightbar8: '1EC3FD'
+    l_left_lightbar9: '000000'
+    l_left_sling_upper: '000000'
+    l_light_outlanes: '19A2D2'
+    l_mystery: '1EC3FD'
+    l_necron_ui: '1EC3FD'
+    l_nurgle_ui: '0F6582'
+    l_right_lightbar17: '1693BE'
+    l_right_lightbar18: '1EC3FD'
+    l_right_lightbar19: '1EC3FD'
+    l_right_lightbar20: '1EC3FD'
+    l_right_lightbar21: '1EC3FD'
+    l_right_lightbar22: '1EC3FD'
+    l_right_lightbar23: '1EC3FD'
+    l_right_lightbar24: '1692BD'
+    l_rollover_gork: '000000'
+    l_rollover_mork: '1EC3FD'
+    l_rollover_right: '1EC3FD'
+    l_super_jackpot: '093848'
+    l_tzeench_ui: '000000'
+    
+- time: '+1'
+  lights:
+    l_2xscoring: '000000'
+    l_adeptus_mechanicius: '000000'
+    l_left_lightbar6: '083747'
+    l_left_lightbar7: '1EC3FD'
+    l_left_lightbar8: '000000'
+    l_left_sling_lower: '1EC3FD'
+    l_light_outlanes: '000000'
+    l_mystery: '000000'
+    l_necron_ui: '000000'
+    l_nurgle_ui: '000000'
+    l_right_lightbar14: '1EC3FD'
+    l_right_lightbar15: '1EC3FD'
+    l_right_lightbar16: '1EC3FD'
+    l_right_lightbar17: '041B23'
+    l_right_lightbar18: '000000'
+    l_right_lightbar19: '000000'
+    l_right_lightbar20: '000000'
+    l_right_lightbar21: '000000'
+    l_right_lightbar22: '000000'
+    l_right_lightbar23: '000000'
+    l_right_lightbar24: '000000'
+    l_right_lightbar25: '1EC3FD'
+    l_right_lightbar26: '1EC3FD'
+    l_right_lightbar27: '1EC3FD'
+    l_rollover_mork: '000000'
+    l_rollover_right: '000000'
+    l_super_jackpot: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar5: '1FC3FD'
+    l_left_lightbar6: '1FC3FD'
+    l_left_lightbar7: '000000'
+    l_left_sling_lower: '000000'
+    l_right_lightbar12: '1FC3FD'
+    l_right_lightbar13: '1FC3FD'
+    l_right_lightbar14: '08303E'
+    l_right_lightbar15: '000000'
+    l_right_lightbar16: '000000'
+    l_right_lightbar17: '000000'
+    l_right_lightbar25: '000000'
+    l_right_lightbar26: '000000'
+    l_right_lightbar27: '000000'
+    l_right_lightbar28: '1FC3FD'
+    l_right_lightbar29: '1FC3FD'
+    l_right_lightbar30: '093848'
+    l_warp_r: '1FC3FD'
+    
+- time: '+1'
+  lights:
+    l_left_inlane_upper: '1FC3FD'
+    l_left_lightbar4: '1FC3FD'
+    l_left_lightbar5: '000000'
+    l_left_lightbar6: '000000'
+    l_right_lightbar10: '1FC3FD'
+    l_right_lightbar11: '1FC3FD'
+    l_right_lightbar12: '000000'
+    l_right_lightbar13: '000000'
+    l_right_lightbar14: '000000'
+    l_right_lightbar28: '000000'
+    l_right_lightbar29: '000000'
+    l_right_lightbar30: '1FC3FD'
+    l_right_lightbar31: '1FC3FD'
+    l_warp_p: '127597'
+    l_warp_r: '051D26'
+    
+- time: '+1'
+  lights:
+    l_left_inlane_lower: '1FC3FD'
+    l_left_inlane_upper: '000000'
+    l_left_lightbar3: '1FC3FD'
+    l_left_lightbar4: '000000'
+    l_right_lightbar10: '000000'
+    l_right_lightbar11: '000000'
+    l_right_lightbar30: '000000'
+    l_right_lightbar31: '041C24'
+    l_right_lightbar32: '1FC3FD'
+    l_right_lightbar8: '1FC3FD'
+    l_right_lightbar9: '1FC3FD'
+    l_right_sling_lower: '1FC3FD'
+    l_warp_p: '1FC3FD'
+    l_warp_r: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_inlane_lower: '000000'
+    l_left_lightbar2: '1FC3FD'
+    l_left_lightbar3: '000000'
+    l_right_lightbar31: '000000'
+    l_right_lightbar32: '000000'
+    l_right_lightbar7: '1FC3FD'
+    l_right_lightbar9: '000000'
+    l_right_sling_lower: '000000'
+    l_warp_p: '000000'
+    
+- time: '+1'
+  lights:
+    l_left_lightbar1: '1FC3FD'
+    l_left_lightbar2: '000000'
+    l_right_inlane_lower: '1FC3FD'
+    l_right_inlane_upper: '1FC3FD'
+    l_right_lightbar5: '1FC3FD'
+    l_right_lightbar6: '1FC3FD'
+    l_right_lightbar7: '000000'
+    l_right_lightbar8: '000000'
+    
+- time: '+1'
+  lights:
+    l_ballsave: '1FC3FD'
+    l_left_lightbar1: '000000'
+    l_right_inlane_lower: '1DB9EF'
+    l_right_inlane_upper: '051D26'
+    l_right_lightbar4: '1FC3FD'
+    l_right_lightbar6: '000000'
+    
+- time: '+1'
+  lights:
+    l_right_inlane_lower: '000000'
+    l_right_inlane_upper: '000000'
+    l_right_lightbar3: '1FC3FD'
+    l_right_lightbar5: '000000'
+    
+- time: '+1'
+  lights:
+    l_ballsave: '000000'
+    l_right_lightbar2: '1FC3FD'
+    l_right_lightbar3: '1481A7'
+    l_right_lightbar4: '000000'
+    
+- time: '+1'
+  lights:
+    l_right_lightbar1: '20C3FD'
+    l_right_lightbar2: '041A22'
+    l_right_lightbar3: '000000'
+    
+- time: '+1'
+  lights:
+    l_right_lightbar1: '000000'
+    l_right_lightbar2: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
