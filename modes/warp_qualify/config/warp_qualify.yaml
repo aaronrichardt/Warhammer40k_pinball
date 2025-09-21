@@ -35,9 +35,6 @@ shots:
     start_enabled: false
     enable_events: inlane_lane_group_lit_complete
     restart_events: inlane_lane_group_lit_complete
-    show_tokens:
-        led: l_adeptus_mechanicius
-        color: purple
 
 shot_groups:
   inlane_lane_group:
@@ -59,13 +56,15 @@ shot_profiles:
         show: off
       - name: lit
         show: on
-        show_tokens:
-          color: purple
 
   generic_flash_profile:
     states:
       - name: lit
         show: generic_flash
+        show_tokens:
+            led: l_adeptus_mechanicius
+            color: lime 
+
       - name: unlit
         show: off
 

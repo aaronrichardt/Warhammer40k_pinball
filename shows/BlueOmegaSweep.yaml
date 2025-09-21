@@ -1,0 +1,322 @@
+#show_version=6
+- time: 0
+  lights:
+    l_omega_6: '000000'
+    l_omega_7: '000000'
+    l_omega_8: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '006FC6'
+    l_omega_8: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000000'
+    l_omega_3: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '005293'
+    l_omega_4: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_3: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '000000'
+    l_omega_6: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '00111E'
+    l_omega_8: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_8: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '004F8D'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_3: '00182C'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000000'
+    l_omega_3: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_3: '000000'
+    l_omega_5: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '000000'
+    l_omega_8: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000406'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '006FC6'
+    l_omega_8: '000000'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000000'
+    l_omega_3: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '005496'
+    l_omega_4: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_3: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '003E6F'
+    l_omega_6: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '005292'
+    l_omega_8: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '00060A'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_8: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '004A83'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000000'
+    l_omega_3: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '0067B8'
+    
+- time: '+1'
+  lights:
+    l_omega_2: '000000'
+    l_omega_4: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_3: '000000'
+    l_omega_5: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '005DA7'
+    
+- time: '+1'
+  lights:
+    l_omega_4: '000000'
+    l_omega_6: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '006FC6'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '002038'
+    
+- time: '+1'
+  lights:
+    l_omega_5: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_6: '000000'
+    l_omega_8: '006FC6'
+    
+#No change this frame - take another step
+#  lights:
+- time: '+1'
+    
+- time: '+1'
+  lights:
+    l_omega_7: '000000'
+    
+- time: '+1'
+  lights:
+    l_omega_1: '000408'
+    l_omega_8: '0070C6'
+    

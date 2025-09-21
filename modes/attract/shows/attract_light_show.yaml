@@ -1,5 +1,33 @@
 #show_version=6
 ##! show: attract_light_show
+
+- duration: 5
+  shows: 
+        BlueOmegaSweep:          
+            speed: 10
+        RightLightBarSweep:
+            speed: 10
+        LeftLightBarSweep:
+            speed: 10
+
+- duration: 4
+  shows: 
+        RightSpinnerExpanding:          
+            speed: 10
+- duration: 4
+  shows: 
+        LeftSpinnerExpanding:          
+            speed: 10
+- duration: 4
+  shows: 
+        CenterSpinnerExpanding:          
+            speed: 10
+
+- duration: 5
+  shows: 
+        Playfield360rainbowsSweep:          
+            speed: 10
+
 - duration: 5
   shows: 
       3toneflash:
@@ -9,6 +37,12 @@
           third_color: EDC207
         speed: 10
  
+
+- duration: 10
+  shows: 
+        PlayfieldTriangleSweep:          
+            speed: 10
+
 
 #- duration: 10
 #  shows: 
@@ -56,3 +90,4 @@
           odd_color: red
           even_color: gold
         speed: 10
+

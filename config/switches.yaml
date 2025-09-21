@@ -128,7 +128,7 @@ switches:
     number: 32082-18
   s_dropramp_away:
     number: 32082-19
-  s_unused:
+  s_center_ramp:
     number: 32082-20
   s_right_poptarget:
     number: 32082-21
@@ -164,4 +164,6 @@ switches:
   s_tempholder2:
     number: io0804-2
   s_tempholder3:
-    number: io0804-3
+    number: io0804-3 
+  s_right_spinner:
+    number: io0804-4  

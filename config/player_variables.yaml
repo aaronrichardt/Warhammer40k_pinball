@@ -18,5 +18,6 @@ player_vars:
     initial_value: 0
   bonus_multiplier: 
     initial_value: 1 
-  
+  playfield_multiplier: 
+    initial_value: 1
   
