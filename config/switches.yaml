@@ -167,3 +167,5 @@ switches:
     number: io0804-3 
   s_right_spinner:
     number: io0804-4  
+  s_left_ramp:
+    number: io0804-5

@@ -4,8 +4,8 @@ mode:
   start_events: ModeSelect_slannesh_selected
   stop_events: timer_slannesh_mode_timer_complete
   priority: 200
-  
-
+ 
+  # The Prince of Pleasure (Number 6)
 timers:
     slannesh_mode_timer: 
         start_value: 60 # seconds

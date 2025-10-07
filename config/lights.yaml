@@ -235,15 +235,15 @@ lights:
   l_rollover_left:
     number: playfield-3-14
     tags: Chain3, GI, even, second
-  l_nurgle3:
+  l_innerloop_arrow:
     number: playfield-3-15
-    tags: Chain3, odd, third
+    tags: Chain3, odd, second
   l_rollover:
     number: playfield-3-16
     tags: Chain3, even, first
-  l_innerloop_arrow:
+  l_nurgle3:
     number: playfield-3-17
-    tags: Chain3, odd, second
+    tags: Chain3, odd, third
   l_innerloop_flasher:
     number: playfield-3-18
     tags: Chain3, even, third

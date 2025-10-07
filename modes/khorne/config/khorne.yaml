@@ -10,6 +10,8 @@ mode:
 #hit as many of the major shots before scoring super jackpot at the scoop
 # 
 
+#Khorne - The Blood God (Number 8):
+
 counters: 
     center_ramp:
         count_events: center_ramp_shot_hit
@@ -33,20 +35,40 @@ timers:
         start_running: true
 
 # shots:
+#     right_orbit_shot:
+#         switch: s_right_orbit
+#         profile: generic_flash
+#         show_tokens:
+#              led: l_right_orbit_arrow
+#              color: red
+#     center_ramp_shot2:
+#         switch: s_center_ramp
+#         profile: generic_flash
+#         show_tokens:
+#              led: l_center_ramp_arrow
+#              color: red
 #     left_ramp_shot:
-#         switch: 
-#     center_ramp_shot: 
-#         switch: 
+#         switch: s_left_ramp
+#         profile: generic_flash
+#         show_tokens:
+#              led: l_center_ramp_arrow
+#              color: red
 
 
+# shot_profiles:
+#     generic_flash:
+#         states:
+#             - name: flashing
+#               show: "generic_flash"
+#             - name: hit
+#               show: "on"
+#     final_shot_profile:
+#         states:
+#             - name: flashing
+#               show: "generic_flash"
+#             - name: hit
+#               show: "on"
+#         loop: false
 
-shot_groups: 
+
     
-    
-
-shot_profiles: 
-  
-
-show_player:
-    #ModeSelect_khorne_selected:
-    #light both ramp shots

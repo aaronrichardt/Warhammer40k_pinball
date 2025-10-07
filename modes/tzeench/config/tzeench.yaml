@@ -1,5 +1,5 @@
 #config_version=6
-
+# Tzeench - The Changer of Ways (Number 9):
 mode:
   start_events: ModeSelect_tzeench_selected
   stop_events: timer_tzeench_mode_timer_complete
