@@ -120,7 +120,7 @@ switches:
   s_u15:
     number: 32082-15
   s_center_spinner:
-    number: 32082-16
+    number: 32082-24
     type: "NC"
   s_inner_loop_lower:
     number: 32082-17
@@ -137,7 +137,7 @@ switches:
   s_snikt: 
     number: 32082-23
   s_droptarget_lock:
-    number: 32082-24
+    number: 32082-16
   s_left_orbit: 
     number: 32082-25
     type: "NC"
