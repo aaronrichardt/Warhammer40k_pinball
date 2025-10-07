@@ -17,19 +17,19 @@ timers:
 counters: 
     center_tzeench_spinner:
         count_events: s_center_spinner_active
-        starting_count: 5
+        starting_count: 50
         count_interval: 1
         direction: down
         count_complete_value: 0
     left_tzeench_spinner:
         count_events: s_left_spinner_active
-        starting_count: 3
+        starting_count: 30
         count_interval: 1
         direction: down
         count_complete_value: 0
     right_tzeench_spinner: 
         count_events: s_right_spinner_active
-        starting_count: 6
+        starting_count: 60
         count_interval: 1
         direction: down
         count_complete_value: 0
