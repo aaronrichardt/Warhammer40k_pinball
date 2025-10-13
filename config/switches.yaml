@@ -50,7 +50,6 @@ switches:
     number: 3208-17
   s_18:
     number: 3208-18
-    tags: playfield_active
   s_light_mystery: 
     number: 3208-19
     tags: playfield_active
@@ -128,7 +127,7 @@ switches:
     number: 32082-18
   s_dropramp_away:
     number: 32082-19
-  s_center_ramp:
+  s_right_spinner:
     number: 32082-20
   s_right_poptarget:
     number: 32082-21
@@ -145,7 +144,6 @@ switches:
     number: 32082-26
   s_left_vuk:
     number: 32082-27
-    type: "NC"
     debounce: quick
   s_left_deadend:
     number: 32082-28
@@ -165,7 +163,7 @@ switches:
     number: io0804-2
   s_tempholder3:
     number: io0804-3 
-  s_right_spinner:
+  s_center_ramp:
     number: io0804-4  
   s_left_ramp:
     number: io0804-5
