@@ -20,3 +20,61 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
+
+shots:
+    nurgle_bell1:
+        switch: s_snikt
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle1
+             color: lime
+    nurgle_bell2:
+        switch: s_17
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle2
+             color: lime
+    nurgle_bell3:
+        switch: s_18
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle3
+             color: lime
+    nurgle_bell4:
+        switch: s_24
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle4
+             color: lime
+    nurgle_bell5:
+        switch: s_25
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle5
+             color: lime
+
+shot_profiles:
+    generic_flash:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+    final_shot_profile:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+        loop: false
+
+shot_groups:
+    tzeench_spinners:
+        shots: 
+            - nurgle_bell1
+            - nurgle_bell2
+            - nurgle_bell3
+            - nurgle_bell4
+            - nurgle_bell5
+        enable_events: ModeSelect_nurgle_selected
+        disable_events: timer_nurgle_mode_timer_complete

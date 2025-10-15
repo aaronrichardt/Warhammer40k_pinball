@@ -247,6 +247,9 @@ lights:
   l_innerloop_flasher:
     number: playfield-3-18
     tags: Chain3, even, third
+
+
+
   l_right_lightbar1:
     number: playfield-5-1
     tags: right_lightbar, odd, first

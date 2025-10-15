@@ -6,6 +6,8 @@ mode:
   priority: 200
  
   # The Prince of Pleasure (Number 6)
+  #All shots start lit; shooting one will then light only that shot until you shoot it again. Side flipper shots only need to be made once, but will count as being hit twice!
+
 timers:
     slannesh_mode_timer: 
         start_value: 60 # seconds
@@ -14,3 +16,55 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
+
+
+shots:
+    slannesh_left_orbit_shot:
+        switch: s_snikt
+        profile: generic_flash
+        show_tokens:
+             led: l_left_orbit_arrow
+             color: pink
+    slannesh_left_inner_orbit_shot:
+        switch: s_17
+        profile: generic_flash
+        show_tokens:
+             led: l_left_innerloop_arrow
+             color: pink
+    slannesh_center_ramp_shot:
+        switch: s_18
+        profile: generic_flash
+        show_tokens:
+             led: l_center_ramp_arrow
+             color: pink
+    slannesh_right_inner_orbit_shot:
+        switch: s_24
+        profile: generic_flash
+        show_tokens:
+             led: l_innerloop_arrow
+             color: pink
+    slannesh_jackpot_shot:
+        switch: s_25
+        profile: generic_flash
+        show_tokens:
+             led: l_jackpot
+             color: pink
+    slannesh_droptarget_shot:
+        switch: s_26
+        profile: generic_flash
+        show_tokens:
+             led: l_solemnace_arrow
+             color: pink
+    slannesh_right_orbit_shot:
+        switch: s_27
+        profile: generic_flash
+        show_tokens:
+             led: l_right_orbit_arrow
+             color: pink
+    slannesh_scoop_shot:
+        switch: s_27
+        profile: generic_flash
+        show_tokens:
+             led: l_nurgle1
+             color: pink
+  
