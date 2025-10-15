@@ -37,7 +37,8 @@ fast:
     boards: 
       playfield:
         model: FP-EXP-0081
-        led_fade_time: 100ms
+      playfield2:        
+        model: FP-EXP-0071
       neuron:
         model: FP-EXP-2000
 

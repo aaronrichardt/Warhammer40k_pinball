@@ -64,7 +64,6 @@ missing_switches:
   s_rollover_mork: 4
   s_snikt: 566
   s_spinner: 60
-  s_start_button: 1
   s_tempholder1: 84
   s_tempholder2: 84
   s_tempholder3: 84
@@ -221,7 +220,7 @@ switches:
   s_shooter_lane: 12
   s_snikt: 848
   s_spinner: 7973
-  s_start_button: 778
+  s_start_button: 779
   s_tempholder1: 0
   s_tempholder2: 0
   s_tempholder3: 0
