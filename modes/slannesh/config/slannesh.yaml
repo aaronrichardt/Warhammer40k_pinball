@@ -20,13 +20,13 @@ timers:
 
 shots:
     slannesh_left_orbit_shot:
-        switch: s_snikt
+        switch: s_snikt_target
         profile: generic_flash
         show_tokens:
              led: l_left_orbit_arrow
              color: pink
     slannesh_left_inner_orbit_shot:
-        switch: s_17
+        switch: s_scoop_nurgle_target
         profile: generic_flash
         show_tokens:
              led: l_left_innerloop_arrow

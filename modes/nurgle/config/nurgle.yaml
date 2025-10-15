@@ -23,13 +23,13 @@ timers:
 
 shots:
     nurgle_bell1:
-        switch: s_snikt
+        switch: s_snikt_target
         profile: generic_flash
         show_tokens:
              led: l_nurgle1
              color: lime
     nurgle_bell2:
-        switch: s_17
+        switch: s_scoop_nurgle_target
         profile: generic_flash
         show_tokens:
              led: l_nurgle2
@@ -53,23 +53,8 @@ shots:
              led: l_nurgle5
              color: lime
 
-shot_profiles:
-    generic_flash:
-        states:
-            - name: flashing
-              show: "generic_flash"
-            - name: hit
-              show: "on"
-    final_shot_profile:
-        states:
-            - name: flashing
-              show: "generic_flash"
-            - name: hit
-              show: "on"
-        loop: false
-
 shot_groups:
-    tzeench_spinners:
+    nurgle_bells:
         shots: 
             - nurgle_bell1
             - nurgle_bell2
