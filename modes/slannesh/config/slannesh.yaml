@@ -17,54 +17,67 @@ timers:
         restart_on_complete: false
         start_running: true
 
-
 shots:
     slannesh_left_orbit_shot:
         switch: s_snikt
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_left_orbit_arrow
              color: pink
     slannesh_left_inner_orbit_shot:
         switch: s_17
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_left_innerloop_arrow
              color: pink
     slannesh_center_ramp_shot:
         switch: s_18
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_center_ramp_arrow
              color: pink
     slannesh_right_inner_orbit_shot:
         switch: s_24
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_innerloop_arrow
              color: pink
     slannesh_jackpot_shot:
         switch: s_25
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_jackpot
              color: pink
     slannesh_droptarget_shot:
         switch: s_26
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_solemnace_arrow
              color: pink
     slannesh_right_orbit_shot:
         switch: s_27
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_right_orbit_arrow
              color: pink
     slannesh_scoop_shot:
         switch: s_27
-        profile: generic_flash
+        profile: nurgle_generic_flash
         show_tokens:
              led: l_nurgle1
              color: pink
   
+shot_profiles:
+    nurgle_generic_flash:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+    nurgle_final_shot_profile:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+        loop: false

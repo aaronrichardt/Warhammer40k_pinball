@@ -15,7 +15,7 @@ modes:
   - ModeSelect
   - mechanicus_qualifier
   - necrons
-  #- rewardbank
+  - rewardbank
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
