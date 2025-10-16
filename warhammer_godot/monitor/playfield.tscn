@@ -1079,7 +1079,7 @@ texture_pressed = ExtResource("6_41o5i")
 stretch_mode = 4
 script = ExtResource("4_iyige")
 
-[node name="s_17" type="TextureButton" parent="switches"]
+[node name="s_scoop_nurgle_target" type="TextureButton" parent="switches"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0

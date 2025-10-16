@@ -46,7 +46,7 @@ switches:
   s_scoop:
     number: 3208-16
     type: "NC"
-  s_17:
+  s_scoop_nurgle_target:
     number: 3208-17
   s_18:
     number: 3208-18
@@ -110,7 +110,7 @@ switches:
     number: 32082-10
   s_right_orbit: 
     number: 32082-11
-  s_u12:
+  s_nurgle_redcircle:
     number: 32082-12
   s_rollover_mork:
     number: 32082-13
@@ -133,14 +133,14 @@ switches:
     number: 32082-21
   s_2_22:
     number: 32082-22
-  s_snikt: 
+  s_2_23: 
     number: 32082-23
   s_droptarget_lock:
     number: 32082-16
   s_left_orbit: 
     number: 32082-25
     type: "NC"
-  s_unknown: 
+  s_nurgle_ricochet_target: 
     number: 32082-26
   s_left_vuk:
     number: 32082-27
@@ -151,7 +151,7 @@ switches:
     number: 32082-29
   s_lockopto3:
     number: 32082-30
-  s_lockopto1:
+  s_snikt_target:
     number: 32082-31
 
   # Other boards
