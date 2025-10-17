@@ -14,6 +14,22 @@ shots:
     show_tokens:
       led: l_warp_a
 
+  rewardbank_lightspinners:
+    switch: s_left_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+  rewardbank_bonusx:
+    switch: s_left_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+  rewardbank_lightmystery:
+    switch: s_left_outlane
+    profile: inlane_lane_profile
+    show_tokens:
+      led: l_warp_a
+
 shot_groups:
   reward_bank_group:
     shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
@@ -33,12 +49,19 @@ timers:
         action: stop
 
 shot_profiles:
-  inlane_lane_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: hit
-        show: on
+    rewardbank_generic_flash:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+    rewardbank_final_shot_profile:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+        loop: false
 
 variable_player:
   inlane_lane_group_hit_complete:
