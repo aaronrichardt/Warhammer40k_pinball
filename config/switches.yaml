@@ -116,7 +116,7 @@ switches:
     number: 32082-13
   s_rollover_gork:
     number: 32082-14
-  s_u15:
+  s_leftramp:
     number: 32082-15
   s_center_spinner:
     number: 32082-24
@@ -125,16 +125,20 @@ switches:
     number: 32082-17
   s_left_spinner:
     number: 32082-18
-  s_dropramp_away:
+  s_center_ramp:
     number: 32082-19
+    type: "NC"
   s_right_spinner:
     number: 32082-20
-  s_right_poptarget:
+  s_titan_lock2:
     number: 32082-21
-  s_2_22:
+    type: "NC"
+  s_titan_lock1:
     number: 32082-22
-  s_2_23: 
+    type: "NC"
+  s_titan_lock3: 
     number: 32082-23
+    type: "NC"
   s_droptarget_lock:
     number: 32082-16
   s_left_orbit: 
@@ -163,7 +167,7 @@ switches:
     number: io0804-2
   s_tempholder3:
     number: io0804-3 
-  s_center_ramp:
+  s_4:
     number: io0804-4  
   s_left_ramp:
     number: io0804-5
