@@ -108,9 +108,9 @@ ball_devices:
       eject_coil: c_scoop
       eject_timeouts: 2s 
 
-    bd_left_vuk:
-        ball_switches: s_left_vuk
-        eject_coil: c_droppod
+    bd_titan:
+        ball_switches: s_titan_lock1, s_titan_lock2, s_titan_lock3
+        eject_coil: c_titan_lock
         eject_timeouts: 3s
 
     bd_right_vuk:

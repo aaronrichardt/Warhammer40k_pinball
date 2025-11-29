@@ -16,6 +16,7 @@ modes:
   - mechanicus_qualifier
   - necrons
   - rewardbank
+  - titan_multiball
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
@@ -25,7 +26,6 @@ modes:
   #- necron_lock_qualified
   #- necron_multiball
   - gorkmorkrollovers
-  #- waagh_multiball
   - waagh_qualifier
   - waagh_multiball
   #- skillshot

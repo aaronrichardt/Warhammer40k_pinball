@@ -1,0 +1,61 @@
+#config_version=6
+
+#The Tyranids have breached the system. As the last bastion of resistance, you must hold off the Hive Fleet long enough to signal Exterminatus. Survive waves of bioforms, destroy synapse creatures, and delay the Hive Mind’s advance.
+
+
+# ?? Mode Structure
+# ?? Phase 1: Swarm Breach
+# Objective: Hit 3 lit shots to represent Genestealer infiltration (e.g., ramps, orbits, scoop).
+
+# Mechanics:
+
+# Each successful shot spawns a new “swarm” insert light.
+
+# Timer-based: 30 seconds to complete all 3 or the swarm overwhelms and resets progress.
+
+# Inspired by Foo Fighters’ Area modes with escalating urgency.
+
+# ?? Phase 2: Synapse Disruption
+# Objective: Hit 2-3 specific targets (standups or spinners) to “break synapse control.”
+
+# Mechanics:
+
+# After each hit, a short hurry-up starts on a major shot (like Godzilla’s bridge hurry-ups).
+
+# Completing all hurry-ups disables the synapse node and advances to Phase 3.
+
+# ?? Phase 3: Hive Tyrant Showdown
+# Objective: Multiball phase (2-ball or 3-ball) where you must hit the central bash toy (Hive Tyrant) multiple times.
+
+# Mechanics:
+
+# Each hit weakens the Tyrant’s psychic field.
+
+# After 5 hits, a super jackpot is lit at the scoop or upper playfield.
+
+# Inspired by Batman '66’s Villain Escape multiball with progressive jackpots.
+
+# Swarm Combo Multiplier: Consecutive swarm kills increase a temporary playfield multiplier (up to 3x).
+
+# Synapse Hurry-Up: Value decreases rapidly—timing is key.
+
+# Hive Tyrant Super Jackpot: Value based on total points earned in previous phases.
+
+# Voiceover: Grim Inquisitor or Tech-Priest giving desperate orders.
+
+# Sound Design: Organic, chittering FX layered with industrial synths. Think Aliens meets Doom Eternal.
+
+mode:
+  start_events: ModeSelect_tyranids_selected
+  stop_events: timer_tyranids_mode_timer_complete
+  priority: 200
+ 
+
+timers:
+    tyranids_mode_timer: 
+        start_value: 60 # seconds
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: true

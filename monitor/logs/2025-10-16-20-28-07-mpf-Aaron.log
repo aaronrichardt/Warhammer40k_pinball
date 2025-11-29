@@ -1,0 +1,5 @@
+2025-10-16 20:28:07,670 : INFO : root : Loading config.
+2025-10-16 20:28:07,672 : INFO : YamlMultifileConfigLoader : Machine config file #1: config.yaml
+2025-10-16 20:28:07,672 : INFO : ConfigProcessor : Loading config from file C:\Users\aaron\AppData\Local\Programs\Python\Python312\Lib\site-packages\mpf\mpfconfig.yaml.
+2025-10-16 20:28:07,677 : INFO : ConfigProcessor : Loading config: C:\Users\aaron\AppData\Local\Programs\Python\Python312\Lib\site-packages\mpf\mpfconfig.yaml
+2025-10-16 20:28:07,677 : INFO : ConfigProcessor : Loading config from file C:\Users\aaron\Warhammer40k_pinball\MONITOR\config\config.yaml.

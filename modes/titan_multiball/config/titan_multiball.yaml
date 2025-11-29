@@ -1,0 +1,31 @@
+#config_version=6
+
+mode:
+  start_events: multiball_lock_titan_full
+  stop_events:
+  events_when_started: titan_multiball_start
+  events_when_stopped: 
+
+  priority: 300
+
+
+multiballs:
+  titan_multiball:
+    ball_count: 3
+    ball_count_type: total
+    shoot_again: 20s # 20 seconds to shoot again
+    start_events:
+      - titan_multiball_start
+    stop_events:
+      - titan_multiball_stop
+
+# sound_player:
+#     waagh_multiball_start:
+#         flashgitz-waaagh-sound-effect:
+#             action: play
+#             ducking:
+#                 bus: voice
+#                 attack: 0.3 sec
+#                 attenuation: 18
+#                 release_point: 2.0 sec
+#                 release: 1.0 sec

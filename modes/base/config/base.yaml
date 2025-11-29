@@ -114,6 +114,7 @@ variable_player:
   s_3bank_shot_flashProfile_flashing_hit:
     score: 10000
 
+
 shot_profiles: 
   pop_profile:
     states:
@@ -202,6 +203,11 @@ counters:
     events_when_complete: start_necron_lock
     reset_on_complete: true
     disable_on_complete: true
+
+multiball_locks: 
+    titan:
+        balls_to_lock: 3
+        lock_devices: bd_titan
 
 sound_player:
     mode_base_started: 
