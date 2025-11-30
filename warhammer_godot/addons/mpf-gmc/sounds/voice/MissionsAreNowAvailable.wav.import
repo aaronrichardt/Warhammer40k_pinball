@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://38t2kl4qvgfa"
-path="res://.godot/imported/MissionsAreNowAvailable.wav-f1aec0995c6b4b8ac6fa5834e27ec09e.sample"
+path="res://.godot/imported/missionsarenowavailable.wav-83bc271da6b2c73d5bbdfa74405ae4b5.sample"
 
 [deps]
 
-source_file="res://addons/mpf-gmc/sounds/voice/MissionsAreNowAvailable.wav"
-dest_files=["res://.godot/imported/MissionsAreNowAvailable.wav-f1aec0995c6b4b8ac6fa5834e27ec09e.sample"]
+source_file="res://addons/mpf-gmc/sounds/voice/missionsarenowavailable.wav"
+dest_files=["res://.godot/imported/missionsarenowavailable.wav-83bc271da6b2c73d5bbdfa74405ae4b5.sample"]
 
 [params]
 

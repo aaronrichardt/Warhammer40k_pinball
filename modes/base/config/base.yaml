@@ -129,15 +129,12 @@ shots:
 
   left_orbit:
     switch: s_left_orbit
-
-  left_sling_shot:
+  left_slingshot:
     switch: s_left_slingshot
-  right_sling_shot:
+  right_slingshot:
     switch: s_right_slingshot
-  
   left_deadend_shot: 
    switch: s_left_deadend
-
   pop_top:
     switch: s_pop_top
     profile: pop_profile
@@ -246,6 +243,24 @@ sound_player:
                 attenuation: 18
                 release_point: 2.0 sec
                 release: 1.0 sec
+    left_slingshot_hit:
+        slingshots:
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.1 sec
+                attenuation: 10
+                release_point: 0.5 sec
+                release: 0.5 sec
+    right_slingshot_hit:
+        slingshots:
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.1 sec
+                attenuation: 10
+                release_point: 0.5 sec
+                release: 0.5 sec
                 
 # sound_pools:
 #   drain_callout:

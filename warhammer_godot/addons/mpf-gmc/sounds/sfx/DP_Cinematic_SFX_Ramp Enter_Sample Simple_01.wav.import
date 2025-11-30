@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce4dvn8gbtkof"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Sample Simple_01.wav-bb2caf4e802b6057ffa9f76b2f709d3a.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Ramp Enter_Sample Simple_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Sample Simple_01.wav-bb2caf4e802b6057ffa9f76b2f709d3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://42w81uoqdbfm"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Sweet Relief_01.wav-07b84de7e47a20ad1d0f71b7d889a540.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Ramp Enter_Sweet Relief_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Sweet Relief_01.wav-07b84de7e47a20ad1d0f71b7d889a540.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,11 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=4 format=3 uid="uid://1w2ax7aonc0l"]
+
+[ext_resource type="AudioStream" uid="uid://mwl2cnbo5wgn" path="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Slingshot_Caster Haze_01.wav" id="1_xaira"]
+[ext_resource type="AudioStream" uid="uid://d022gfoxin10v" path="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Slingshot_Caster Haze_02.wav" id="2_k30jc"]
+[ext_resource type="AudioStream" uid="uid://bkjmr1n3rigco" path="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Slingshot_Caster Haze_03.wav" id="3_n6unc"]
+
+[resource]
+streams_count = 3
+stream_0/stream = ExtResource("1_xaira")
+stream_1/stream = ExtResource("2_k30jc")
+stream_2/stream = ExtResource("3_n6unc")

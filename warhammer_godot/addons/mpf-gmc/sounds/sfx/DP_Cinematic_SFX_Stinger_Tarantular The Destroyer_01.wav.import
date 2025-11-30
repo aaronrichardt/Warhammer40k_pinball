@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d4gv5xdglfogf"
+path="res://.godot/imported/DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01.wav-78800ce1f3d17366a4aca3db767939f9.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01.wav-78800ce1f3d17366a4aca3db767939f9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

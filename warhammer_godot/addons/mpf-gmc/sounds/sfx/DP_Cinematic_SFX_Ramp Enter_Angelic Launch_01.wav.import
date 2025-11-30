@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://u3hyvdlxcv0o"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Angelic Launch_01.wav-ff96b0626e7d9b95c31b08f5845c797f.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Ramp Enter_Angelic Launch_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Angelic Launch_01.wav-ff96b0626e7d9b95c31b08f5845c797f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d1sbfu57yfn0u"
+path="res://.godot/imported/DP_Cinematic_SFX_Drop Target_Giving Trees_03.wav-6bda57f30db67e96db157288613cb8b3.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Drop Target_Giving Trees_03.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Drop Target_Giving Trees_03.wav-6bda57f30db67e96db157288613cb8b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1va8mmv2ghmm"
+path="res://.godot/imported/DP_Cinematic_SFX_Stinger_Amphibious Intent_01.wav-415870d79f6eee4ff60f96394a8c1b89.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Stinger_Amphibious Intent_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Stinger_Amphibious Intent_01.wav-415870d79f6eee4ff60f96394a8c1b89.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

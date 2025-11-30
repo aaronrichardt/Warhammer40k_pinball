@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwvfxfvt81mro"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Over Portal_01.wav-acc069c11cd2172a36c652cf81b3546d.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Ramp Enter_Over Portal_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Enter_Over Portal_01.wav-acc069c11cd2172a36c652cf81b3546d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

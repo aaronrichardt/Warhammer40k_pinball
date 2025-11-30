@@ -19,13 +19,3 @@ multiballs:
     stop_events:
       - titan_multiball_stop
 
-# sound_player:
-#     waagh_multiball_start:
-#         flashgitz-waaagh-sound-effect:
-#             action: play
-#             ducking:
-#                 bus: voice
-#                 attack: 0.3 sec
-#                 attenuation: 18
-#                 release_point: 2.0 sec
-#                 release: 1.0 sec

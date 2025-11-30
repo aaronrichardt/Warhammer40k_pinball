@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7bk0ici7x823"
+path="res://.godot/imported/DP_Cinematic_SFX_Ramp Exit_Orbiter Beta_03.wav-a60419f0c9eab83ddaa3aea7eab394ae.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Ramp Exit_Orbiter Beta_03.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Ramp Exit_Orbiter Beta_03.wav-a60419f0c9eab83ddaa3aea7eab394ae.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

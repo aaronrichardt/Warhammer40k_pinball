@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mwl2cnbo5wgn"
+path="res://.godot/imported/DP_Cinematic_SFX_Slingshot_Caster Haze_01.wav-cf2dd026a10106c075a9de2b32d080c4.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Slingshot_Caster Haze_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Slingshot_Caster Haze_01.wav-cf2dd026a10106c075a9de2b32d080c4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

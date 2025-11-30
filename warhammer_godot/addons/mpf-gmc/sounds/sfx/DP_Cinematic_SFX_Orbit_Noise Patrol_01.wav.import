@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://mnuolenojuf5"
+path="res://.godot/imported/DP_Cinematic_SFX_Orbit_Noise Patrol_01.wav-cc4d0f49b42e5912f1c9b5b2b5e54d3a.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Orbit_Noise Patrol_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Orbit_Noise Patrol_01.wav-cc4d0f49b42e5912f1c9b5b2b5e54d3a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

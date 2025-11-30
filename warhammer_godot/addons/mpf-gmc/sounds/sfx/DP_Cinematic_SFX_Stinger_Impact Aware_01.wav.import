@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cbinadm752es2"
+path="res://.godot/imported/DP_Cinematic_SFX_Stinger_Impact Aware_01.wav-a49ce73899b7ef9b6541c8d0547b6ade.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Stinger_Impact Aware_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Stinger_Impact Aware_01.wav-a49ce73899b7ef9b6541c8d0547b6ade.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

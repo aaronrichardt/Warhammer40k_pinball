@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ca3bn81ja4bq7"
+path="res://.godot/imported/DP_Cinematic_SFX_Drop Target_White Noise Drop_01.wav-2611ef849cefabd08faf3f99847c94cd.sample"
+
+[deps]
+
+source_file="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Drop Target_White Noise Drop_01.wav"
+dest_files=["res://.godot/imported/DP_Cinematic_SFX_Drop Target_White Noise Drop_01.wav-2611ef849cefabd08faf3f99847c94cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
