@@ -243,7 +243,7 @@ sound_player:
                 attenuation: 18
                 release_point: 2.0 sec
                 release: 1.0 sec
-    left_slingshot_hit:
+    s_left_slingshot_active:
         slingshots:
             action: play
             ducking:
@@ -252,7 +252,7 @@ sound_player:
                 attenuation: 10
                 release_point: 0.5 sec
                 release: 0.5 sec
-    right_slingshot_hit:
+    s_right_slingshot_active:
         slingshots:
             action: play
             ducking:

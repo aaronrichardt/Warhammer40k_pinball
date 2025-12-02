@@ -12,5 +12,10 @@ mode:
   priority: 200
 
 
-#sound_player:
-  #xenosspot: xenos_spotted
+sound_player:
+  s_xenos_x_active: xenos_hit_fx
+  s_xenos_e_active: xenos_hit_fx
+  s_xenos_n_active: xenos_hit_fx
+  s_xenos_o_active: xenos_hit_fx
+  s_xenos_s_active: xenos_hit_fx
+  xenosspot: xenos-spotted

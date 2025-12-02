@@ -1,0 +1,7 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://cynjcjfosyh8s"]
+
+[ext_resource type="AudioStream" uid="uid://ni3vn2msl58m" path="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Drop Target_Primitive Blast_02.wav" id="1_q168t"]
+
+[resource]
+streams_count = 1
+stream_0/stream = ExtResource("1_q168t")
