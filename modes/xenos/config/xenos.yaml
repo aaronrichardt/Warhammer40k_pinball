@@ -18,4 +18,7 @@ sound_player:
   s_xenos_n_active: xenos_hit_fx
   s_xenos_o_active: xenos_hit_fx
   s_xenos_s_active: xenos_hit_fx
-  xenosspot: xenos-spotted
+  xenos_spotted: 
+    xenos-spotted: 
+            bus: voice
+

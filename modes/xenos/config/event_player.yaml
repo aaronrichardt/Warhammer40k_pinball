@@ -8,14 +8,11 @@ event_player:
   s_xenos_x_active:
     #if the x is hit, and unlit
     - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False}
-    #award a if we already have g1
     - xenos_e_complete{device.accruals.xenos_accrual.value[0]==True}
   s_xenos_e_active:
     #if a is hit and unlit
     - xenos_e_complete{device.accruals.xenos_accrual.value[1]==False}
-    #award g1 if we already have a
     - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False and device.accruals.xenos_accrual.value[1]==True}
-    #award d if we already have a and g1
     - xenos_n_complete{device.accruals.xenos_accrual.value[0]==True and device.accruals.xenos_accrual.value[1]==True and device.accruals.xenos_accrual.value[2]==False}
   s_xenos_n_active:
     - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False}
@@ -26,5 +23,6 @@ event_player:
     - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False and device.accruals.xenos_accrual.value[3]==True}
     - xenos_s_complete{device.accruals.xenos_accrual.value[2]==True and device.accruals.xenos_accrual.value[3]==True and device.accruals.xenos_accrual.value[4]==False}
   s_xenos_s_active:
-    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False and device.accruals.xenos_accrual.value[4]==True}
     - xenos_s_complete{device.accruals.xenos_accrual.value[4]==False }
+    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False and device.accruals.xenos_accrual.value[4]==True}
+

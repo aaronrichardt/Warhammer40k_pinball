@@ -12,9 +12,9 @@ sound_system:
       volume: 0.7
     voice:
       type: standard
-      simultaneous_sounds: 1
+      simultaneous_sounds: 3
       volume: 0.7
     sfx:
       type: standard
       simultaneous_sounds: 8
-      volume: 0.4
+      volume: 0.7

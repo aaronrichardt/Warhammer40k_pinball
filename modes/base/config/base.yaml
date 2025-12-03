@@ -261,6 +261,20 @@ sound_player:
                 attenuation: 10
                 release_point: 0.5 sec
                 release: 0.5 sec
+    # s_center_ramp_active:
+    #     DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+    #         bus: sfx
+    # s_lower_loop_active:
+    #     DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+    #         bus: sfx
+
+    # s_right_orbit_active:
+    #     DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
+    #         bus: sfx
+    s_center_spinner_active:
+        lazgun:
+            bus: sfx
+        
                 
 # sound_pools:
 #   drain_callout:
