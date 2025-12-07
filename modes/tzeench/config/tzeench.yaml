@@ -78,8 +78,6 @@ shots:
         switch: s_center_ramp
         profile: generic_flash
         start_enabled: false
-        #enable_events: tzeench_spinners_lit_complete
-        #hit_events: center_ramp_shot_generic_flash_hit_hit, tzeench_spinners_lit_complete
         show_tokens:
              led: l_center_ramp_arrow
              color: red

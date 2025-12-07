@@ -9,41 +9,39 @@ mode:
 
 shots:
   rewardbank_lightlock:
-    switch: s_left_outlane
+    switch: s_light_lock
     profile: inlane_lane_profile
     show_tokens:
-      led: l_warp_a
-
+      led: l_lightlock
   rewardbank_lightspinners:
-    switch: s_left_outlane
+    switch: s_light_spinners
     profile: inlane_lane_profile
     show_tokens:
-      led: l_warp_a
+      led: l_lightspinners
   rewardbank_bonusx:
-    switch: s_left_outlane
+    switch: s_light_bonusx
     profile: inlane_lane_profile
     show_tokens:
-      led: l_warp_a
+      led: l_bonusx
   rewardbank_lightmystery:
-    switch: s_left_outlane
+    switch: s_light_mystery
     profile: inlane_lane_profile
     show_tokens:
-      led: l_warp_a
+      led: l_lightmystery
 
 shot_groups:
   reward_bank_group:
     shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
     reset_events: reward_bank_group
-    rotate_right_events: rotate_rewardbank
+    rotate_events: timer_rewardbank_rotation_tick
 
 timers:
-
   rewardbank_rotation:
     start_value: 0
     tick_interval: 1s
     start_running: true
     control_events:
-      - event: mode_rewardbank_started
+      - event: mode_WeaponsBank_started
         action: start
       - event: reward_bank_group_hit
         action: stop

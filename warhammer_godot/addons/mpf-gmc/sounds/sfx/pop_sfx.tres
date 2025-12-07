@@ -1,0 +1,8 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=2 format=3 uid="uid://bdicrwt5rivo6"]
+
+[ext_resource type="AudioStream" uid="uid://d1sbfu57yfn0u" path="res://addons/mpf-gmc/sounds/sfx/DP_Cinematic_SFX_Drop Target_Giving Trees_03.wav" id="1_2q4pm"]
+
+[resource]
+random_pitch = 3.0
+streams_count = 1
+stream_0/stream = ExtResource("1_2q4pm")

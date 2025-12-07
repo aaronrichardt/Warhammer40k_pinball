@@ -114,7 +114,7 @@ ball_devices:
         eject_timeouts: 3s
 
     bd_right_vuk:
-        ball_switches: s_left_orbit
+        ball_switches: s_jackpot_vuk
         eject_coil: c_upperscoop
         eject_timeouts: 3s
     #bd_necron_lock:

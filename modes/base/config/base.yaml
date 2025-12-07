@@ -49,70 +49,114 @@ show_player:
 #     debug: true
 
 variable_player:
-  s_3bank_top_active:
-    score: 1000
-  s_3bank_middle_active:
-    score: 1000
-  s_3bank_bottom_active: 
-    score: 1000
+
   s_lower_bigtarget_active:
-    score: 3000
+    score: 3000 * (current_player.playfield_multiplier)
   s_upper_bigtarget_active:
-    score: 5000
+    score: 5000 * (current_player.playfield_multiplier)
   s_right_inlane_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_left_inlane_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_right_outlane_active:
-    score: 10000
+    score: 10000 * (current_player.playfield_multiplier)
   s_left_outlane_active:
-    score: 10000
+    score: 10000 * (current_player.playfield_multiplier)
   s_left_slingshot_active:
-    score: 500
+    score: 500 * (current_player.playfield_multiplier)
   s_right_slingshot_active:
-    score: 500
+    score: 500 * (current_player.playfield_multiplier)
   s_pop_left_active:
-    score: 500 
+    score: 500  * (current_player.playfield_multiplier)
  #s_pop_center_active:
  #  score: 500
   s_pop_right_active:
-    score: 500
+    score: 500 * (current_player.playfield_multiplier)
   s_rollover_mork_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_rollover_gork_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_upperscoop_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_spinner_active:
-    score: 100
+    score: 100 * (current_player.playfield_multiplier)
   s_xenos_x_active:
-    score: 100
+    score: 100 * (current_player.playfield_multiplier)
   s_xenos_e_active:
-    score: 100 
+    score: 100  * (current_player.playfield_multiplier)
   s_xenos_n_active:
-    score: 100
+    score: 100 * (current_player.playfield_multiplier)
   s_xenos_o_active:
-    score: 100  
+    score: 100   * (current_player.playfield_multiplier)
   s_xenos_s_active:
-    score: 100 
+    score: 100  * (current_player.playfield_multiplier)
   s_kickback1_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_kickback2_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_disk_backtarget_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_droptarget_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_droptarget_lock_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_center_spinner_active:
-    score: 5000
+    score: 5000 * (current_player.playfield_multiplier)
   s_scoop_active:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_3bank_shot_hit:
-    score: 1000
+    score: 1000 * (current_player.playfield_multiplier)
   s_3bank_shot_flashProfile_flashing_hit:
-    score: 10000
+    score: 10000 * (current_player.playfield_multiplier)
+  s_center_ramp_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_snikt_target:
+  score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_active_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_nurgle_target_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_18_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_light_mystery_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_bonus_x_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_light_spinners_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_light_lock_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_droptarget_down_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_24_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_25_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_26_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_27_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_necron_target_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_right_orbit_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_redcircle_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_right_spinner_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock1_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock2_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock3_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_jackpot_vuk_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_ricochet_target_active:
+   score: 2000 * (current_player.playfield_multiplier)
+  s_waagh_newton_ball_active:
+   score: 2000 * (current_player.playfield_multiplier)
+
 
 
 shot_profiles: 
@@ -126,9 +170,8 @@ shot_profiles:
     loop: true
 
 shots: 
-
   left_orbit:
-    switch: s_left_orbit
+    switch: s_left_ramp
   left_slingshot:
     switch: s_left_slingshot
   right_slingshot:
@@ -141,7 +184,6 @@ shots:
   pop_bottom:
     switch: s_pop_bottom
     profile: pop_profile
-  
   left_drain:
     switch: s_left_outlane
   right_drain:
@@ -149,7 +191,7 @@ shots:
 
 sequence_shots: 
   right_orbit:
-    switch_sequence: s_right_orbit, s_left_orbit
+    switch_sequence: s_right_orbit, s_left_ramp
     sequence_timeout: 3s
 
 accruals:
@@ -161,7 +203,6 @@ accruals:
       - carousel_qualified
     disable_events: 
     enable_events:
-
 
 counters:
   warp_qualify_counter:
@@ -261,19 +302,48 @@ sound_player:
                 attenuation: 10
                 release_point: 0.5 sec
                 release: 0.5 sec
-    # s_center_ramp_active:
-    #     DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-    #         bus: sfx
-    # s_lower_loop_active:
-    #     DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-    #         bus: sfx
-
-    # s_right_orbit_active:
-    #     DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
-    #         bus: sfx
-    s_center_spinner_active:
-        lazgun:
+    #center ramp
+    s_center_ramp_active:
+        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
             bus: sfx
+    s_droptarget_lock:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+            bus: sfx
+
+    s_pop_top_active:
+        pop_sfx:
+            bus: sfx
+    s_pop_bottom_active:
+        pop_sfx:
+            bus: sfx
+    #lower loop
+    s_lower_loop_active:
+        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+            bus: sfx
+      #right orbit
+    s_right_orbit_active:
+        DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
+            bus: sfx
+            #center spinner
+    s_center_spinner_active:
+        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+            bus: sfx
+            #left spinner
+    s_left_spinner_active:
+        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+            bus: sfx
+            #right spinner
+    s_right_spinner_active:
+        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+            bus: sfx
+    s_jackpot_vuk_active:
+        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
+            bus: sfx
+    s_snikt_target_active:
+        DP_Cinematic_SFX_Standup_Plasmate_01:
+            bus: sfx
+
+
         
                 
 # sound_pools:

@@ -1388,17 +1388,6 @@ texture_pressed = ExtResource("6_41o5i")
 stretch_mode = 4
 script = ExtResource("4_iyige")
 
-[node name="s_left_orbit" type="TextureButton" parent="switches"]
-layout_mode = 0
-offset_left = -1.0
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -1.0
-texture_normal = ExtResource("5_nc38d")
-texture_pressed = ExtResource("6_41o5i")
-stretch_mode = 4
-script = ExtResource("4_iyige")
-
 [node name="s_unknown" type="TextureButton" parent="switches"]
 layout_mode = 0
 offset_left = -1.0

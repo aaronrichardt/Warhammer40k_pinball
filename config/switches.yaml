@@ -1,8 +1,6 @@
 #config_version=6
-
 switches:
   # Board 3208 (0-31)
-
   s_trough1:
     number: 3208-0
     type: "NC"
@@ -28,10 +26,8 @@ switches:
     number: 3208-7
   s_right_inlane:
     number: 3208-8
-    tags: playfield_active
   s_right_outlane:
     number: 3208-9
-    tags: playfield_active
   s_right_slingshot: 
     number: 3208-10
     ignore_window_ms: 0
@@ -55,10 +51,8 @@ switches:
     number: 3208-18
   s_light_mystery: 
     number: 3208-19
-    tags: playfield_active
   s_bonus_x:
     number: 3208-20
-    tags: playfield_active
   s_light_spinners: 
     number: 3208-21
   s_light_lock:
@@ -71,10 +65,8 @@ switches:
     number: 3208-25
   s_26:
     number: 3208-26
-    tags: playfield_active
   s_27:
     number: 3208-27
-    tags: playfield_active
   s_upperleft_flipper:
     number: 3208-28
   s_right_flipper:
@@ -82,11 +74,10 @@ switches:
     tags: right_flipper
   s_start_button:
     number: 3208-30
-    tags: start
+    tags: start 
   s_left_flipper:
     number: 3208-31
     tags: left_flipper
-
   # Board 32082 (0-31)
   s_xenos_x:
     number: 32082-0
@@ -104,7 +95,7 @@ switches:
   s_xenos_o:
     number: 32082-6
   s_xenos_e:
-    number: 32082-7
+    number: 32082-7 
   s_necron_target:
     number: 32082-8
   s_pop_bottom:
@@ -112,15 +103,15 @@ switches:
   s_pop_top:
     number: 32082-10
   s_right_orbit: 
-    number: 32082-11
+    number: 32082-11 
   s_nurgle_redcircle:
     number: 32082-12
   s_rollover_mork:
-    number: 32082-13
+    number: 32082-13  
   s_rollover_gork:
-    number: 32082-14
+    number: 32082-14 
   s_leftramp:
-    number: 32082-15
+    number: 32082-15 
   s_center_spinner:
     number: 32082-24
     type: "NC"
@@ -144,7 +135,7 @@ switches:
     type: "NC"
   s_droptarget_lock:
     number: 32082-16
-  s_left_orbit: 
+  s_jackpot_vuk: 
     number: 32082-25
     type: "NC"
   s_nurgle_ricochet_target: 
@@ -160,7 +151,6 @@ switches:
     number: 32082-30
   s_snikt_target:
     number: 32082-31
-
   # Other boards
   s_upperscoop:
     number: io0804-0
