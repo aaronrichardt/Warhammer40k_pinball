@@ -13,12 +13,58 @@ mode:
 
 
 sound_player:
-  s_xenos_x_active: xenos_hit_fx
-  s_xenos_e_active: xenos_hit_fx
-  s_xenos_n_active: xenos_hit_fx
-  s_xenos_o_active: xenos_hit_fx
-  s_xenos_s_active: xenos_hit_fx
+  s_xenos_x_active: 
+    xenos_hit_fx:
+        action: play
+        ducking:
+            bus: sfx
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
+  s_xenos_e_active:  
+    xenos_hit_fx:
+        action: play
+        ducking:
+            bus: sfx
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
+  s_xenos_n_active: 
+      xenos_hit_fx:
+        action: play
+        ducking:
+            bus: sfx
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
+  s_xenos_o_active: 
+      xenos_hit_fx:
+        action: play
+        ducking:
+            bus: sfx
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
+  s_xenos_s_active:
+      xenos_hit_fx:
+        action: play
+        ducking:
+            bus: sfx
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
   xenos_spotted: 
-    xenos-spotted: 
+      xenos-spotted: 
+        action: play
+        ducking:
             bus: voice
+            attack: 0.3 sec
+            attenuation: 18
+            release_point: 2.0 sec
+            release: 1.0 sec
 
