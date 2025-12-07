@@ -110,52 +110,50 @@ variable_player:
     score: 10000 * (current_player.playfield_multiplier)
   s_center_ramp_active:
     score: 2000 * (current_player.playfield_multiplier)
-  s_snikt_target:
-  score: 2000 * (current_player.playfield_multiplier)
   s_scoop_active_active:
     score: 2000 * (current_player.playfield_multiplier)
   s_scoop_nurgle_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_18_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_mystery_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_bonus_x_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_spinners_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_lock_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_droptarget_down_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_24_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_25_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_26_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_27_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_necron_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_right_orbit_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_nurgle_redcircle_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_right_spinner_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock1_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock2_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock3_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_jackpot_vuk_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_nurgle_ricochet_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_waagh_newton_ball_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
 
 
 

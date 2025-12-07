@@ -19,7 +19,7 @@ shots:
     show_tokens:
       led: l_lightspinners
   rewardbank_bonusx:
-    switch: s_light_bonusx
+    switch: s_bonus_x
     profile: inlane_lane_profile
     show_tokens:
       led: l_bonusx
