@@ -111,51 +111,51 @@ variable_player:
   s_center_ramp_active:
     score: 2000 * (current_player.playfield_multiplier)
   s_snikt_target:
-  score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_scoop_active_active:
     score: 2000 * (current_player.playfield_multiplier)
   s_scoop_nurgle_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_18_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_mystery_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_bonus_x_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_spinners_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_light_lock_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_droptarget_down_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_24_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_25_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_26_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_27_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_necron_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_right_orbit_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_nurgle_redcircle_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_right_spinner_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock1_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock2_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_titan_lock3_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_jackpot_vuk_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_nurgle_ricochet_target_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
   s_waagh_newton_ball_active:
-   score: 2000 * (current_player.playfield_multiplier)
+    score: 2000 * (current_player.playfield_multiplier)
 
 
 
@@ -250,80 +250,45 @@ multiball_locks:
 sound_player:
     mode_base_started: 
         Admonition:
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
+            action: play
+            bus: voice
              #target: sfx
              #delay: 0
     mode_waagh_multiball_started:
         Rise_of_the_WAAAGH:
             action: play
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
+            bus: voice
         Admonition:
             action: stop
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
+            bus: voice
     left_drain_hit:
         drain1:
-            action: play
-            ducking:
-                bus: voice
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_left_slingshot_active:
+            bus: voice
         slingshots:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.1 sec
-                attenuation: 10
-                release_point: 0.5 sec
-                release: 0.5 sec
+            bus: sfx
     s_right_slingshot_active:
         slingshots:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.1 sec
-                attenuation: 10
-                release_point: 0.5 sec
-                release: 0.5 sec
-    #center ramp
+            bus: sfx
     s_center_ramp_active:
         DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-            bus: sfx
+           bus: sfx
     s_droptarget_lock:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-            bus: sfx
-
+           bus: sfx
     s_pop_top_active:
         pop_sfx:
-            bus: sfx
+           bus: sfx
     s_pop_bottom_active:
         pop_sfx:
-            bus: sfx
+           bus: sfx
     #lower loop
     s_lower_loop_active:
         DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-            bus: sfx
+           bus: sfx
       #right orbit
     s_right_orbit_active:
         DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
-            bus: sfx
+           bus: sfx
             #center spinner
     s_center_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
