@@ -110,8 +110,6 @@ variable_player:
     score: 10000 * (current_player.playfield_multiplier)
   s_center_ramp_active:
     score: 2000 * (current_player.playfield_multiplier)
-  s_snikt_target:
-    score: 2000 * (current_player.playfield_multiplier)
   s_scoop_active_active:
     score: 2000 * (current_player.playfield_multiplier)
   s_scoop_nurgle_target_active:
@@ -250,63 +248,164 @@ multiball_locks:
 sound_player:
     mode_base_started: 
         Admonition:
-            action: play
-            bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
              #target: sfx
              #delay: 0
     mode_waagh_multiball_started:
         Rise_of_the_WAAAGH:
             action: play
-            bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
         Admonition:
             action: stop
-            bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     left_drain_hit:
         drain1:
-            bus: voice
+            action: play
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_left_slingshot_active:
         slingshots:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.1 sec
+                attenuation: 10
+                release_point: 0.5 sec
+                release: 0.5 sec
     s_right_slingshot_active:
         slingshots:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.1 sec
+                attenuation: 10
+                release_point: 0.5 sec
+                release: 0.5 sec
+    #center ramp
     s_center_ramp_active:
         DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     s_droptarget_lock:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
+
     s_pop_top_active:
         pop_sfx:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     s_pop_bottom_active:
         pop_sfx:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     #lower loop
     s_lower_loop_active:
         DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
       #right orbit
     s_right_orbit_active:
         DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
-           bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
             #center spinner
     s_center_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
             #left spinner
     s_left_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
             #right spinner
     s_right_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     s_jackpot_vuk_active:
         DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
     s_snikt_target_active:
         DP_Cinematic_SFX_Standup_Plasmate_01:
-            bus: sfx
+            action: play
+            ducking:
+                bus: sfx
+                attack: 0.3 sec
+                attenuation: 18
+                release_point: 2.0 sec
+                release: 1.0 sec
 
 
         
