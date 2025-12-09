@@ -56,10 +56,7 @@ config:
   - switches.yaml
   - videos.yaml
   - timed_switches.yaml
-  - assets.yaml
-  - sounds.yaml
   - player_variables.yaml
-  - sound_system.yaml
   - modes.yaml
   - drop_targets.yaml
 
@@ -158,6 +155,12 @@ autofire_coils:
   ac_popbumper_bottom:
     coil: c_pop_bottom
     switch: s_pop_bottom
+
+
+spinners:
+  center_spinner:
+    switch: s_center_spinner
+    active_ms: 500
 
 
 machine_vars:

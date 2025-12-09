@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MPFSoundAsset" load_steps=4 format=3 uid="uid://cwivk5rggns1f"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound_marker.gd" id="1_phbik"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_sound.gd" id="2_57nda"]
+[ext_resource type="AudioStream" uid="uid://c5t82p6fxsj62" path="res://addons/mpf-gmc/sounds/big-ben.wav" id="3_7a8hc"]
+
+[resource]
+script = ExtResource("2_57nda")
+stream = ExtResource("3_7a8hc")
+bus = "sfx  "
+fade_in = 0.0
+fade_out = 0.0
+loops = 0
+start_at = 0.0
+max_queue_time = 0.0
+markers = Array[ExtResource("1_phbik")]([])
