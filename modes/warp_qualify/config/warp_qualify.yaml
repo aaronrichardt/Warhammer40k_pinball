@@ -105,7 +105,7 @@ ball_holds:
 
 sound_player: 
     start_modeselect:
-        MissionsAreNowAvailable:
+        missionsarenowavailable:
             action: play
             ducking:
                 bus: voice

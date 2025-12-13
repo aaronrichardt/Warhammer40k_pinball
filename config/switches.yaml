@@ -115,6 +115,7 @@ switches:
   s_center_spinner:
     number: 32082-24
     type: "NC"
+    debounce: quick
   s_inner_loop_lower:
     number: 32082-17
   s_left_spinner:
