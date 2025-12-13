@@ -17,7 +17,7 @@ shots:
     switch: s_light_spinners
     profile: inlane_lane_profile
     show_tokens:
-      led: l_lightspinners
+      led: l_light_spinners
   rewardbank_bonusx:
     switch: s_bonus_x
     profile: inlane_lane_profile
@@ -27,7 +27,7 @@ shots:
     switch: s_light_mystery
     profile: inlane_lane_profile
     show_tokens:
-      led: l_lightmystery
+      led: l_light_mystery
 
 shot_groups:
   reward_bank_group:

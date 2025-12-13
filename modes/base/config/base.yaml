@@ -246,16 +246,14 @@ multiball_locks:
         lock_devices: bd_titan
 
 sound_player:
-    mode_base_started: 
-        Admonition:
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-             #target: sfx
-             #delay: 0
+    #mode_base_started: 
+    #    Admonition:
+    #        ducking:
+    #            bus: music
+    #            attack: 0.3 sec
+    #            attenuation: 18
+    #            release_point: 2.0 sec
+    #            release: 1.0 sec
     mode_waagh_multiball_started:
         Rise_of_the_WAAAGH:
             action: play
@@ -282,131 +280,131 @@ sound_player:
                 attenuation: 18
                 release_point: 2.0 sec
                 release: 1.0 sec
-    s_left_slingshot_active:
+    left_slingshot_hit:
         slingshots:
             action: play
             ducking:
                 bus: sfx
-                attack: 0.1 sec
+                attack: 1.1 sec
                 attenuation: 10
                 release_point: 0.5 sec
                 release: 0.5 sec
-    s_right_slingshot_active:
-        slingshots:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.1 sec
-                attenuation: 10
-                release_point: 0.5 sec
-                release: 0.5 sec
-    #center ramp
-    s_center_ramp_active:
-        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_droptarget_lock:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-
-    s_pop_top_active:
-        pop_sfx:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_pop_bottom_active:
-        pop_sfx:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    #lower loop
-    s_lower_loop_active:
-        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-      #right orbit
-    s_right_orbit_active:
-        DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-            #center spinner
-    s_center_spinner_active:
-        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-            #left spinner
-    s_left_spinner_active:
-        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-            #right spinner
-    s_right_spinner_active:
-        DP_Cinematic_SFX_Spinner_Orbiter 1_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_jackpot_vuk_active:
-        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_snikt_target_active:
-        DP_Cinematic_SFX_Standup_Plasmate_01:
-            action: play
-            ducking:
-                bus: sfx
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-
+ #   s_right_slingshot_active:
+ #       slingshots:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.1 sec
+ #               attenuation: 10
+ #               release_point: 0.5 sec
+ #               release: 0.5 sec
+ #   #center ramp
+ #   s_center_ramp_active:
+ #       DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #   s_droptarget_lock_active:
+ #       DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #
+ #   s_pop_top_active:
+ #       pop_sfx:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #   s_pop_bottom_active:
+ #       pop_sfx:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #   #lower loop
+ #   s_lower_loop_active:
+ #       DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #     #right orbit
+ #   s_right_orbit_active:
+ #       DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #           #center spinner
+ #   s_center_spinner_active:
+ #       DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #           #left spinner
+ #   s_left_spinner_active:
+ #       DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #           #right spinner
+ #   s_right_spinner_active:
+ #       DP_Cinematic_SFX_Spinner_Orbiter 1_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #   s_jackpot_vuk_active:
+ #       DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #   s_snikt_target_active:
+ #       DP_Cinematic_SFX_Standup_Plasmate_01:
+ #           action: play
+ #           ducking:
+ #               bus: sfx
+ #               attack: 0.3 sec
+ #               attenuation: 18
+ #               release_point: 2.0 sec
+ #               release: 1.0 sec
+ #
 
         
                 
