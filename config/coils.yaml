@@ -49,7 +49,7 @@ coils:
   c_droptarget_smartdrop:
     number: 32082-7
   c_titan_lock:
-    number: 32082-6
+    number: io0804-2
     default_pulse_ms: 18
     #default_pulse_ms: 200
     #

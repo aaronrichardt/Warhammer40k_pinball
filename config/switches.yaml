@@ -78,7 +78,6 @@ switches:
   s_left_flipper:
     number: 3208-31
     tags: left_flipper
-  # Board 32082 (0-31)
   s_xenos_x:
     number: 32082-0
   s_xenos_n:
