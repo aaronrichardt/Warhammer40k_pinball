@@ -110,7 +110,7 @@ ball_devices:
 
     bd_right_vuk:
         ball_switches: s_jackpot_vuk
-        eject_coil: c_upperscoop
+        eject_coil: c_jackpot_vuk
         eject_timeouts: 3s
     #bd_necron_lock:
     #  mechanical_eject: Trues
