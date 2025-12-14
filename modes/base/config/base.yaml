@@ -173,8 +173,6 @@ shots:
     switch: s_left_slingshot
   right_slingshot:
     switch: s_right_slingshot
-  left_deadend_shot: 
-   switch: s_left_deadend
   pop_top:
     switch: s_pop_top
     profile: pop_profile

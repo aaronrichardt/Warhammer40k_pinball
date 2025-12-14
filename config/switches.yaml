@@ -144,7 +144,7 @@ switches:
   s_left_vuk:
     number: 32082-27
     debounce: quick
-  s_left_deadend:
+  s_innerloop_right:
     number: 32082-28
   s_waagh_newton_ball:
     number: 32082-29
