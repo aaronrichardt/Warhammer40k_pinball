@@ -249,6 +249,7 @@ sound_player:
     mode_base_started: 
         Admonition:
             action: play
+            volume: 0.7
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -275,6 +276,7 @@ sound_player:
     left_drain_hit:
         big-ben:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -284,6 +286,7 @@ sound_player:
     s_left_slingshot_active:
         slingshots:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -293,6 +296,7 @@ sound_player:
     s_right_slingshot_active:
         slingshots:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -303,6 +307,7 @@ sound_player:
     s_center_ramp_active:
         DP_Cinematic_SFX_Stinger_Impact Aware_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -312,6 +317,7 @@ sound_player:
     s_left_ramp_active:
         DP_Cinematic_SFX_Ramp_Enter_Chungus_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -321,6 +327,7 @@ sound_player:
     s_droptarget_lock_active:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -331,6 +338,7 @@ sound_player:
     s_pop_top_active:
         pop_sfx:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -340,6 +348,7 @@ sound_player:
     s_pop_bottom_active:
         pop_sfx:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -350,6 +359,7 @@ sound_player:
     s_lower_loop_active:
         DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -360,6 +370,7 @@ sound_player:
     s_right_orbit_active:
         DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -370,6 +381,7 @@ sound_player:
     spinner_center_spinner_hit:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0 sec
@@ -380,6 +392,7 @@ sound_player:
     s_left_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -390,6 +403,7 @@ sound_player:
     s_right_spinner_active:
         DP_Cinematic_SFX_Spinner_Orbiter 1_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -399,6 +413,7 @@ sound_player:
     s_jackpot_vuk_active:
         DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -408,6 +423,7 @@ sound_player:
     s_snikt_target_active:
         DP_Cinematic_SFX_Standup_Plasmate_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -417,6 +433,7 @@ sound_player:
     s_left_inlane_active:
         mecha-sound-impact:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -427,6 +444,7 @@ sound_player:
     s_right_inlane_active:
         mecha-sound-impact:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -436,6 +454,7 @@ sound_player:
     balldevice_bd_scoop_ejecting_ball:
         DP_Cinematic_SFX_Scoop_The Eject Sound:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -446,6 +465,7 @@ sound_player:
     s_nurgle_redcircle_active:
         DP_Cinematic_SFX_Stinger_Sub Affair_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -455,6 +475,7 @@ sound_player:
     s_waagh_newton_ball_active:
         DP_Cinematic_SFX_Slingshot_Atrium Sub_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -464,6 +485,7 @@ sound_player:
     multiball_lock_titan_ball_locked:
         DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -473,6 +495,7 @@ sound_player:
     s_necron_target_active:
         DP_Cinematic_SFX_Standup_Plasmate_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -482,6 +505,7 @@ sound_player:
     s_scoop_nurgle_target_active:
         DP_Cinematic_SFX_Drop Target_Thump_01:
             action: play
+            volume: 1.3
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -491,6 +515,7 @@ sound_player:
     s_light_lock_active:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
                 action: play
+                volume: 1.3
                 ducking:
                     bus: effects
                     attack: 0.3 sec
@@ -500,6 +525,7 @@ sound_player:
     s_bonus_x_active:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
                 action: play
+                volume: 1.3
                 ducking:
                     bus: effects
                     attack: 0.3 sec
@@ -509,6 +535,7 @@ sound_player:
     s_light_mystery_active:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
                 action: play
+                volume: 1.3
                 ducking:
                     bus: effects
                     attack: 0.3 sec
@@ -518,6 +545,7 @@ sound_player:
     s_light_spinners_active:
         DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
                 action: play
+                volume: 1.3
                 ducking:
                     bus: effects
                     attack: 0.3 sec

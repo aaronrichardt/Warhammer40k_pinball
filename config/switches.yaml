@@ -109,12 +109,11 @@ switches:
     number: 32082-13  
   s_rollover_gork:
     number: 32082-14 
-  s_leftramp:
+  s_left_ramp:
     number: 32082-15 
   s_center_spinner:
     number: 32082-24
     type: "NC"
-    debounce: quick
   s_inner_loop_lower:
     number: 32082-17
   s_left_spinner:
@@ -162,5 +161,5 @@ switches:
     number: io0804-3 
   s_4:
     number: io0804-4  
-  s_left_ramp:
+  s_35:
     number: io0804-5
