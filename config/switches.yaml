@@ -90,7 +90,7 @@ switches:
     type: "NC"
   s_lowerloop:
     number: 32082-4
-  s_disk_backtarget:
+  s_innerloop_left:
     number: 32082-5
   s_xenos_o:
     number: 32082-6

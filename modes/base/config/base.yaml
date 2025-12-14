@@ -188,7 +188,10 @@ shots:
 
 sequence_shots: 
   right_orbit:
-    switch_sequence: s_right_orbit, s_left_ramp
+    switch_sequence: s_right_orbit, s_innerloop_left
+    sequence_timeout: 3s
+  complete_inner_loop:
+    switch_sequence: s_innerloop_right, s_innerloop_left, s_lowerloop
     sequence_timeout: 3s
 
 accruals:
@@ -300,7 +303,16 @@ sound_player:
                 release: 1.0 sec
       #center ramp
     s_center_ramp_active:
-        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+        DP_Cinematic_SFX_Stinger_Impact Aware_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_left_ramp_active:
+        DP_Cinematic_SFX_Ramp_Enter_Chungus_01:
             action: play
             ducking:
                 bus: effects
@@ -423,8 +435,100 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
+    balldevice_bd_scoop_ejecting_ball:
+        DP_Cinematic_SFX_Scoop_The Eject Sound:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     
+    s_nurgle_redcircle_active:
+        DP_Cinematic_SFX_Stinger_Sub Affair_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_waagh_newton_ball_active:
+        DP_Cinematic_SFX_Slingshot_Atrium Sub_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    multiball_lock_titan_ball_locked:
+        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_necron_target_active:
+        DP_Cinematic_SFX_Standup_Plasmate_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_scoop_nurgle_target_active:
+        DP_Cinematic_SFX_Drop Target_Thump_01:
+            action: play
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_light_lock_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_bonus_x_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_light_mystery_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_light_spinners_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
 
+
+        
         
                 
 # sound_pools:

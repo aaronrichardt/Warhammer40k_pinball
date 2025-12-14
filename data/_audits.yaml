@@ -49,7 +49,6 @@ missing_switches:
   s_right_slingshot: 1
   s_rollover_gork: 3
   s_rollover_mork: 3
-  s_scoop: 2
   s_scoop_nurgle_target: 2
   s_snikt_target: 3
   s_start_button: 12
@@ -164,7 +163,7 @@ switches:
   s_right_spinner: 769
   s_rollover_gork: 11
   s_rollover_mork: 21
-  s_scoop: 54
+  s_scoop: 55
   s_scoop_nurgle_target: 18
   s_snikt_target: 97
   s_start_button: 13

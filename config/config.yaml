@@ -60,8 +60,6 @@ config:
   - modes.yaml
   - drop_targets.yaml
 
-
-
 displays:
   window:
     width: 1920
