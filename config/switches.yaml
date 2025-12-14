@@ -30,10 +30,10 @@ switches:
     number: 3208-9
   s_right_slingshot: 
     number: 3208-10
-    ignore_window_ms: 0
+
   s_left_slingshot: 
     number: 3208-11
-    ignore_window_ms: 0
+
   s_left_outlane:
     number: 3208-12
   s_left_inlane: 
