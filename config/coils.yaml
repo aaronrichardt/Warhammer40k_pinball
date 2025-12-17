@@ -50,7 +50,7 @@ coils:
     number: 32082-7
   c_titan_lock:
     number: io0804-2
-    default_pulse_ms: 18
+    default_pulse_ms: 16
     #default_pulse_ms: 200
     #
     default_hold_power: 0.250

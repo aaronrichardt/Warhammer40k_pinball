@@ -2,7 +2,7 @@
 
 mode:
   start_events: multiball_lock_titan_full
-  stop_events:
+  stop_events: ball_will_end
   events_when_started: titan_multiball_start
   events_when_stopped: 
 
@@ -14,8 +14,8 @@ multiballs:
     ball_count: 3
     ball_count_type: total
     shoot_again: 20s # 20 seconds to shoot again
+    ball_locks: bd_titan_lock
     start_events:
       - titan_multiball_start
     stop_events:
       - titan_multiball_stop
-
