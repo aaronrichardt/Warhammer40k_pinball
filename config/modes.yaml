@@ -28,5 +28,5 @@ modes:
   - gorkmorkrollovers
   - waagh_qualifier
   - waagh_multiball
-  #- skillshot
+  - skillshot
   #- super_skillshot

@@ -231,7 +231,9 @@ virtual_platform_start_active_switches:
   - s_trough5
   - s_trough6
 
-
+keyboard:
+    z:
+     switch: s_left_flipper
 
 
 

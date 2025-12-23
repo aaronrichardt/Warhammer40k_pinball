@@ -8,52 +8,134 @@
 mode:
   start_events: ball_started, skillshot_restart
   stop_events: 
-    - stop_mode_skillshot
+    - skill_shot_success
+    - skill_shot_failed
   priority: 500
 shots:
-  skill_gork:
-    advance_events: advance_skillshot_gork
-    switch: s_rollover_gork
-    profile: skill_shot_profile
-    show_tokens: 
-      led: l_gork
-  skill_mork:
-    advance_events: advance_skillshot_mork
-    switch: s_rollover_mork
-    profile: skill_shot_profile
-    show_tokens:
-      led: l_mork
+    skill_xenos_x:
+        switch: s_xenos_x
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_xenos_x
+    skill_xenos_e:
+        switch: s_xenos_e
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_xenos_e
+    skill_xenos_n:
+        switch: s_xenos_n
+        profile: skill_shot_profile
+        # advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_xenos_n
+    skill_xenos_o:
+        switch: s_xenos_o
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_xenos_o
+    skill_xenos_s:
+        switch: s_xenos_s
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_xenos_s
+
+    skill_left_inlane:
+        switch: s_left_inlane
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_warp_a
+    skill_right_inlane:
+        switch: s_right_inlane
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_warp_r
+    skill_right_outlane:
+        switch: s_right_outlane
+        profile: skill_shot_profile
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          light: l_warp_r
+
+    super_skill_shot:
+        switch: s_lowerloop, s_left_inlane, s_necron_target
+        profile: super_skill_shot_profile
+        start_enabled: false
+        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        show_tokens:
+          skillshotlight1: l_solemnace_circle
+          skillshotlight2: l_solemnace_arrow
+          skillshotlight3: l_necron_lock1
+          skillshotlight4: l_necron_lock2
+          skillshotlight_color: green
+
+
+sequences: 
+    super_skillshot_selected:
+        events:
+          - s_left_flipper_active
+          - balldevice_bd_plunger_ball_eject_success
+    super_skillshot_deselected:
+        events:
+          - s_left_flipper_inactive
+
 shot_groups:
-  skillshots:
-    shots: skill_gork, skill_mork
-    disable_rotation_events: s_autoplunger_inactive
-    rotate_right_events: s_right_flipper_active
+  skill_shot_group:
+    shots: skill_xenos_x, skill_xenos_e, skill_xenos_n, skill_xenos_o, skill_xenos_s
     rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+
+  super_skill_shot_group:
+    shots: super_skill_shot
+    rotate_left_events: s_left_flipper_active
+    rotate_right_events: s_right_flipper_active
+    enable_events: super_skillshot_selected
+    disable_events: super_skillshot_deselected
+
 
 shot_profiles:
   skill_shot_profile:
     advance_on_hit: false
     states: 
-      - name : off
-        show: off
       - name: lit
         show: flash
+  super_skill_shot_profile:
+    advance_on_hit: false
+    states: 
+      - name: lit
+        show: skillshot_light_show
+        speed: 10
 
+timers:
+  skill_shot_timeout:
+    start_value: 0
+    end_value: 4     # set the timeout of your skill shot here
+    direction: up
+    tick_interval: 1s
+    start_running: false
+    control_events:
+      - action: start
+        event: balldevice_bd_plunger_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
 
-random_event_player:
-  mode_skillshot_started:
-    events:
-      - advance_skillshot_mork
-      - advance_skillshot_gork
-
-
-variable_player:
-  skillshot_lit_hit:
-    score: 20000
-
-
-event_player: 
-  skillshot_hit: stop_mode_skillshot
-  playfield_active: stop_mode_skillshot|3s
-#an event to trigger the super skill mode.
-#hold left flipper and plunge to activate super skill shot
+show_player: 
+    s_left_flipper_active: 
+        skillshot_light_show:
+            action: play
+            loops: -1
+            speed: 10
+            show_tokens:
+              skillshotlight1: l_solemnace_circle
+              skillshotlight2: l_solemnace_arrow
+              skillshotlight3: l_necron_lock1
+              skillshotlight4: l_necron_lock2
+              skillshotlight_color: green
+    s_left_flipper_inactive:  
+        skillshot_light_show:
+            action: stop
+        
+    

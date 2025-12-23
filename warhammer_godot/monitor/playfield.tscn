@@ -149,7 +149,7 @@ script = ExtResource("3_lapcf")
 width_inches = 0.2
 tags = ["Chain1"]
 
-[node name="l_Solemnace_circle" type="Sprite2D" parent="lights"]
+[node name="l_solemnace_circle" type="Sprite2D" parent="lights"]
 position = Vector2(353, 620)
 scale = Vector2(0.12642, 0.12642)
 texture = ExtResource("3_meo0c")

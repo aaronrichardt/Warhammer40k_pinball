@@ -58,7 +58,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '117293'
+    l_solemnace_circle: '117293'
     l_adeptus_mechanicius: '1EC3FD'
     l_center_ramp_circle: '1EC3FD'
     l_orkface1: '1EC3FD'
@@ -73,7 +73,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_center_ramp_circle: '000000'
     l_mystery: '1EC3FD'

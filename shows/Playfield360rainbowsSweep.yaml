@@ -2,7 +2,7 @@
 - time: 0
   lights:
     l_2xscoring: '0051B6'
-    l_Solemnace_circle: '185848'
+    l_solemnace_circle: '185848'
     l_addaball: '0051B6'
     l_adeptus_mechanicius: '1B593C'
     l_ballsave: '0000C8'
@@ -145,7 +145,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0051B6'
+    l_solemnace_circle: '0051B6'
     l_adeptus_mechanicius: '0051B6'
     l_ballsave: '7A2AB9'
     l_center_ramp_arrow: 'C87900'
@@ -275,7 +275,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0000C8'
+    l_solemnace_circle: '0000C8'
     l_adeptus_mechanicius: '0000C8'
     l_innerloop_flasher: '1B593C'
     l_left_inlane_lower: 'BF06A0'
@@ -467,7 +467,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '7A2AB9'
+    l_solemnace_circle: '7A2AB9'
     l_adeptus_mechanicius: '7A2AB9'
     l_ballsave: 'C70101'
     l_center_ramp_arrow: '0051B6'
@@ -603,7 +603,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'BF06A0'
+    l_solemnace_circle: 'BF06A0'
     l_adeptus_mechanicius: 'BF06A0'
     l_ballsave: 'C70302'
     l_chaos_ui: 'C8401F'
@@ -729,7 +729,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C70101'
+    l_solemnace_circle: 'C70101'
     l_adeptus_mechanicius: 'C70101'
     l_bonusx: '7A2AB9'
     l_jackpot: '7A2AB9'
@@ -855,7 +855,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C8401F'
-    l_Solemnace_circle: 'C8391C'
+    l_solemnace_circle: 'C8391C'
     l_bonusx: 'BF06A0'
     l_jackpot: 'BF06A0'
     l_left_inlane_lower: '1B593C'
@@ -925,7 +925,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C8401F'
+    l_solemnace_circle: 'C8401F'
     l_adeptus_mechanicius: 'C8401F'
     l_ballsave: '947012'
     l_chaos_ui: '1B593C'
@@ -1051,7 +1051,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C87900'
+    l_solemnace_circle: 'C87900'
     l_adeptus_mechanicius: 'C87900'
     l_left_inlane_lower: '0051B6'
     l_left_innerloop_arrow: 'BF06A0'
@@ -1175,7 +1175,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '1B593C'
-    l_Solemnace_circle: '766A1C'
+    l_solemnace_circle: '766A1C'
     l_bonusx: 'C8401F'
     l_jackpot: 'C8401F'
     l_left_inlane_lower: '0000C8'
@@ -1244,7 +1244,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '1B593C'
+    l_solemnace_circle: '1B593C'
     l_adeptus_mechanicius: '1B593C'
     l_ballsave: '0000C8'
     l_center_ramp_circle: 'C70704'
@@ -1379,7 +1379,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0051B6'
+    l_solemnace_circle: '0051B6'
     l_adeptus_mechanicius: '0051B6'
     l_innerloop_flasher: 'C87900'
     l_left_inlane_lower: '7A2AB9'
@@ -1573,7 +1573,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0000C8'
+    l_solemnace_circle: '0000C8'
     l_adeptus_mechanicius: '0000C8'
     l_ballsave: 'BF06A0'
     l_center_ramp_arrow: 'A7730B'
@@ -1711,7 +1711,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '7A2AB9'
+    l_solemnace_circle: '7A2AB9'
     l_adeptus_mechanicius: '7A2AB9'
     l_innerloop_flasher: '0051B6'
     l_left_inlane_lower: 'C70101'
@@ -1901,7 +1901,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'BF06A0'
+    l_solemnace_circle: 'BF06A0'
     l_adeptus_mechanicius: 'BF06A0'
     l_ballsave: 'C8401F'
     l_center_ramp_arrow: '0000C8'
@@ -2034,7 +2034,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C70101'
+    l_solemnace_circle: 'C70101'
     l_adeptus_mechanicius: 'C70101'
     l_chaos_ui: 'C8481A'
     l_innerloop_flasher: '7A2AB9'
@@ -2155,7 +2155,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C8401F'
-    l_Solemnace_circle: 'C8401F'
+    l_solemnace_circle: 'C8401F'
     l_adeptus_mechanicius: 'C8401F'
     l_bonusx: 'BF06A0'
     l_jackpot: 'BF06A0'
@@ -2287,7 +2287,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C87900'
-    l_Solemnace_circle: 'C8481A'
+    l_solemnace_circle: 'C8481A'
     l_addaball: 'C87900'
     l_bonusx: 'C70101'
     l_jackpot: 'C70101'
@@ -2356,7 +2356,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C87900'
+    l_solemnace_circle: 'C87900'
     l_adeptus_mechanicius: 'C87900'
     l_innerloop_flasher: 'C70101'
     l_left_inlane_lower: '0051B6'
@@ -2481,7 +2481,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '1B593C'
-    l_Solemnace_circle: '1B593C'
+    l_solemnace_circle: '1B593C'
     l_adeptus_mechanicius: '1B593C'
     l_left_inlane_lower: '0000C8'
     l_left_inlane_upper: '0000C8'
@@ -2674,7 +2674,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0051B6'
+    l_solemnace_circle: '0051B6'
     l_adeptus_mechanicius: '0051B6'
     l_innerloop_flasher: 'C87900'
     l_left_inlane_lower: '7A2AB9'
@@ -2804,7 +2804,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '0000C8'
-    l_Solemnace_circle: '0025C0'
+    l_solemnace_circle: '0025C0'
     l_adeptus_mechanicius: '0000C8'
     l_left_inlane_lower: 'BF06A0'
     l_left_inlane_upper: 'BF06A0'
@@ -2867,7 +2867,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0000C8'
+    l_solemnace_circle: '0000C8'
     l_ballsave: 'BF06A0'
     l_center_ramp_arrow: '1B593C'
     l_center_ramp_circle: '1B593C'
@@ -3005,7 +3005,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '7A2AB9'
+    l_solemnace_circle: '7A2AB9'
     l_adeptus_mechanicius: '7A2AB9'
     l_ballsave: 'C50233'
     l_chaos_ui: 'C70102'
@@ -3141,7 +3141,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'BF06A0'
-    l_Solemnace_circle: 'BF06A0'
+    l_solemnace_circle: 'BF06A0'
     l_adeptus_mechanicius: 'BF06A0'
     l_bonusx: '0000C8'
     l_innerloop_flasher: '003FBA'
@@ -3268,7 +3268,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C70101'
-    l_Solemnace_circle: 'C4034A'
+    l_solemnace_circle: 'C4034A'
     l_bonusx: '7A2AB9'
     l_jackpot: '7A2AB9'
     l_left_inlane_lower: 'C87900'
@@ -3336,7 +3336,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C70101'
+    l_solemnace_circle: 'C70101'
     l_adeptus_mechanicius: 'C70101'
     l_ballsave: 'C87900'
     l_chaos_ui: 'C87900'
@@ -3466,7 +3466,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'C8401F'
+    l_solemnace_circle: 'C8401F'
     l_adeptus_mechanicius: 'C8401F'
     l_innerloop_flasher: 'BF06A0'
     l_left_inlane_lower: '1B593C'
@@ -3587,7 +3587,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C87900'
-    l_Solemnace_circle: 'C87900'
+    l_solemnace_circle: 'C87900'
     l_adeptus_mechanicius: 'C86B08'
     l_bonusx: 'C70101'
     l_jackpot: 'C70101'
@@ -3783,7 +3783,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '1B593C'
+    l_solemnace_circle: '1B593C'
     l_adeptus_mechanicius: '1B593C'
     l_innerloop_flasher: 'C8401F'
     l_left_inlane_lower: '0000C8'
@@ -3975,7 +3975,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0051B6'
+    l_solemnace_circle: '0051B6'
     l_adeptus_mechanicius: '0051B6'
     l_ballsave: '7A2AB9'
     l_center_ramp_arrow: 'C87900'
@@ -4103,7 +4103,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '0000C8'
+    l_solemnace_circle: '0000C8'
     l_adeptus_mechanicius: '0000C8'
     l_innerloop_flasher: '1B593C'
     l_left_inlane_lower: 'BF06A0'
@@ -4298,7 +4298,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '7A2AB9'
+    l_solemnace_circle: '7A2AB9'
     l_adeptus_mechanicius: '7A2AB9'
     l_ballsave: 'C70101'
     l_center_ramp_arrow: '0051B6'
@@ -4431,7 +4431,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: 'BF06A0'
+    l_solemnace_circle: 'BF06A0'
     l_adeptus_mechanicius: 'BF06A0'
     l_chaos_ui: 'C70704'
     l_innerloop_flasher: '0000C8'
@@ -4556,7 +4556,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C70101'
-    l_Solemnace_circle: 'C70101'
+    l_solemnace_circle: 'C70101'
     l_adeptus_mechanicius: 'C70101'
     l_bonusx: '7A2AB9'
     l_jackpot: '7A2AB9'
@@ -4684,7 +4684,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C8401F'
-    l_Solemnace_circle: 'C7180C'
+    l_solemnace_circle: 'C7180C'
     l_addaball: 'C8401F'
     l_bonusx: 'BF06A0'
     l_jackpot: 'BF06A0'

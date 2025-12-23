@@ -28,7 +28,7 @@ lights:
   l_omega_8:
     number: playfield-1-8
     tags:  Chain1, even, second
-  l_Solemnace_circle:
+  l_solemnace_circle:
     number: playfield-1-9
     tags:  Chain1, odd, third
   l_adeptus_mechanicius:

@@ -86,7 +86,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '158BB4'
+    l_solemnace_circle: '158BB4'
     l_innerloop_flasher: '000000'
     l_left_lightbar11: '1EC3FD'
     l_left_lightbar12: '000000'
@@ -102,7 +102,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_addaball: '021015'
     l_left_lightbar10: '1EC3FD'
     l_left_lightbar11: '000000'

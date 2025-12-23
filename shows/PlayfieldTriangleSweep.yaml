@@ -89,7 +89,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_innerloop_flasher: '000000'
@@ -128,7 +128,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: 'C880C8'
     l_left_innerloop_arrow: 'C880C8'
@@ -303,7 +303,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_center_ramp_arrow: 'C880C8'
     l_center_ramp_circle: 'C880C8'
     l_left_lightbar11: 'C880C8'
@@ -374,7 +374,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_lower: '110B11'
     l_left_inlane_upper: 'C880C8'
@@ -543,7 +543,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '120B12'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_innerloop_flasher: '000000'
@@ -583,7 +583,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: '0D080D'
+    l_solemnace_circle: '0D080D'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: '593959'
     l_left_innerloop_arrow: 'C880C8'
@@ -620,7 +620,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_left_inlane_upper: '000000'
     l_left_innerloop_arrow: '000000'
     l_left_innerloop_circle: '000000'
@@ -756,7 +756,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '754B75'
     l_center_ramp_arrow: 'C880C8'
     l_center_ramp_circle: 'C880C8'
@@ -788,7 +788,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: 'BA77BA'
+    l_solemnace_circle: 'BA77BA'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C17CC1'
     l_center_ramp_arrow: '000000'
@@ -822,7 +822,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: 'C880C8'
     l_left_innerloop_arrow: '1D131D'
@@ -998,7 +998,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_innerloop_flasher: '000000'
@@ -1036,7 +1036,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_innerloop_arrow: 'C880C8'
     l_left_innerloop_circle: 'C880C8'
@@ -1198,7 +1198,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'AC6EAC'
+    l_solemnace_circle: 'AC6EAC'
     l_addaball: 'C880C8'
     l_center_ramp_arrow: 'C880C8'
     l_center_ramp_circle: 'C880C8'
@@ -1231,7 +1231,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_center_ramp_arrow: '000000'
@@ -1264,7 +1264,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: 'C880C8'
     l_left_innerloop_arrow: 'C880C8'
@@ -1388,7 +1388,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: '020102'
+    l_solemnace_circle: '020102'
     l_addaball: 'C880C8'
     l_bonusx: '000000'
     l_innerloop_flasher: '8D5B8D'
@@ -1429,7 +1429,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_center_ramp_arrow: 'A86BA8'
@@ -1466,7 +1466,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_center_ramp_arrow: '000000'
     l_center_ramp_circle: '000000'
@@ -1638,7 +1638,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: 'C880C8'
     l_center_ramp_arrow: '3B263B'
     l_center_ramp_circle: 'C880C8'
@@ -1707,7 +1707,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: 'C880C8'
     l_left_innerloop_arrow: 'C880C8'
@@ -1884,7 +1884,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: '362336'
     l_center_ramp_arrow: 'C880C8'
@@ -1919,7 +1919,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_center_ramp_arrow: '000000'
     l_center_ramp_circle: '000000'
@@ -2085,7 +2085,7 @@
 - time: '+1'
   lights:
     l_2xscoring: 'C880C8'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '9E659E'
     l_bonusx: '000000'
     l_innerloop_flasher: 'C880C8'
@@ -2116,7 +2116,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: '452C45'
+    l_solemnace_circle: '452C45'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_innerloop_flasher: '000000'
@@ -2152,7 +2152,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_left_inlane_upper: 'C880C8'
     l_left_innerloop_arrow: 'C880C8'
@@ -2330,7 +2330,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '533553'
-    l_Solemnace_circle: 'C880C8'
+    l_solemnace_circle: 'C880C8'
     l_addaball: '000000'
     l_adeptus_mechanicius: 'C880C8'
     l_center_ramp_arrow: 'C880C8'
@@ -2366,7 +2366,7 @@
 - time: '+1'
   lights:
     l_2xscoring: '000000'
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '000000'
     l_center_ramp_arrow: '000000'
     l_center_ramp_circle: '000000'

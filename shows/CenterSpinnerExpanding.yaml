@@ -146,7 +146,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '1EC3FD'
+    l_solemnace_circle: '1EC3FD'
     l_left_lightbar20: '1EC3FD'
     l_left_lightbar21: '1793BE'
     l_left_lightbar22: '000000'
@@ -159,7 +159,7 @@
     
 - time: '+1'
   lights:
-    l_Solemnace_circle: '000000'
+    l_solemnace_circle: '000000'
     l_adeptus_mechanicius: '1FC3FD'
     l_left_lightbar18: '106786'
     l_left_lightbar19: '1FC3FD'
