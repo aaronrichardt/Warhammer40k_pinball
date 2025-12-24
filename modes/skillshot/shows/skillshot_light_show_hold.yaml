@@ -1,0 +1,21 @@
+#show_version=6
+##! show: light_xenos_letter
+
+- time: "+1"
+  lights:
+    (skillshotlight4): off
+    (skillshotlight1): (skillshotlight_color)
+
+- time: "+1"
+  lights:
+    (skillshotlight1): off
+    (skillshotlight2): (skillshotlight_color)
+
+- time: "+1"
+  lights:
+    (skillshotlight2): off
+    (skillshotlight3): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight3): off
+    (skillshotlight4): (skillshotlight_color)

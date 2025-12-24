@@ -79,7 +79,7 @@ sequences:
     super_skillshot_selected:
         events:
           - s_left_flipper_active
-          - balldevice_bd_plunger_ball_eject_success
+          - s_autoplunger_inactive
     super_skillshot_deselected:
         events:
           - s_left_flipper_inactive
@@ -92,10 +92,7 @@ shot_groups:
 
   super_skill_shot_group:
     shots: super_skill_shot
-    rotate_left_events: s_left_flipper_active
-    rotate_right_events: s_right_flipper_active
-    enable_events: super_skillshot_selected
-    disable_events: super_skillshot_deselected
+    enable_events: logicblock_super_skillshot_selected_complete
 
 
 shot_profiles:
@@ -108,7 +105,7 @@ shot_profiles:
     advance_on_hit: false
     states: 
       - name: lit
-        show: skillshot_light_show
+        show: skillshot_light_show_hold
         speed: 10
 
 timers:
@@ -134,8 +131,36 @@ show_player:
               skillshotlight3: l_necron_lock1
               skillshotlight4: l_necron_lock2
               skillshotlight_color: green
+
     s_left_flipper_inactive:  
         skillshot_light_show:
             action: stop
+
+    super_skill_shot_group_complete:
+        necron_rings:
+            action: play
+            loops: 6
+            speed: 10
+
+# accruals:
+#   superskill_enabled_accrual:
+#     events:
+#       -  
+#     reset_on_complete: true
+#     disable_on_complete: false
+#     reset_events: mode_xenos_started
+#     events_when_complete: award_xenos, reset_xenos_lights, xenos_spotted
+
+event_player:
+    s_left_flipper_inactive:
+        - reset_superskillshot_droptarget {logicblock_super_skillshot_selected_complete == False}
+
+    
+coil_player: 
+    s_left_flipper_active: c_droptarget_down
+    reset_superskillshot_droptarget: c_droptarget_reset
         
+                        
+        
+    
     

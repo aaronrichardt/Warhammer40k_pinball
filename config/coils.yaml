@@ -39,14 +39,14 @@ coils:
   c_jackpot_vuk:
     number: 32082-3
     default_pulse_ms: 8
-  c_droptarget_reset:
-    number: 32082-4
-    default_pulse_ms: 18
+
   c_scoop:
     number: 32082-1
     default_pulse_ms: 18
-
-  c_droptarget_smartdrop:
+  c_droptarget_reset:
+    number: 32082-4
+    default_pulse_ms: 18
+  c_droptarget_down:
     number: 32082-7
   c_titan_lock:
     number: io0804-2
