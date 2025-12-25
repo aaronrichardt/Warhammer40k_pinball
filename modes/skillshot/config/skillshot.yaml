@@ -153,7 +153,8 @@ show_player:
 
 event_player:
     s_left_flipper_inactive:
-        - reset_superskillshot_droptarget{logicblock_super_skillshot_selected_complete == False}
+        - reset_superskillshot_droptarget{logicblock_super_skillshot_selected_enabled == True} 
+        #This mean the sequence was not selected
 
     
 coil_player: 
