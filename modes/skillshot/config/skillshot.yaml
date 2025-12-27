@@ -61,9 +61,15 @@ shots:
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
           light: l_warp_r
+    
+    skill_lowerloop:
+        switch: s_lowerloop
+
+    skill_necron:
+        switch: s_right_outlane
 
     super_skill_shot:
-        switch: s_lowerloop, s_left_inlane, s_necron_target
+        switch: s_necron_target
         profile: super_skill_shot_profile
         start_enabled: false
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
@@ -74,15 +80,24 @@ shots:
           skillshotlight4: l_necron_lock2
           skillshotlight_color: green
 
+sequence_shots: 
+    super_skill_necron_combo:
+        switch_sequence:
+          - s_lowerloop
+          - s_left_inlane
+          - s_necron_target
 
 sequences: 
     super_skillshot_selected:
+        reset_on_complete: false
+        enable_events: super_skill_shot_option
+        disable_events: super_skill_shot_disabled
         events:
           - s_left_flipper_active
           - s_autoplunger_inactive
-    super_skillshot_deselected:
-        events:
-          - s_left_flipper_inactive
+        events_when_complete:
+          - enable_superskillshot
+
 
 shot_groups:
   skill_shot_group:
@@ -92,7 +107,7 @@ shot_groups:
 
   super_skill_shot_group:
     shots: super_skill_shot
-    enable_events: logicblock_super_skillshot_selected_complete
+    enable_events: enable_superskillshot
 
 
 shot_profiles:
@@ -111,7 +126,7 @@ shot_profiles:
 timers:
   skill_shot_timeout:
     start_value: 0
-    end_value: 4     # set the timeout of your skill shot here
+    end_value: 10     # set the timeout of your skill shot here
     direction: up
     tick_interval: 1s
     start_running: false
@@ -120,10 +135,9 @@ timers:
         event: balldevice_bd_plunger_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
 
 show_player: 
-    s_left_flipper_active: 
+    enable_superskillshot_lights: 
         skillshot_light_show:
             action: play
-            loops: -1
             speed: 10
             show_tokens:
               skillshotlight1: l_solemnace_circle
@@ -132,36 +146,47 @@ show_player:
               skillshotlight4: l_necron_lock2
               skillshotlight_color: green
 
-    s_left_flipper_inactive:  
+    reset_superskillshot_droptarget:
         skillshot_light_show:
             action: stop
 
-    super_skill_shot_group_complete:
+    super_skill_necron_combo_hit:
         necron_rings:
             action: play
             loops: 6
-            speed: 10
-
-# accruals:
-#   superskill_enabled_accrual:
-#     events:
-#       -  
-#     reset_on_complete: true
-#     disable_on_complete: false
-#     reset_events: mode_xenos_started
-#     events_when_complete: award_xenos, reset_xenos_lights, xenos_spotted
+            speed: 40
+        skillshot_light_show:
+            action: stop
 
 event_player:
-    s_left_flipper_inactive:
-        - reset_superskillshot_droptarget{logicblock_super_skillshot_selected_enabled == True} 
-        #This mean the sequence was not selected
-
+    # only trigger the lights and drop if the sequence has not been picked 
+    # aka its a pre-show to prompt the player
+    s_left_flipper_active{device.sequences.super_skillshot_selected.enabled == False}: 
+        - enable_superskillshot_lights
+        - super_skill_shot_option
+    s_left_flipper_inactive{device.sequences.super_skillshot_selected.enabled == True and device.switches.s_autoplunger.state == 1}:
+        - reset_superskillshot_droptarget
+        - super_skill_shot_disabled
+    
+    super_skill_necron_combo_hit:
+        - skill_shot_success|3s
+        #we reset the drop target if the player did not take the super skillshot, false would mean the sequence was triggered and its now disabled
+    double_super_skillshot_combo_hit:
+        - skill_shot_success|3s
     
 coil_player: 
     s_left_flipper_active: c_droptarget_down
     reset_superskillshot_droptarget: c_droptarget_reset
         
                         
-        
+sound_player:
+    super_skill_necron_combo_hit:
+        trayzn_super_skillshot:
+            bus: voice
+            volume: 2
+    double_super_skillshot_combo_hit:
+        trayzn_double_super_skillshot:
+            bus: voice
+            volume: 2
     
     
