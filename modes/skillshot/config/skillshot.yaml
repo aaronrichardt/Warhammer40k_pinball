@@ -68,7 +68,7 @@ shots:
     skill_necron:
         switch: s_right_outlane
 
-    super_skill_shot:
+    super_skillshot:
         switch: s_necron_target
         profile: super_skill_shot_profile
         start_enabled: false
@@ -80,6 +80,17 @@ shots:
           skillshotlight4: l_necron_lock2
           skillshotlight_color: green
 
+    double_super_skillshot:
+        switch: s_jackpot_vuk
+        profile: double_super_skill_shot_profile
+        start_enabled: false
+        show_tokens:
+          skillshotlight1: l_pop_flasher
+          skillshotlight2: l_jackpot
+          skillshotlight3: l_jackpot
+          skillshotlight4: l_super_jackpot
+          skillshotlight_color: green
+        
 sequence_shots: 
     super_skill_necron_combo:
         switch_sequence:
@@ -87,7 +98,15 @@ sequence_shots:
           - s_left_inlane
           - s_necron_target
 
+    double_super_skillshot_combo:
+        switch_sequence:
+          - s_right_orbit
+          - s_innerloop_right
+          - s_innerloop_right
+          - s_jackpot_vuk
+
 sequences: 
+
     super_skillshot_selected:
         reset_on_complete: false
         enable_events: super_skill_shot_option
@@ -106,7 +125,11 @@ shot_groups:
     rotate_right_events: s_right_flipper_active
 
   super_skill_shot_group:
-    shots: super_skill_shot
+    shots: super_skillshot
+    enable_events: enable_superskillshot
+
+  double_super_skill_shot_group:
+    shots: double_super_skillshot
     enable_events: enable_superskillshot
 
 
@@ -120,7 +143,13 @@ shot_profiles:
     advance_on_hit: false
     states: 
       - name: lit
-        show: skillshot_light_show_hold
+        show: skillshot_light_show
+        speed: 10
+  double_super_skill_shot_profile:
+    advance_on_hit: false
+    states: 
+      - name: lit
+        show: super_skillshot_light_show
         speed: 10
 
 timers:
@@ -146,10 +175,28 @@ show_player:
               skillshotlight4: l_necron_lock2
               skillshotlight_color: green
 
+        super_skillshot_light_show:
+            action: play
+            speed: 10
+            show_tokens:
+              skillshotlight1: l_right_orbit_cicle
+              skillshotlight2: l_right_orbit_arrow
+              skillshotlight3: l_left_innerloop_arrow
+              skillshotlight4: l_right_innerloop_circle
+              skillshotlight5: l_innerloop_arrow
+              skillshotlight6: l_innerloop_flasher
+              skillshotlight7: l_left_innerloop_arrow
+              skillshotlight8: l_pop_flasher
+              skillshotlight9: l_jackpot
+              skillshotlight10: l_super_jackpot
+              skillshotlight_color: red
+
     reset_superskillshot_droptarget:
         skillshot_light_show:
             action: stop
-
+        super_skillshot_light_show:
+            action: stop
+            
     super_skill_necron_combo_hit:
         necron_rings:
             action: play
