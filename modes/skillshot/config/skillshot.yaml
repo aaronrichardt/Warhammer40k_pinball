@@ -159,9 +159,13 @@ timers:
     direction: up
     tick_interval: 1s
     start_running: false
+    events_when_complete:
+      - skill_shot_failed
     control_events:
       - action: start
         event: balldevice_bd_plunger_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
+      - action: stop
+        event: stop_skill_shot_timer
 
 show_player: 
     enable_superskillshot_lights: 
@@ -214,16 +218,59 @@ event_player:
     s_left_flipper_inactive{device.sequences.super_skillshot_selected.enabled == True and device.switches.s_autoplunger.state == 1}:
         - reset_superskillshot_droptarget
         - super_skill_shot_disabled
-    
+    #fails
+    s_left_slingshot_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_right_slingshot_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_nurgle_ricochet_target_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_scoop_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_right_orbit_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_left_ramp_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_waagh_newton_ball_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    s_center_ramp_active:
+        - stop_skill_shot_timer
+        - skill_shot_failed|3s
+    #successes
+    skill_xenos_x_hit:
+        - stop_skill_shot_timer
+        - skill_shot_success|3s
+    skill_xenos_e_hit:
+        - stop_skill_shot_timer
+        - skill_shot_success|3s
+    skill_xenos_n_hit:
+        - stop_skill_shot_timer
+        - skill_shot_success|3s
+    skill_xenos_o_hit:
+        - stop_skill_shot_timer
+        - skill_shot_success|3s
+    skill_xenos_s_hit:
+        - stop_skill_shot_timer
+        - skill_shot_success|3s
     super_skill_necron_combo_hit:
+        - stop_skill_shot_timer
         - skill_shot_success|3s
         #we reset the drop target if the player did not take the super skillshot, false would mean the sequence was triggered and its now disabled
     double_super_skillshot_combo_hit:
+        - stop_skill_shot_timer
         - skill_shot_success|3s
+
     
 coil_player: 
-    s_left_flipper_active: c_droptarget_down
-    s_left_flipper_inactive: c_droptarget_reset
+    enable_superskillshot_lights: c_droptarget_down
+    reset_superskillshot_droptarget: c_droptarget_reset
         
                         
 sound_player:
