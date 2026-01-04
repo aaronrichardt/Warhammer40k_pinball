@@ -158,7 +158,7 @@ event_player:
     
 coil_player: 
     s_left_flipper_active: c_droptarget_down
-    reset_superskillshot_droptarget: c_droptarget_reset
+    s_left_flipper_inactive: c_droptarget_reset
         
                         
         
