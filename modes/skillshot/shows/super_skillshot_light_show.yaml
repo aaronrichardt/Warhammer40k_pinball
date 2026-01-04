@@ -1,0 +1,46 @@
+#show_version=6
+##! show: light_xenos_letter
+
+- time: "+1"
+  lights:
+    (skillshotlight10): off
+    (skillshotlight1): (skillshotlight_color)
+
+- time: "+1"
+  lights:
+    (skillshotlight1): off
+    (skillshotlight2): (skillshotlight_color)
+
+- time: "+1"
+  lights:
+    (skillshotlight2): off
+    (skillshotlight3): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight3): off
+    (skillshotlight4): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight4): off
+    (skillshotlight5): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight5): off
+    (skillshotlight6): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight6): off 
+    (skillshotlight7): (skillshotlight_color) 
+    #FUCK OFF
+- time: "+1"
+  lights:
+    (skillshotlight7): off
+    (skillshotlight8): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight8): off
+    (skillshotlight9): (skillshotlight_color)
+- time: "+1"
+  lights:
+    (skillshotlight9): off
+    (skillshotlight10): (skillshotlight_color)

@@ -629,6 +629,5 @@ event_player:
       repeat: 0
       direction: up
   mode_bonus_will_start: stop_all_music
-  
-
+  s_snikt_target_active: ork_left, ork_right, ork_left, ork_right, ork_home
 
