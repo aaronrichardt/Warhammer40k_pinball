@@ -139,9 +139,9 @@ servos:
             max_us: 2500
             max_runtime: 5s
         positions:
-            2400: ork_home
-            1800: ork_left
-            2500: ork_right
+            0.6: ork_home
+            0.4: ork_left
+            0.7: ork_right
         number: playfield2-1
 
 

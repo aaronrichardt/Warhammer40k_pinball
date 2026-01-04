@@ -229,11 +229,21 @@ coil_player:
 sound_player:
     super_skill_necron_combo_hit:
         trayzn_super_skillshot:
-            bus: voice
             volume: 2
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     double_super_skillshot_combo_hit:
         trayzn_double_super_skillshot:
-            bus: voice
             volume: 2
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     
     

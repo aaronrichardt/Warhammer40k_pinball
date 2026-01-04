@@ -1,0 +1,22 @@
+# Ignore Copilot extension folders and logs (if any)
+.copilot/
+copilot.log
+
+# Ignore Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore build output
+bin/
+obj/
+
+# Ignore Python cache (if using Python for MPF)
+__pycache__/
+*.pyc
+
+# Ignore MPF cache and logs
+mpf_cache/
+logs/
