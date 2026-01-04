@@ -159,8 +159,6 @@ timers:
     direction: up
     tick_interval: 1s
     start_running: false
-    events_when_complete:
-      - skill_shot_failed
     control_events:
       - action: start
         event: balldevice_bd_plunger_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
