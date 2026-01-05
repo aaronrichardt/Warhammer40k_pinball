@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbp2x3dum7r8f"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_h5320"]
+[ext_resource type="Texture2D" uid="uid://tgopdso34cok" path="res://addons/mpf-gmc/slides/Artboard 1.png" id="2_clm54"]
+
+[node name="SkillshotSuccess" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h5320")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_right = -0.00012207
+offset_bottom = -0.00012207
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 187.0
+offset_top = 426.0
+offset_right = 1730.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 80
+text = "SKILLSHOT SUCCESSFUL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_clm54")
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_left = 1546.0
+offset_top = 451.0

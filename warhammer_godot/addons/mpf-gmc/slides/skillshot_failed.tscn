@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://dpsfk6adngq7u"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_lwsgw"]
+
+[node name="SkillshotFailed" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_lwsgw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_right = -0.00012207
+offset_bottom = -0.00012207
+color = Color(0.0250607, 0.00297056, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 187.0
+offset_top = 426.0
+offset_right = 1730.0
+offset_bottom = 626.0
+theme_override_font_sizes/font_size = 80
+text = "SKILLSHOT FAILED
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 48.0
+anchor_bottom = 27.0
+offset_left = 1546.0
+offset_top = 451.0
