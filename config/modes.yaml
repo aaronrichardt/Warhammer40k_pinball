@@ -15,6 +15,7 @@ modes:
   - ModeSelect
   - mechanicus_qualifier
   - necrons
+  - mystery_mode
   #- WeaponsBank
   - titan_multiball
   #- waagh_multiball

@@ -1,53 +1,114 @@
 #config_version=6
 
 mode:
-  start_events: start_mode_mystery_mode
+  #Started by warp_qualify mode when the inlane lane group is completed
+  start_events: enable_mystery
+  stop_events: mystery_achieved, multiball_active
   priority: 300
 
-shots:
-  rewardbank_lightlock:
-    switch: s_left_outlane
-    profile: mystery_mode_profile
-    show_tokens:
-      shot_led: l_lightlock
-  rewardbank_lightspinners:
-    switch: s_left_outlane
-    profile: mystery_mode_profile
-    show_tokens:
-      shot_led: l_light_spinners
-  rewardbank_bonusx:
-    switch: s_left_outlane
-    profile: mystery_mode_profile
-    show_tokens:
-      shot_led: l_bonusx
-  rewardbank_lightmystery:
-    switch: s_left_outlane
-    profile: mystery_mode_profile
-    show_tokens:
-      shot_led: l_light_mystery
-
-shot_groups:
-  reward_bank_group:
-    shots: rewardbank_lightlock, rewardbank_lightspinners, rewardbank_bonusx, rewardbank_lightmystery
-    reset_events: reward_bank_group
-
-shot_profiles:
-  mystery_mode_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: lit
-        show: light_rewardbank
-        show_tokens:
-          shot_color: FF00FF
-          shot_final_color: FF00FF
-      - name: hit
-        show: light_rewardbank
-        show_tokens:
-          shot_color: FFFFFF
-          shot_final_color: FF00FF
+# ball_holds:
+#   mystery_scoop:
+#     balls_to_hold: 1
+#     hold_devices: bd_scoop
+#     enable_events: enable_mystery
+#     disable_events: end_mystery, multiball_active
+#     release_one_events: end_mystery
 
 event_player:
-  rewardbank_lightmystery_hit:
-    - mystery_achieved  # Unique reward event
-    - stop_mode_mystery_mode
+  mystery_scoop_shot_mystery_shot_profile_flashing_hit:
+    - mystery_achieved|5s  # Unique reward event
+
+
+
+shots:
+  mystery_scoop_shot:
+    switch: s_scoop
+    profile: mystery_shot_profile
+    show_tokens:
+        led: l_mystery
+        color: purple 
+    start_enabled: true
+    #enable_events: carousel_item_selected_mystery_scoop
+    #restart_events: inlane_lane_group_lit_complete
+
+shot_profiles:
+    mystery_shot_profile:
+        states:
+            - name: flashing
+              show: "generic_flash"
+              speed: 5
+            - name: hit
+              show: "off"
+# +2 Bonus X
+# Hold Bonus Multiplier
+# Hold Bonus
+# +1 Gadget
+# Light Shot Multipliers
+# 5M
+# Light Extra Ball (percentage-based)
+# Increase Bat-Phone Hurry-Up (if active, awarded on every other Mystery award)
+# Light Lock(s) (during a major villain mode)
+# Award Lock (during a major villain mode)
+# +1x Playfield Multiplier (during a major villain mode, if active)
+# Add More Time (during any timed mode)
+# Add-A-Ball (during any multiball mode)
+# Add-A-Ball + Add More Time (during any multiball mode, if a timed mode is stacked)
+
+random_event_player:
+  mystery_scoop_shot_mystery_shot_profile_flashing_hit:
+    events:
+      award_hold_bonus: 20 #numbers show probability of event
+      award_add_2x_bonus: 20
+      award_hold_bonus_multiplier: 20
+      award_light_shot_multipliers: 20
+      award_big_points: 20
+      award_small_points: 20
+      award_light_extra_ball: 20
+      award_increase_warp_hurryup: 20
+      award_light_lock: 20
+      award_light_waagh: 20
+      #award_add_more_time: 20 
+      #award_add_a_ball: 20
+      #award_add_a_ball_and_more_time: 20
+    force_all: true
+
+slide_player:
+  award_hold_bonus:
+    award_hold_bonus_slide:
+      expire: 5s
+  award_add_2x_bonus:
+    award_add_2x_bonus_slide:
+      expire: 5s
+  award_hold_bonus_multiplier:
+    award_hold_bonus_multiplier_slide:
+      expire: 5s
+  award_light_shot_multipliers:
+    award_light_shot_multipliers_slide:
+      expire: 5s
+  award_big_points:
+    award_big_points_slide:
+      expire: 5s
+  award_small_points:
+    award_small_points_slide:
+      expire: 5s
+  award_light_extra_ball:
+    award_light_extra_ball_slide:
+      expire: 5s
+  award_increase_warp_hurryup:
+    award_increase_warp_hurryup_slide:
+      expire: 5s
+  award_light_lock:
+    award_light_lock_slide:
+      expire: 5s
+  award_light_waagh:
+    award_light_waagh_slide:
+      expire: 5s
+  award_add_more_time:
+    award_add_more_time_slide:
+      expire: 5s
+  award_add_a_ball:
+    award_add_a_ball_slide:
+      expire: 5s
+  award_add_a_ball_and_more_time:
+    award_add_a_ball_and_more_time_slide:
+      expire: 5s

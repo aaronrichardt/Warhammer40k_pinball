@@ -1,7 +1,7 @@
 #config_version=6
 event_player:
   #plus one gadget when accrual is complete
-  award_xenos:
+  xenos_spotted:
     - xenos_earned
     - xenosspot
     #- gadgets_available
