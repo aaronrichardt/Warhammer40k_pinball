@@ -5,14 +5,13 @@ modes:
   - base
   #- high_score
   - xenos
-  - warp
   - nurgle
   - khorne
   - tzeench
   - slannesh
   - warp_qualify
   - ball_save
-  - ModeSelect
+  - mission_select
   - mechanicus_qualifier
   - necrons
   - mystery_mode

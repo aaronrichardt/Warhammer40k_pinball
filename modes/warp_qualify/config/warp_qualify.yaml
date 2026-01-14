@@ -4,7 +4,7 @@
 mode:
   #this mode starts when the ball starts
   start_events: ball_started, mode_slannesh_stopped, mode_knorne_stopped, mode_nurgle_stopped, mode_tzeentch_stopped, multiball_waagh_multiball_ended 
-  stop_events: warp_qualify_stop, mode_slannesh_started, mode_knorne_started, mode_nurgle_started, mode_tzeentch_started,  waagh_multiball_mode_start
+  #stop_events: warp_qualify_stop, mode_slannesh_started, mode_knorne_started, mode_nurgle_started, mode_tzeentch_started,  waagh_multiball_mode_start
   priority: 200
 
 shots:
@@ -33,7 +33,7 @@ shots:
 shot_groups:
   inlane_lane_group:
     shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
-    reset_events: inlane_lane_group_hit_complete
+    reset_events: inlane_lane_group_lit_complete
     rotate_left_events: s_left_flipper_active
     rotate_right_events: s_right_flipper_active
    
@@ -46,7 +46,7 @@ shot_profiles:
         show: on
 
 variable_player:
-  inlane_lane_group_hit_complete:
+  inlane_lane_group_lit_complete:
     score: 10000
     bonus_multiplier: 1
 
@@ -56,38 +56,6 @@ event_player:
         #starting the Mystery Mode for the scoop hold
         - enable_mystery
         - start_warp_hurryup
-    
-
-# accruals:
-
-
-  # mechanicus_accrual:
-  #   events:
-  #     - mechanicus_scoop_shot_complete # index [0]
-  #   reset_on_complete: false
-  #   disable_on_complete: true
-  #   reset_events: mode_warp_qualify_started
-
-
-# ball_holds:
-#   mystery_scoop:
-#     balls_to_hold: 1
-#     hold_devices: bd_scoop
-#     enable_events: start_modeselect
-#     disable_events: mode_ModeSelect_enable_stopping
-#     release_one_events: ModeSelect_item_selected
-
-sound_player: 
-    start_modeselect:
-        missionsarenowavailable:
-            action: play
-            ducking:
-                bus: voice
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-        
     
 show_player: 
   reset_warp_lights:

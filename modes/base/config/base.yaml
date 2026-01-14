@@ -14,6 +14,7 @@ ball_holds:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: ball_started, enable_base_scoop
+    disable_events: xenos_earned
     release_one_events: mystery_achieved
 
 show_player:
