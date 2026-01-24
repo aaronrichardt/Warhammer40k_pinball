@@ -1,65 +1,79 @@
 events:
-  game_ended: 19
-  game_started: 177
+  game_ended: 18
+  game_started: 193
 missing_switches:
-  s_24: 177
-  s_25: 177
-  s_26: 177
-  s_27: 3
+  s_18: 19
+  s_24: 193
+  s_25: 193
+  s_26: 193
+  s_27: 19
   s_2_22: 1
   s_2_23: 1
-  s_35: 89
-  s_4: 166
-  s_bonus_x: 4
-  s_center_ramp: 3
-  s_center_spinner: 3
+  s_35: 105
+  s_4: 182
+  s_bonus_x: 20
+  s_center_ramp: 19
+  s_center_spinner: 19
   s_disk_backtarget: 69
   s_dropramp_away: 3
-  s_droptarget_down: 83
-  s_droptarget_lock: 83
-  s_inner_loop_lower: 177
-  s_innerloop_left: 3
-  s_innerloop_right: 3
-  s_jackpot_vuk: 3
+  s_droptarget_down: 99
+  s_droptarget_lock: 99
+  s_inner_loop_lower: 193
+  s_innerloop_left: 19
+  s_innerloop_right: 19
+  s_jackpot_vuk: 19
+  s_left_EOS: 19
   s_left_deadend: 80
+  s_left_flipper: 3
   s_left_orbit: 2
-  s_left_outlane: 4
-  s_left_ramp: 3
-  s_left_spinner: 3
-  s_left_vuk: 177
-  s_light_lock: 3
-  s_light_mystery: 4
-  s_light_spinners: 4
-  s_lockopto3: 177
-  s_nurgle_redcircle: 3
-  s_nurgle_ricochet_target: 3
-  s_pop_bottom: 4
-  s_pop_top: 4
-  s_right_eos: 3
-  s_right_flipper: 3
-  s_right_inlane: 3
-  s_right_orbit: 3
-  s_right_outlane: 3
+  s_left_ramp: 19
+  s_left_spinner: 19
+  s_left_vuk: 193
+  s_light_lock: 19
+  s_light_mystery: 20
+  s_light_spinners: 20
+  s_lockopto3: 193
+  s_lowerloop: 17
+  s_necron_target: 17
+  s_nurgle_redcircle: 19
+  s_nurgle_ricochet_target: 19
+  s_pop_bottom: 20
+  s_pop_top: 20
+  s_right_eos: 19
+  s_right_flipper: 19
+  s_right_orbit: 19
   s_right_poptarget: 1
-  s_right_spinner: 3
-  s_rollover_gork: 89
-  s_rollover_mork: 4
-  s_scoop: 3
-  s_scoop_nurgle_target: 88
-  s_snikt_target: 4
-  s_start_button: 4
-  s_tempholder1: 177
-  s_tempholder2: 177
-  s_tempholder3: 177
-  s_titan_lock1: 83
-  s_titan_lock2: 85
-  s_titan_lock3: 85
+  s_right_spinner: 19
+  s_rollover_gork: 105
+  s_rollover_mork: 20
+  s_scoop_nurgle_target: 104
+  s_snikt_target: 20
+  s_start_button: 20
+  s_tempholder1: 193
+  s_tempholder2: 193
+  s_tempholder3: 193
+  s_titan_lock1: 99
+  s_titan_lock2: 101
+  s_titan_lock3: 101
+  s_trough1: 19
+  s_trough2: 19
+  s_trough3: 19
+  s_trough4: 19
+  s_trough5: 19
+  s_trough6: 19
+  s_trough_jam: 19
   s_u15: 1
-  s_upperscoop: 177
-  s_waagh_newton_ball: 6
+  s_upperflipper_eos: 19
+  s_upperleft_flipper: 19
+  s_upperscoop: 193
+  s_waagh_newton_ball: 22
+  s_xenos_e: 2
+  s_xenos_n: 2
+  s_xenos_o: 2
+  s_xenos_s: 1
 player:
   score:
-    average: 694427
+    average: 732418
     top:
     - 2498800
     - 1709900
@@ -71,14 +85,15 @@ player:
     - 529600
     - 446300
     - 381200
-    total: 19
+    total: 18
 shots:
   double_super_skillshot: 1
-  left_drain: 81
+  left_drain: 109
   left_orbit: 33
   left_sling_shot: 151
-  left_slingshot: 231
-  mechanicus_scoop_shot: 16
+  left_slingshot: 245
+  mechanicus_scoop_shot: 21
+  mystery_scoop_shot: 20
   nurgle_bell1: 2
   nurgle_bell2: 3
   pop_bottom: 119
@@ -87,26 +102,27 @@ shots:
   rewardbank_lightlock: 21
   rewardbank_lightmystery: 24
   rewardbank_lightspinners: 19
-  right_drain: 52
+  right_drain: 81
   right_sling_shot: 115
-  right_slingshot: 400
-  skill_left_inlane: 24
-  skill_lowerloop: 21
-  skill_right_inlane: 2
+  right_slingshot: 419
+  skill_left_inlane: 25
+  skill_lowerloop: 20
+  skill_right_inlane: 6
   skill_xenos_e: 4
-  skill_xenos_s: 1
-  skill_xenos_x: 8
+  skill_xenos_o: 1
+  skill_xenos_s: 4
+  skill_xenos_x: 12
   slannesh_left_orbit_shot: 2
   super_skill_shot: 12
   super_skillshot: 2
   top_lane_gork: 12
   top_lane_mork: 29
-  warp_inlane_left: 116
-  warp_inlane_right: 185
-  warp_outlane_left: 76
-  warp_outlane_right: 48
+  warp_inlane_left: 144
+  warp_inlane_right: 217
+  warp_outlane_left: 104
+  warp_outlane_right: 77
 switches:
-  s_18: 38
+  s_18: 35
   s_24: 0
   s_25: 0
   s_26: 0
@@ -115,7 +131,7 @@ switches:
   s_2_23: 7
   s_35: 0
   s_4: 0
-  s_autoplunger: 355
+  s_autoplunger: 365
   s_bonus_x: 15
   s_center_ramp: 291
   s_center_spinner: 2891
@@ -127,14 +143,14 @@ switches:
   s_innerloop_left: 47
   s_innerloop_right: 41
   s_jackpot_vuk: 10
-  s_left_EOS: 610
+  s_left_EOS: 603
   s_left_deadend: 0
-  s_left_flipper: 1132
-  s_left_inlane: 123
+  s_left_flipper: 1134
+  s_left_inlane: 151
   s_left_orbit: 13
-  s_left_outlane: 85
+  s_left_outlane: 113
   s_left_ramp: 20
-  s_left_slingshot: 383
+  s_left_slingshot: 397
   s_left_spinner: 480
   s_left_vuk: 0
   s_leftramp: 11
@@ -142,23 +158,23 @@ switches:
   s_light_mystery: 30
   s_light_spinners: 22
   s_lockopto3: 0
-  s_lowerloop: 111
-  s_necron_target: 63
+  s_lowerloop: 110
+  s_necron_target: 62
   s_nurgle_redcircle: 171
   s_nurgle_ricochet_target: 120
   s_pop_bottom: 119
   s_pop_top: 117
   s_right_eos: 697
   s_right_flipper: 766
-  s_right_inlane: 190
+  s_right_inlane: 222
   s_right_orbit: 71
-  s_right_outlane: 52
+  s_right_outlane: 81
   s_right_poptarget: 9
-  s_right_slingshot: 517
+  s_right_slingshot: 536
   s_right_spinner: 1385
   s_rollover_gork: 12
   s_rollover_mork: 29
-  s_scoop: 69
+  s_scoop: 94
   s_scoop_nurgle_target: 26
   s_snikt_target: 133
   s_start_button: 26
@@ -168,20 +184,20 @@ switches:
   s_titan_lock1: 21
   s_titan_lock2: 17
   s_titan_lock3: 18
-  s_trough1: 137
-  s_trough2: 131
-  s_trough3: 128
-  s_trough4: 122
-  s_trough5: 122
-  s_trough6: 132
-  s_trough_jam: 131
+  s_trough1: 132
+  s_trough2: 126
+  s_trough3: 123
+  s_trough4: 117
+  s_trough5: 117
+  s_trough6: 125
+  s_trough_jam: 126
   s_u15: 15
-  s_upperflipper_eos: 500
-  s_upperleft_flipper: 529
+  s_upperflipper_eos: 493
+  s_upperleft_flipper: 521
   s_upperscoop: 0
   s_waagh_newton_ball: 87
-  s_xenos_e: 117
-  s_xenos_n: 104
-  s_xenos_o: 108
-  s_xenos_s: 89
-  s_xenos_x: 137
+  s_xenos_e: 121
+  s_xenos_n: 108
+  s_xenos_o: 113
+  s_xenos_s: 97
+  s_xenos_x: 144

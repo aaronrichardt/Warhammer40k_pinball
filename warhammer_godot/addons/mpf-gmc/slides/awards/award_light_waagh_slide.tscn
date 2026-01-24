@@ -1,11 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpsfk6adngq7u"]
+[gd_scene load_steps=2 format=3 uid="uid://7i1ov4gr1tus"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_lwsgw"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_l5eir"]
 
-[node name="SkillshotFailed" type="Control"]
+[node name="AwardLightWaaghSlide" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_lwsgw")
+script = ExtResource("1_l5eir")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
@@ -24,8 +24,7 @@ offset_top = 426.0
 offset_right = 1730.0
 offset_bottom = 626.0
 theme_override_font_sizes/font_size = 80
-text = "SKILLSHOT FAILED
-"
+text = "LIGHT WAAGH! LETTERS"
 horizontal_alignment = 1
 vertical_alignment = 1
 

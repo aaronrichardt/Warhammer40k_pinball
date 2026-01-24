@@ -10,6 +10,6 @@ accruals:
       - xenos_s_complete # index [4]
     reset_on_complete: true
     disable_on_complete: false
-    reset_events: mode_xenos_started
-    events_when_complete: award_xenos, reset_xenos_lights, xenos_spotted
+    reset_events: reenable_xenos_accrual
+    events_when_complete: reset_xenos_lights, xenos_spotted
 

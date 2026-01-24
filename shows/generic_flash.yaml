@@ -1,7 +1,29 @@
 #show_version=6
-
-
 - time: 0
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): off
+
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): off
+
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): off
+
+- time: "+1"
   lights:
     (led): (color)
 

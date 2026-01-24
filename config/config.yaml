@@ -101,7 +101,7 @@ ball_devices:
     bd_scoop:
       ball_switches: s_scoop
       eject_coil: c_scoop
-      eject_timeouts: 2s 
+      auto_fire_on_unexpected_ball: false
 
     bd_titan:
         ball_switches: s_titan_lock1, s_titan_lock2, s_titan_lock3

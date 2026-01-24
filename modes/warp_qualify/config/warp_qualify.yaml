@@ -4,7 +4,7 @@
 mode:
   #this mode starts when the ball starts
   start_events: ball_started, mode_slannesh_stopped, mode_knorne_stopped, mode_nurgle_stopped, mode_tzeentch_stopped, multiball_waagh_multiball_ended 
-  stop_events: warp_qualify_stop, mode_slannesh_started, mode_knorne_started, mode_nurgle_started, mode_tzeentch_started,  waagh_multiball_mode_start
+  #stop_events: warp_qualify_stop, mode_slannesh_started, mode_knorne_started, mode_nurgle_started, mode_tzeentch_started,  waagh_multiball_mode_start
   priority: 200
 
 shots:
@@ -29,26 +29,14 @@ shots:
     show_tokens:
       led: l_warp_p
 
-  mechanicus_scoop_shot:
-    switch: s_scoop
-    profile: generic_flash_profile
-    start_enabled: false
-    enable_events: inlane_lane_group_lit_complete
-    restart_events: inlane_lane_group_lit_complete
 
 shot_groups:
   inlane_lane_group:
     shots: warp_inlane_left, warp_inlane_right, warp_outlane_right, warp_outlane_left
-    reset_events: inlane_lane_group_hit_complete
+    reset_events: inlane_lane_group_lit_complete
     rotate_left_events: s_left_flipper_active
     rotate_right_events: s_right_flipper_active
    
-  start_select_mode_group:
-    shots: mechanicus_scoop_shot
-    reset_events: 
-    enable_events: inlane_lane_group_hit_complete
-    disable_events: mechanicus_scoop_shot_hit_complete
-
 shot_profiles:
   inlane_lane_profile:
     states:
@@ -57,63 +45,17 @@ shot_profiles:
       - name: lit
         show: on
 
-  generic_flash_profile:
-    states:
-      - name: lit
-        show: generic_flash
-        show_tokens:
-            led: l_adeptus_mechanicius
-            color: lime 
-
-      - name: unlit
-        show: off
-
-
-
 variable_player:
-  inlane_lane_group_hit_complete:
+  inlane_lane_group_lit_complete:
     score: 10000
     bonus_multiplier: 1
 
 
 event_player:
     inlane_lane_group_lit_complete:
-        - start_modeselect
-
-    ball_hold_mystery_scoop_held_ball: start_mechanicus_mode
-    mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
-
-
-accruals:
-
-
-  mechanicus_accrual:
-    events:
-      - mechanicus_scoop_shot_complete # index [0]
-    reset_on_complete: false
-    disable_on_complete: true
-    reset_events: mode_warp_qualify_started
-
-
-ball_holds:
-  mystery_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: start_modeselect
-    disable_events: mode_ModeSelect_enable_stopping
-    release_one_events: ModeSelect_item_selected
-
-sound_player: 
-    start_modeselect:
-        missionsarenowavailable:
-            action: play
-            ducking:
-                bus: voice
-                attack: 0.3 sec
-                attenuation: 18
-                release_point: 2.0 sec
-                release: 1.0 sec
-        
+        #starting the Mystery Mode for the scoop hold
+        - enable_mystery
+        - start_warp_hurryup
     
 show_player: 
   reset_warp_lights:

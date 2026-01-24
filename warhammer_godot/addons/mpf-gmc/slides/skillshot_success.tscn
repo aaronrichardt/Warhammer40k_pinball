@@ -19,6 +19,7 @@ offset_bottom = -0.00012207
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 offset_left = 187.0
 offset_top = 426.0
 offset_right = 1730.0
@@ -30,6 +31,7 @@ vertical_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_clm54")

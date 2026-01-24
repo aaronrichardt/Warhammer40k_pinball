@@ -12,10 +12,6 @@ mode:
     - skill_shot_failed 
   priority: 500
 
-slide_player:
-    slide_skill_shot_success: skillshot_success
-    slide_skill_shot_failed: skillshot_failed
-
 shots:
     skill_xenos_x:
         switch: s_xenos_x
@@ -312,4 +308,6 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
     
-    
+slide_player:
+    slide_skill_shot_success: skillshot_success
+    slide_skill_shot_failed: skillshot_failed
