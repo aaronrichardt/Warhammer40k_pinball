@@ -287,6 +287,19 @@ multiball_locks:
         lock_devices: bd_titan
 
 sound_player:
+    enable_mystery:
+        Mystery_award_available:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    mystery_achieved:
+        Mystery_awards_pool:
+             bus: voice
     mode_base_started: 
         Admonition:
             action: play

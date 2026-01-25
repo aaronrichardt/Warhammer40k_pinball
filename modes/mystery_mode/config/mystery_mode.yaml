@@ -27,6 +27,7 @@ shots:
         led: l_mystery
         color: purple 
     start_enabled: true
+    restart_events: mystery_achieved
     #enable_events: carousel_item_selected_mystery_scoop
     #restart_events: inlane_lane_group_lit_complete
 
