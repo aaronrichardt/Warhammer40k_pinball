@@ -15,7 +15,7 @@ modes:
   - mechanicus_qualifier
   - necrons
   - mystery_mode
-  #- WeaponsBank
+  - weapons_bank
   - titan_multiball
   #- waagh_multiball
   #- inquisition_multiball

@@ -133,7 +133,7 @@ show_player:
   waagh_qualify_shot_g_complete:
     light_waagh_letter:
       priority: 10
-      key: xenos_o_hit_show
+      key: waagh_g_hit_show
       show_tokens:
         show_led: l_waagh_G
         show_led_color: Yellow
@@ -141,7 +141,7 @@ show_player:
   waagh_qualify_shot_h_complete:
     light_waagh_letter:
       priority: 10
-      key: xenos_s_hit_show
+      key: waagh_h_hit_show
       show_tokens:
         show_led: l_waagh_H
         show_led_color: Yellow

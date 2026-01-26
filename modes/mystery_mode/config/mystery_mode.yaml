@@ -8,7 +8,7 @@ mode:
 
 event_player:
   mystery_scoop_shot_mystery_shot_profile_flashing_hit:
-    - mystery_achieved|5s  # Unique reward event
+    - mystery_achieved|2s  # Unique reward event
 
     
 ball_holds:

@@ -1,0 +1,255 @@
+#config_version=6
+##! mode: warp_qualify
+
+mode:
+  #this mode starts when the ball starts
+  start_events: skill_shot_failed, skill_shot_success
+  stop_events: rewardbank_mode_stop
+  priority: 200
+
+shots:
+  rewardbank1_level1:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: yellow
+  rewardbank2_level1:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: yellow
+  rewardbank3_level1:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: yellow
+  rewardbank4_level1:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: yellow
+
+  rewardbank1_level2:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: green
+  rewardbank2_level2:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: green
+  rewardbank3_level2:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: green
+  rewardbank4_level2:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: green
+
+  rewardbank1_level3:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: cyan
+  rewardbank2_level3:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: cyan
+  rewardbank3_level3:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: cyan
+  rewardbank4_level3:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: cyan
+
+  rewardbank1_level4:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: blue
+  rewardbank2_level4:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: blue
+  rewardbank3_level4:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: blue
+  rewardbank4_level4:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: blue
+
+  rewardbank1_level5:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: purple
+  rewardbank2_level5:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: purple
+  rewardbank3_level5:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: purple
+  rewardbank4_level5:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: purple
+
+  rewardbank1_level6:
+    switch: s_light_lock
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_lightlock
+      color: red
+  rewardbank2_level6:
+    switch: s_light_spinners
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_spinners
+      color: red
+  rewardbank3_level6:
+    switch: s_bonus_x
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_bonusx
+      color: red
+  rewardbank4_level6:
+    switch: s_light_mystery
+    profile: rewardbank_generic_flash
+    show_tokens:
+      led: l_light_mystery
+      color: red
+
+#Reward level colors
+#level 1 - yellow
+#level 2 - green
+#level 3 - cyan
+#level 4 - blue
+#level 5 - purple
+#level 6 - red
+
+shot_groups:
+  reward_group_level1:
+    shots: rewardbank1_level1, rewardbank2_level1, rewardbank3_level1, rewardbank4_level1
+    #reset_events: start_group_level2
+    disable_events: start_group_level2
+    #rotate_events: timer_rewardbank_rotation_tick
+  reward_group_level2:
+    shots: rewardbank1_level2, rewardbank2_level2, rewardbank3_level2, rewardbank4_level2
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level2
+    #reset_events: reward_bank_group, start_group_level2
+  reward_group_level3:
+    shots: rewardbank1_level3, rewardbank2_level3, rewardbank3_level3, rewardbank4_level3
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level3
+  reward_group_level4:
+    shots: rewardbank1_level4, rewardbank2_level4, rewardbank3_level4, rewardbank4_level4
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level4
+  reward_group_level5:
+    shots: rewardbank1_level5, rewardbank2_level5, rewardbank3_level5, rewardbank4_level5
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level5
+  reward_group_level6:
+    shots: rewardbank1_level6, rewardbank2_level6, rewardbank3_level6, rewardbank4_level6
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
+    reset_events: reward_group_level6_hit_complete
+
+shot_profiles:
+    rewardbank_generic_flash:
+        states:
+            - name: flashing
+              show: "generic_flash"
+              priority: 1
+            - name: hit
+              show: "solid_color"
+
+variable_player:
+  inlane_lane_group_hit_complete:
+    score: 10000
+    bonus_multiplier: 1
+
+
+event_player:
+  reward_group_level1_hit_complete:
+    - reset_weaponsbank_lights
+    - start_group_level2
+  reward_group_level2_hit_complete:
+    - reset_weaponsbank_lights
+    - start_group_level3
+  reward_group_level3_hit_complete:
+    - reset_weaponsbank_lights
+    - start_group_level4
+  reward_group_level4_hit_complete:
+    - reset_weaponsbank_lights
+    - start_group_level5
+  reward_group_level5_hit_complete:
+    - reset_weaponsbank_lights
+    - start_group_level6
+  reward_group_level6_hit_complete:
+    - reset_weaponsbank_lights
+  
+  # timer_rewardbank_rotation_tick:
+  #   - rotate_rewardbank  
+  # rewardbank_lightlock_hit:
+  #   - start_mode_lock_mode
+  #   - stop_mode_rewardbank
+  # rewardbank_lightspinners_hit:
+  #   - start_mode_spinners_mode
+  #   - stop_mode_rewardbank
+  # rewardbank_bonusx_hit:
+  #   - start_mode_bonus_mode
+  #   - stop_mode_rewardbank
+  # rewardbank_lightmystery_hit:
+  #   - start_mode_mystery_mode
+  #   - stop_mode_rewardbank
+    
+show_player: 
+  reset_weaponsbank_lights:
+    light_weapons_bank:
+      priority: 10
+      show_tokens:
+        shot_led: weapon_bank
+        shot_color: white
+
+

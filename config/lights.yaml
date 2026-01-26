@@ -173,26 +173,26 @@ lights:
     number: playfield-2-24
     tags: Chain2, even, second
   l_upper_lightingbolt1:
-    number: playfield-2-25
-    tags: Chain2, odd, third
+    number: playfield-2-25,bolt
+    tags: Chain2, odd, third, bolt
   l_upper_lightingbolt2:
     number: playfield-2-26
-    tags: Chain2, even, first
+    tags: Chain2, even, first, bolt
   l_lower_lightingbolt:
     number: playfield-2-27
-    tags: Chain2, odd, second
+    tags: Chain2, odd, second,bolt
   l_lightlock:
     number: playfield-2-28
-    tags: Chain2, even, third
+    tags: Chain2, even, third, weapon_bank
   l_light_spinners:
     number: playfield-2-29
-    tags: Chain2, odd, first
+    tags: Chain2, odd, first,weapon_bank
   l_bonusx:
     number: playfield-2-30
-    tags: Chain2, even, second
+    tags: Chain2, even, second, weapon_bank
   l_light_mystery:
     number: playfield-2-31
-    tags: Chain2, odd, third
+    tags: Chain2, odd, third, weapon_bank
   l_solemnace_arrow:
     number: playfield-3-1
     tags: Chain3, odd, first
