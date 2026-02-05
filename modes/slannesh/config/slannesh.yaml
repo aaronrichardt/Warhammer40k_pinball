@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: ModeSelect_slannesh_selected
+  start_events: mission_select_slannesh_selected
   stop_events: timer_slannesh_mode_timer_complete
   priority: 200
  

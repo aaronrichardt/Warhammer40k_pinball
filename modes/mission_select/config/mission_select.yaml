@@ -2,11 +2,11 @@
 
 mode:
   start_events: start_mission_select
-  stop_events: ModeSelect_item_selected, ModeSelect_item_cancelled
+  stop_events: mission_select_item_selected, mission_select_item_cancelled
   code: mpf.modes.carousel.code.carousel.Carousel
-  events_when_stopped: ModeSelect_item_selected
+  events_when_stopped: mission_select_item_selected
   game_mode: true
-  priority: 501
+  priority: 1501
 
 mode_settings:
   selectable_items: 
@@ -21,4 +21,5 @@ mode_settings:
   previous_item_events: s_left_flipper_active
 
 slide_player:
-  mode_ModeSelect_started: ModeSelect
+    item_highlighted: mission_select
+    mode_mission_select_started: mission_select
