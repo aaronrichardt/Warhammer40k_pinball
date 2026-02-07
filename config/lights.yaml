@@ -173,7 +173,7 @@ lights:
     number: playfield-2-24
     tags: Chain2, even, second
   l_upper_lightingbolt1:
-    number: playfield-2-25,bolt
+    number: playfield-2-25
     tags: Chain2, odd, third, bolt
   l_upper_lightingbolt2:
     number: playfield-2-26

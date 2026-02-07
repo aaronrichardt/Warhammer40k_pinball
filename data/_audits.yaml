@@ -65,11 +65,11 @@ shots:
   pop_bottom: 127
   pop_top: 129
   rewardbank1_level1: 26
-  rewardbank1_level2: 28
-  rewardbank1_level3: 16
-  rewardbank1_level4: 14
-  rewardbank1_level5: 12
-  rewardbank1_level6: 10
+  rewardbank1_level2: 29
+  rewardbank1_level3: 17
+  rewardbank1_level4: 15
+  rewardbank1_level5: 13
+  rewardbank1_level6: 11
   rewardbank2_level1: 25
   rewardbank2_level2: 28
   rewardbank2_level3: 14
@@ -125,18 +125,18 @@ switches:
   s_autoplunger: 399
   s_bonus_x: 61
   s_center_ramp: 292
-  s_center_spinner: 2979
+  s_center_spinner: 2982
   s_disk_backtarget: 86
   s_dropramp_away: 32
   s_droptarget_down: 2
   s_droptarget_lock: 11
   s_inner_loop_lower: 0
   s_innerloop_left: 55
-  s_innerloop_right: 45
+  s_innerloop_right: 46
   s_jackpot_vuk: 11
-  s_left_EOS: 647
+  s_left_EOS: 648
   s_left_deadend: 0
-  s_left_flipper: 1178
+  s_left_flipper: 1179
   s_left_inlane: 158
   s_left_orbit: 13
   s_left_outlane: 127
@@ -145,7 +145,7 @@ switches:
   s_left_spinner: 480
   s_left_vuk: 0
   s_leftramp: 11
-  s_light_lock: 71
+  s_light_lock: 72
   s_light_mystery: 77
   s_light_spinners: 69
   s_lockopto3: 0
@@ -183,8 +183,8 @@ switches:
   s_trough6: 129
   s_trough_jam: 132
   s_u15: 15
-  s_upperflipper_eos: 535
-  s_upperleft_flipper: 564
+  s_upperflipper_eos: 536
+  s_upperleft_flipper: 565
   s_upperscoop: 0
   s_waagh_newton_ball: 92
   s_xenos_e: 129

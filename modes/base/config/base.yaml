@@ -299,7 +299,14 @@ sound_player:
                 release: 1.0 sec
     mystery_achieved:
         Mystery_awards_pool:
-             bus: voice
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     mode_base_started: 
         Admonition:
             action: play
