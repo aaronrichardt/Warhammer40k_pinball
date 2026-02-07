@@ -13,6 +13,7 @@ shots:
     profile: rewardbank_generic_flash
     disable_events: start_group_level2
     enable_events: mode_weapons_bank_will_start
+    start_enabled: true
     show_tokens:
       led: l_lightlock
       color: yellow
@@ -21,6 +22,7 @@ shots:
     profile: rewardbank_generic_flash
     disable_events: start_group_level2
     enable_events: mode_weapons_bank_will_start
+    start_enabled: true
     show_tokens:
       led: l_light_spinners
       color: yellow
@@ -29,6 +31,7 @@ shots:
     profile: rewardbank_generic_flash
     disable_events: start_group_level2
     enable_events: mode_weapons_bank_will_start
+    start_enabled: true
     show_tokens:
       led: l_bonusx
       color: yellow
@@ -37,6 +40,7 @@ shots:
     profile: rewardbank_generic_flash
     disable_events: start_group_level2
     enable_events: mode_weapons_bank_will_start
+    start_enabled: true
     show_tokens:
       led: l_light_mystery
       color: yellow
@@ -44,7 +48,8 @@ shots:
   rewardbank1_level2:
     switch: s_light_lock
     profile: rewardbank_generic_flash
-    disable_events: start_group_level3
+    disable_events: start_group_level3,  ,mode_weapons_bank_will_start
+    enable_events: start_group_level2
     show_tokens:
       led: l_lightlock
       color: green
@@ -52,6 +57,7 @@ shots:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
     disable_events: start_group_level3
+    enable_events: start_group_level2, mode_weapons_bank_will_start
     show_tokens:
       led: l_light_spinners
       color: green
@@ -59,6 +65,7 @@ shots:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
     disable_events: start_group_level3
+    enable_events: start_group_level2, mode_weapons_bank_will_start
     show_tokens:
       led: l_bonusx
       color: green
@@ -66,6 +73,7 @@ shots:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
     disable_events: start_group_level3
+    enable_events: start_group_level2, mode_weapons_bank_will_start
     show_tokens:
       led: l_light_mystery
       color: green
@@ -73,7 +81,8 @@ shots:
   rewardbank1_level3:
     switch: s_light_lock
     profile: rewardbank_generic_flash
-    disable_events: start_group_level4
+    disable_events: start_group_level4,  ,mode_weapons_bank_will_start
+    enable_events: start_group_level3
     show_tokens:
       led: l_lightlock
       color: cyan
@@ -81,6 +90,7 @@ shots:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
     disable_events: start_group_level4
+    enable_events: start_group_level3, mode_weapons_bank_will_start
     show_tokens:
       led: l_light_spinners
       color: cyan
@@ -88,6 +98,7 @@ shots:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
     disable_events: start_group_level4
+    enable_events: start_group_level3, mode_weapons_bank_will_start
     show_tokens:
       led: l_bonusx
       color: cyan
@@ -95,6 +106,7 @@ shots:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
     disable_events: start_group_level4
+    enable_events: start_group_level3, mode_weapons_bank_will_start
     show_tokens:
       led: l_light_mystery
       color: cyan
@@ -102,7 +114,7 @@ shots:
   rewardbank1_level4:
     switch: s_light_lock
     profile: rewardbank_generic_flash
-    disable_events: start_group_level5 
+    disable_events: start_group_level5  ,mode_weapons_bank_will_start
     enable_events: start_group_level4
     show_tokens:
       led: l_lightlock
@@ -110,7 +122,7 @@ shots:
   rewardbank2_level4:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
-    disable_events: start_group_level5
+    disable_events: start_group_level5, mode_weapons_bank_will_start
     enable_events: start_group_level4
     show_tokens:
       led: l_light_spinners
@@ -119,7 +131,7 @@ shots:
   rewardbank3_level4:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
-    disable_events: start_group_level5
+    disable_events: start_group_level5, mode_weapons_bank_will_start
     enable_events: start_group_level4
     show_tokens:
       led: l_bonusx
@@ -127,7 +139,7 @@ shots:
   rewardbank4_level4:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
-    disable_events: start_group_level5
+    disable_events: start_group_level5, mode_weapons_bank_will_start
     enable_events: start_group_level4
     show_tokens:
       led: l_light_mystery
@@ -136,28 +148,32 @@ shots:
   rewardbank1_level5:
     switch: s_light_lock
     profile: rewardbank_generic_flash
-    disable_events: start_group_level6
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_lightlock
       color: purple
   rewardbank2_level5:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
-    disable_events: start_group_level6
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_light_spinners
       color: purple
   rewardbank3_level5:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
-    disable_events: start_group_level6
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_bonusx
       color: purple
   rewardbank4_level5:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
-    disable_events: start_group_level6
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_light_mystery
       color: purple
@@ -165,24 +181,32 @@ shots:
   rewardbank1_level6:
     switch: s_light_lock
     profile: rewardbank_generic_flash
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_lightlock
       color: red
   rewardbank2_level6:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_light_spinners
       color: red
   rewardbank3_level6:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level6
     show_tokens:
       led: l_bonusx
       color: red
   rewardbank4_level6:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
+    disable_events: mode_weapons_bank_will_start
+    enable_events: start_group_level
     show_tokens:
       led: l_light_mystery
       color: red

@@ -139,7 +139,7 @@ shot_profiles:
     advance_on_hit: false
     states: 
       - name: lit
-        show: flash
+        show: standard_flash
   super_skill_shot_profile:
     advance_on_hit: false
     states: 

@@ -43,11 +43,11 @@ show_player:
         show_tokens:
             color: cyan
             final_color: blue
-            led: l_tzeench
+            led: l_tzeench_ui
         speed: 7
-  mode_tzeench_completed:
-      tzeench_complete_light_show:
-      speed: 1
+  #mode_tzeench_completed:
+  #    tzeench_complete_light_show:
+  #    speed: 1
 
 variable_player:
 
@@ -261,8 +261,8 @@ accruals:
             - award_tzeench_mission_complete
             - award_necron_mission_complete
             
-    disable_events: 
-    enable_events:
+    #disable_events: 
+    #enable_events:
 
 
 counters:
