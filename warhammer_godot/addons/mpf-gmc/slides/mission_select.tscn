@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://daf2wedvyveni"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_0il4v"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_edwlu"]
+[ext_resource type="PackedScene" uid="uid://eckmd4yb5lal" path="res://addons/mpf-gmc/slides/nurgle.tscn" id="3_bvqca"]
+[ext_resource type="PackedScene" uid="uid://bovylwjst15s1" path="res://addons/mpf-gmc/slides/slannesh.tscn" id="4_66jj0"]
+[ext_resource type="PackedScene" uid="uid://bl8i8irwq43b1" path="res://addons/mpf-gmc/slides/tzeench.tscn" id="5_msqo5"]
+[ext_resource type="PackedScene" uid="uid://cd1e13qg24kiw" path="res://addons/mpf-gmc/slides/necrons.tscn" id="6_l35u7"]
+[ext_resource type="PackedScene" uid="uid://bp1cdam4grnfo" path="res://addons/mpf-gmc/slides/khorne.tscn" id="7_xumkd"]
+[ext_resource type="PackedScene" uid="uid://q85p3oo6vnhe" path="res://addons/mpf-gmc/slides/backToTheFight.tscn" id="8_uvano"]
+
+[node name="mission_select" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_0il4v")
+
+[node name="Carousel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("2_edwlu")
+carousel_name = "mission_select"
+
+[node name="nurgle" parent="Carousel" instance=ExtResource("3_bvqca")]
+
+[node name="slannesh" parent="Carousel" instance=ExtResource("4_66jj0")]
+
+[node name="tzeench" parent="Carousel" instance=ExtResource("5_msqo5")]
+
+[node name="necrons" parent="Carousel" instance=ExtResource("6_l35u7")]
+
+[node name="khorne" parent="Carousel" instance=ExtResource("7_xumkd")]
+
+[node name="backToTheFight" parent="Carousel" instance=ExtResource("8_uvano")]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 41.0

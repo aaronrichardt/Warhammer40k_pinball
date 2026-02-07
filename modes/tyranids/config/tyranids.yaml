@@ -46,7 +46,7 @@
 # Sound Design: Organic, chittering FX layered with industrial synths. Think Aliens meets Doom Eternal.
 
 mode:
-  start_events: ModeSelect_tyranids_selected
+  start_events: mission_select_tyranids_selected
   stop_events: timer_tyranids_mode_timer_complete
   priority: 200
  

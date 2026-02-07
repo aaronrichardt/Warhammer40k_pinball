@@ -17,6 +17,13 @@ ball_holds:
     disable_events: xenos_earned
     release_one_events: mystery_achieved
 
+  mystery_select_scoop:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: enable_mystery
+    disable_events: mystery_achieved|1s
+    release_one_events: mystery_achieved
+
 show_player:
   mode_base_started:
     base_light_show:
@@ -29,6 +36,18 @@ show_player:
     pop_flash:
       speed: 2
       loops: 0
+
+  mode_tzeench_started:
+    flash_to_hold:
+        action: play
+        show_tokens:
+            color: cyan
+            final_color: blue
+            led: l_tzeench
+        speed: 7
+  mode_tzeench_completed:
+      tzeench_complete_light_show:
+      speed: 1
 
 variable_player:
 
@@ -163,7 +182,7 @@ shots:
         color: lime 
     start_enabled: false
     enable_events: xenos_spotted
-    #restart_events: inlane_lane_group_lit_complete
+    
 
 
 shot_groups: 
@@ -172,6 +191,7 @@ shot_groups:
     reset_events: 
     enable_events: xenos_spotted
     disable_events: mechanicus_scoop_shot_hit_complete
+    restart_events: xenos_spotted
 
 shot_profiles: 
   pop_profile:
@@ -231,17 +251,19 @@ sequence_shots:
     switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
     sequence_timeout: 3s
 
-
-
 accruals:
-  qualify_main_mode:
-    events: 
-      - left_ramp_shot_hit
-      - right_ramp_shot_hit
-    events_when_complete:
-      - carousel_qualified
+    all_missions_complete:
+        events:
+            - award_nurgle_mission_complete
+            - award_khorne_mission_complete
+            - award_slannesh_mission_complete
+            - award_tyranids_mission_complete
+            - award_tzeench_mission_complete
+            - award_necron_mission_complete
+            
     disable_events: 
     enable_events:
+
 
 counters:
   warp_qualify_counter:
