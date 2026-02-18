@@ -149,7 +149,7 @@ shots:
     switch: s_light_lock
     profile: rewardbank_generic_flash
     disable_events: mode_weapons_bank_will_start
-    enable_events: start_group_level6
+    enable_events: start_group_level5
     show_tokens:
       led: l_lightlock
       color: purple
@@ -157,7 +157,7 @@ shots:
     switch: s_light_spinners
     profile: rewardbank_generic_flash
     disable_events: mode_weapons_bank_will_start
-    enable_events: start_group_level6
+    enable_events: start_group_level5
     show_tokens:
       led: l_light_spinners
       color: purple
@@ -165,7 +165,7 @@ shots:
     switch: s_bonus_x
     profile: rewardbank_generic_flash
     disable_events: mode_weapons_bank_will_start
-    enable_events: start_group_level6
+    enable_events: start_group_level5
     show_tokens:
       led: l_bonusx
       color: purple
@@ -173,7 +173,7 @@ shots:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
     disable_events: mode_weapons_bank_will_start
-    enable_events: start_group_level6
+    enable_events: start_group_level5
     show_tokens:
       led: l_light_mystery
       color: purple
@@ -206,7 +206,7 @@ shots:
     switch: s_light_mystery
     profile: rewardbank_generic_flash
     disable_events: mode_weapons_bank_will_start
-    enable_events: start_group_level
+    enable_events: start_group_level6
     show_tokens:
       led: l_light_mystery
       color: red
@@ -222,31 +222,38 @@ shots:
 shot_groups:
   reward_group_level1:
     shots: rewardbank1_level1, rewardbank2_level1, rewardbank3_level1, rewardbank4_level1
-    #reset_events: start_group_level2
+    #reset_events: start_group_level2 
     disable_events: start_group_level2
+    restart_events: ball_started, mode_skillshot_stopped
+    reset_events: ball_ended, mode_skillshot_stopped
     #rotate_events: timer_rewardbank_rotation_tick
   reward_group_level2:
     shots: rewardbank1_level2, rewardbank2_level2, rewardbank3_level2, rewardbank4_level2
-    disable_events: mode_weapons_bank_will_start
+    disable_events: mode_weapons_bank_will_start, start_group_level3
     enable_events: start_group_level2
+    reset_events: ball_ended, mode_skillshot_stopped
     #reset_events: reward_bank_group, start_group_level2
   reward_group_level3:
     shots: rewardbank1_level3, rewardbank2_level3, rewardbank3_level3, rewardbank4_level3
-    disable_events: mode_weapons_bank_will_start
+    disable_events: mode_weapons_bank_will_start, start_group_level4
     enable_events: start_group_level3
+    reset_events: ball_ended, mode_skillshot_stopped
   reward_group_level4:
     shots: rewardbank1_level4, rewardbank2_level4, rewardbank3_level4, rewardbank4_level4
-    disable_events: mode_weapons_bank_will_start
+    disable_events: mode_weapons_bank_will_start, start_group_level5
     enable_events: start_group_level4
+    reset_events: ball_ended, mode_skillshot_stopped
   reward_group_level5:
     shots: rewardbank1_level5, rewardbank2_level5, rewardbank3_level5, rewardbank4_level5
-    disable_events: mode_weapons_bank_will_start
+    disable_events: mode_weapons_bank_will_start, start_group_level6
+    reset_events: ball_ended, mode_skillshot_stopped
     enable_events: start_group_level5
   reward_group_level6:
     shots: rewardbank1_level6, rewardbank2_level6, rewardbank3_level6, rewardbank4_level6
     disable_events: mode_weapons_bank_will_start
     enable_events: start_group_level6
-    reset_events: reward_group_level6_hit_complete
+    reset_events: ball_ended, mode_skillshot_stopped
+    restart_events: reward_group_level6_hit_complete
 
 shot_profiles:
     rewardbank_generic_flash:
@@ -261,7 +268,6 @@ variable_player:
   inlane_lane_group_hit_complete:
     score: 10000
     bonus_multiplier: 1
-
 
 event_player:
   reward_group_level1_hit_complete:

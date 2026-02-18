@@ -11,13 +11,8 @@ mode:
   start_events: ball_started
   priority: 200
 
-ball_holds:
-  mission_select_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: xenos_earned
-    disable_events: ModeSelect_item_selected, ModeSelect_item_cancelled
-    release_one_events: ModeSelect_item_selected
+# ball_holds:
+
 
 
 sound_player:
