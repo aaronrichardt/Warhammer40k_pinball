@@ -21,7 +21,7 @@ ball_holds:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: enable_mystery
-    disable_events: mystery_achieved|1s
+    disable_events: mystery_achieved
     release_one_events: mystery_achieved
 
   mission_select_scoop:
@@ -346,7 +346,7 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
-    mode_waagh_multiball_started:
+    waagh_multiball_start:
         Rise_of_the_WAAAGH:
             action: play
             ducking:
@@ -356,7 +356,7 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
         Admonition:
-            action: play
+            action: stop
             ducking:
                 bus: music
                 attack: 0.3 sec

@@ -163,13 +163,13 @@ autofire_coils:
 spinners:
   center_spinner:
     switch: s_center_spinner
-    active_ms: 100
+    active_ms: 1000
   left_spinner:
     switch: s_left_spinner
-    active_ms: 100
+    active_ms: 1000
   right_spinner:
     switch: s_right_spinner
-    active_ms: 100
+    active_ms: 1000
 
 
 machine_vars:
