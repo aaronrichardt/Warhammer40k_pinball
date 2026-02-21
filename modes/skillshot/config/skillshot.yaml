@@ -18,50 +18,58 @@ shots:
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_xenos_x
+          led: l_xenos_x
+          color: white
     skill_xenos_e:
         switch: s_xenos_e
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_xenos_e
+          led: l_xenos_e
+          color: white
     skill_xenos_n:
         switch: s_xenos_n
         profile: skill_shot_profile
         # advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_xenos_n
+          led: l_xenos_n
+          color: white
     skill_xenos_o:
         switch: s_xenos_o
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_xenos_o
+          led: l_xenos_o
+          color: white
     skill_xenos_s:
         switch: s_xenos_s
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_xenos_s
+          led: l_xenos_s
+          color: white
 
     skill_left_inlane:
         switch: s_left_inlane
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_warp_a
+          led: l_warp_a
+          color: white
     skill_right_inlane:
         switch: s_right_inlane
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_warp_r
+          led: l_warp_r
+          color: white
     skill_right_outlane:
         switch: s_right_outlane
         profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
         show_tokens:
-          light: l_warp_r
+          led: l_warp_r
+          color: white
     
     skill_lowerloop:
         switch: s_lowerloop
@@ -122,8 +130,6 @@ sequences:
 shot_groups:
   skill_shot_group:
     shots: skill_xenos_x, skill_xenos_e, skill_xenos_n, skill_xenos_o, skill_xenos_s
-    rotate_left_events: s_left_flipper_active
-    rotate_right_events: s_right_flipper_active
 
   super_skill_shot_group:
     shots: super_skillshot
@@ -140,6 +146,7 @@ shot_profiles:
     states: 
       - name: lit
         show: standard_flash
+        speed: 10
   super_skill_shot_profile:
     advance_on_hit: false
     states: 

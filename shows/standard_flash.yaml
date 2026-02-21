@@ -6,7 +6,7 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -14,22 +14,14 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 - time: "+1"
   lights:
     (led): (color)
 
 - time: "+1"
   lights:
-    (led): off
-
-- time: "+1"
-  lights:
-    (led): (color)
-
-- time: "+1"
-  lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -37,7 +29,7 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -45,7 +37,7 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -53,7 +45,7 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -61,21 +53,7 @@
 
 - time: "+1"
   lights:
-    (led): off
-- time: "+1"
-  lights:
-    (led): (color)
-
-- time: "+1"
-  lights:
-    (led): off
-- time: "+1"
-  lights:
-    (led): (color)
-
-- time: "+1"
-  lights:
-    (led): off
+    (led): stop
 
 - time: "+1"
   lights:
@@ -83,11 +61,33 @@
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
 - time: "+1"
   lights:
     (led): (color)
 
 - time: "+1"
   lights:
-    (led): off
+    (led): stop
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): stop
+
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): stop
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): stop
