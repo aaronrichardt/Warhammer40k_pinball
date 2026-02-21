@@ -43,6 +43,17 @@ event_player:
     logicblock_right_tzeench_spinner_complete:
         s_tempholder3_active
 
+sound_player:
+    mission_select_tzeench_selected|2s:
+        BlueSpinnerThenScoop_01:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
 #config_version=6
 ##! mode: xenos
 accruals:
@@ -66,7 +77,7 @@ shots:
         switch: s_tempholder2
         profile: generic_flash
         show_tokens:
-             led: l_left_orbit_arrow
+             led: l_center_ramp_circle, l_center_ramp_arrow
              color: aqua
     right_spinner_shot:
         switch: s_tempholder3
