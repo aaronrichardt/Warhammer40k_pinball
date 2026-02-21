@@ -366,7 +366,7 @@ sound_player:
     left_drain_hit:
         big-ben:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -376,7 +376,7 @@ sound_player:
     s_left_slingshot_active:
         slingshots:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -386,7 +386,7 @@ sound_player:
     s_right_slingshot_active:
         slingshots:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -397,7 +397,7 @@ sound_player:
     s_center_ramp_active:
         DP_Cinematic_SFX_Stinger_Impact Aware_01:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
