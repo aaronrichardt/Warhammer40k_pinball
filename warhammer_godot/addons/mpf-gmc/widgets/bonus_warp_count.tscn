@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0ouvwvv7v6sn"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_vituq"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_wl0kd"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_rwwd4"]
+
+[node name="BonusWarpCount" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_vituq")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 704.0
+offset_right = 838.0
+offset_bottom = 841.0
+theme = ExtResource("2_wl0kd")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = "WARPS = 100 X"
+script = ExtResource("3_rwwd4")
+variable_name = "var_bonus_warp_hits"
+template_string = "Warps=  %s X"

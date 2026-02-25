@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckp3eapqw10jn"]
+
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="1_obgvb"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_lepl0"]
+
+[node name="BonusRelicsTotal" type="Node2D"]
+
+[node name="MPFVariable" type="Label" parent="."]
+offset_left = 1060.0
+offset_top = 127.0
+offset_right = 1825.0
+offset_bottom = 264.0
+theme = ExtResource("1_obgvb")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = "100,000,000,000"
+script = ExtResource("2_lepl0")
+variable_name = "bonus_relics_total"
+comma_separate = true
+template_string = "100,000,000,000"

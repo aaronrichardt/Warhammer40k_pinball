@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7rv5bv61eapj"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_6fxe0"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_7hv2b"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_5nadn"]
+
+[node name="BonusSwitches" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_6fxe0")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 976.0
+offset_top = 384.0
+offset_right = 1882.0
+offset_bottom = 521.0
+theme = ExtResource("2_7hv2b")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = "10,000,000,000,000
+"
+script = ExtResource("3_5nadn")
+variable_name = "bonus_complete_total"

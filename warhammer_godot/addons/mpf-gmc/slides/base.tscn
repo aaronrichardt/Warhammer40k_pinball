@@ -191,6 +191,5 @@ theme = ExtResource("4_c4bpu")
 theme_override_font_sizes/font_size = 0
 text = "Ball 1"
 script = ExtResource("3_4w4lw")
-variable_type = 2
 variable_name = "ball"
 template_string = "Ball %s"

@@ -4,6 +4,7 @@
 modes: 
   - base
   #- high_score
+  - bonus
   - xenos
   - nurgle
   - khorne
@@ -21,7 +22,6 @@ modes:
   #- inquisition_multiball
   #- horus
   - tilt  
-  #- bonus
   #- necron_lock
   #- necron_lock_qualified
   #- necron_multiball
