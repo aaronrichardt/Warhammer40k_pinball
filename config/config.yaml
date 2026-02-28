@@ -143,6 +143,7 @@ servos:
             0.4: ork_left
             0.7: ork_right
         number: playfield2-1
+        reset_events: ball_starting, ball_ending
 
 
 autofire_coils:
