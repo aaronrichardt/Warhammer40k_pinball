@@ -9,7 +9,7 @@ mode:
 
 ball_saves:
   ball_save_ball_save:
-    active_time: 10s
+    active_time: 5s
     hurry_up_time: 5s
     timer_start_events: balldevice_bd_plunger_ball_eject_success
     auto_launch: true

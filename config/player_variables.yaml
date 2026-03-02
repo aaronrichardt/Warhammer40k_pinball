@@ -6,10 +6,10 @@ player_vars:
     initial_value: 0
   bonus_switches:
     initial_value: 0
-  bonus_holy_relics:
-    initial_value: 0
-  bonus_warp_jumps:
-    initial_value: 0
+  bonus_pops_value:
+    initial_value: 1000
+  bonus_pops_count:
+    initial_value: 10
   bonus_modes_started:
     initial_value: 0
   pv_warp_mode_counter:
@@ -17,6 +17,16 @@ player_vars:
   pv_necron_lock_count:
     initial_value: 0
   bonus_multiplier: 
-    initial_value: 1 
+    initial_value: 2
   playfield_multiplier: 
     initial_value: 1
+  bonus_total:
+    initial_value: 1
+  bonus_relics_count:
+    initial_value: 0
+  bonus_relics_value:
+    initial_value: 250000
+  bonus_purity_seals_count:
+    initial_value: 0
+  bonus_purity_seals_value:
+    initial_value: 100000

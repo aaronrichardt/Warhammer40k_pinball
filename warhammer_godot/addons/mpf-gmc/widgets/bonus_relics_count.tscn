@@ -11,17 +11,17 @@ script = ExtResource("1_8yo31")
 
 [node name="MPFVariable" type="Label" parent="."]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 112.0
-offset_right = 843.0
-offset_bottom = 249.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 797.0
+offset_bottom = 201.0
 theme = ExtResource("2_8qqtq")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 10
 theme_override_constants/shadow_offset_y = 10
 theme_override_constants/outline_size = 20
-text = "RELICS = %s   X"
+text = "RELICS = %s X"
 script = ExtResource("3_b80aw")
 variable_name = "var_bonus_relic_hits"
-template_string = "RELICS = %s   X"
+template_string = "RELICS = %s X"

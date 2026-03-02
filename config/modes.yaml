@@ -5,6 +5,7 @@ modes:
   - base
   #- high_score
   - bonus
+  #- bonus_custom
   - xenos
   - nurgle
   - khorne

@@ -5,30 +5,67 @@ mode:
   start_events: ball_ending     # start on ball ending process
   use_wait_queue: true          # delay ball ending
   priority: 500                 # determines the order of ball end modes
-  stop_events: stop_bonus_mode     # post this event to stop the mode and continue the ball ending process
-
-
-mode_settings:
-  display_delay_ms: 2s
-  bonus_entries:
-    - entry: bonus_relics
-      score: 100000* (current_player.holy_relics) 
-    - entry: bonus_switches
-      score:   100000* (current_player.switch_hits )
-    - entry: bonus_warps
-      score: 100000* (current_player.warp_jumps) 
+  stop_events: stop_bonus_custom_mode     # post this event to stop the mode and continue the ball ending process
+  events_when_started: stop_all_music # post this event to stop all music when the mode starts, you can customize this as needed
 
 slide_player:
-  mode_bonus_started: bonus
+  mode_bonus_custom_started: bonus # Start Bonus Slide
 
 widget_player:
-  bonus_entries: bonus_entries_widget
-  bonus_relics: bonus_total_widget
-  bonus_switches: bonus_total_widget
-  bonus_warps: bonus_warp_count
-  bonus_total: bonus_total_widget
+  show_end_of_ball_widget:
+    end_of_ball_widget:
+        action: play
+  hide_end_of_ball_widget:
+    end_of_ball_widget:
+        action: remove
+  show_bonus_relics_count_widget:
+    bonus_relics_count:
+        action: play
+  show_bonus_relics_value_widget:
+    bonus_relics_value:
+        action: play
+  # bonus_entries: 
+  #   bonus_entries_widget:
+  #       action: play
+
+  # bonus_relics: 
+  #   bonus_total_widget:    
+  #       action: play
+  # bonus_switches: bonus_total_widget
+  # bonus_warps: bonus_warp_count
+  # bonus_total: bonus_total_widget
+  # bonus_multiplier: bonus_multiplier_widget
+  # bonus_subtotal: bonus_subtotal_widget
 
 event_player:
     bonus_warps: 
-        bonus_total
-    
+        - bonus_total
+    mode_bonus_started:
+        - show_end_of_ball_widget
+        - set_holy_relics_subtotal
+        - set_bonus_subtotal
+        - set_bonus_total
+    widget_end_of_ball_widget_active:
+        - hide_end_of_ball_widget| 2s  # Hide the end of ball widget after showing it after 2 seconds
+    widget_end_of_ball_widget_removed: # When the end of ball widget is removed, post the event to start the bonus entries,
+        - show_bonus_relics_count_widget| 500ms # Start the bonus entry process after a short delay
+    widget_bonus_relics_count_active: # When the bonus relics count widget is active, post the event to start the next bonus entry after a short delay, you can customize the timing as needed.
+        - show_bonus_relics_value_widget| 500ms
+    widget_bonus_relics_value_active: # When the bonus relics value widget is active, post the event to start the next bonus entry after a short delay, you can customize the timing as needed.
+        - show_bonus_relics_total_widget| 500ms
+
+
+#Setup Math for bonus total, which is the sum of all the bonus entries multiplied by the multiplier. This is just an example, you can customize it as needed.
+variable_player:
+    set_holy_relics_subtotal:
+        holy_relics_subtotal:
+            action: set
+            int: current_player.holy_relics * 100000
+    set_bonus_subtotal:
+        bonus_subtotal:
+            action: set
+            int: current_player.holy_relics_subtotal + current_player.switch_hits_subtotal + current_player.warp_jumps_subtotal
+    set_bonus_total:
+        bonus_total:
+            action: set
+            int: (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps) * current_player.bonus_multiplier

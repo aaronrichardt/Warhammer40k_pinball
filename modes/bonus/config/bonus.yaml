@@ -10,39 +10,57 @@ mode:
 
 mode_settings:
   display_delay_ms: 2s
+  hurry_up_delay_ms: 100ms                         #after hurry-up event, switch to 0.3s delays
+  hurry_up_event: s_flipper_right_active,s_flipper_left_active
   bonus_entries:
+
     - entry: initial
       score: 0
-    - entry: subtotal
-      score:
-    - 
-    - entry: bonus_relics
-      score: 100000* (current_player.holy_relics) 
-    - entry: bonus_switches
-      score:   100000* (current_player.switch_hits )
-    - entry: bonus_warps
-      score: 100000* (current_player.warp_jumps) 
-    - entry: bonus_total
-      score: 100000* (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps)
+      skip_if_zero: false
+
+    # - entry: pops
+    #   score: current_player.bonus_pops_value
+    #   player_score_entry: current_player.bonus_pops_count
+    #   skip_if_zero: false
+
+    - entry: pops
+      score: current_player.bonus_pops_value * current_player.bonus_pops_count
+      skip_if_zero: false
+    - entry: purity_seals
+      score: current_player.bonus_purity_seals_value * current_player.bonus_purity_seals_count
+      skip_if_zero: false
+    - entry: relics
+      score: current_player.bonus_relics_value * current_player.bonus_relics_count
+      skip_if_zero: false
+
+    # - entry: subtotal
+    #   score: 0
+    #   skip_if_zero: false
+
+    # - entry: multiplier
+    #   score: current_player.bonus_multiplier
+    #   skip_if_zero: false
+
+
+    # - entry: total
+    #   score: current_player.bonus_multiplier * (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps)
+    #   skip_if_zero: false
+    # - entry: bonus_relics
+    #   score: 100000* (current_player.holy_relics) 
+    # - entry: bonus_switches
+    #   score:   100000* (current_player.switch_hits )
+    # - entry: bonus_warps
+    #   score: 100000* (current_player.warp_jumps) 
+    # - entry: bonus_total
+    #   score: 100000* (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps)
 
 slide_player:
   mode_bonus_started: bonus
-  # bonus_start:
-  #     bonus:
-  #         action: update
-  #         tokens:
-  #             entry: initial
-  # bonus_entry:
-  #     bonus:
-  #           action: update
-# widget_player:
-#   bonus_entries: bonus_entries_widget
-#   bonus_relics: bonus_total_widget
-#   bonus_switches: bonus_total_widget
-#   bonus_warps: bonus_warp_count
-#   bonus_total: bonus_total_widget
-
-event_player:
-    bonus_warps: 
-        bonus_total
-    
+  bonus_start:
+      bonus:
+          action: update
+          tokens:
+              entry: initial
+  bonus_entry:
+      bonus:
+          action: update
