@@ -448,3 +448,99 @@ lights:
   l_left_lightbar32:
     number: playfield-6-32
     tags: left_lightbar, even, first
+  l-8-1:
+    number: playfield-8-1
+    tags: odd, first, right_scoop_flasher
+  l-8-2:
+    number: playfield-8-2
+    tags: even, second, right_scoop_flasher
+  l-8-3:
+    number: playfield-8-3
+    tags: odd, third, right_scoop_flasher
+  l-8-4:
+    number: playfield-8-4
+    tags: even, first, right_scoop_flasher
+  l-8-5:
+    number: playfield-8-5
+    tags: odd, second, right_scoop_flasher
+  l-8-6:
+    number: playfield-8-6
+    tags: even, third, right_scoop_flasher
+  l-8-7:
+    number: playfield-8-7
+    tags: odd, first, right_scoop_flasher
+  l-8-8:
+    number: playfield-8-8
+    tags: even, second, right_scoop_flasher
+  l-8-9:
+    number: playfield-8-9
+    tags: odd, third
+  l-8-10:
+    number: playfield-8-10
+    tags: even, first
+  l-8-11:
+    number: playfield-8-11
+    tags: odd, second
+  l-8-12:
+    number: playfield-8-12
+    tags: even, third
+  l-8-13:
+    number: playfield-8-13
+    tags: odd, first
+  l-8-14:
+    number: playfield-8-14
+    tags: even, second
+  l-8-15:
+    number: playfield-8-15
+    tags: odd, third
+  l-8-16:
+    number: playfield-8-16
+    tags: even, first
+  l-8-17:
+    number: playfield-8-17
+    tags: odd, second
+  l-8-18:
+    number: playfield-8-18
+    tags: even, third
+  l-8-19:
+    number: playfield-8-19
+    tags: odd, first
+  l-8-20:
+    number: playfield-8-20
+    tags: even, second
+  l-8-21:
+    number: playfield-8-21
+    tags: odd, third
+  l-8-22:
+    number: playfield-8-22
+    tags: even, first
+  l-8-23:
+    number: playfield-8-23
+    tags: odd, second
+  l-8-24:
+    number: playfield-8-24
+    tags: even, third
+  l-8-25:
+    number: playfield-8-25
+    tags: odd, first
+  l-8-26:
+    number: playfield-8-26
+    tags: even, second
+  l-8-27:
+    number: playfield-8-27
+    tags: odd, third
+  l-8-28:
+    number: playfield-8-28
+    tags: even, first
+  l-8-29:
+    number: playfield-8-29
+    tags: odd, second
+  l-8-30:
+    number: playfield-8-30
+    tags: even, third
+  l-8-31:
+    number: playfield-8-31
+    tags: odd, first
+  l-8-32:
+    number: playfield-8-32
+    tags: even, second

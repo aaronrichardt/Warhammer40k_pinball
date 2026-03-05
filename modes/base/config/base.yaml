@@ -43,6 +43,29 @@ show_player:
     pop_flash:
       speed: 2
       loops: 0
+  balldevice_bd_scoop_ejecting_ball:
+    generic_flash:
+      speed: 100
+      loops: 0
+      show_tokens:
+        led: right_scoop_flasher
+        color: red
+#  balldevice_mystery_select_scoop_ejecting_ball:
+#    generic_flash:
+#      speed: 5
+#      loops: 0
+#      show_tokens:
+#        led: right_scoop_flasher
+#        color: red
+#
+#  balldevice_base_scoop_ejecting_ball:
+#    generic_flash:
+#      speed: 5
+#      loops: 0
+#      show_tokens:
+#        led: right_scoop_flasher
+#        color: red
+
 
   mode_tzeench_started:
     flash_to_hold:
