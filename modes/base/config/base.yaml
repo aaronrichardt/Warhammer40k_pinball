@@ -9,27 +9,30 @@ slide_player:
     #init_done: welcome_slide
     #mode_attract_started: attract
 
+config: 
+    - events.yaml
+
 ball_holds:
   base_scoop:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled
     disable_events: xenos_earned
-    release_one_events: balldevice_bd_scoop_ball_entered
+    release_one_events:  release_one_ball
 
   mystery_select_scoop:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: enable_mystery
     disable_events: mystery_achieved
-    release_one_events: mystery_achieved
+    release_one_events:  release_one_ball
 
   mission_select_scoop:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: xenos_earned
     disable_events: mission_select_item_selected, mission_select_item_cancelled
-    release_one_events: mission_select_item_selected, mission_select_item_cancelled
+    release_one_events: release_one_ball
 
 show_player:
   mode_base_started:
@@ -43,9 +46,9 @@ show_player:
     pop_flash:
       speed: 2
       loops: 0
-  balldevice_bd_scoop_ejecting_ball:
+  play_scoop_flash_show:
     generic_flash:
-      speed: 100
+      speed: 15
       loops: 0
       show_tokens:
         led: right_scoop_flasher
@@ -679,34 +682,4 @@ sound_player:
 #       - drain2
 
             
-        
-
-event_player:
-  mode_base_started: warp_traveler
-  s_left_slingshot_active: sling_hit
-  s_right_slingshot_active: sling_hit
-  s_scoop_active: scoop_hit
-  s_spinner_active: spinner_hit
-  #player_added{num == 1}: base_sound_player_1
-  player_added{num == 2}: base_sound_player_2
-  player_added{num == 3}: base_sound_player_3
-  player_added{num == 4}: base_sound_player_4
-  player_added{game.num_players == 1}: base_start_single_player, base_sound_player_1
-  player_added{game.num_players == 2}: base_start_multi_player_two
-  player_added{game.num_players == 3}: base_start_multi_player_three
-  player_added{game.num_players == 4}: base_start_multi_player_four
-  mode_base_started{game.num_players == 1}: base_start_single_player
-  mode_base_started{game.num_players == 2}: base_start_multi_player_two
-  mode_base_started{game.num_players == 3}: base_start_multi_player_three
-  mode_base_started{game.num_players == 4}: base_start_multi_player_four
-  base_skillshot_should_start: skillshot_should_start
-  ball_save_default_saving_ball:
-    cmd_backbox_show_overlay:
-      show_type: sweep_vertical
-      color: "FF2000"
-      speed: 1
-      repeat: 0
-      direction: up
-  mode_bonus_will_start: stop_all_music
-  s_snikt_target_active: ork_left, ork_right, ork_left, ork_right, ork_home
-
+       
