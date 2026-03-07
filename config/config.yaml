@@ -123,14 +123,6 @@ ball_devices:
     # eject_coil: c_droppod
     # eject_timeouts: 3s
       
-
-#ball_holds:
-#  lowerScoop: 
-#    balls_to_hold: 1
-#    hold_devices: bd_lowerscoop
-#    disable_events: mode_nurgle_started, mode_khorne_started, mode_tzeench_started, mode_slannesh_started
-#    enable_events: carousel_qualified, mode_nurgle_ended, mode_khorne_ended, mode_tzeench_ended, mode_slannesh_ended
-#    release_one_events: carousel_item_selected, carousel_item_cancelled 
 servos:
     ork_servo:
         platform_settings:

@@ -29,22 +29,22 @@ event_player:
       direction: up
   mode_bonus_will_start: stop_all_music
   s_snikt_target_active: 
-    ork_left 
-    ork_right|.5s 
-    ork_left|.1s 
-    ork_right|1.5s
-    ork_home|2s
-  mission_select_item_selected:
-    play_scoop_flash_show
-    release_one_ball|.5s
-  mission_select_item_cancelled: 
-    play_scoop_flash_show
-    release_one_ball|.5s
-  balldevice_bd_scoop_ball_entered:
-    play_scoop_flash_show
-    release_one_ball|.5s
-  mystery_achieved:
-    play_scoop_flash_show
-    release_one_ball|.5s
+    - ork_left 
+    - ork_right|.5s 
+    - ork_left|.1s 
+    - ork_right|1.5s
+    - ork_home|2s
+  # mission_select_item_selected:
+  #   - play_scoop_flash_show
+  #   - release_one_ball|.5s
+  # mission_select_item_cancelled: 
+  #   - play_scoop_flash_show
+  #   - release_one_ball|.5s
+  # # balldevice_bd_scoop_ball_entered:
+  # #   play_scoop_flash_show
+  # #   release_one_ball|.5s
+  # mystery_achieved:
+  #   - play_scoop_flash_show
+  #   - release_one_ball|.5s
 
 

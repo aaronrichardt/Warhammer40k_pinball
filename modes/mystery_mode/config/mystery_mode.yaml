@@ -10,7 +10,7 @@ event_player:
   mystery_scoop_shot_mystery_shot_profile_flashing_hit:
     - mystery_achieved|2s  # Unique reward event
 
-    
+
 shots:
   mystery_scoop_shot:
     switch: s_scoop

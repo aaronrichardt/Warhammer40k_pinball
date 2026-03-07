@@ -13,26 +13,32 @@ config:
     - events.yaml
 
 ball_holds:
-  base_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled
-    disable_events: xenos_earned
-    release_one_events:  release_one_ball
-
+  # base_scoop:
+  #   balls_to_hold: 1
+  #   hold_devices: bd_scoop
+  #   enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled
+  #   disable_events: ball_started, xenos_earned, enable_mystery
+  #   #release_one_events:  release_one_ball
+ 
   mystery_select_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: enable_mystery
-    disable_events: mystery_achieved
-    release_one_events:  release_one_ball
+      balls_to_hold: 1
+      hold_devices: bd_scoop
+      enable_events: enable_mystery, mode_mystery_mode_started
+      disable_events: ball_started,mystery_achieved
+        #release_one_events:  release_one_ball
 
   mission_select_scoop:
     balls_to_hold: 1
     hold_devices: bd_scoop
     enable_events: xenos_earned
-    disable_events: mission_select_item_selected, mission_select_item_cancelled
-    release_one_events: release_one_ball
+    disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled
+    # release_one_events: release_one_ball
+
+queue_relay_player:
+    balldevice_bd_scoop_ball_eject_attempt:
+        post: play_scoop_flash_show
+        wait_for: play_scoop_flash_show_complete
+
 
 show_player:
   mode_base_started:
@@ -47,6 +53,7 @@ show_player:
       speed: 2
       loops: 0
   play_scoop_flash_show:
+    events_when_complete: play_scoop_flash_show_complete
     generic_flash:
       speed: 15
       loops: 0
