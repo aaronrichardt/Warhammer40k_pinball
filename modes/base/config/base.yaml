@@ -39,7 +39,6 @@ queue_relay_player:
         post: play_scoop_flash_show
         wait_for: play_scoop_flash_show_complete
 
-
 show_player:
   mode_base_started:
     base_light_show:
@@ -53,10 +52,10 @@ show_player:
       speed: 2
       loops: 0
   play_scoop_flash_show:
-    events_when_complete: play_scoop_flash_show_complete
     generic_flash:
       speed: 15
       loops: 0
+      events_when_completed: play_scoop_flash_show_complete
       show_tokens:
         led: right_scoop_flasher
         color: red
