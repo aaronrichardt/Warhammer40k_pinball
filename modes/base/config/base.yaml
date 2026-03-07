@@ -206,7 +206,6 @@ shots:
   right_drain:
     switch: s_right_outlane
 
-
   mechanicus_scoop_shot:
     switch: s_scoop
     profile: generic_flash_profile
@@ -216,7 +215,6 @@ shots:
     start_enabled: false
     enable_events: xenos_spotted
     
-
 
 shot_groups: 
   start_select_mode_group:
@@ -252,37 +250,37 @@ sequence_shots:
     sequence_timeout: 3s
    #Secret Combo Shots
     # Xenos Bank into the innder loop
-  secret_combo_1:
-    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
-  secret_combo_2:
-    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
-  secret_combo_3:
-    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
-  secret_combo_4:
-    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
-  secret_combo_5:
-    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
-      # Xenos Bank into the inner loop into the jackpot vuk
-  secret_combo_6:
-    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
-    sequence_timeout: 3s
-  secret_combo_7:
-    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
-    sequence_timeout: 3s
-  secret_combo_8:
-    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
-    sequence_timeout: 3s
-  secret_combo_9:
-    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
-    sequence_timeout: 3s
-  secret_combo_10:
-    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
-    sequence_timeout: 3s
+  # secret_combo_1:
+  #   switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left
+  #   sequence_timeout: 3s
+  # secret_combo_2:
+  #   switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left
+  #   sequence_timeout: 3s
+  # secret_combo_3:
+  #   switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left
+  #   sequence_timeout: 3s
+  # secret_combo_4:
+  #   switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left
+  #   sequence_timeout: 3s
+  # secret_combo_5:
+  #   switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left
+  #   sequence_timeout: 3s
+  #     # Xenos Bank into the inner loop into the jackpot vuk
+  # secret_combo_6:
+  #   switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+  #   sequence_timeout: 3s
+  # secret_combo_7:
+  #   switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+  #   sequence_timeout: 3s
+  # secret_combo_8:
+  #   switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+  #   sequence_timeout: 3s
+  # secret_combo_9:
+  #   switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+  #   sequence_timeout: 3s
+  # secret_combo_10:
+  #   switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+  #   sequence_timeout: 3s
 
 accruals:
     all_missions_complete:
@@ -673,13 +671,6 @@ sound_player:
         
         
                 
-# sound_pools:
-#   drain_callout:
-#     type: random_force_all
-#     track: voice
-#     sounds:
-#       - drain1
-#       - drain2
 
             
        
