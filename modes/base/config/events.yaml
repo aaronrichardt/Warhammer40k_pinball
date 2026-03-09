@@ -48,5 +48,5 @@ event_player:
     - release_one_ball|1s
   ball_hold_base_scoop_full:
     - play_scoop_flash_show
-    - release_one_ball|1s
+    - release_one_ball|.5s
 

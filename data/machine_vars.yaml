@@ -22,10 +22,6 @@ grandChampion_value:
   expire: null
   expire_secs: null
   value: 1000004
-highScore1_label:
-  expire: null
-  expire_secs: null
-  value: 'HIGH SCORE #1'
 highScore1_name:
   expire: null
   expire_secs: null
@@ -34,10 +30,6 @@ highScore1_value:
   expire: null
   expire_secs: null
   value: 1000004
-highScore2_label:
-  expire: null
-  expire_secs: null
-  value: 'HIGH SCORE #2'
 highScore2_name:
   expire: null
   expire_secs: null
@@ -46,10 +38,6 @@ highScore2_value:
   expire: null
   expire_secs: null
   value: 1000004
-highScore3_label:
-  expire: null
-  expire_secs: null
-  value: 'HIGH SCORE #3'
 highScore3_name:
   expire: null
   expire_secs: null
@@ -58,10 +46,6 @@ highScore3_value:
   expire: null
   expire_secs: null
   value: 1000004
-highScore4_label:
-  expire: null
-  expire_secs: null
-  value: 'HIGH SCORE #4'
 highScore4_name:
   expire: null
   expire_secs: null
@@ -77,4 +61,4 @@ master_volume:
 player1_score:
   expire: null
   expire_secs: null
-  value: 289000
+  value: 765700
