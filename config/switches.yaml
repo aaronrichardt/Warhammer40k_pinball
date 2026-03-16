@@ -1,4 +1,4 @@
-#config_version=6
+ #config_version=6
 switches:
   # Board 3208 (0-31)
   s_trough1:
@@ -109,6 +109,7 @@ switches:
     number: 32082-13  
   s_rollover_gork:
     number: 32082-14 
+  #left ramp really isnt a ramp but a jump ramp that feeds the orbit to the right.
   s_left_ramp:
     number: 32082-15 
   s_center_spinner:

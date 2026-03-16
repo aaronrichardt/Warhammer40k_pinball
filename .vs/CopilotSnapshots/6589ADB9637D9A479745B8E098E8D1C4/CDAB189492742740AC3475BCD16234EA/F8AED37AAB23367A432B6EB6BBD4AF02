@@ -1,11 +1,8 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   priority: 100
 
-config: 
-  - base_seqeunce_shots.yaml
-  - base_variable_player.yaml
 slide_player:
     mode_base_started: base
     mode_skillshot_stopped: base
@@ -31,6 +28,112 @@ show_player:
     pop_flash:
       speed: 2
       loops: 0
+
+variable_player:
+
+  s_lower_bigtarget_active:
+    score: 3000 * (current_player.playfield_multiplier)
+  s_upper_bigtarget_active:
+    score: 5000 * (current_player.playfield_multiplier)
+  s_right_inlane_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_left_inlane_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_right_outlane_active:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_left_outlane_active:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_left_slingshot_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_right_slingshot_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_pop_left_active:
+    score: 500  * (current_player.playfield_multiplier)
+  s_pop_right_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_rollover_mork_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_rollover_gork_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_upperscoop_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_spinner_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_x_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_e_active:
+    score: 100  * (current_player.playfield_multiplier)
+  s_xenos_n_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_o_active:
+    score: 100   * (current_player.playfield_multiplier)
+  s_xenos_s_active:
+    score: 100  * (current_player.playfield_multiplier)
+  s_kickback1_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_kickback2_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_disk_backtarget_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_droptarget_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_droptarget_lock_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  spinner_center_spinner_hit:
+    score: 5000 * (current_player.playfield_multiplier)
+  s_scoop_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_3bank_shot_hit:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_3bank_shot_flashProfile_flashing_hit:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_center_ramp_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_active_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_nurgle_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_18_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_mystery_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_bonus_x_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_spinners_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_lock_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_droptarget_down_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_24_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_25_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_26_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_27_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_necron_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_right_orbit_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_redcircle_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_right_spinner_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock1_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock2_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock3_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_jackpot_vuk_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_ricochet_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_waagh_newton_ball_active:
+    score: 2000 * (current_player.playfield_multiplier)
+
 
 shots: 
   left_orbit:
@@ -86,6 +189,49 @@ shot_profiles:
       - name: unlit
         show: off
  
+sequence_shots: 
+  right_orbit:
+    switch_sequence: s_right_orbit, s_innerloop_left
+    sequence_timeout: 3s
+  complete_inner_loop:
+    switch_sequence: s_innerloop_right, s_innerloop_left, s_lowerloop
+    sequence_timeout: 3s
+   #Secret Combo Shots
+    # Xenos Bank into the innder loop
+  secret_combo_1:
+    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_2:
+    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_3:
+    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_4:
+    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_5:
+    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+      # Xenos Bank into the inner loop into the jackpot vuk
+  secret_combo_6:
+    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_7:
+    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_8:
+    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_9:
+    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_10:
+    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+
+
+
 accruals:
   qualify_main_mode:
     events: 
@@ -97,44 +243,6 @@ accruals:
     enable_events:
 
 counters:
-  blood_angels_qualify_counter:
-    count_events: left_orbit_hit
-    starting_count: 0
-    count_interval: 1
-    direction: up
-    count_complete_value: current_player.blood_angels_qualify_value
-    events_when_complete: blood_angels_qualified
-    reset_on_complete: false
-    disable_on_complete: true
-
-  imperial_fists_qualify_counter:
-    count_events: left_orbit_hit
-    starting_count: 0
-    count_interval: 1
-    direction: up
-    count_complete_value: current_player.imperial_fists_qualify_value
-    events_when_complete: imperial_fists_qualified
-    reset_on_complete: false
-    disable_on_complete: true
-  salamanders_qualify_counter:
-    count_events: right_orbit_hit
-    starting_count: 0
-    count_interval: 1
-    direction: up
-    count_complete_value: current_player.salamanders_qualify_value
-    events_when_complete: salamanders_qualified
-    reset_on_complete: false
-    disable_on_complete: true
-  dark_angels_qualify_counter:
-    count_events: right_orbit_hit
-    starting_count: 0
-    count_interval: 1
-    direction: up
-    count_complete_value: current_player.dark_angels_qualify_value
-    events_when_complete: dark_angels_qualified
-    reset_on_complete: false
-    disable_on_complete: true
-  
   warp_qualify_counter:
     count_events: s_snikt_active
     starting_count: 0
@@ -484,18 +592,19 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
-    imperial_fists_qualified: 
-        imperialFistJoinTheBattle:
-                action: play
-                volume: 1.5
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
+
+
         
         
+                
+# sound_pools:
+#   drain_callout:
+#     type: random_force_all
+#     track: voice
+#     sounds:
+#       - drain1
+#       - drain2
+
             
         
 
@@ -528,8 +637,3 @@ event_player:
   mode_bonus_will_start: stop_all_music
   s_snikt_target_active: ork_left, ork_right, ork_left, ork_right, ork_home
 
-
-widget_player: 
-  imperial_fists_qualified:
-    imperialFistsIcon
-  

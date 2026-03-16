@@ -63,8 +63,11 @@ shot_profiles:
 
 variable_player:
   inlane_lane_group_hit_complete:
-    score: 10000
+    score: 100000
     bonus_multiplier: 1
+    weapons_bank_value: 
+      action: add
+      int: 100000
 
 
 event_player:

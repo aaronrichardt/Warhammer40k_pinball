@@ -20,3 +20,13 @@ player_vars:
     initial_value: 1 
   playfield_multiplier: 
     initial_value: 1
+  weapons_bank_value: 
+    initial_value: 
+  blood_angels_qualify_value: 
+    initial_value: 3 
+  salamanders_qualify_value: 
+    initial_value: 3 
+  imperial_fists_qualify_value: 
+    initial_value: 3 
+  dark_angels_qualify_value: 
+    initial_value: 3 

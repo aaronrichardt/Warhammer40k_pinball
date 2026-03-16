@@ -1,0 +1,360 @@
+# 🎯 QUICK REFERENCE CARD - Shot Combos
+
+## The Three Combos
+
+### COMBO 1: 🟢 RAMP TO ORBIT
+```
+Left Ramp → Right Orbit → Left Spinner
+⏱️  5 second windows
+💰 50,000 pts
+🔓 Ball Lock Unlocked
+📈 Multiplier x2
+```
+
+### COMBO 2: 🟢 LOOP COMBO  
+```
+L. Inner Loop → R. Inner Loop → Right Orbit
+⏱️  5 second windows
+💰 75,000 pts
+⏳ Hurry Up Activated
+📈 Multiplier x2
+```
+
+### COMBO 3: 💜 SPINNER RAMPAGE
+```
+L. Spinner → C. Spinner → R. Spinner
+⏱️  4 second windows
+💰 100,000 pts
+👑 Super Mode Unlocked
+📈 Multiplier x3
+```
+
+---
+
+## What Unlocks What
+
+| Feature | Unlocked By | Effect |
+|---------|------------|--------|
+| **Ball Lock** | Ramp OR Loop combo | Can lock balls for multiball |
+| **Hurry Up** | Loop combo | Time-limited scoring mode |
+| **Super Mode** | Spinner combo | Premium gameplay features |
+| **2x Multiplier** | Ramp OR Loop combo | All shots worth 2x |
+| **3x Multiplier** | Spinner combo | All shots worth 3x |
+
+---
+
+## Switching & Events
+
+| Shot | Switch | Combo |
+|------|--------|-------|
+| Left Ramp | s_left_ramp | Ramp combo (1/3) |
+| Right Orbit | s_right_orbit | Ramp & Loop combos |
+| Left Spinner | s_left_spinner | Ramp & Rampage combos |
+| Center Spinner | s_center_spinner | Rampage combo (2/3) |
+| Right Spinner | s_right_spinner | Rampage combo (3/3) |
+| Left Loop | s_innerloop_left | Loop combo (1/3) |
+| Right Loop | s_innerloop_right | Loop combo (2/3) |
+
+---
+
+## Events Posted
+
+### Ramp Combo Complete
+```
+✓ ramp_to_orbit_combo_complete
+✓ ball_lock_qualification_started
+✓ playfield_multiplier_x2
+✓ ramp_combo_qualified
+```
+
+### Loop Combo Complete
+```
+✓ loop_combo_complete
+✓ hurry_up_mode_start
+✓ ball_lock_qualification_started
+✓ loop_combo_qualified
+```
+
+### Spinner Combo Complete
+```
+✓ spinner_rampage_combo_complete
+✓ playfield_multiplier_x3
+✓ spinner_combo_qualified
+✓ super_mode_qualified
+```
+
+---
+
+## Variable Updates
+
+### When Ramp Combo Completes
+```
+score:                   +50,000
+playfield_multiplier:    +1 (becomes 2x)
+ball_lock_qualified:     +1 shot
+```
+
+### When Loop Combo Completes
+```
+score:                   +75,000
+playfield_multiplier:    +1 (becomes 2x)
+ball_lock_qualified:     +1 shot (if not already)
+```
+
+### When Spinner Combo Completes
+```
+score:                   +100,000
+playfield_multiplier:    +2 (becomes 3x)
+super_mode_qualified:    +1 mode
+```
+
+---
+
+## Implementation Checklist
+
+**MUST DO:**
+```
+☐ Add playfield_multiplier to player_variables.yaml
+☐ Add ball_lock_qualified_shots to player_variables.yaml
+☐ Create shows/off.yaml
+☐ Create shows/flash.yaml
+☐ Create shows/on.yaml
+☐ Map combo_indicator_1/2/3 LEDs in lights.yaml
+```
+
+**SHOULD DO:**
+```
+☐ Add event listeners in ball lock mode
+☐ Add event listeners in hurry up mode
+☐ Add event listeners in super mode
+☐ Test all three combos
+☐ Tune time windows if needed
+```
+
+**NICE TO HAVE:**
+```
+☐ Display combo progress on slides
+☐ Add combo animations
+☐ Create mode-specific combos
+☐ Add combo statistics tracking
+```
+
+---
+
+## Testing Quick Commands
+
+```bash
+# Test Ramp Combo
+hit_and_release_switch s_left_ramp
+advance_time_and_run 1
+hit_and_release_switch s_right_orbit
+advance_time_and_run 1
+hit_and_release_switch s_left_spinner
+advance_time_and_run 0.1
+
+# Test Loop Combo
+hit_and_release_switch s_innerloop_left
+advance_time_and_run 1
+hit_and_release_switch s_innerloop_right
+advance_time_and_run 1
+hit_and_release_switch s_right_orbit
+advance_time_and_run 0.1
+
+# Test Spinner Combo
+hit_and_release_switch s_left_spinner
+advance_time_and_run 1
+hit_and_release_switch s_center_spinner
+advance_time_and_run 1
+hit_and_release_switch s_right_spinner
+advance_time_and_run 0.1
+```
+
+---
+
+## Show File Templates
+
+### off.yaml
+```yaml
+#config_version=6
+shows:
+  off:
+    - duration: 1
+      lights:
+        (leds): off
+```
+
+### flash.yaml
+```yaml
+#config_version=6
+shows:
+  flash:
+    - duration: 0.5
+      lights:
+        (leds): red
+    - duration: 0.5
+      lights:
+        (leds): off
+```
+
+### on.yaml
+```yaml
+#config_version=6
+shows:
+  on:
+    - duration: 1
+      lights:
+        (leds): red
+```
+
+---
+
+## Player Variables to Add
+
+```yaml
+# config/player_variables.yaml
+
+playfield_multiplier:
+  initial_value: 1
+  value_type: int
+  
+ball_lock_qualified_shots:
+  initial_value: 0
+  value_type: int
+```
+
+---
+
+## LED Token Mapping
+
+```yaml
+# config/lights.yaml
+
+lights:
+  combo_indicator_1:
+    number: io0804-0  # CHANGE TO YOUR BOARD
+    tags: combo_indicator
+  
+  combo_indicator_2:
+    number: io0804-1  # CHANGE TO YOUR BOARD
+    tags: combo_indicator
+  
+  combo_indicator_3:
+    number: io0804-2  # CHANGE TO YOUR BOARD
+    tags: combo_indicator
+```
+
+---
+
+## Event Listeners Template
+
+### Ball Lock Mode
+```yaml
+# modes/lock_mode/config/lock_mode.yaml
+event_player:
+  ball_lock_qualification_started:
+    - enable_lock_shots
+```
+
+### Hurry Up Mode
+```yaml
+# modes/hurry_up/config/hurry_up.yaml
+event_player:
+  hurry_up_mode_start:
+    - start_hurry_up_timer
+```
+
+### Super Mode
+```yaml
+# modes/super_mode/config/super_mode.yaml
+event_player:
+  super_mode_qualified:
+    - activate_super_features
+```
+
+---
+
+## Scoring Multiplier Effect
+
+```
+BASE GAME:
+Center Ramp:  2,000
+Right Orbit:  2,000
+
+AFTER RAMP COMBO (2x):
+Center Ramp:  4,000 (2x)
+Right Orbit:  4,000 (2x)
+
+AFTER SPINNER COMBO (3x):
+Center Ramp:  6,000 (3x)
+Right Orbit:  6,000 (3x)
+```
+
+---
+
+## Time Window Explanation
+
+```
+Hit Shot 1
+│
+├─ [5 second window]
+│
+├─ Hit Shot 2 ✓ (within window)
+│ │
+│ ├─ [5 second window]
+│ │
+│ ├─ Hit Shot 3 ✓ (within window)
+│ │
+│ └─ COMBO COMPLETE!
+│
+└─ If Shot 2 not hit in time: Combo resets
+```
+
+---
+
+## Troubleshooting One-Liners
+
+| Problem | Solution |
+|---------|----------|
+| Combo won't trigger | Check shot names in base.yaml match defined shots |
+| Events not posting | Verify event_player indentation is correct |
+| Multiplier not updating | Ensure playfield_multiplier variable exists |
+| Shows not playing | Check show files created in shows/ directory |
+| LEDs not lighting | Verify combo_indicator LEDs defined in lights.yaml |
+| Wrong sequence order | Review sequence shot order in base.yaml |
+| Time window too tight | Increase delay_between (e.g., 5s → 6s) |
+
+---
+
+## File Locations
+
+```
+✏️  MODIFIED:
+└─ modes/base/config/base.yaml
+
+📄 CREATED:
+├─ modes/base/SHOT_COMBOS_README.md
+├─ modes/base/COMBO_FLOW_DIAGRAMS.md
+├─ modes/base/IMPLEMENTATION_GUIDE.md
+├─ modes/base/COMBO_SYSTEM_SUMMARY.txt
+└─ modes/base/QUICK_REFERENCE.txt (this file)
+
+✅ TO CREATE:
+├─ config/player_variables.yaml (update)
+├─ config/lights.yaml (update)
+├─ shows/off.yaml (new)
+├─ shows/flash.yaml (new)
+└─ shows/on.yaml (new)
+```
+
+---
+
+## Need Help?
+
+1. **Full Setup Guide** → See IMPLEMENTATION_GUIDE.md
+2. **Visual Diagrams** → See COMBO_FLOW_DIAGRAMS.md
+3. **Complete Reference** → See SHOT_COMBOS_README.md
+4. **Full Summary** → See COMBO_SYSTEM_SUMMARY.txt
+
+---
+
+**Status: ✅ READY TO IMPLEMENT**

@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 
 mode: 
   start_events: ModeSelect_khorne_selected
@@ -15,6 +15,11 @@ mode:
 counters: 
     center_ramp:
         count_events: center_ramp_shot_hit
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 3
+    left_ramp:
+        count_events: left_ramp_shot_hit
         starting_count: 0
         count_interval: 1
         count_complete_value: 3
@@ -68,7 +73,7 @@ shots:
             led: l_center_ramp_arrow
             color: red
 
-    left_orbit_shot:
+    left_ramp_shot:
         switch: s_left_ramp
         profile: khorne_ramp_profile
         show_tokens:
@@ -116,37 +121,6 @@ shot_groups:
 
     ramp_shots:
         shots: center_ramp_shot, left_ramp_shot
-
-variable_player:
-    center_ramp_shot_hit:
-        score: 5000
-    left_ramp_shot_hit:
-        score: 5000
-    right_orbit_shot_hit:
-        score: 7500
-    left_spinner_shot_hit:
-        score: 2500
-    right_spinner_shot_hit:
-        score: 2500
-    center_spinner_shot_hit:
-        score: 2500
-    logicblock_center_ramp_complete:
-        score: 25000
-    logicblock_left_ramp_complete:
-        score: 25000
-    upper_vuk_shot_hit:
-        score: 50000
-
-event_player:
-    logicblock_center_ramp_complete:
-        - khorne_center_ramp_lit_up
-        - major_shots_relit
-    logicblock_left_ramp_complete:
-        - khorne_left_ramp_lit_up
-        - major_shots_relit
-    upper_vuk_shot_hit:
-        - khorne_super_jackpot_collected
-        - khorne_major_shots_reset
 
 
     
