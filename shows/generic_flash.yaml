@@ -30,3 +30,11 @@
 - time: "+1"
   lights:
     (led): off
+
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): stop

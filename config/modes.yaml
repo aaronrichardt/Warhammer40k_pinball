@@ -4,25 +4,25 @@
 modes: 
   - base
   #- high_score
+  - bonus
+  #- bonus_custom
   - xenos
-  - warp
   - nurgle
   - khorne
   - tzeench
   - slannesh
   - warp_qualify
   - ball_save
-  - ModeSelect
+  - mission_select
   - mechanicus_qualifier
   - necrons
   - mystery_mode
-  #- WeaponsBank
+  - weapons_bank
   - titan_multiball
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
   - tilt  
-  #- bonus
   #- necron_lock
   #- necron_lock_qualified
   #- necron_multiball

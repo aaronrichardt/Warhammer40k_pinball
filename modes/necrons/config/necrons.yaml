@@ -1,7 +1,7 @@
 #config_version=6
 
 mode:
-  start_events: ModeSelect_necrons_selected
+  start_events: mission_select_necrons_selected
   stop_events: timer_necrons_mode_timer_complete
   priority: 200
   
@@ -15,3 +15,8 @@ timers:
         restart_on_complete: false
         start_running: true
 
+
+shots:
+
+
+shot_groups:     

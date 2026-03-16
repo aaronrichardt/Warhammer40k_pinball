@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ce2gi3fvaxq55"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_grxbb"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_7dh2t"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_stnvm"]
+
+[node name="BonusWarpTotal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_grxbb")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1024.0
+offset_top = 704.0
+offset_right = 1734.0
+offset_bottom = 841.0
+theme = ExtResource("2_7dh2t")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = "100000000"
+script = ExtResource("3_stnvm")
+variable_name = "var_bonus_warp_total"
+comma_separate = true
+template_string = " %s"

@@ -1,6 +1,7 @@
 #config_version=6
 mode:
   start_events: ball_started
+  events_when_started: enable_base_scoop
   priority: 100
 
 config: 
@@ -12,12 +13,36 @@ slide_player:
     #init_done: welcome_slide
     #mode_attract_started: attract
 
+config: 
+    - events.yaml
+
 ball_holds:
   base_scoop:
-    balls_to_hold: 1
-    hold_devices: bd_scoop
-    enable_events: ball_started, enable_base_scoop
-    release_one_events: mystery_achieved
+      balls_to_hold: 1
+      hold_devices: bd_scoop
+      enable_events: enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled
+      #disable_events: xenos_earned, enable_mystery
+      release_all_events: release_one_ball
+      #release_one_events:  release_one_ball
+ 
+  mystery_select_scoop:
+      balls_to_hold: 1
+      hold_devices: bd_scoop
+      enable_events: enable_mystery, mode_mystery_mode_started
+      disable_events: ball_started , disable_mystery
+        #release_one_events:  release_one_ball
+
+  mission_select_scoop:
+      balls_to_hold: 1
+      hold_devices: bd_scoop
+      enable_events: xenos_earned
+      disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
+      # release_one_events: release_one_ball
+
+# queue_relay_player:
+#     balldevice_bd_scoop_ball_eject_attempt:
+#         post: play_scoop_flash_show
+#         wait_for: play_scoop_flash_show_complete
 
 show_player:
   mode_base_started:
@@ -31,6 +56,29 @@ show_player:
     pop_flash:
       speed: 2
       loops: 0
+  play_scoop_flash_show:
+    generic_flash:
+      speed: 15
+      loops: 0
+      #events_when_completed: play_scoop_flash_show_complete
+      show_tokens:
+        led: right_scoop_flasher
+        color: red
+#  balldevice_mystery_select_scoop_ejecting_ball:
+#    generic_flash:
+#      speed: 5
+#      loops: 0
+#      show_tokens:
+#        led: right_scoop_flasher
+#        color: red
+#
+#  balldevice_base_scoop_ejecting_ball:
+#    generic_flash:
+#      speed: 5
+#      loops: 0
+#      show_tokens:
+#        led: right_scoop_flasher
+#        color: red
 
 shots: 
   left_orbit:
@@ -50,7 +98,6 @@ shots:
   right_drain:
     switch: s_right_outlane
 
-
   mechanicus_scoop_shot:
     switch: s_scoop
     profile: generic_flash_profile
@@ -59,8 +106,7 @@ shots:
         color: lime 
     start_enabled: false
     enable_events: xenos_spotted
-    #restart_events: inlane_lane_group_lit_complete
-
+    
 
 shot_groups: 
   start_select_mode_group:
@@ -68,6 +114,7 @@ shot_groups:
     reset_events: 
     enable_events: xenos_spotted
     disable_events: mechanicus_scoop_shot_hit_complete
+    restart_events: xenos_spotted
 
 shot_profiles: 
   pop_profile:
@@ -87,14 +134,18 @@ shot_profiles:
         show: off
  
 accruals:
-  qualify_main_mode:
-    events: 
-      - left_ramp_shot_hit
-      - right_ramp_shot_hit
-    events_when_complete:
-      - carousel_qualified
-    disable_events: 
-    enable_events:
+    all_missions_complete:
+        events:
+            - award_nurgle_mission_complete
+            - award_khorne_mission_complete
+            - award_slannesh_mission_complete
+            - award_tyranids_mission_complete
+            - award_tzeench_mission_complete
+            - award_necron_mission_complete
+            
+    #disable_events: 
+    #enable_events:
+
 
 counters:
   blood_angels_qualify_counter:
@@ -178,6 +229,26 @@ multiball_locks:
         lock_devices: bd_titan
 
 sound_player:
+    enable_mystery:
+        Mystery_award_available:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    mystery_achieved:
+        Mystery_awards_pool:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     mode_base_started: 
         Admonition:
             action: play
@@ -188,7 +259,7 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
-    mode_waagh_multiball_started:
+    waagh_multiball_start:
         Rise_of_the_WAAAGH:
             action: play
             ducking:
@@ -198,7 +269,7 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
         Admonition:
-            action: play
+            action: stop
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -208,7 +279,7 @@ sound_player:
     left_drain_hit:
         big-ben:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -218,7 +289,7 @@ sound_player:
     s_left_slingshot_active:
         slingshots:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -228,7 +299,7 @@ sound_player:
     s_right_slingshot_active:
         slingshots:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec
@@ -239,7 +310,7 @@ sound_player:
     s_center_ramp_active:
         DP_Cinematic_SFX_Stinger_Impact Aware_01:
             action: play
-            volume: 1.3
+            volume: 2
             ducking:
                 bus: effects
                 attack: 0.3 sec

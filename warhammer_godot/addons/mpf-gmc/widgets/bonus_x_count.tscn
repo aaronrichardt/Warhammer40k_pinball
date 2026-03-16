@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://31mikcnwl6ct"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_h8gnr"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_p05h8"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_ojj8t"]
+
+[node name="BonusX" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_h8gnr")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 888.0
+offset_right = 667.0
+offset_bottom = 1025.0
+theme = ExtResource("2_p05h8")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = "Total= "
+script = ExtResource("3_ojj8t")
+template_string = "Total= "

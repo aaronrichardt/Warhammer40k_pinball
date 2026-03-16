@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl6y3bnqgg647"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_eff8w"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_fpsgd"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_a5yu4"]
+
+[node name="BonusRelicsCount" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_eff8w")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 0
+offset_left = 744.0
+offset_top = 56.0
+offset_right = 1176.0
+offset_bottom = 193.0
+theme = ExtResource("2_fpsgd")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+text = " 100,000"
+script = ExtResource("3_a5yu4")
+variable_name = "var_bonus_relic_value"
+comma_separate = true
+template_string = " %s  "

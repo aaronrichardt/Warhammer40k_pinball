@@ -6,18 +6,9 @@ mode:
   stop_events: mystery_achieved, multiball_active
   priority: 300
 
-# ball_holds:
-#   mystery_scoop:
-#     balls_to_hold: 1
-#     hold_devices: bd_scoop
-#     enable_events: enable_mystery
-#     disable_events: end_mystery, multiball_active
-#     release_one_events: end_mystery
-
 event_player:
   mystery_scoop_shot_mystery_shot_profile_flashing_hit:
-    - mystery_achieved|5s  # Unique reward event
-
+    - mystery_achieved|2s  # Unique reward event
 
 
 shots:
@@ -28,6 +19,7 @@ shots:
         led: l_mystery
         color: purple 
     start_enabled: true
+    restart_events: mystery_achieved
     #enable_events: carousel_item_selected_mystery_scoop
     #restart_events: inlane_lane_group_lit_complete
 

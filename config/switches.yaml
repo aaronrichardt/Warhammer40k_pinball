@@ -115,15 +115,18 @@ switches:
   s_center_spinner:
     number: 32082-24
     type: "NC"
+    debounce: quick
   s_inner_loop_lower:
     number: 32082-17
   s_left_spinner:
     number: 32082-18
+    debounce: quick
   s_center_ramp:
     number: 32082-19
     type: "NC"
   s_right_spinner:
     number: 32082-20
+    debounce: quick
   s_titan_lock2:
     number: 32082-21
     type: "NC"

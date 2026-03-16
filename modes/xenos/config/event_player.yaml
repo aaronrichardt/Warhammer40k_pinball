@@ -1,6 +1,9 @@
 #config_version=6
+
+
 event_player:
   #plus one gadget when accrual is complete
+
   xenos_spotted:
     - xenos_earned
     - xenosspot
@@ -26,3 +29,6 @@ event_player:
     - xenos_s_complete{device.accruals.xenos_accrual.value[4]==False }
     - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False and device.accruals.xenos_accrual.value[4]==True}
 
+  
+  ball_hold_mission_select_scoop_held_ball: start_mission_select
+  mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete

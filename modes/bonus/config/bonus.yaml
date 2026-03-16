@@ -1,19 +1,66 @@
 #config_version=6
 ##! mode: bonus
 
+mode:
+  start_events: ball_ending     # start on ball ending process
+  use_wait_queue: true          # delay ball ending
+  priority: 500                 # determines the order of ball end modes
+  stop_events: stop_bonus_mode     # post this event to stop the mode and continue the ball ending process
+
+
 mode_settings:
+  display_delay_ms: 2s
+  hurry_up_delay_ms: 100ms                         #after hurry-up event, switch to 0.3s delays
+  hurry_up_event: s_flipper_right_active,s_flipper_left_active
   bonus_entries:
-    - entry: bonus_switches
-      text: "Switches Hit"
-      score: (current_player.switch_hits )
-    - entry: bonus_holy_relics
-      text: "Holy Relics Collected"
-      score: (current_player.holy_relics) * (current_player.holy_relic_value)
-    - entry: bonus_modes_started
-      text: "Battles Started"
-      score: 750000
-      player_score_entry: current_player.modes_started
-    - entry: bonus_warpjumps
-      text: "Warp Jumps Made"
-      score: 150000
-      player_score_entry: current_player.warp_jumps
+
+    - entry: initial
+      score: 0
+      skip_if_zero: false
+
+    # - entry: pops
+    #   score: current_player.bonus_pops_value
+    #   player_score_entry: current_player.bonus_pops_count
+    #   skip_if_zero: false
+
+    - entry: pops
+      score: current_player.bonus_pops_value * current_player.bonus_pops_count
+      skip_if_zero: false
+    - entry: purity_seals
+      score: current_player.bonus_purity_seals_value * current_player.bonus_purity_seals_count
+      skip_if_zero: false
+    - entry: relics
+      score: current_player.bonus_relics_value * current_player.bonus_relics_count
+      skip_if_zero: false
+
+    # - entry: subtotal
+    #   score: 0
+    #   skip_if_zero: false
+
+    # - entry: multiplier
+    #   score: current_player.bonus_multiplier
+    #   skip_if_zero: false
+
+
+    # - entry: total
+    #   score: current_player.bonus_multiplier * (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps)
+    #   skip_if_zero: false
+    # - entry: bonus_relics
+    #   score: 100000* (current_player.holy_relics) 
+    # - entry: bonus_switches
+    #   score:   100000* (current_player.switch_hits )
+    # - entry: bonus_warps
+    #   score: 100000* (current_player.warp_jumps) 
+    # - entry: bonus_total
+    #   score: 100000* (current_player.holy_relics + current_player.switch_hits + current_player.warp_jumps)
+
+slide_player:
+  mode_bonus_started: bonus
+  bonus_start:
+      bonus:
+          action: update
+          tokens:
+              entry: initial
+  bonus_entry:
+      bonus:
+          action: update

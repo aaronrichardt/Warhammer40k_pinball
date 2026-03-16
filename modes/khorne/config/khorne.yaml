@@ -1,7 +1,7 @@
 #config_version=6
 
 mode: 
-  start_events: ModeSelect_khorne_selected
+  start_events: mission_select_khorne_selected
   stop_events: timer_khorne_mode_timer_complete
   priority: 200 
 
