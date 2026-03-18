@@ -5,16 +5,15 @@ mode:
   priority: 100
 
 config: 
-  - base_seqeunce_shots.yaml
+  - base_sequence_shots.yaml
   - base_variable_player.yaml
+  - events.yaml
 slide_player:
     mode_base_started: base
     mode_skillshot_stopped: base
     #init_done: welcome_slide
     #mode_attract_started: attract
 
-config: 
-    - events.yaml
 
 ball_holds:
   base_scoop:
