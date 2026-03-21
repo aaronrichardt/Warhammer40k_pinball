@@ -31,3 +31,4 @@ shot_profiles:
     states:
       - name: lit
         show: titan_lock_light_show
+        speed: 10
