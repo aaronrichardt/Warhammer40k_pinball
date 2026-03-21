@@ -1,0 +1,33 @@
+#config_version=6
+#
+mode:
+  start_events: ball_started
+  stop_events: ball_will_end
+  priority: 300
+
+
+event_player:
+  titan_lock_qualified:
+    - enable_titan_lock_shot
+    - lock_open
+  enable_titan_lock_shot_hit:
+    - lock_home
+
+shots:
+  titan_lock1:
+    switch: s_titan_lock1
+    start_enabled: false
+    profile: titan_lock_profile
+    enable_events: enable_titan_lock_shot
+    disable_events: enable_titan_lock_shot_hit
+    show_tokens:
+      shot_color: lime
+      shot_led1: l_center_ramp_circle
+      shot_led2: l_center_ramp_arrow
+
+
+shot_profiles:
+  titan_lock_profile:
+    states:
+      - name: lit
+        show: titan_lock_light_show
