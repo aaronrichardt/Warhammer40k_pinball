@@ -136,7 +136,17 @@ servos:
             0.7: ork_right
         number: playfield2-1
         reset_events: ball_starting, ball_ending
+    lock_servo:
+        platform_settings:
+            home_us: 2400
+            max_us: 2500
+            max_runtime: 5s
+        positions:
+            1.0: lock_home
+            0.2: lock_open
 
+        number: playfield2-2
+        reset_events: ball_starting, ball_ending
 
 autofire_coils:
   ac_slingshot_left:

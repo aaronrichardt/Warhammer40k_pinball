@@ -61,61 +61,61 @@ shot_profiles:
         loop: false
 
 shots:
-    center_ramp_shot:
+    khorne_center_ramp_shot:
         switch: s_center_ramp
         profile: khorne_ramp_profile
         show_tokens:
             led: l_center_ramp_arrow
             color: red
 
-    left_orbit_shot:
+    khorne_left_orbit_shot:
         switch: s_left_ramp
         profile: khorne_ramp_profile
         show_tokens:
             led: l_left_ramp_arrow
             color: red
 
-    right_orbit_shot:
+    khorne_right_orbit_shot:
         switch: s_right_orbit
         profile: khorne_major_shot_profile
         show_tokens:
             led: l_right_orbit_arrow
             color: red
 
-    upper_vuk_shot:
+    khorne_upper_vuk_shot:
         switch: s_jackpot_vuk
         profile: khorne_super_jackpot_profile
         show_tokens:
             led: l_jackpot_arrow
             color: red
 
-    left_spinner_shot:
+    khorne_left_spinner_shot:
         switch: s_left_spinner
         profile: khorne_major_shot_profile
         show_tokens:
             led: l_left_spinner_arrow
             color: red
 
-    right_spinner_shot:
+    khorne_right_spinner_shot:
         switch: s_right_spinner
         profile: khorne_major_shot_profile
         show_tokens:
             led: l_right_spinner_arrow
             color: red
 
-    center_spinner_shot:
+    khorne_center_spinner_shot:
         switch: s_center_spinner
         profile: khorne_major_shot_profile
         show_tokens:
             led: l_center_spinner_arrow
             color: red
 
-shot_groups:
-    major_shots:
-        shots: right_orbit_shot, left_spinner_shot, right_spinner_shot, center_spinner_shot
+# shot_groups:
+#     major_shots:
+#         shots: right_orbit_shot, left_spinner_shot, right_spinner_shot, center_spinner_shot
 
-    ramp_shots:
-        shots: center_ramp_shot, left_ramp_shot
+#     ramp_shots:
+#         shots: center_ramp_shot, left_ramp_shot
 
 variable_player:
     center_ramp_shot_hit:

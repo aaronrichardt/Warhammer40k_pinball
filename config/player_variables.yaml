@@ -31,7 +31,7 @@ player_vars:
   bonus_purity_seals_value:
     initial_value: 100000
   weapons_bank_value: 
-    initial_value: 
+    initial_value: 0
   blood_angels_qualify_value: 
     initial_value: 3 
   salamanders_qualify_value: 

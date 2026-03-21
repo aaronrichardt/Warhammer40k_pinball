@@ -5,7 +5,7 @@ mode:
   priority: 100
 
 config: 
-  - base_seqeunce_shots.yaml
+  - base_sequence_shots.yaml
   - base_variable_player.yaml
   - events.yaml
 slide_player:
