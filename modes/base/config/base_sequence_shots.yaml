@@ -3,8 +3,14 @@ sequence_shots:
   right_orbit:
     switch_sequence: s_right_orbit, s_innerloop_left
     sequence_timeout: 3s
+  innerloop_right:
+    switch_sequence: s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  innerloop_left:
+    switch_sequence: s_innerloop_left, s_innerloop_right
+    sequence_timeout: 3s
   complete_inner_loop:
-    switch_sequence: s_innerloop_right, s_innerloop_left, s_lowerloop
+    switch_sequence: s_innerloop_left, s_innerloop_right, s_left_outlane
     sequence_timeout: 3s
    #Secret Combo Shots
     # Xenos Bank into the innder loop

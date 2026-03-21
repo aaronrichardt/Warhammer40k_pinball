@@ -142,10 +142,6 @@ accruals:
             - award_tzeench_mission_complete
             - award_necron_mission_complete
             
-    #disable_events: 
-    #enable_events:
-
-
 counters:
   blood_angels_qualify_counter:
     count_events: left_orbit_hit
