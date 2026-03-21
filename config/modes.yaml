@@ -19,6 +19,7 @@ modes:
   - mystery_mode
   - weapons_bank
   - titan_multiball
+  - titan_multiball_qualifier
   #- waagh_multiball
   #- inquisition_multiball
   #- horus
