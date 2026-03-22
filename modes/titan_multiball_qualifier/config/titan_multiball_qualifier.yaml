@@ -10,6 +10,7 @@ event_player:
   titan_lock_qualified:
     - enable_titan_lock_shot
     - lock_open
+#event comes from the ball device when the lock is qualified, which is when the ball enters the lock and the lock is open. This means that the player has successfully locked a ball and qualified for multiball.
   multiball_lock_titan_locked_ball:
     - lock_home
 
@@ -34,5 +35,11 @@ shot_profiles:
           speed
 
 show_player:
-  shot_titan_lock1
+  multiball_lock_titan_locked_ball: 
+    2toneflash:
+     event: play
+     loops : 1
+     speed: 5
+
+
     
