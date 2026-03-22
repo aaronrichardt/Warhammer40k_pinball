@@ -32,14 +32,19 @@ shot_profiles:
     states:
       - name: lit
         show: titan_lock_light_show
-          speed
+        speed: 10
+        loops: -1
 
 show_player:
   multiball_lock_titan_locked_ball: 
     2toneflash:
-     event: play
+     action: play
      loops : 1
-     speed: 5
+     speed: 50
+     show_tokens:
+        even_color: lime
+        odd_color: white
+
 
 
     
