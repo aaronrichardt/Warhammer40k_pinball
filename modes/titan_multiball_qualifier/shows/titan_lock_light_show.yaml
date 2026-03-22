@@ -64,10 +64,3 @@
 - time: "+1"
   lights:
     (shot_led2): off
-
-
-
-
-
-
-  duration: -1
