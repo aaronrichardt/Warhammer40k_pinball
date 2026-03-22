@@ -167,3 +167,7 @@ switches:
     number: io0804-4  
   s_35:
     number: io0804-5
+  s_36:
+    number: io0804-6
+  s_37:
+    number: io0804-7

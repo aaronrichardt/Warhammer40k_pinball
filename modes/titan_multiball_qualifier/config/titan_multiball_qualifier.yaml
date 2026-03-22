@@ -28,7 +28,7 @@ shots:
 
 
 sound_player:
-    multiball_lock_titan_locked_ball {total_balls_locked=1}:  
+    multiball_lock_titan_locked_ball{multiball_lock_titan_locked_ball.total_balls_locked==1}:  
         BallOneLocked:
             action: play
             volume: 1
@@ -38,7 +38,7 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
-    multiball_lock_titan_locked_ball {total_balls_locked=2}: 
+    multiball_lock_titan_locked_ball{multiball_lock_titan_locked_ball.total_balls_locked==2}: 
         BallTwoLocked:
             action: play
             volume: 1
