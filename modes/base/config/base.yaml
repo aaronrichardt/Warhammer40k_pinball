@@ -222,6 +222,7 @@ multiball_locks:
     titan:
         balls_to_lock: 3
         lock_devices: bd_titan
+        balls_to_replace: 2
 
 sound_player:
     enable_mystery:
