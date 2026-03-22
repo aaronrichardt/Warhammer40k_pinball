@@ -10,7 +10,7 @@ event_player:
   titan_lock_qualified:
     - enable_titan_lock_shot
     - lock_open
-  enable_titan_lock_shot_hit:
+  multiball_lock_titan_locked_ball:
     - lock_home
 
 shots:
@@ -18,8 +18,8 @@ shots:
     switch: s_titan_lock1
     start_enabled: false
     profile: titan_lock_profile
-    enable_events: enable_titan_lock_shot
-    disable_events: enable_titan_lock_shot_hit
+    restart_events: enable_titan_lock_shot
+    disable_events: multiball_lock_titan_locked_ball
     show_tokens:
       shot_color: lime
       shot_led1: l_center_ramp_circle
@@ -31,4 +31,8 @@ shot_profiles:
     states:
       - name: lit
         show: titan_lock_light_show
-        speed: 10
+          speed
+
+show_player:
+  shot_titan_lock1
+    
