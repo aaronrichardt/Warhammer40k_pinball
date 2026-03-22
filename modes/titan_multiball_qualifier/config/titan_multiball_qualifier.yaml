@@ -27,6 +27,28 @@ shots:
       shot_led2: l_center_ramp_arrow
 
 
+sound_player:
+    multiball_lock_titan_locked_ball {total_balls_locked=1}:  
+        BallOneLocked:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    multiball_lock_titan_locked_ball {total_balls_locked=2}: 
+        BallTwoLocked:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+
 shot_profiles:
   titan_lock_profile:
     states:
