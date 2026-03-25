@@ -20,13 +20,10 @@ modes:
   - weapons_bank
   - titan_multiball
   - titan_multiball_qualifier
-  #- waagh_multiball
-  #- inquisition_multiball
-  #- horus
   - tilt  
-  #- necron_lock
+  - necron_lock
   #- necron_lock_qualified
-  #- necron_multiball
+  - necron_multiball
   - gorkmorkrollovers
   - waagh_qualifier
   - waagh_multiball
