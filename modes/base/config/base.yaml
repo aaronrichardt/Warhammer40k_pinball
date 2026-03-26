@@ -228,7 +228,8 @@ sound_player:
     enable_mystery:
         Mystery_award_available:
             action: play
-            volume: 1
+            volume: .7
+            bus: music
             ducking:
                 bus: voice
                 attack: 0.3 sec
@@ -248,7 +249,8 @@ sound_player:
     mode_base_started: 
         Admonition:
             action: play
-            volume: 0.7
+            volume: 0.5
+            bus: music
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -258,6 +260,8 @@ sound_player:
     waagh_multiball_start:
         Rise_of_the_WAAAGH:
             action: play
+            bus: music
+            volume: 1
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -266,6 +270,8 @@ sound_player:
                 release: 1.0 sec
         Admonition:
             action: stop
+            bus: music
+
             ducking:
                 bus: music
                 attack: 0.3 sec

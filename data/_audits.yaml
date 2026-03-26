@@ -46,7 +46,6 @@ missing_switches:
   s_pop_top: 30
   s_right_eos: 30
   s_right_flipper: 30
-  s_right_inlane: 3
   s_right_orbit: 22
   s_right_outlane: 34
   s_right_poptarget: 1
@@ -138,12 +137,12 @@ shots:
   rewardbank_lightspinners: 21
   right_drain: 123
   right_sling_shot: 115
-  right_slingshot: 623
+  right_slingshot: 624
   right_spinner_shot: 1
   skill_left_inlane: 38
   skill_lowerloop: 22
   skill_necron: 7
-  skill_right_inlane: 45
+  skill_right_inlane: 46
   skill_right_outlane: 7
   skill_xenos_e: 15
   skill_xenos_n: 17
@@ -157,7 +156,7 @@ shots:
   top_lane_gork: 26
   top_lane_mork: 34
   warp_inlane_left: 193
-  warp_inlane_right: 305
+  warp_inlane_right: 306
   warp_outlane_left: 244
   warp_outlane_right: 119
 switches:
@@ -207,7 +206,7 @@ switches:
   s_pop_top: 245
   s_right_eos: 1130
   s_right_flipper: 1228
-  s_right_inlane: 314
+  s_right_inlane: 315
   s_right_orbit: 112
   s_right_outlane: 124
   s_right_poptarget: 9
