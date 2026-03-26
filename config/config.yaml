@@ -113,9 +113,9 @@ ball_devices:
         ball_switches: s_jackpot_vuk
         eject_coil: c_jackpot_vuk
         eject_timeouts: 3s
-    #bd_necron_lock:
-    #  mechanical_eject: Trues
-    #  ball_switches: s_droptarget_opto    
+    bd_necron_lock:
+      mechanical_eject: true
+      ball_switches: s_37    
 
     #d_droppod:
     # mechanical_eject: false
