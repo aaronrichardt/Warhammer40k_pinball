@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4n5l3y1li5qy"]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_uw5rk"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_oaens"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_grapx"]
+[ext_resource type="Texture2D" uid="uid://bgyy4bi1l32la" path="res://addons/mpf-gmc/images/imperal fists logo.jpg" id="4_8hssv"]
+
+[node name="MPFWidget" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1223.0
+offset_top = 160.0
+offset_right = 1880.0
+offset_bottom = 370.0
+script = ExtResource("1_uw5rk")
+
+[node name="MPFVariable" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.41
+anchor_right = -0.41
+offset_left = 326.37
+offset_top = -32.0
+offset_right = 941.37
+offset_bottom = 56.0
+theme = ExtResource("2_oaens")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "Add more Time To Modes"
+script = ExtResource("3_grapx")
+variable_name = "imperial_fist_details"
+comma_separate = true
+template_string = "Timer: %ss"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -111.0
+offset_top = -56.0
+offset_right = 33.0
+offset_bottom = 88.0
+texture = ExtResource("4_8hssv")
+expand_mode = 1
