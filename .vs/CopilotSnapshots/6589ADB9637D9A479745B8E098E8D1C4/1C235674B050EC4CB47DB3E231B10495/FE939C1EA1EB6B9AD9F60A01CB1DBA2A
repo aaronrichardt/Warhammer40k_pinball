@@ -1,0 +1,378 @@
+﻿#config_version=6
+# TZEENCH - THE CHANGER OF WAYS
+# Stage 1: Dramatic strobe effect with roaming shot mechanic
+# Stage 2: Batman 66-style progressive ruleset
+
+mode:
+  start_events: mission_select_tzeench_selected
+  stop_events: timer_tzeench_mode_timer_complete
+  priority: 200
+
+timers:
+  tzeench_mode_timer:
+    start_value: 60 # seconds
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    restart_on_complete: false
+    start_running: true
+
+  # Timer that rotates roaming shot every 6 seconds
+  tzeench_roaming_advance:
+    start_value: 6 # seconds
+    end_value: 0
+    direction: down
+    tick_interval: 1s
+    restart_on_complete: true
+    start_running: true
+
+# The 9 roaming shots
+shots:
+  tzeench_center_ramp_shot:
+    switch: s_18
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_center_ramp_arrow
+      color: aqua
+
+  tzeench_left_orbit_shot:
+    switch: s_snikt_target
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_left_orbit_arrow
+      color: aqua
+
+  tzeench_right_orbit_shot:
+    switch: s_27
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_right_orbit_arrow
+      color: aqua
+
+  tzeench_inner_loop_left_shot:
+    switch: s_scoop_nurgle_target
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_left_innerloop_arrow
+      color: aqua
+
+  tzeench_inner_loop_right_shot:
+    switch: s_24
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_right_innerloop_circle
+      color: aqua
+
+  tzeench_droptarget_shot:
+    switch: s_26
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_solemnace_arrow
+      color: aqua
+
+  tzeench_scoop_shot:
+    switch: s_scoop_nurgle_target
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_nurgle1
+      color: aqua
+
+  tzeench_jackpot_shot:
+    switch: s_25
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_jackpot
+      color: aqua
+
+  tzeench_snikt_target_shot:
+    switch: s_snikt_target
+    profile: tzeench_roaming_profile
+    show_tokens:
+      led: l_left_sling_upper
+      color: aqua
+
+  # Super Jackpot shot - becomes lit in Stage 2 & 3
+  tzeench_super_jackpot:
+    switch: s_25
+    profile: tzeench_jackpot_profile
+    start_enabled: false
+    show_tokens:
+      led: l_jackpot
+      color: aqua
+
+# Shot group for roaming rotation
+shot_groups:
+  tzeench_roaming_shots:
+    shots: tzeench_center_ramp_shot, tzeench_left_orbit_shot, tzeench_right_orbit_shot, tzeench_inner_loop_left_shot, tzeench_inner_loop_right_shot, tzeench_droptarget_shot, tzeench_scoop_shot, tzeench_jackpot_shot, tzeench_snikt_target_shot
+    rotate_events: timer_tzeench_roaming_advance_complete
+    enable_events: mode_tzeench_started
+    disable_events: timer_tzeench_mode_timer_complete
+
+shot_profiles:
+  tzeench_roaming_profile:
+    states:
+      - name: roaming
+        show: "strobe_white"
+      - name: hit
+        show: "tzeench_roaming_hit"
+    loop: false
+
+  tzeench_stage2_profile:
+    states:
+      - name: flashing
+        show: "generic_flash"
+        show_tokens:
+          led: (led)
+          color: (color)
+      - name: hit
+        show: "on"
+        show_tokens:
+          led: (led)
+
+  tzeench_stage3_profile:
+    states:
+      - name: flashing
+        show: "generic_flash"
+        show_tokens:
+          led: (led)
+          color: (color)
+      - name: lit
+        show: "on"
+        show_tokens:
+          led: (led)
+      - name: hit
+        show: "generic_flash"
+        show_tokens:
+          led: (led)
+          color: yellow
+    loop: true
+
+  tzeench_jackpot_profile:
+    states:
+      - name: unlit
+        show: "off"
+      - name: lit
+        show: "generic_flash"
+        show_tokens:
+          led: (led)
+          color: (color)
+      - name: hit
+        show: "on"
+        show_tokens:
+          led: (led)
+
+# Event handlers for game logic
+event_player:
+  mode_tzeench_started:
+    # Turn off GI lights for strobe effect
+    - show_player|show_name=gi_lights_off:
+        lights:
+          tag: GI
+    # Start strobing all GI lights with white
+    - show_player|show_name=strobe_white:
+        lights:
+          tag: GI
+        loop: true
+    # Light up first shot (roaming group will auto-select first shot)
+    - shot_tzeench_roaming_shots_lighting_hit
+
+  # When any roaming shot is hit
+  shot_tzeench_center_ramp_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - timer_tzeench_roaming_advance_restart
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_left_orbit_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_right_orbit_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_inner_loop_left_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_inner_loop_right_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_droptarget_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_scoop_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_jackpot_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  shot_tzeench_snikt_target_shot_hit:
+    - variable_player|tzeench_shots_hit|add:1
+    - variable_player|tzeench_shot_value|add:10000
+    - scoring|score:current_player.tzeench_shot_value
+    - shot_tzeench_roaming_shots_rotate_right
+    - delay:15s|event:tzeench_reset_roaming_shots
+
+  # Left xenos target bank hit increases base shot value
+  s_left_xenos_target_active:
+    - variable_player|tzeench_shot_value|add:50000
+
+  # Check if 9+ shots hit to advance to stage 2
+  variable_tzeench_shots_hit|ge:9:
+    - variable_player|tzeench_stage|set:2
+    - event_player|post:tzeench_stage_2_start
+
+  # Stage 2 transition
+  tzeench_stage_2_start:
+    # Turn GI lights back on (normal operation)
+    - show_player|show_name=off:
+        lights:
+          tag: GI
+    - variable_player|tzeench_stage2_shots_hit|set:0
+
+  # STAGE 2: Any shot to light Super Jackpot
+  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:2:
+    - variable_player|tzeench_stage2_shots_hit|add:1
+    - scoring|score:250000
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:2:
+    - variable_player|tzeench_stage2_shots_hit|add:1
+    - scoring|score:250000
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:2:
+    - variable_player|tzeench_stage2_shots_hit|add:1
+    - scoring|score:250000
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:2:
+    - variable_player|tzeench_stage2_shots_hit|add:1
+    - scoring|score:250000
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:2:
+    - variable_player|tzeench_stage2_shots_hit|add:1
+    - scoring|score:250000
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  # Super Jackpot hit in Stage 2 - advance to Stage 3
+  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:2:
+    - scoring|score:1000000
+    - event_player|post:tzeench_stage_3_start
+
+  # Stage 3 transition
+  tzeench_stage_3_start:
+    - variable_player|tzeench_stage|set:3
+    - variable_player|tzeench_stage3_shots_hit|set:0
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  # STAGE 3: 5-shot progression with cycling
+  # First, light all stage 3 shots
+  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_droptarget_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_scoop_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_jackpot_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  shot_tzeench_snikt_target_shot_hit|current_player.tzeench_stage:3:
+    - variable_player|tzeench_stage3_shots_hit|add:1
+    - scoring|score:500000
+    - shot_tzeench_stage3_shots_reset
+    - shot_tzeench_stage3_shots_lighting_hit
+
+  # Check if 5 shots hit - light Super Jackpot
+  variable_tzeench_stage3_shots_hit|ge:5:
+    - shot_tzeench_super_jackpot_lighting_hit
+
+  # Super Jackpot hit in Stage 3 - mode complete!
+  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:3:
+    - scoring|score:5000000
+    - event_player|post:tzeench_mode_complete
+
+  # Reset shots after 15 seconds
+  tzeench_reset_roaming_shots:
+    - shot_tzeench_roaming_shots_reset
+
+sound_player:
+  mission_select_tzeench_selected|2s:
+    BlueSpinnerThenScoop_01:
+      action: play
+      volume: 1
+      ducking:
+        bus: voice
+        attack: 0.3 sec
+        attenuation: 0
+        release_point: 2.0 sec
+        release: 1.0 sec
+

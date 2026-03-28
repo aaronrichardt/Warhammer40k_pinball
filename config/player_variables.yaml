@@ -40,3 +40,13 @@ player_vars:
     initial_value: 3 
   dark_angels_qualify_value: 
     initial_value: 3 
+  tzeench_shots_hit:
+    initial_value: 0
+  tzeench_stage:
+    initial_value: 1
+  tzeench_shot_value:
+    initial_value: 100000
+  tzeench_stage2_shots_hit:
+    initial_value: 0
+  tzeench_stage3_shots_hit:
+    initial_value: 0

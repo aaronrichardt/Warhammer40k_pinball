@@ -1,0 +1,154 @@
+﻿#config_version=6
+# Tzeench - The Changer of Ways (Number 9):
+mode:
+  start_events: mission_select_tzeench_selected
+  stop_events: timer_tzeench_mode_timer_complete
+  priority: 200
+
+timers:
+    tzeench_mode_timer: 
+        start_value: 60 # seconds
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false
+
+counters: 
+    center_tzeench_spinner:
+        count_events: s_center_spinner_active
+        starting_count: 50
+        count_interval: 1
+        direction: down
+        count_complete_value: 0
+    left_tzeench_spinner:
+        count_events: s_left_spinner_active
+        starting_count: 30
+        count_interval: 1
+        direction: down
+        count_complete_value: 0
+    right_tzeench_spinner: 
+        count_events: s_right_spinner_active
+        starting_count: 60
+        count_interval: 1
+        direction: down
+        count_complete_value: 0
+
+
+event_player:
+    logicblock_center_tzeench_spinner_complete: 
+        s_tempholder1_active
+    logicblock_left_tzeench_spinner_complete:
+        s_tempholder2_active
+    logicblock_right_tzeench_spinner_complete:
+        s_tempholder3_active
+
+sound_player:
+    mission_select_tzeench_selected|2s:
+        BlueSpinnerThenScoop_01:
+            action: play
+            volume: 1
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+#config_version=6
+##! mode: xenos
+accruals:
+  tzeench_accrual:
+    events:
+      - center_spinner_shot_completed # index [0]
+      - left_spinner_shot_completed # index [1]
+      - right_spinner_shot_completed # index [2]
+    reset_on_complete: false
+    disable_on_complete: true 
+    events_when_complete: tzeench_spinners_complete 
+
+shots:
+    center_spinner_shot:
+        switch: s_tempholder1
+        profile: generic_flash
+        show_tokens:
+             led: l_innerloop_arrow
+             color: aqua
+    left_spinner_shot:
+        switch: s_tempholder2
+        profile: generic_flash
+        show_tokens:
+             led: l_center_ramp_circle, l_center_ramp_arrow
+             color: aqua
+    right_spinner_shot:
+        switch: s_tempholder3
+        profile: generic_flash
+        show_tokens:
+             led: l_right_orbit_arrow
+             color: aqua
+    center_ramp_shot:
+        switch: s_center_ramp
+        profile: generic_flash
+        start_enabled: false
+        show_tokens:
+             led: l_center_ramp_arrow
+             color: red
+
+
+# Make a false switch entry and then user the counters
+# complete to throw the switch hit logic that ends the shot and rewards completing each shot
+
+shot_groups:
+    tzeench_spinners:
+        shots: 
+            - center_spinner_shot
+            - left_spinner_shot
+            - right_spinner_shot
+        enable_events: ModeSelect_tzeench_selected
+        disable_events: timer_tzeench_mode_timer_complete
+
+    center_ramp_final_shot_group:
+        shots:
+            - center_ramp_shot
+        enable_events: tzeench_spinners_hit_complete
+        disable_events: ModeSelect_tzeench_selected
+
+
+shot_profiles:
+    generic_flash:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+    final_shot_profile:
+        states:
+            - name: flashing
+              show: "generic_flash"
+            - name: hit
+              show: "on"
+        loop: false
+
+variable_player:
+    spinners_shot_1stcomplete:
+        score: 5000000 * current_player.playfield_multiplier
+    spinners_shot_2ndcomplete:
+        score: 10000000 * current_player.playfield_multiplier
+    spinners_shot_3rdcomplete:
+        score: 15000000 * current_player.playfield_multiplier
+    center_ramp_final_shot_group_complete:
+        score: 25000000 * current_player.playfield_multiplier
+
+show_player:
+    center_spinner_shot_hit:
+        CenterSpinnerExpanding:
+            speed: 20
+            loops: 0
+    left_spinner_shot_hit:
+       LeftSpinnerExpanding:
+            speed: 20
+            loops: 0
+    right_spinner_shot_hit:
+        RightSpinnerExpanding:
+            speed: 20
+            loops: 0
+

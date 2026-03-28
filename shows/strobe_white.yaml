@@ -1,0 +1,12 @@
+#show_version=6
+
+# White strobe effect for Tzeench Stage 1 - 300ms blink
+shows:
+  strobe_white:
+    - duration: 0.3s
+      lights:
+        (led): white
+    - duration: 0.3s
+      lights:
+        (led): off
+
