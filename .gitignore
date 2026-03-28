@@ -19,4 +19,9 @@ logs/*.log
 /.vs/Warhammer40k_pinball/CopilotIndices/17.14.734.62261/SemanticSymbols.db-wal
 /.vs/Warhammer40k_pinball/CopilotIndices/17.14.734.62261/SemanticSymbols.db-shm
 /.vs/slnx.sqlite-journal
+<<<<<<< HEAD
+=======
+/.vs/Warhammer40k_pinball.slnx/FileContentIndex/55bae954-4e25-4372-ac39-c1ceeb5eef25.vsidx
+/.vs/Warhammer40k_pinball.slnx/FileContentIndex
+>>>>>>> a6a3b1b0020a0c2fea2c9b1894d57cc791a12956
 /.vs/Warhammer40k_pinball.slnx

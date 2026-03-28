@@ -1,0 +1,6 @@
+#show_version=6
+
+# GI lights off for Tzeench Stage 1 strobe effect
+    - time: "0s"
+      lights:
+        (led): off

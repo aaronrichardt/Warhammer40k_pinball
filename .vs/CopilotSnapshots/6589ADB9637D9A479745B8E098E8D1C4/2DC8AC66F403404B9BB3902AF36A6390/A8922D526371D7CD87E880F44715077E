@@ -1,0 +1,52 @@
+﻿#config_version=6
+player_vars:
+  xenos_available:
+    initial_value: 0
+  xenos_earned:
+    initial_value: 0
+  bonus_switches:
+    initial_value: 0
+  bonus_pops_value:
+    initial_value: 1000
+  bonus_pops_count:
+    initial_value: 10
+  bonus_modes_started:
+    initial_value: 0
+  pv_warp_mode_counter:
+    initial_value: 0
+  pv_necron_lock_count:
+    initial_value: 0
+  bonus_multiplier: 
+    initial_value: 2
+  playfield_multiplier: 
+    initial_value: 1
+  bonus_total:
+    initial_value: 1
+  bonus_relics_count:
+    initial_value: 0
+  bonus_relics_value:
+    initial_value: 250000
+  bonus_purity_seals_count:
+    initial_value: 0
+  bonus_purity_seals_value:
+    initial_value: 100000
+  weapons_bank_value: 
+    initial_value: 0
+  blood_angels_qualify_value: 
+    initial_value: 3 
+  salamanders_qualify_value: 
+    initial_value: 3 
+  imperial_fists_qualify_value: 
+    initial_value: 3 
+  dark_angels_qualify_value: 
+    initial_value: 3 
+  tzeench_shots_hit:
+    initial_value: 0
+  tzeench_stage:
+    initial_value: 1
+  tzeench_shot_value:
+    initial_value: 100000
+  tzeench_stage2_shots_hit:
+    initial_value: 0
+  tzeench_stage3_shots_hit:
+    initial_value: 0

@@ -14,7 +14,7 @@ ball_saves:
     timer_start_events: balldevice_bd_plunger_ball_eject_success
     auto_launch: true
     balls_to_save: 1
-    early_ball_save_events: s_right_outlane_active, s_ball_save_active, s_left_outlane_active
+    early_ball_save_events: s_right_outlane_active, s_ball_save_active, s_left_inlane_active
     
   random_ball_save:
     active_time: 1.5s

@@ -19,13 +19,11 @@ modes:
   - mystery_mode
   - weapons_bank
   - titan_multiball
-  #- waagh_multiball
-  #- inquisition_multiball
-  #- horus
+  - titan_multiball_qualifier
   - tilt  
-  #- necron_lock
+  - necron_lock
   #- necron_lock_qualified
-  #- necron_multiball
+  - necron_multiball
   - gorkmorkrollovers
   - waagh_qualifier
   - waagh_multiball

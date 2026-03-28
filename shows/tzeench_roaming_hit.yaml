@@ -1,0 +1,18 @@
+#show_version=6
+
+# Wavy light blue for Tzeench roaming shot hit
+    - time: "+0.3s"
+      lights:
+        (led): aqua
+    - time: "+0.3s"
+      lights:
+        (led): off
+    - time: "+0.3s"
+      lights:
+        (led): aqua
+    - time: "+0.3s"
+      lights:
+        (led): off
+    - time: "+0.3s"
+      lights:
+        (led): aqua

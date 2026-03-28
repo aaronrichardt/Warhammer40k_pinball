@@ -1,0 +1,157 @@
+﻿#config_version=6
+
+mode: 
+  start_events: ModeSelect_khorne_selected
+  stop_events: timer_khorne_mode_timer_complete
+  priority: 200 
+
+#stage 1
+#Two Ramps are like make each ramp 3 times to light super jackpot and relight all major shots 
+#hit as many of the major shots before scoring super jackpot at the upper vuk
+# 
+
+#Khorne - The Blood God (Number 8):
+
+counters: 
+    center_ramp:
+        count_events: center_ramp_shot_hit
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 3
+    left_ramp:
+        count_events: left_ramp_shot_hit
+        starting_count: 0
+        count_interval: 1
+        count_complete_value: 3
+
+
+timers:
+    khorne_mode_timer: 
+        start_value: 60 # seconds
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: true
+
+shot_profiles:
+    khorne_ramp_profile:
+        states:
+            - name: unlit
+              show: "off"
+            - name: lit
+              show: "flash"
+            - name: complete
+              show: "on"
+        loop: false
+
+    khorne_major_shot_profile:
+        states:
+            - name: unlit
+              show: "off"
+            - name: lit
+              show: "flash"
+            - name: hit
+              show: "on"
+        loop: true
+
+    khorne_super_jackpot_profile:
+        states:
+            - name: unlit
+              show: "off"
+            - name: lit
+              show: "pulse_fast"
+            - name: collected
+              show: "on"
+        loop: false
+
+shots:
+    center_ramp_shot:
+        switch: s_center_ramp
+        profile: khorne_ramp_profile
+        show_tokens:
+            led: l_center_ramp_arrow
+            color: red
+
+    left_ramp_shot:
+        switch: s_left_ramp
+        profile: khorne_ramp_profile
+        show_tokens:
+            led: l_left_ramp_arrow
+            color: red
+
+    right_orbit_shot:
+        switch: s_right_orbit
+        profile: khorne_major_shot_profile
+        show_tokens:
+            led: l_right_orbit_arrow
+            color: red
+
+    upper_vuk_shot:
+        switch: s_jackpot_vuk
+        profile: khorne_super_jackpot_profile
+        show_tokens:
+            led: l_jackpot_arrow
+            color: red
+
+    left_spinner_shot:
+        switch: s_left_spinner
+        profile: khorne_major_shot_profile
+        show_tokens:
+            led: l_left_spinner_arrow
+            color: red
+
+    right_spinner_shot:
+        switch: s_right_spinner
+        profile: khorne_major_shot_profile
+        show_tokens:
+            led: l_right_spinner_arrow
+            color: red
+
+    center_spinner_shot:
+        switch: s_center_spinner
+        profile: khorne_major_shot_profile
+        show_tokens:
+            led: l_center_spinner_arrow
+            color: red
+
+shot_groups:
+    major_shots:
+        shots: right_orbit_shot, left_spinner_shot, right_spinner_shot, center_spinner_shot
+
+    ramp_shots:
+        shots: center_ramp_shot, left_ramp_shot
+
+variable_player:
+    center_ramp_shot_hit:
+        score: 5000
+    left_ramp_shot_hit:
+        score: 5000
+    right_orbit_shot_hit:
+        score: 7500
+    left_spinner_shot_hit:
+        score: 2500
+    right_spinner_shot_hit:
+        score: 2500
+    center_spinner_shot_hit:
+        score: 2500
+    logicblock_center_ramp_complete:
+        score: 25000
+    logicblock_left_ramp_complete:
+        score: 25000
+    upper_vuk_shot_hit:
+        score: 50000
+
+event_player:
+    logicblock_center_ramp_complete:
+        - khorne_center_ramp_lit_up
+        - major_shots_relit
+    logicblock_left_ramp_complete:
+        - khorne_left_ramp_lit_up
+        - major_shots_relit
+    upper_vuk_shot_hit:
+        - khorne_super_jackpot_collected
+        - khorne_major_shots_reset
+
+
+    

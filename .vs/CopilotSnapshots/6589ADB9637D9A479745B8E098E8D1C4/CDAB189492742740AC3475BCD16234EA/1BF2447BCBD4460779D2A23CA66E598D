@@ -1,0 +1,722 @@
+﻿#config_version=6
+mode:
+  start_events: ball_started
+  priority: 100
+
+slide_player:
+    mode_base_started: base
+    mode_skillshot_stopped: base
+    #init_done: welcome_slide
+    #mode_attract_started: attract
+
+ball_holds:
+  base_scoop:
+    balls_to_hold: 1
+    hold_devices: bd_scoop
+    enable_events: ball_started, enable_base_scoop
+    release_one_events: mystery_achieved
+
+show_player:
+  mode_base_started:
+    base_light_show:
+      speed: 1
+  s_pop_top_active:
+    pop_flash:
+      speed: 2
+      loops: 0
+  s_pop_bottom_active:
+    pop_flash:
+      speed: 2
+      loops: 0
+
+variable_player:
+
+  s_lower_bigtarget_active:
+    score: 3000 * (current_player.playfield_multiplier)
+  s_upper_bigtarget_active:
+    score: 5000 * (current_player.playfield_multiplier)
+  s_right_inlane_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_left_inlane_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_right_outlane_active:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_left_outlane_active:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_left_slingshot_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_right_slingshot_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_pop_left_active:
+    score: 500  * (current_player.playfield_multiplier)
+  s_pop_right_active:
+    score: 500 * (current_player.playfield_multiplier)
+  s_rollover_mork_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_rollover_gork_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_upperscoop_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_spinner_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_x_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_e_active:
+    score: 100  * (current_player.playfield_multiplier)
+  s_xenos_n_active:
+    score: 100 * (current_player.playfield_multiplier)
+  s_xenos_o_active:
+    score: 100   * (current_player.playfield_multiplier)
+  s_xenos_s_active:
+    score: 100  * (current_player.playfield_multiplier)
+  s_kickback1_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_kickback2_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_disk_backtarget_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_droptarget_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_droptarget_lock_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  spinner_center_spinner_hit:
+    score: 5000 * (current_player.playfield_multiplier)
+  s_scoop_active:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_3bank_shot_hit:
+    score: 1000 * (current_player.playfield_multiplier)
+  s_3bank_shot_flashProfile_flashing_hit:
+    score: 10000 * (current_player.playfield_multiplier)
+  s_center_ramp_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_active_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_scoop_nurgle_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_18_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_mystery_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_bonus_x_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_spinners_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_light_lock_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_droptarget_down_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_24_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_25_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_26_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_27_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_necron_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_right_orbit_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_redcircle_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_right_spinner_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock1_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock2_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_titan_lock3_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_jackpot_vuk_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_nurgle_ricochet_target_active:
+    score: 2000 * (current_player.playfield_multiplier)
+  s_waagh_newton_ball_active:
+    score: 2000 * (current_player.playfield_multiplier)
+
+
+shots: 
+  left_orbit:
+    switch: s_left_ramp
+  left_slingshot:
+    switch: s_left_slingshot
+  right_slingshot:
+    switch: s_right_slingshot
+  pop_top:
+    switch: s_pop_top
+    profile: pop_profile
+  pop_bottom:
+    switch: s_pop_bottom
+    profile: pop_profile
+  right_orbit:
+    switch: s_right_orbit
+  left_spinner:
+    switch: s_left_spinner
+  center_spinner:
+    switch: s_center_spinner
+  right_spinner:
+    switch: s_right_spinner
+  inner_loop_left:
+    switch: s_innerloop_left
+  innerloop_right:
+    switch: s_innerloop_right
+  center_ramp:
+    switch: s_center_ramp
+
+sequence_shots:
+  ramp_to_orbit_combo:
+    sequences:
+      - shot: left_orbit
+        shot: right_orbit
+        shot: left_spinner
+    delay_between: 5s
+    sequence_complete_events: ramp_to_orbit_combo_complete
+    show_tokens:
+      leds: combo_indicator_1
+      color: green
+
+  loop_combo:
+    sequences:
+      - shot: inner_loop_left
+        shot: innerloop_right
+        shot: right_orbit
+    delay_between: 5s
+    sequence_complete_events: loop_combo_complete
+    show_tokens:
+      leds: combo_indicator_2
+      color: green
+
+  spinner_rampage_combo:
+    sequences:
+      - shot: left_spinner
+        shot: center_spinner
+        shot: right_spinner
+    delay_between: 4s
+    sequence_complete_events: spinner_rampage_combo_complete
+    show_tokens:
+      leds: combo_indicator_3
+      color: purple
+
+shot_groups:
+  base_combo_shots:
+    shots: left_orbit, right_orbit, left_spinner, center_spinner, right_spinner, inner_loop_left, innerloop_right
+
+event_player:
+  ramp_to_orbit_combo_complete:
+    - ball_lock_qualification_started
+    - playfield_multiplier_x2
+    - ramp_combo_qualified
+  loop_combo_complete:
+    - hurry_up_mode_start
+    - ball_lock_qualification_started
+    - loop_combo_qualified
+  spinner_rampage_combo_complete:
+    - playfield_multiplier_x3
+    - spinner_combo_qualified
+    - super_mode_qualified
+
+variable_player:
+  ramp_to_orbit_combo_complete:
+    score: 50000
+    playfield_multiplier: 1
+  loop_combo_complete:
+    score: 75000
+    playfield_multiplier: 1
+  spinner_rampage_combo_complete:
+    score: 100000
+    playfield_multiplier: 2
+  ball_lock_qualification_started:
+    ball_lock_qualified_shots: 1
+  playfield_multiplier_x2:
+    playfield_multiplier: 1
+  playfield_multiplier_x3:
+    playfield_multiplier: 2
+
+    switch: s_left_outlane
+  right_drain:
+    switch: s_right_outlane
+
+
+  mechanicus_scoop_shot:
+    switch: s_scoop
+    profile: generic_flash_profile
+    show_tokens:
+        led: l_adeptus_mechanicius
+        color: lime 
+    start_enabled: false
+    enable_events: xenos_spotted
+    #restart_events: inlane_lane_group_lit_complete
+
+
+shot_groups: 
+  start_select_mode_group:
+    shots: mechanicus_scoop_shot
+    reset_events: 
+    enable_events: xenos_spotted
+    disable_events: mechanicus_scoop_shot_hit_complete
+
+shot_profiles: 
+  pop_profile:
+    states:
+      - name: unlit
+        show: off
+      - name: hit
+        show: pop_flash
+        speed: 1
+    loop: true
+
+  generic_flash_profile:
+    states:
+      - name: lit
+        show: generic_flash
+      - name: unlit
+        show: off
+ 
+sequence_shots: 
+  right_orbit:
+    switch_sequence: s_right_orbit, s_innerloop_left
+    sequence_timeout: 3s
+  complete_inner_loop:
+    switch_sequence: s_innerloop_right, s_innerloop_left, s_lowerloop
+    sequence_timeout: 3s
+   #Secret Combo Shots
+    # Xenos Bank into the innder loop
+  secret_combo_1:
+    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_2:
+    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_3:
+    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_4:
+    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+  secret_combo_5:
+    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 3s
+      # Xenos Bank into the inner loop into the jackpot vuk
+  secret_combo_6:
+    switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_7:
+    switch_sequence: s_xenos_e, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_8:
+    switch_sequence: s_xenos_n, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_9:
+    switch_sequence: s_xenos_o, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+  secret_combo_10:
+    switch_sequence: s_xenos_s, s_innerloop_right, s_innerloop_left, s_jackpot_vuk
+    sequence_timeout: 3s
+
+
+
+accruals:
+  qualify_main_mode:
+    events: 
+      - left_ramp_shot_hit
+      - right_ramp_shot_hit
+    events_when_complete:
+      - carousel_qualified
+    disable_events: 
+    enable_events:
+
+counters:
+  warp_qualify_counter:
+    count_events: s_snikt_active
+    starting_count: 0
+    count_interval: 1
+    direction: up
+    count_complete_value: 3 + (current_player.pv_warp_mode_counter * 2)
+    events_when_complete: start_mode_warp
+    reset_on_complete: true
+    disable_on_complete: false
+  necron_lock_qualifier:
+    count_events: s_droptarget_down_active
+    starting_count: 0
+    count_interval : 1
+    direction: up
+    count_complete_value: 1
+    events_when_complete: 
+        - reset_necron_drop 
+    disable_on_complete: true
+  necron_lock_qualifier2:
+    count_events: s_droptarget_down_active
+    starting_count: 0
+    count_interval : 1
+    direction: up
+    count_complete_value: 2
+    events_when_complete: 
+        - reset_necron_drop 
+    disable_on_complete: true
+  necron_lock_qualifier3:
+    count_events: s_droptarget_down_active
+    starting_count: 0
+    count_interval : 1
+    direction: up
+    count_complete_value: 3
+    events_when_complete: start_necron_lock
+    reset_on_complete: true
+    disable_on_complete: true
+
+multiball_locks: 
+    titan:
+        balls_to_lock: 3
+        lock_devices: bd_titan
+
+sound_player:
+    mode_base_started: 
+        Admonition:
+            action: play
+            volume: 0.7
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    mode_waagh_multiball_started:
+        Rise_of_the_WAAAGH:
+            action: play
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+        Admonition:
+            action: play
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    left_drain_hit:
+        big-ben:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_left_slingshot_active:
+        slingshots:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_right_slingshot_active:
+        slingshots:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+      #center ramp
+    s_center_ramp_active:
+        DP_Cinematic_SFX_Stinger_Impact Aware_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_left_ramp_active:
+        DP_Cinematic_SFX_Ramp_Enter_Chungus_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_droptarget_lock_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    
+    s_pop_top_active:
+        pop_sfx:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_pop_bottom_active:
+        pop_sfx:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    #lower loop
+    s_lower_loop_active:
+        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+      #right orbit
+    s_right_orbit_active:
+        DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+            #center spinner
+    spinner_center_spinner_hit:
+        lazgun_sfx:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0 sec
+                attenuation: 0
+                release_point: 0.0 sec
+                release: 0.0 sec
+            #left spinner
+    spinner_left_spinner_hit:
+        lazgun_sfx:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+            #right spinner
+    spinner_right_spinner_hit:
+        lazgun_sfx:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_jackpot_vuk_active:
+        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_snikt_target_active:
+        DP_Cinematic_SFX_Standup_Plasmate_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_left_inlane_active:
+        mecha-sound-impact:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    
+    s_right_inlane_active:
+        mecha-sound-impact:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    balldevice_bd_scoop_ejecting_ball:
+        DP_Cinematic_SFX_Scoop_The Eject Sound:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    
+    s_nurgle_redcircle_active:
+        DP_Cinematic_SFX_Stinger_Sub Affair_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_waagh_newton_ball_active:
+        DP_Cinematic_SFX_Slingshot_Atrium Sub_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    multiball_lock_titan_ball_locked:
+        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_necron_target_active:
+        DP_Cinematic_SFX_Standup_Plasmate_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_scoop_nurgle_target_active:
+        DP_Cinematic_SFX_Drop Target_Thump_01:
+            action: play
+            volume: 1.3
+            ducking:
+                bus: effects
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    s_light_lock_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                volume: 1.3
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_bonus_x_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                volume: 1.3
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_light_mystery_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                volume: 1.3
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+    s_light_spinners_active:
+        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
+                action: play
+                volume: 1.3
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
+
+
+        
+        
+                
+# sound_pools:
+#   drain_callout:
+#     type: random_force_all
+#     track: voice
+#     sounds:
+#       - drain1
+#       - drain2
+
+            
+        
+
+event_player:
+  mode_base_started: warp_traveler
+  s_left_slingshot_active: sling_hit
+  s_right_slingshot_active: sling_hit
+  s_scoop_active: scoop_hit
+  s_spinner_active: spinner_hit
+  #player_added{num == 1}: base_sound_player_1
+  player_added{num == 2}: base_sound_player_2
+  player_added{num == 3}: base_sound_player_3
+  player_added{num == 4}: base_sound_player_4
+  player_added{game.num_players == 1}: base_start_single_player, base_sound_player_1
+  player_added{game.num_players == 2}: base_start_multi_player_two
+  player_added{game.num_players == 3}: base_start_multi_player_three
+  player_added{game.num_players == 4}: base_start_multi_player_four
+  mode_base_started{game.num_players == 1}: base_start_single_player
+  mode_base_started{game.num_players == 2}: base_start_multi_player_two
+  mode_base_started{game.num_players == 3}: base_start_multi_player_three
+  mode_base_started{game.num_players == 4}: base_start_multi_player_four
+  base_skillshot_should_start: skillshot_should_start
+  ball_save_default_saving_ball:
+    cmd_backbox_show_overlay:
+      show_type: sweep_vertical
+      color: "FF2000"
+      speed: 1
+      repeat: 0
+      direction: up
+  mode_bonus_will_start: stop_all_music
+  s_snikt_target_active: ork_left, ork_right, ork_left, ork_right, ork_home
+
