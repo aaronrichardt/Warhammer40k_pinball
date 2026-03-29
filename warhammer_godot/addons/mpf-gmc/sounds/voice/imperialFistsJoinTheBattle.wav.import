@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://u7ympkiih4no"
-path="res://.godot/imported/imperialFistJoinTheBattle.wav-3b4105d1b957b507d11f5bb350d3d0df.sample"
+path="res://.godot/imported/imperialFistsJoinTheBattle.wav-fa2248697f793e5e9d3ff101070d44ac.sample"
 
 [deps]
 
-source_file="res://addons/mpf-gmc/sounds/voice/imperialFistJoinTheBattle.wav"
-dest_files=["res://.godot/imported/imperialFistJoinTheBattle.wav-3b4105d1b957b507d11f5bb350d3d0df.sample"]
+source_file="res://addons/mpf-gmc/sounds/voice/imperialFistsJoinTheBattle.wav"
+dest_files=["res://.godot/imported/imperialFistsJoinTheBattle.wav-fa2248697f793e5e9d3ff101070d44ac.sample"]
 
 [params]
 

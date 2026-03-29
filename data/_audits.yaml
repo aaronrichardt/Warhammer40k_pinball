@@ -69,7 +69,6 @@ missing_switches:
   s_waagh_newton_ball: 4
   s_xenos_e: 3
   s_xenos_n: 4
-  s_xenos_o: 4
   s_xenos_x: 4
 player:
   score:
@@ -81,6 +80,8 @@ shots:
   right_slingshot: 1
   skill_left_inlane: 1
   skill_right_inlane: 3
+  skill_xenos_o: 1
+  skill_xenos_s: 1
   warp_inlane_left: 1
   warp_inlane_right: 3
 switches:
@@ -153,6 +154,6 @@ switches:
   s_waagh_newton_ball: 0
   s_xenos_e: 1
   s_xenos_n: 0
-  s_xenos_o: 0
+  s_xenos_o: 1
   s_xenos_s: 3
   s_xenos_x: 0
