@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop
@@ -21,8 +21,7 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled, disable_mystery
       disable_events: xenos_earned, enable_mystery
-      release_all_events: release_one_ball
-      priority: 0
+      release_all_events: release_one_ball, xenos_earned
       #release_one_events:  release_one_ball
  
   mystery_select_scoop:
@@ -30,7 +29,6 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: enable_mystery
       disable_events: ball_started , disable_mystery
-      priority: 1
         #release_one_events:  release_one_ball
 
   mission_select_scoop:
@@ -38,7 +36,6 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
-      priority: 2
       # release_one_events: release_one_ball
 
 # queue_relay_player:
@@ -561,7 +558,7 @@ sound_player:
                     release_point: 2.0 sec
                     release: 1.0 sec
     imperial_fists_qualified: 
-        imperialFistsJoinTheBattle:
+        imperialFistJoinTheBattle:
                 action: play
                 volume: 1.5
                 ducking:

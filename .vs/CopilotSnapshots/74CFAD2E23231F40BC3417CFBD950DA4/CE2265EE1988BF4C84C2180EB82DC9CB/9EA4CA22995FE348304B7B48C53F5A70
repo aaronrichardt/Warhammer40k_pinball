@@ -1,0 +1,34 @@
+﻿#config_version=6
+
+
+event_player:
+  #plus one gadget when accrual is complete
+
+  xenos_spotted:
+    - xenos_earned
+    - xenosspot
+    #- gadgets_available
+  s_xenos_x_active:
+    #if the x is hit, and unlit
+    - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False}
+    - xenos_e_complete{device.accruals.xenos_accrual.value[0]==True}
+  s_xenos_e_active:
+    #if a is hit and unlit
+    - xenos_e_complete{device.accruals.xenos_accrual.value[1]==False}
+    - xenos_x_complete{device.accruals.xenos_accrual.value[0]==False and device.accruals.xenos_accrual.value[1]==True}
+    - xenos_n_complete{device.accruals.xenos_accrual.value[0]==True and device.accruals.xenos_accrual.value[1]==True and device.accruals.xenos_accrual.value[2]==False}
+  s_xenos_n_active:
+    - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False}
+    - xenos_e_complete{device.accruals.xenos_accrual.value[1]==False and device.accruals.xenos_accrual.value[2]==True}
+    - xenos_o_complete{device.accruals.xenos_accrual.value[1]==True and device.accruals.xenos_accrual.value[2]==True  and device.accruals.xenos_accrual.value[3]==False}
+  s_xenos_o_active:
+    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False}
+    - xenos_n_complete{device.accruals.xenos_accrual.value[2]==False and device.accruals.xenos_accrual.value[3]==True}
+    - xenos_s_complete{device.accruals.xenos_accrual.value[2]==True and device.accruals.xenos_accrual.value[3]==True and device.accruals.xenos_accrual.value[4]==False}
+  s_xenos_s_active:
+    - xenos_s_complete{device.accruals.xenos_accrual.value[4]==False }
+    - xenos_o_complete{device.accruals.xenos_accrual.value[3]==False and device.accruals.xenos_accrual.value[4]==True}
+
+  
+  ball_hold_mission_select_scoop_held_ball: start_mission_select
+  mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
