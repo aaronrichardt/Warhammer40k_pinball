@@ -483,67 +483,67 @@ lights:
   l-8-9:
     number: playfield-8-9
     type: grb
-    tags: odd, third
+    tags: odd, third, bottom_pop_flasher
   l-8-10:
     number: playfield-8-10
     type: grb
-    tags: even, first
+    tags: even, first, bottom_pop_flasher
   l-8-11:
     number: playfield-8-11
     type: grb
-    tags: odd, second
+    tags: odd, second,bottom_pop_flasher
   l-8-12:
     number: playfield-8-12
     type: grb
-    tags: even, third
+    tags: even, third,bottom_pop_flasher
   l-8-13:
     number: playfield-8-13
     type: grb
-    tags: odd, first
+    tags: odd, first, bottom_pop_flasher
   l-8-14:
     number: playfield-8-14
     type: grb
-    tags: even, second
+    tags: even, second,bottom_pop_flasher
   l-8-15:
     number: playfield-8-15
     type: grb
-    tags: odd, third
+    tags: odd, third,bottom_pop_flasher
   l-8-16:
     number: playfield-8-16
     type: grb
-    tags: even, first
+    tags: even, first,bottom_pop_flasher
   l-8-17:
     number: playfield-8-17
     type: grb
-    tags: odd, second
+    tags: odd, second,top_pop_flasher
   l-8-18:
     number: playfield-8-18
     type: grb
-    tags: even, third
+    tags: even, third,top_pop_flasher
   l-8-19:
     number: playfield-8-19
     type: grb
-    tags: odd, first
+    tags: odd, first,top_pop_flasher
   l-8-20:
     number: playfield-8-20
     type: grb
-    tags: even, second
+    tags: even, second,top_pop_flasher
   l-8-21:
     number: playfield-8-21
     type: grb
-    tags: odd, third
+    tags: odd, third,top_pop_flasher
   l-8-22:
     number: playfield-8-22
     type: grb
-    tags: even, first
+    tags: even, first,top_pop_flasher
   l-8-23:
     number: playfield-8-23
     type: grb
-    tags: odd, second
+    tags: odd, second,top_pop_flasher
   l-8-24:
     number: playfield-8-24
     type: grb
-    tags: even, third
+    tags: even, third,top_pop_flasher
   l-8-25:
     number: playfield-8-25
     type: grb

@@ -1,18 +1,39 @@
 #config_version=6
-#
+
 mode:
   start_events: ball_started
   stop_events: ball_will_end
   priority: 300
 
-
 event_player:
+  award_light_lock: #Comes from the mystery mode event
+    - enable_titan_lock_shot
+    - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
   titan_lock_qualified:
     - enable_titan_lock_shot
-    - lock_open
+    - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
+
 #event comes from the ball device when the lock is qualified, which is when the ball enters the lock and the lock is open. This means that the player has successfully locked a ball and qualified for multiball.
-  multiball_lock_titan_locked_ball:
+  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count = 0}: 
     - lock_home
+  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count > 0}: 
+    - lower_titan_lock_count
+
+variable_player:
+  award_light_lock:
+    titan_multiball_qualifier_lock_count:
+      action: add
+      int: 1
+  titan_lock_qualified:
+    titan_multiball_qualifier_lock_count:
+      action: add
+      int: 1
+  lower_titan_lock_count:
+    titan_multiball_qualifier_lock_count:
+      action: add
+      int: -1
+    
+
 
 shots:
   titan_lock1:
@@ -20,7 +41,7 @@ shots:
     start_enabled: false
     profile: titan_lock_profile
     restart_events: enable_titan_lock_shot
-    disable_events: multiball_lock_titan_locked_ball
+    disable_events: lock_home
     show_tokens:
       shot_color: lime
       shot_led1: l_center_ramp_circle

@@ -54,10 +54,16 @@ show_player:
       speed: 1
   s_pop_top_active:
     pop_flash:
+      show_tokens:
+        led: top_pop_flasher
+        color: yellow
       speed: 2
       loops: 0
   s_pop_bottom_active:
     pop_flash:
+      show_tokens:
+        led: bottom_pop_flasher
+        color: yellow
       speed: 2
       loops: 0
   play_scoop_flash_show:

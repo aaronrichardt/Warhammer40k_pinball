@@ -2,9 +2,9 @@
 
 - time: 0
   lights:
-    l_pop_flasher: FFFFFF
+    (led): (pop_color)
     #fade_ms: 0ms
 - time: "+250ms"
   lights:
-    l_pop_flasher: off
+    (led): off
     #fade_ms: 0ms
