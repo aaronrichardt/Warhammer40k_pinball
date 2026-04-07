@@ -50,3 +50,6 @@ player_vars:
     initial_value: 0
   tzeench_stage3_shots_hit:
     initial_value: 0
+  titan_multiball_qualifier_lock_count:
+    initial_value: 0
+    value_type: int
