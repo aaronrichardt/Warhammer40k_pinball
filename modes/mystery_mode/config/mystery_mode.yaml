@@ -3,7 +3,7 @@
 mode:
   #Started by warp_qualify mode when the inlane lane group is completed
   start_events: enable_mystery
-  stop_events: mystery_achieved, multiball_active
+  stop_events: mystery_achieved
   priority: 300
 
 event_player:
