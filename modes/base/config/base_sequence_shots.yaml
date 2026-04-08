@@ -17,6 +17,10 @@ sequence_shots:
     sequence_timeout: 3s
    #Secret Combo Shots
     # Xenos Bank into the innder loop
+  base_titan_lock_qualifier_1:
+    switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
+    sequence_timeout: 2s
+
   secret_combo_1:
     switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left
     sequence_timeout: 3s

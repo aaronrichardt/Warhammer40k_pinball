@@ -14,7 +14,7 @@ event_player:
     - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
 
 #event comes from the ball device when the lock is qualified, which is when the ball enters the lock and the lock is open. This means that the player has successfully locked a ball and qualified for multiball.
-  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count = 0}: 
+  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count == 0}: 
     - lock_home
   multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count > 0}: 
     - lower_titan_lock_count

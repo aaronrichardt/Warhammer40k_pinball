@@ -19,7 +19,7 @@ ball_holds:
   base_scoop:
       balls_to_hold: 1
       hold_devices: bd_scoop
-      enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled, disable_mystery
+      enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled, mystery_achieved
       disable_events: xenos_earned, enable_mystery
       release_all_events: release_one_ball
       priority: 0
@@ -29,8 +29,9 @@ ball_holds:
       balls_to_hold: 1
       hold_devices: bd_scoop
       enable_events: enable_mystery
-      disable_events: ball_started , disable_mystery
-      priority: 1
+      disable_events: ball_started , mystery_achieved
+      release_all_events: release_one_ball
+      priority: 0
         #release_one_events:  release_one_ball
 
   mission_select_scoop:
@@ -38,7 +39,8 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
-      priority: 2
+      release_all_events: release_one_ball, 
+      priority: 0
       # release_one_events: release_one_ball
 
 # queue_relay_player:

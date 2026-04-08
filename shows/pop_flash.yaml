@@ -2,7 +2,7 @@
 
 - time: 0
   lights:
-    (led): (pop_color)
+    (led): (color)
     #fade_ms: 0ms
 - time: "+250ms"
   lights:

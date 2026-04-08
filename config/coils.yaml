@@ -38,7 +38,7 @@ coils:
     default_pulse_ms: 17
   c_jackpot_vuk:
     number: 32082-3
-    default_pulse_ms: 11
+    default_pulse_ms: 10
 
   c_scoop:
     number: 32082-1
