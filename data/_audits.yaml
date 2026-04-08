@@ -13,7 +13,6 @@ missing_switches:
   s_37: 10
   s_4: 5
   s_center_ramp: 10
-  s_center_spinner: 5
   s_disk_backtarget: 69
   s_dropramp_away: 3
   s_droptarget_down: 68
@@ -141,7 +140,7 @@ switches:
   s_24: 0
   s_25: 0
   s_26: 0
-  s_27: 3748
+  s_27: 3755
   s_2_22: 6
   s_2_23: 7
   s_35: 0
@@ -151,7 +150,7 @@ switches:
   s_autoplunger: 690
   s_bonus_x: 120
   s_center_ramp: 302
-  s_center_spinner: 4323
+  s_center_spinner: 4324
   s_disk_backtarget: 86
   s_dropramp_away: 32
   s_droptarget_down: 6
@@ -193,7 +192,7 @@ switches:
   s_rollover_mork: 38
   s_scoop: 224
   s_scoop_nurgle_target: 30
-  s_snikt_target: 264
+  s_snikt_target: 265
   s_start_button: 57
   s_tempholder1: 0
   s_tempholder2: 0

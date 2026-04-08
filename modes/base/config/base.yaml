@@ -39,7 +39,7 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
-      release_all_events: release_one_ball
+      release_all_events: release_one_ball, 
       priority: 0
       # release_one_events: release_one_ball
 
