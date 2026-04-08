@@ -47,7 +47,7 @@ game:
  
 machine: 
   balls_installed: 6
-  min_balls: 3
+  min_balls: 0
   
 config: 
   - lights.yaml

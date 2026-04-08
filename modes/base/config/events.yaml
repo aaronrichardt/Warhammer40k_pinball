@@ -56,3 +56,5 @@ event_player:
     - play_scoop_flash_show
     - release_one_ball|.5s
 
+  base_titan_lock_qualifier_1_hit:
+    - titan_lock_qualified ##Call to mode titan qualifier 
