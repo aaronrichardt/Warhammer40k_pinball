@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop

@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop
@@ -153,32 +153,6 @@ shot_profiles:
         show: pop_flash
         speed: 1
     loop: true
-
-  orbit_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: lit_solid
-        show: solid_color
-        show_tokens:
-          color: white
-      - name: hit
-        show: solid_color
-        show_tokens:
-          color: white
-    loop: false
-
-  sequence_combo_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: lit
-        show: generic_flash
-      - name: hit
-        show: solid_color
-        show_tokens:
-          color: white
-    loop: false
 
   generic_flash_profile:
     states:

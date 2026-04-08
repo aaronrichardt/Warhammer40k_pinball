@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop
@@ -91,9 +91,6 @@ show_player:
 shots: 
   left_orbit:
     switch: s_left_ramp
-  right_orbit:
-    switch: s_right_orbit_active
-    profile: orbit_profile
   left_slingshot:
     switch: s_left_slingshot
   right_slingshot:
@@ -108,14 +105,8 @@ shots:
     switch: s_left_outlane
   right_drain:
     switch: s_right_outlane
-  base_innerloop_right:
-    switch: s_innerloop_right
-    profile: sequence_combo_profile
-    start_enabled: false
   base_jackpot_vuk:
-    switch: s_jackpot_vuk
-    profile: sequence_combo_profile
-    start_enabled: false
+    switch_sequence: s_jackpot_vuk
 
 
 
@@ -129,13 +120,7 @@ shots:
     enable_events: xenos_spotted
     
 
-shot_groups:
-  right_orbit_combo:
-    shots: right_orbit, base_innerloop_right, base_jackpot_vuk
-    reset_events: ball_started
-    enable_events: ball_started
-    disable_events: 
-    restart_events: right_orbit_hit
+shot_groups: 
 
   start_select_mode_group:
     shots: mechanicus_scoop_shot
@@ -153,32 +138,6 @@ shot_profiles:
         show: pop_flash
         speed: 1
     loop: true
-
-  orbit_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: lit_solid
-        show: solid_color
-        show_tokens:
-          color: white
-      - name: hit
-        show: solid_color
-        show_tokens:
-          color: white
-    loop: false
-
-  sequence_combo_profile:
-    states:
-      - name: unlit
-        show: off
-      - name: lit
-        show: generic_flash
-      - name: hit
-        show: solid_color
-        show_tokens:
-          color: white
-    loop: false
 
   generic_flash_profile:
     states:

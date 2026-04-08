@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop
@@ -161,11 +161,11 @@ shot_profiles:
       - name: lit_solid
         show: solid_color
         show_tokens:
-          color: white
+          color: lime
       - name: hit
         show: solid_color
         show_tokens:
-          color: white
+          color: yellow
     loop: false
 
   sequence_combo_profile:
@@ -177,7 +177,7 @@ shot_profiles:
       - name: hit
         show: solid_color
         show_tokens:
-          color: white
+          color: green
     loop: false
 
   generic_flash_profile:
