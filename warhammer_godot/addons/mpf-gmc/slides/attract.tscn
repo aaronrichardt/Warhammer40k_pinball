@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://baf8eg0d8gp4d"]
+[gd_scene load_steps=11 format=3 uid="uid://baf8eg0d8gp4d"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ya6r8"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_logger.gd" id="2_4of0r"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dprrb1fkus7yc" path="res://addons/mpf-gmc/slides/credits.tscn" id="9_s4qjf"]
 [ext_resource type="PackedScene" uid="uid://bntlvfc8kk4jo" path="res://addons/mpf-gmc/slides/ThankYou.tscn" id="9_xigc1"]
 [ext_resource type="PackedScene" uid="uid://d2gde8qb36spj" path="res://addons/mpf-gmc/slides/ThemeSlide.tscn" id="10_ntyy0"]
+[ext_resource type="PackedScene" uid="uid://2e8p3salw1gt" path="res://addons/mpf-gmc/slides/ArtCredit.tscn" id="10_yi60t"]
 
 [node name="attract" type="Control"]
 layout_mode = 3
@@ -44,6 +45,13 @@ visible = false
 visible = false
 
 [node name="ThemeSlide" parent="MPFCarousel" instance=ExtResource("10_ntyy0")]
-visible = false
 
 [node name="credits" parent="MPFCarousel" instance=ExtResource("9_s4qjf")]
+
+[node name="ArtCredit" parent="MPFCarousel" instance=ExtResource("10_yi60t")]
+layout_mode = 1
+anchors_preset = 15
+offset_left = -2.0
+offset_top = 1.0
+offset_right = 1918.0
+offset_bottom = 1081.0

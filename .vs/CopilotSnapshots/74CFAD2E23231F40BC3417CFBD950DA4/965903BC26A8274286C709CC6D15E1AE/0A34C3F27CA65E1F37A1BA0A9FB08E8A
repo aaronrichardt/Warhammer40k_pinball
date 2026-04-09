@@ -1,4 +1,4 @@
-#config_version=6
+﻿#config_version=6
 mode:
   start_events: ball_started
   events_when_started: enable_base_scoop
@@ -19,7 +19,7 @@ ball_holds:
   base_scoop:
       balls_to_hold: 1
       hold_devices: bd_scoop
-      enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled, mystery_achieved
+      enable_events: ball_started, enable_base_scoop, mission_select_item_selected, mission_select_item_cancelled, disable_mystery
       disable_events: xenos_earned, enable_mystery
       release_all_events: release_one_ball
       priority: 0
@@ -29,9 +29,8 @@ ball_holds:
       balls_to_hold: 1
       hold_devices: bd_scoop
       enable_events: enable_mystery
-      disable_events: ball_started , mystery_achieved
-      release_all_events: release_one_ball
-      priority: 0
+      disable_events: ball_started , disable_mystery
+      priority: 1
         #release_one_events:  release_one_ball
 
   mission_select_scoop:
@@ -39,8 +38,7 @@ ball_holds:
       hold_devices: bd_scoop
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
-      release_all_events: release_one_ball, 
-      priority: 0
+      priority: 2
       # release_one_events: release_one_ball
 
 # queue_relay_player:
@@ -94,7 +92,7 @@ shots:
   left_orbit:
     switch: s_left_ramp
   right_orbit:
-    switch: s_right_orbit
+    switch: s_right_orbit_active
     profile: orbit_profile
   left_slingshot:
     switch: s_left_slingshot
@@ -300,7 +298,7 @@ sound_player:
         Mystery_award_available:
             action: play
             volume: .7
-            bus: voice
+            bus: music
             ducking:
                 bus: voice
                 attack: 0.3 sec
@@ -322,28 +320,6 @@ sound_player:
             action: play
             volume: 0.5
             bus: music
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    play_welcome_instruction: 
-        WelcomeBattleBrother2:
-            action: play
-            volume: 1
-            bus: voice
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    play_howto_instruction: 
-        hurryUpAndMystery:
-            action: play
-            volume: 1
-            bus: voice
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -660,8 +636,7 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
-
-
+        
         
             
         

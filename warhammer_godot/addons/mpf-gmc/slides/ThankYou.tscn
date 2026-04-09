@@ -21,15 +21,16 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = -1.0
-offset_right = 1919.0
-offset_bottom = 1080.0
+offset_left = 31.0
+offset_top = 41.0
+offset_right = 1901.0
+offset_bottom = 1055.0
 theme_override_font_sizes/font_size = 80
-text = "a special thank you to all who 
-helped & inspired:
+text = "A special thank you to all who helped & inspired:
 
 John \"Lin\" Manuelian
 Brian Doughty
+Mike Testa
 Ernie Silverberg
 Ryan McQuaid
 Mark Seiden

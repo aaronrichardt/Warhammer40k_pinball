@@ -7,8 +7,10 @@
 [node name="MPFSlide" instance=ExtResource("1_5h2g7")]
 
 [node name="Label" parent="." index="1"]
-offset_right = 1728.0
-offset_bottom = 255.0
+offset_left = 101.0
+offset_top = 57.0
+offset_right = 1830.0
+offset_bottom = 312.0
 text = "Powered By:
 "
 

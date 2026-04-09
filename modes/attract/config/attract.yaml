@@ -13,7 +13,7 @@ mode_settings:
     - ThemeSlide
     - ThankYou
     - credits
-
+    - ArtCredit
     - PoweredBy
     #- attract2
     - kanedaSucks
@@ -34,26 +34,6 @@ timers:
         tick_interval: 1s
         restart_on_complete: true
         start_running: true
-
-        
-
-
-#slides: 
-# attract:
-#   expire: 5s
-#   transition_out:
-#     type: wipe
-#     duration: 5s
-# base:
-#   expire: 5s
-#   transition_out:
-#     type: wipe
-#     duration: 5s
-# ThankYou: 
-#   expire: 5s
-#   transition_out:
-#     type: wipe
-#     duration: 5s
 
 
 show_player:

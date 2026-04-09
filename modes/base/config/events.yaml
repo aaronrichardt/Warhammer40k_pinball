@@ -3,6 +3,10 @@
 
 event_player:
   mode_base_started: warp_traveler
+  mode_base_started{player==1 and ball==1}: 
+    - play_welcome_instruction|2s
+    - play_howto_instruction|15s
+
   s_left_slingshot_active: sling_hit
   s_right_slingshot_active: sling_hit
   s_scoop_active: scoop_hit
