@@ -94,7 +94,7 @@ shots:
   left_orbit:
     switch: s_left_ramp
   right_orbit:
-    switch: s_right_orbit_active
+    switch: s_right_orbit
     profile: orbit_profile
   left_slingshot:
     switch: s_left_slingshot
@@ -300,7 +300,7 @@ sound_player:
         Mystery_award_available:
             action: play
             volume: .7
-            bus: music
+            bus: voice
             ducking:
                 bus: voice
                 attack: 0.3 sec
@@ -322,6 +322,28 @@ sound_player:
             action: play
             volume: 0.5
             bus: music
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    play_welcome_instruction: 
+        WelcomeBattleBrother2:
+            action: play
+            volume: 1
+            bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
+    play_howto_instruction: 
+        hurryUpAndMystery:
+            action: play
+            volume: 1
+            bus: voice
             ducking:
                 bus: music
                 attack: 0.3 sec
@@ -638,7 +660,8 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
-        
+
+
         
             
         

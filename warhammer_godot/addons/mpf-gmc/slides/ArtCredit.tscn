@@ -2,21 +2,24 @@
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_bqt8o"]
 
-[node name="MPFSlide" type="Control"]
+[node name="ArtCredit" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_bqt8o")
 mask_from_active = null
 
 [node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 48.0
 anchor_bottom = 27.0
-offset_right = -0.00012207
-offset_bottom = -0.00012207
+offset_top = -2.0
+offset_right = -90240.0
+offset_bottom = -28082.0
 color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="."]
