@@ -4,11 +4,11 @@
 ##! mode: ball_save
 mode:
   start_events: ball_started
-  stop_events: ball_save_show_ended
+  stop_events: ball_save_show_ended, stop_ball_save
 
 
 ball_saves:
-  ball_save_ball_save:
+  base_save:
     active_time: 5s
     hurry_up_time: 5s
     timer_start_events: balldevice_bd_plunger_ball_eject_success
@@ -25,7 +25,7 @@ ball_saves:
     balls_to_save: 1   
      
 show_player:
-  ball_save_ball_save_ball_save_timer_start:
+  ball_save_base_save_ball_save_timer_start:
     flash_color:
       key: ball_save
       speed: 2
@@ -33,7 +33,7 @@ show_player:
         lights: l_ballsave
         color: yellow
         
-  ball_save_ball_save_ball_save_hurry_up:
+  ball_save_base_save_hurry_up:
     flash_color:
       key: ball_save
       speed: 6
@@ -41,7 +41,7 @@ show_player:
         lights: l_ballsave
         color: red
         
-  ball_save_ball_save_ball_save_disabled:
+  ball_save_base_save_disabled:
     ball_save: stop
     
   

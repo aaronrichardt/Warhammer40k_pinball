@@ -31,7 +31,7 @@ ball_holds:
       enable_events: enable_mystery
       disable_events: ball_started , mystery_achieved
       release_all_events: release_one_ball
-      priority: 0
+      priority: 2
         #release_one_events:  release_one_ball
 
   mission_select_scoop:
@@ -40,7 +40,7 @@ ball_holds:
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
       release_all_events: release_one_ball, 
-      priority: 0
+      priority: 1
       # release_one_events: release_one_ball
 
 # queue_relay_player:
@@ -118,8 +118,25 @@ shots:
     switch: s_jackpot_vuk
     profile: sequence_combo_profile
     start_enabled: false
+  
+  starting_combo_right_orbit:
+    switch: s_right_orbit
+    profile: sequence_stage_profile
+    start_enabled: true 
+    restart_events:
+    
+  second_combo_stage_jackpot:
+    switch: s_jackpot_vuk
+    profile:  sequence_stage_profile
+    start_enabled: true 
+    restart_events:
 
 
+  second_combo_stage_right_inner_loop:
+    hit_events: base_innerloop_right
+    profile: sequence_stage_profile
+    start_enabled: true 
+    restart_events:
 
   mechanicus_scoop_shot:
     switch: s_scoop
@@ -181,6 +198,15 @@ shot_profiles:
         show_tokens:
           color: white
     loop: false
+
+  sequence_stage_profile: 
+    states: 
+      - name: lit
+        show: generics_flash
+      - name: hit
+        show: solid_color
+
+
 
   generic_flash_profile:
     states:
