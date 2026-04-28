@@ -126,7 +126,9 @@ shots:
     start_enabled: true 
     restart_events: 
     disable_events: #Disable duing Multiballs or Modes 
- 
+    show_tokens:
+        led: l_right_orbit_arrow
+        color: white 
     
   second_combo_stage_jackpot:
     switch: s_jackpot_vuk
@@ -134,6 +136,9 @@ shots:
     start_enabled: false
     restart_events: starting_combo_right_orbit_hit
     disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_jackpot
+        color: white 
 
   second_combo_stage_right_inner_loop:
     hit_events: base_innerloop_right
@@ -141,6 +146,9 @@ shots:
     start_enabled: false
     restart_events: starting_combo_right_orbit_hit
     disable_events: disable_base_combos
+    show_tokens:
+        led: l_innerloop_arrow
+        color: white
     #Disable duing Multiballs or Modes 
 
    #COMBO RIGHT ORBIT END
@@ -153,7 +161,9 @@ shots:
     start_enabled: true 
     restart_events: 
     disable_events: #Disable duing Multiballs or Modes 
- 
+    show_tokens:
+        led: l_left_orbit_arrow
+        color: white 
     
   second_combo_stage_center_ramp:
     switch: s_center_ramp
@@ -161,6 +171,9 @@ shots:
     start_enabled: false 
     restart_events: starting_combo_left_orbit_hit
     disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_center_ramp_arrow
+        color: white
 
   second_combo_stage_left_loop:
     hit_events: base_innerloop_left
@@ -168,9 +181,42 @@ shots:
     start_enabled: false
     restart_events: starting_combo_right_orbit_hit
     disable_events: #Disable duing Multiballs or Modes 
-
+    show_tokens:
+        led: l_left_innerloop_arrow
+        color: white
    #COMBO LEFT ORBIT END
 
+  #COMBO CENTER RAMP START
+  starting_combo_center_ramp:
+    switch: s_center_ramp
+    profile: sequence_stage_profile
+    start_enabled: true 
+    restart_events: 
+    disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_left_orbit_arrow
+        color: white 
+    
+  second_combo_stage_right_orbit:
+    switch: s_right_orbit
+    profile:  sequence_stage_profile
+    start_enabled: false 
+    restart_events: starting_combo_center_ramp_hit
+    disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_center_ramp_arrow
+        color: white
+
+  second_combo_stage_scoop:
+    switch: s_scoop
+    profile: sequence_stage_profile
+    start_enabled: false
+    restart_events: starting_combo_center_ramp_hit
+    disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_light_mystery
+        color: white
+   #COMBO CENTER RAMP END
 
   mechanicus_scoop_shot:
     switch: s_scoop
