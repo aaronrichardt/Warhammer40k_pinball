@@ -9,11 +9,10 @@ mode:
 
 
 mode_settings:
-  display_delay_ms: 2s
+  display_delay_ms: 1s
   hurry_up_delay_ms: 100ms                         #after hurry-up event, switch to 0.3s delays
-  hurry_up_event: s_flipper_right_active,s_flipper_left_active
+  hurry_up_event: flipper_cancel
   bonus_entries:
-
     - entry: initial
       score: 0
       skip_if_zero: false
@@ -64,3 +63,10 @@ slide_player:
   bonus_entry:
       bonus:
           action: update
+
+
+combo_switches:
+    double_flippers:
+        tag_1: left_flipper
+        tag_2: right_flipper
+        events_when_both: flipper_cancel

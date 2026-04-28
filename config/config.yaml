@@ -127,7 +127,7 @@ servos:
     ork_servo:
         platform_settings:
             min_us: 0
-            home_us: 1250
+            home_us: 1850
             max_us: 2500
             max_runtime: 5s
         positions:

@@ -417,7 +417,7 @@ sound_player:
     enable_mystery:
         Mystery_award_available:
             action: play
-            volume: .7
+            volume: 1
             bus: voice
             ducking:
                 bus: voice
@@ -438,7 +438,7 @@ sound_player:
     mode_base_started: 
         Admonition:
             action: play
-            volume: 0.5
+            volume: 0.7
             bus: music
             ducking:
                 bus: music

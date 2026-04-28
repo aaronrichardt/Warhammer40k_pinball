@@ -14,13 +14,13 @@ class dead_flip(Mode):
         self.add_mode_event_handler('sw_right_flipper', self.flipper_right)
         self.add_mode_event_handler('both_flippers_one', self.both_flippers)
 
-    def both_flippers(self, **kwargs):
-        if self.sequence_pos == 0:
-            self.machine.events.post('dead_flip_code_sequence_started')
-            self.sequence_pos = 1
-        else:
-            self.machine.events.post('resetting_dead_flip_code_sequence_and_starting')
-            self.sequence_pos = 1
+    # def both_flippers(self, **kwargs):
+    #     if self.sequence_pos == 0:
+    #         self.machine.events.post('dead_flip_code_sequence_started')
+    #         self.sequence_pos = 1
+    #     else:
+    #         self.machine.events.post('resetting_dead_flip_code_sequence_and_starting')
+    #         self.sequence_pos = 1
 
     def flipper_left(self, **kwargs):
         if self.sequence_pos > 0:
