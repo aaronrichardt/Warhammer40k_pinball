@@ -31,7 +31,7 @@ ball_holds:
       enable_events: enable_mystery
       disable_events: ball_started , mystery_achieved
       release_all_events: release_one_ball
-      priority: 0
+      priority: 2
         #release_one_events:  release_one_ball
 
   mission_select_scoop:
@@ -40,7 +40,7 @@ ball_holds:
       enable_events: xenos_earned
       disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
       release_all_events: release_one_ball, 
-      priority: 0
+      priority: 1
       # release_one_events: release_one_ball
 
 # queue_relay_player:
@@ -118,7 +118,58 @@ shots:
     switch: s_jackpot_vuk
     profile: sequence_combo_profile
     start_enabled: false
+  
+  #COMBO RIGHT ORBIT START
+  starting_combo_right_orbit:
+    switch: s_right_orbit
+    profile: sequence_stage_profile
+    start_enabled: true 
+    restart_events: 
+    disable_events: #Disable duing Multiballs or Modes 
+ 
+    
+  second_combo_stage_jackpot:
+    switch: s_jackpot_vuk
+    profile:  sequence_stage_profile
+    start_enabled: false
+    restart_events: starting_combo_right_orbit_hit
+    disable_events: #Disable duing Multiballs or Modes 
 
+  second_combo_stage_right_inner_loop:
+    hit_events: base_innerloop_right
+    profile: sequence_stage_profile
+    start_enabled: false
+    restart_events: starting_combo_right_orbit_hit
+    disable_events: disable_base_combos
+    #Disable duing Multiballs or Modes 
+
+   #COMBO RIGHT ORBIT END
+
+
+  #COMBO LEFT ORBIT START
+  starting_combo_left_orbit:
+    switch: s_left_orbit
+    profile: sequence_stage_profile
+    start_enabled: true 
+    restart_events: 
+    disable_events: #Disable duing Multiballs or Modes 
+ 
+    
+  second_combo_stage_center_ramp:
+    switch: s_center_ramp
+    profile:  sequence_stage_profile
+    start_enabled: false 
+    restart_events: starting_combo_left_orbit_hit
+    disable_events: #Disable duing Multiballs or Modes 
+
+  second_combo_stage_left_loop:
+    hit_events: base_innerloop_left
+    profile: sequence_stage_profile
+    start_enabled: false
+    restart_events: starting_combo_right_orbit_hit
+    disable_events: #Disable duing Multiballs or Modes 
+
+   #COMBO LEFT ORBIT END
 
 
   mechanicus_scoop_shot:
@@ -136,7 +187,7 @@ shot_groups:
     shots: right_orbit, base_innerloop_right, base_jackpot_vuk
     reset_events: ball_started
     enable_events: ball_started
-    disable_events: 
+    disable_events: #Disable duing Multiballs or Modes 
     restart_events: right_orbit_hit
 
   start_select_mode_group:
@@ -182,6 +233,15 @@ shot_profiles:
           color: white
     loop: false
 
+  sequence_stage_profile: 
+    states: 
+      - name: lit
+        show: generics_flash
+      - name: hit
+        show: solid_color
+
+
+
   generic_flash_profile:
     states:
       - name: lit
@@ -202,6 +262,18 @@ shot_profiles:
         speed: 1
         loops: -1
 
+timers: 
+    base_combo_right_orbit:
+        start_value: 3
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        control_events:
+         - event: right_orbit_hit
+           action: start
+            
+            
+            
  
 accruals:
     all_missions_complete:
