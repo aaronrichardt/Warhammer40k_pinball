@@ -54,7 +54,7 @@ All combos are built from these base shots:
 
 ```yaml
 Ramps/Orbits:
-- left_orbit (s_left_ramp)
+- left_orbit (s_left_orbit)
 - right_orbit (s_right_orbit)
 - center_ramp (s_center_ramp)
 

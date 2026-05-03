@@ -174,7 +174,7 @@ Standard Gameplay
 
 ```
 Shots in Group:
-├── left_orbit (s_left_ramp)
+├── left_orbit (s_left_orbit)
 ├── right_orbit (s_right_orbit)
 ├── left_spinner (s_left_spinner)
 ├── center_spinner (s_center_spinner)
@@ -229,7 +229,7 @@ Before using these combos, ensure:
 start_game
 
 # Test Ramp to Orbit Combo
-hit_and_release_switch s_left_ramp
+hit_and_release_switch s_left_orbit
 advance_time_and_run 1
 hit_and_release_switch s_right_orbit
 advance_time_and_run 1

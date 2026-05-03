@@ -69,7 +69,7 @@ shots:
             color: red
 
     khorne_left_orbit_shot:
-        switch: s_left_ramp
+        switch: s_left_orbit
         profile: khorne_ramp_profile
         show_tokens:
             led: l_left_ramp_arrow

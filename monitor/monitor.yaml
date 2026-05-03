@@ -471,7 +471,7 @@ switch:
   s_left_outlane:
     x: 0.09064878306080928
     y: 0.6852173913043477
-  s_left_ramp:
+  s_left_orbit:
     x: 0.25849259314444345
     y: 0.026244343891402712
   s_left_slingshot:

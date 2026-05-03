@@ -92,7 +92,7 @@ show_player:
 
 shots: 
   left_orbit:
-    switch: s_left_ramp
+    switch: s_left_orbit
   right_orbit:
     switch: s_right_orbit
     profile: orbit_profile
@@ -165,6 +165,15 @@ shots:
         led: l_left_orbit_arrow
         color: white 
     
+  second_combo_stage_left_loop:
+    hit_events: base_innerloop_left
+    profile: sequence_stage_profile
+    start_enabled: false
+    restart_events: starting_combo_right_orbit_hit
+    disable_events: #Disable duing Multiballs or Modes 
+    show_tokens:
+        led: l_left_innerloop_arrow
+        color: white
   second_combo_stage_center_ramp:
     switch: s_center_ramp
     profile:  sequence_stage_profile
@@ -175,15 +184,7 @@ shots:
         led: l_center_ramp_arrow
         color: white
 
-  second_combo_stage_left_loop:
-    hit_events: base_innerloop_left
-    profile: sequence_stage_profile
-    start_enabled: false
-    restart_events: starting_combo_right_orbit_hit
-    disable_events: #Disable duing Multiballs or Modes 
-    show_tokens:
-        led: l_left_innerloop_arrow
-        color: white
+
    #COMBO LEFT ORBIT END
 
   #COMBO CENTER RAMP START
@@ -318,10 +319,29 @@ timers:
          - event: right_orbit_hit
            action: start
             
-            
-            
- 
-accruals:
+           
+sequences:
+    triple_combo1: 
+        events:
+            - starting_combo_center_ramp_hit
+            - second_combo_stage_right_orbit_hit
+            - second_combo_stage_scoop_hit
+        reset_on_complete: true
+        reset_events: 
+
+    triple_combo2: 
+        events: 
+            - starting_combo_right_orbit
+            - second_combo_stage_right_inner_loop_hit
+            - second_combo_stage_jackpot_hit
+        reset_on_complete: true 
+    triple_combo3:
+        events: 
+            - starting_combo_left_orbit
+            - second_combo_stage_left_loop
+            - second_combo_stage_center_ramp
+        reset_on_complete: true
+    
     all_missions_complete:
         events:
             - award_nurgle_mission_complete
@@ -530,7 +550,7 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
-    s_left_ramp_active:
+    s_left_orbit_active:
         DP_Cinematic_SFX_Ramp_Enter_Chungus_01:
             action: play
             volume: 1.3

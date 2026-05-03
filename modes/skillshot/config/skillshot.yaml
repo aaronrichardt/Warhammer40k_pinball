@@ -245,7 +245,7 @@ event_player:
         - stop_skill_shot_timer
         - slide_skill_shot_failed
         - skill_shot_failed|3s
-    s_left_ramp_active:
+    s_left_orbit_active:
         - stop_skill_shot_timer
         - slide_skill_shot_failed
         - skill_shot_failed|3s

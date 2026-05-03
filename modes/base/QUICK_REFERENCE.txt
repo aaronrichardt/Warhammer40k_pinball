@@ -47,7 +47,7 @@ L. Spinner → C. Spinner → R. Spinner
 
 | Shot | Switch | Combo |
 |------|--------|-------|
-| Left Ramp | s_left_ramp | Ramp combo (1/3) |
+| Left Ramp | s_left_orbit | Ramp combo (1/3) |
 | Right Orbit | s_right_orbit | Ramp & Loop combos |
 | Left Spinner | s_left_spinner | Ramp & Rampage combos |
 | Center Spinner | s_center_spinner | Rampage combo (2/3) |
@@ -145,7 +145,7 @@ super_mode_qualified:    +1 mode
 
 ```bash
 # Test Ramp Combo
-hit_and_release_switch s_left_ramp
+hit_and_release_switch s_left_orbit
 advance_time_and_run 1
 hit_and_release_switch s_right_orbit
 advance_time_and_run 1

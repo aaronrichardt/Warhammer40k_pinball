@@ -28,7 +28,7 @@ missing_switches:
   s_left_inlane: 8
   s_left_orbit: 2
   s_left_outlane: 1
-  s_left_ramp: 3
+  s_left_orbit: 3
   s_left_spinner: 1
   s_left_vuk: 507
   s_light_lock: 1
@@ -176,7 +176,7 @@ switches:
   s_left_inlane: 277
   s_left_orbit: 13
   s_left_outlane: 722
-  s_left_ramp: 166
+  s_left_orbit: 166
   s_left_slingshot: 1802
   s_left_spinner: 2513
   s_left_vuk: 0

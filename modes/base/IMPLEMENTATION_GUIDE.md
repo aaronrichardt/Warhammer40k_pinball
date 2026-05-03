@@ -175,7 +175,7 @@ When a `sequence_shot` is defined, MPF tracks:
 **Ramp to Orbit Combo:**
 
 ```
-Time 0.0s:  Player hits Left Ramp (s_left_ramp)
+Time 0.0s:  Player hits Left Ramp (s_left_orbit)
             → Shot 1 Complete
             → Timer starts: 5 second window
 
