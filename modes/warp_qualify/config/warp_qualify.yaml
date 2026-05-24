@@ -56,7 +56,7 @@ event_player:
         #starting the Mystery Mode for the scoop hold
         - enable_mystery
         - start_warp_hurryup
-    
+ 
 show_player: 
   reset_warp_lights:
     light_xenos_letter:

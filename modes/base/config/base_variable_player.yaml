@@ -103,4 +103,6 @@ variable_player:
     score: 2000 * (current_player.playfield_multiplier)
   s_waagh_newton_ball_active:
     score: 2000 * (current_player.playfield_multiplier)
+  base_warp_hurry_up_hit:
+    score: timer_base_hurry_up_warp_ticks
 
