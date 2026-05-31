@@ -1,0 +1,37 @@
+
+mode: 
+    start_events: start_warp_hurryup
+    stop_events: warp_hurryup_collected
+    priority: 
+    
+
+shots: 
+  base_warp_hurry_up:
+    switch: s_nurgle_redcircle
+    profile: generic_flash_profile
+    start_enabled: false
+    disable_events: stop_warp_hurryup, warp_hurryup_collected
+    restart_events: start_warp_hurryup
+    show_tokens:
+        led: l_nurgle3
+        color: red
+
+timers: 
+    base_hurry_up_warp: 
+        start_value: (current_player.warp_hurry_up_base_value) 
+        end_value: 100000
+        direction: down 
+        tick_interval: .5ms
+        control_events:
+         - event: start_warp_hurryup
+           action: start 
+         - event: stop_warp_hurryup
+           action: stop
+         - event: restart_warp_hurryup
+variable_player: 
+  base_warp_hurry_up_hit:
+    score: timer_base_hurry_up_warp_ticks
+    
+event_player: 
+    base_warp_hurry_up_hit:
+        warp_hurryup_collected|2s 

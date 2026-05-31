@@ -156,7 +156,7 @@ shots:
 
   #COMBO LEFT ORBIT START
   starting_combo_left_orbit:
-    switch: s_left_orbit
+    switch: s_left_ramp
     profile: sequence_stage_profile
     start_enabled: true 
     restart_events: 
@@ -283,7 +283,7 @@ shot_profiles:
   sequence_stage_profile: 
     states: 
       - name: lit
-        show: generics_flash
+        show: generic_flash
       - name: hit
         show: solid_color
 
