@@ -99,9 +99,11 @@ shots:
     start_enabled: true
     disable_events: 
     enable_events: ball_started
+    restart_events: timer_base_combo_right_orbit_complete, ball_started, right_orbit_combo_hit_complete
     show_tokens:
         led: l_right_orbit_arrow
         color: white 
+
   base_shot_left_slingshot:
     switch: s_left_slingshot
   base_shot_right_slingshot:
@@ -122,7 +124,8 @@ shots:
     hit_events: base_innerloop_sequence_right_hit
     profile: sequence_combo_profile
     enable_events: timer_base_combo_right_orbit_started
-    disable_events: timer_base_combo_right_orbit_completed, ball_started
+    disable_events: timer_base_combo_right_orbit_complete, ball_started, right_orbit_combo_hit_complete
+    restart_events: timer_base_combo_right_orbit_started
     start_enabled: false
     show_tokens:
         led: l_innerloop_arrow
@@ -134,7 +137,8 @@ shots:
     switch: s_jackpot_vuk
     profile: sequence_combo_profile
     enable_events: timer_base_combo_right_orbit_started
-    disable_events: timer_base_combo_right_orbit_completed, ball_started
+    disable_events: timer_base_combo_right_orbit_complete, ball_started, right_orbit_combo_hit_complete
+    restart_events: timer_base_combo_right_orbit_started
     start_enabled: false
     show_tokens:
         led: l_jackpot
@@ -252,7 +256,7 @@ shots:
 shot_groups:
   right_orbit_combo:
     shots: base_shot_right_orbit, base_shot_innerloop_right, base_shot_jackpot_vuk
-    reset_events: timer_base_combo_right_orbit_completed, ball_started
+    reset_events: timer_base_combo_right_orbit_completed, ball_started, right_orbit_combo_hit_complete
     enable_events: ball_started
     disable_events: #Disable duing Multiballs or Modes 
 
@@ -329,13 +333,13 @@ shot_profiles:
 
 timers: 
     base_combo_right_orbit:
-        start_value: 3
+        start_value: 6
         end_value: 0
         direction: down
         tick_interval: 1s
         control_events:
-         - event: base_shot_right_orbit_hit
-           action: start
+         - event: base_shot_right_orbit_unlit_hit
+           action: restart
             
            
 sequences:
