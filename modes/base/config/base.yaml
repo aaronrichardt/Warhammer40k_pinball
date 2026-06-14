@@ -93,6 +93,15 @@ show_player:
 shots: 
   base_shot_left_orbit:
     switch: s_left_orbit
+    profile: orbit_profile
+    start_enabled: true
+    disable_events: 
+    enable_events: ball_started
+    restart_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
+    show_tokens:
+        led: l_left_orbit_arrow
+        color: white 
+
   base_shot_right_orbit:
     switch: s_right_orbit
     profile: orbit_profile
@@ -121,7 +130,7 @@ shots:
     
   base_shot_innerloop_right:
     #advance_events: base_innerloop_sequence_right_hit
-    hit_events: base_innerloop_sequence_right_hit
+    hit_events: base_shot_right_orbit_lit_hit
     profile: sequence_combo_profile
     enable_events: timer_base_combo_right_orbit_started
     disable_events: timer_base_combo_right_orbit_complete, ball_started, right_orbit_combo_hit_complete
@@ -132,17 +141,40 @@ shots:
         color: white
     #Disable duing Multiballs or Modes 
 
- 
   base_shot_jackpot_vuk:
     switch: s_jackpot_vuk
     profile: sequence_combo_profile
-    enable_events: timer_base_combo_right_orbit_started
+    enable_events: base_shot_innerloop_right_lit_hit
     disable_events: timer_base_combo_right_orbit_complete, ball_started, right_orbit_combo_hit_complete
     restart_events: timer_base_combo_right_orbit_started
     start_enabled: false
     show_tokens:
         led: l_jackpot
         color: white 
+
+  base_shot_innerloop_left:
+    #advance_events: base_innerloop_sequence_right_hit
+    hit_events: base_innerloop_left_hit
+    profile: sequence_combo_profile
+    enable_events: base_shot_left_orbit_lit_solid_hit
+    disable_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
+    restart_events: timer_base_combo_left_orbit_started
+    start_enabled: false
+    show_tokens:
+        led: l_left_innerloop_arrow
+        color: white
+
+  base_shot_center_ramp:
+    #advance_events: base_innerloop_sequence_right_hit
+    switch: s_center_ramp
+    profile: sequence_combo_profile
+    enable_events: timer_base_combo_left_orbit_started, base_shot_innerloop_left_sequence_combo_profile_lit_hit
+    disable_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
+    restart_events: timer_base_combo_left_orbit_started
+    start_enabled: false
+    show_tokens:
+        led: l_left_innerloop_arrow
+        color: white
   
   #COMBO RIGHT ORBIT START
   # starting_combo_right_orbit:
@@ -180,34 +212,7 @@ shots:
 
 
   #COMBO LEFT ORBIT START
-  # starting_combo_left_orbit:
-  #   switch: s_left_orbit
-  #   profile: sequence_stage_profile
-  #   start_enabled: true 
-  #   restart_events: 
-  #   disable_events: #Disable duing Multiballs or Modes 
-  #   show_tokens:
-  #       led: l_left_orbit_arrow
-  #       color: white 
-    
-  # second_combo_stage_left_loop:
-  #   hit_events: base_innerloop_left
-  #   profile: sequence_stage_profile
-  #   start_enabled: false
-  #   restart_events: starting_combo_right_orbit_hit
-  #   disable_events: #Disable duing Multiballs or Modes 
-  #   show_tokens:
-  #       led: l_left_innerloop_arrow
-  #       color: white
-  # second_combo_stage_center_ramp:
-  #   switch: s_center_ramp
-  #   profile:  sequence_stage_profile
-  #   start_enabled: false 
-  #   restart_events: starting_combo_left_orbit_hit
-  #   disable_events: #Disable duing Multiballs or Modes 
-  #   show_tokens:
-  #       led: l_center_ramp_arrow
-  #       color: white
+
 
 
    #COMBO LEFT ORBIT END
@@ -260,6 +265,11 @@ shot_groups:
     enable_events: ball_started
     disable_events: #Disable duing Multiballs or Modes 
 
+  left_orbit_combo:
+    shots: base_shot_left_orbit, base_shot_innerloop_left, base_shot_center_ramp
+    reset_events: timer_base_combo_left_orbit_completed, ball_started, left_orbit_combo_hit_complete
+    enable_events: ball_started
+    disable_events: #Disable duing Multiballs or Modes 
 
   start_select_mode_group:
     shots: mechanicus_scoop_shot
@@ -296,6 +306,7 @@ shot_profiles:
     states:
       - name: lit
         show: generic_flash
+        speed: 5
       - name: hit
         show: solid_color
         show_tokens:
