@@ -14,8 +14,8 @@ player_vars:
     initial_value: 0
   pv_warp_mode_counter:
     initial_value: 0
-  pv_necron_lock_count:
-    initial_value: 0
+  necron_lock_count:
+    initial_value: 3
   bonus_multiplier: 
     initial_value: 2
   playfield_multiplier: 

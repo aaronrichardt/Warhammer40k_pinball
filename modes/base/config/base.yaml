@@ -432,33 +432,36 @@ counters:
     events_when_complete: start_mode_warp
     reset_on_complete: true
     disable_on_complete: false
-  necron_lock_qualifier:
-    count_events: s_droptarget_down_active
-    starting_count: 0
-    count_interval : 1
-    direction: up
-    count_complete_value: 1
-    events_when_complete: 
-        - reset_necron_drop 
-    disable_on_complete: true
-  necron_lock_qualifier2:
-    count_events: s_droptarget_down_active
-    starting_count: 0
-    count_interval : 1
-    direction: up
-    count_complete_value: 2
-    events_when_complete: 
-        - reset_necron_drop 
-    disable_on_complete: true
-  necron_lock_qualifier3:
-    count_events: s_droptarget_down_active
-    starting_count: 0
-    count_interval : 1
-    direction: up
-    count_complete_value: 3
-    events_when_complete: start_necron_lock
-    reset_on_complete: true
-    disable_on_complete: true
+
+  # necron_lock_qualifier:
+  #   count_events: s_droptarget_down_active
+  #   starting_count: 0
+  #   count_interval : 1
+  #   direction: up
+  #   count_complete_value: 1
+  #   events_when_complete: 
+  #       - reset_necron_drop 
+  #   disable_on_complete: true
+
+  # necron_lock_qualifier2:
+  #   count_events: s_droptarget_down_active
+  #   starting_count: 0
+  #   count_interval : 1
+  #   direction: up
+  #   count_complete_value: 2
+  #   events_when_complete: 
+  #       - reset_necron_drop 
+  #   disable_on_complete: true
+
+  # necron_lock_qualifier3:
+  #   count_events: s_droptarget_down_active
+  #   starting_count: 0
+  #   count_interval : 1
+  #   direction: up
+  #   count_complete_value: 3
+  #   events_when_complete: start_necron_lock
+  #   reset_on_complete: true
+  #   disable_on_complete: true
 
 multiball_locks: 
     titan:
@@ -831,11 +834,6 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
-
-
-        
-            
-        
 
 event_player:
   mode_base_started: warp_traveler

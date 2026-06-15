@@ -1,28 +1,64 @@
 #config_version=6
 mode:
-  start_events: start_necron_lock
+  start_events: ball_started , start_necron_lock
   stop_events: stop_necron_lock
   priority: 100
 
-variable_player: 
-  reset_necron_lock_count:
-    pv_warp_mode_counter:
-      action: set
-      int: 0
+
+shots:
+    necron_lock_drop_target:
+        switch: s_droptarget_down
+        profile: base_profile
+        start_enabled: true
+        disable_events: logicblock_necron_lockup_complete
+        enable_events: ball_started
+        restart_events: 
+        show_tokens:
+            led: l_solemnace_arrow
+            color: lime 
+
+    necron_lock_back_target:
+        switch: s_necron_target
+        profile: necron_lock_profile
+        start_enabled: false
+        disable_events: 
+       # enable_events: counter_necron_lockup_complete
+        restart_events: logicblock_necron_lockup_complete
+        show_tokens:
+            led4: l_necron_lock2
+            led3: l_necron_lock1
+            led2: l_solemnace_arrow
+            led1: l_solemnace_circle
+            color: lime
+
+
+shot_profiles:
+   base_profile:
+    states:
+      - name: lit
+        show: generic_flash
+        speed: 7
+    loop: true
+
+   necron_lock_profile:
+    states:
+         - name: lit
+           show: necron_lock_show
+           speed: 7
+    loop: true
+
+    
 
 counters:
   necron_lockup:
     count_events: 
-      - s_droptarget_opto_active
-      - s_droptarget_lock_active
+        - necron_lock_drop_target_lit_hit
     starting_count: 0
     count_interval : 1
     direction: up
-    count_complete_value: 1
-    events_when_complete: 
-        - reset_necron_drop
-        #- stop_necron_lock
+    count_complete_value: current_player.necron_lock_count #3 then 1+ for each time completed
     disable_on_complete: true
+
 
 multiball_locks:
   necron_lock: 
@@ -30,3 +66,4 @@ multiball_locks:
     lock_devices: bd_necron_lock
     disable_events: mode_necron_multiball_started
     reset_all_counts_events: multiball_necron_multiball_started
+

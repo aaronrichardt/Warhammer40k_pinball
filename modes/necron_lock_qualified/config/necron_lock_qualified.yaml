@@ -1,5 +1,0 @@
-#config_version=6
-mode:
-  start_events: start_necron_lock_qualified 
-  stop_events: multiball_necron_multiball_started
-  priority: 100

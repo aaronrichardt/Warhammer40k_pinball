@@ -177,6 +177,10 @@ timers:
         event: stop_skill_shot_timer
 
 show_player: 
+    slide_skill_shot_success: 
+        Playfield360rainbowsSweep:
+            speed: 2
+
     mode_skillshot_started:
         standard_flash:
             key: skillshot
