@@ -50,7 +50,6 @@ visible = false
 
 [node name="ArtCredit" parent="MPFCarousel" instance=ExtResource("10_yi60t")]
 layout_mode = 1
-anchors_preset = 15
 offset_left = -2.0
 offset_top = 1.0
 offset_right = 1918.0

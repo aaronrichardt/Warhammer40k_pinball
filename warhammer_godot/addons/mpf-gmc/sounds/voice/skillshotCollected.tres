@@ -1,0 +1,16 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://cnedf8uitqrf"]
+
+[ext_resource type="AudioStream" uid="uid://dqah54a8yec0d" path="res://addons/mpf-gmc/sounds/voice/skillshot_collected1_01.wav" id="1_k8mlf"]
+[ext_resource type="AudioStream" uid="uid://b8ibmrm3kju5p" path="res://addons/mpf-gmc/sounds/voice/skillshot_collected_01.wav" id="2_qrmv1"]
+[ext_resource type="AudioStream" uid="uid://dppt8m5rj1q51" path="res://addons/mpf-gmc/sounds/voice/skillshot_collected2_01.wav" id="3_0foc3"]
+[ext_resource type="AudioStream" uid="uid://cifg5tfdrk43c" path="res://addons/mpf-gmc/sounds/voice/impressive_skillshot_01.wav" id="4_4pph7"]
+[ext_resource type="AudioStream" uid="uid://dqbtdtgon7qtu" path="res://addons/mpf-gmc/sounds/voice/impressive_skillshot1_01.wav" id="5_f00an"]
+
+[resource]
+playback_mode = 1
+streams_count = 5
+stream_0/stream = ExtResource("1_k8mlf")
+stream_1/stream = ExtResource("2_qrmv1")
+stream_2/stream = ExtResource("3_0foc3")
+stream_3/stream = ExtResource("4_4pph7")
+stream_4/stream = ExtResource("5_f00an")
