@@ -53,3 +53,6 @@ player_vars:
   titan_multiball_qualifier_lock_count:
     initial_value: 0
     value_type: int
+  warp_hurry_up_base_value:
+    inital_value: 5000000
+      

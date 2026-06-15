@@ -65,3 +65,9 @@ show_player:
         letter_made_led: lane
         letter_made_color: Purple
         letter_made_final_color: 000000    
+
+sound_player: 
+    start_warp_hurryup:
+        hurryUpAndMystery:
+            action: play
+            volume: 1
