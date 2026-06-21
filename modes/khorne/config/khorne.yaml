@@ -64,13 +64,31 @@ shots:
     khorne_center_ramp_shot:
         switch: s_center_ramp
         profile: khorne_ramp_profile
+        start_enabled: false
         show_tokens:
             led: l_center_ramp_arrow
+            color: red
+
+    khorne_left_loop_shot:
+        hit_events: base_innerloop_sequence_left_hit
+        profile: khorne_major_shot_profile
+        start_enabled: false
+        show_tokens:
+            led: l_left_innerloop_arrow
+            color: red
+
+    knorne_right_loop_shot:
+        hit_events: base_innerloop_sequence_right_hit
+        profile: khorne_major_shot_profile
+        start_enabled: false
+        show_tokens: 
+            led: l_right_innerloop_arrow
             color: red
 
     khorne_left_orbit_shot:
         switch: s_left_orbit
         profile: khorne_ramp_profile
+        start_enabled: false
         show_tokens:
             led: l_left_ramp_arrow
             color: red
@@ -78,37 +96,91 @@ shots:
     khorne_right_orbit_shot:
         switch: s_right_orbit
         profile: khorne_major_shot_profile
+        start_enabled: false
         show_tokens:
             led: l_right_orbit_arrow
             color: red
 
-    khorne_upper_vuk_shot:
+    khorne_super_jackpot_shot:
         switch: s_jackpot_vuk
         profile: khorne_super_jackpot_profile
+        start_enabled: false
         show_tokens:
             led: l_jackpot_arrow
             color: red
 
-    khorne_left_spinner_shot:
-        switch: s_left_spinner
+    khorne_ricochet_loop_shot:
+        hit_events: khorne_ricochet_sequence_right_hit
         profile: khorne_major_shot_profile
-        show_tokens:
-            led: l_left_spinner_arrow
+        start_enabled: false
+        show_tokens: 
+            led: l_nurgle2
             color: red
 
-    khorne_right_spinner_shot:
-        switch: s_right_spinner
-        profile: khorne_major_shot_profile
-        show_tokens:
-            led: l_right_spinner_arrow
-            color: red
 
-    khorne_center_spinner_shot:
-        switch: s_center_spinner
-        profile: khorne_major_shot_profile
-        show_tokens:
-            led: l_center_spinner_arrow
-            color: red
+
+sequence_shots: 
+  khorne_left_loop_sequence:
+    switch_sequence: s_innerloop_left, s_innerloop_right
+  khorne_right_loops_sequence: 
+   switch_sequence: s_innerloop_right, s_innerloop_left
+  khorne_ricochet_sequence_right:
+    switch_sequence: s_snikt_target, s_innerloop_right, s_innerloop_left
+    sequence_timeout: 2s
+#This will enable stages 1 -3 for the mode.
+shot_groups:
+
+    khorne_stage_one_one:
+        shots: khorne_right_orbit_shot, khorne_left_orbit_shot
+        enable_events: mission_select_khorne_selected
+        reset_events: 
+        disable_events: khorne_stage_one_one_hit #this will need to trigger after lightshow after stage one is hit
+    khorne_stage_one_two: 
+        shots: khorne_ricochet_loop, knorne_center_ramp, knorne_right_loop_shot, knorne_left_loop_shot, khorne_super_jackpot_shot
+        enable_events: khorne_stage_one_one_hit #this will need to trigger after lightshow after stage one is hit
+        
+    knorne_stage_two_one:
+        shots: khorne_right_orbit_shot, khorne_left_orbit_shot
+        enable_events: khorne_stage_one_two_comeplete
+        reset_events: 
+        disable_events: khorne_stage_one_two_complete #this will need to trigger after lightshow after stage one is hit
+
+    knorne_stage_two_two:
+        shots: knorne_stage_two_one_complete
+        enable_events: knorne_stage_two_one_complete #this will need to trigger after lightshow after stage one is hit
+
+
+    knorne_stage_three: #the final stage should be all shots are lit, hitting any five shots will light super JP, however hitting a lit shot will unlight it and light other unlit shots 
+    #meaning you can keep hitting shots indefinitely until you score the super JP or the timer expires. 
+        shots:
+        enable_events: knorne_stage_two_two_complete #this will need to trigger after lightshow after stage one is hit
+        reset_events:
+
+
+
+
+    # khorne_left_spinner_shot:
+    #     switch: s_left_spinner
+    #     profile: khorne_major_shot_profile
+    #     show_tokens:
+    #         led: l_left_spinner_arrow
+    #         color: red
+
+    # khorne_right_spinner_shot:
+    #     switch: s_right_spinner
+    #     profile: khorne_major_shot_profile
+    #     show_tokens:
+    #         led: l_right_spinner_arrow
+    #         color: red
+
+    # khorne_center_spinner_shot:
+    #     switch: s_center_spinner
+    #     profile: khorne_major_shot_profile
+    #     show_tokens:
+    #         led: l_center_spinner_arrow
+    #         color: red
+
+    
 
 # shot_groups:
 #     major_shots:
