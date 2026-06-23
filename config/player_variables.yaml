@@ -4,6 +4,8 @@ player_vars:
     initial_value: 0
   xenos_earned:
     initial_value: 0
+  mode_timer_value:
+    initial_value: 40
   bonus_switches:
     initial_value: 0
   bonus_pops_value:
