@@ -7,53 +7,80 @@ mode:
 
  # The Plague Lord (Number 7): The number 7
 #Ring the bells of nurgle 
-#Ring 7 Bells to finish nurgle in order
+#Ring 7 Bells to finish nurgle in order to light super jackpot
 # first shot scores 4, 7, 10 ,15 and final is 20 million 
 # each right spinner rip scores 1 million and adds 500k to the next shot 
 # hitting 3 shots lights ally 
 
 timers:
     nurgle_mode_timer: 
-        start_value: 60 # seconds
+        start_value: current_player.mode_timer_value # seconds
         end_value: 0
         direction: down 
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
 
+    nurgle_enable_shot_timer: 
+        start_value: 15
+        end_value: 0 
+        direction: down
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false 
+        start_events: 
+        stop_events: 
+
+sequence_shots: 
+    
+
 shots:
     nurgle_bell1:
         switch: s_snikt_target
-        profile: generic_flash
+        profile: nurgle_major_shot_profile
         show_tokens:
              led: l_nurgle1
              color: lime
     nurgle_bell2:
         switch: s_scoop_nurgle_target
-        profile: generic_flash
+        profile: nurgle_major_shot_profile
         show_tokens:
              led: l_nurgle2
              color: lime
     nurgle_bell3:
         switch: s_18
-        profile: generic_flash
+        profile: nurgle_major_shot_profile
         show_tokens:
              led: l_nurgle3
              color: lime
     nurgle_bell4:
         switch: s_24
-        profile: generic_flash
+        profile: nurgle_major_shot_profile
         show_tokens:
              led: l_nurgle4
              color: lime
     nurgle_bell5:
         switch: s_25
-        profile: generic_flash
+        profile: nurgle_major_shot_profile
         show_tokens:
              led: l_nurgle5
              color: lime
+    nurgle_ricochet_loop:
+        hit_events: 
+        profile: nurgle_major_shot_profile
+        show_tokens:  
+            led: l_nurgle2
+            color: lime 
 
 shot_groups:
+    # Ring the bell via the loop, then the other shots will activate and inner timer will keep track of the 15 seconds given to make shot
+    # to burn the garden of nurgle 
+    nurgle_bell_loop: 
+        shots: 
+            - 
+        enable_events:
+        disable_events: 
+
     nurgle_bells:
         shots: 
             - nurgle_bell1
@@ -63,3 +90,12 @@ shot_groups:
             - nurgle_bell5
         enable_events: ModeSelect_nurgle_selected
         disable_events: timer_nurgle_mode_timer_complete
+
+shot_profiles:
+    nurgle_major_shot_profile:
+        states:
+            - name: lit
+              show: "flash"
+            - name: hit
+              show: "off"
+        loop: false

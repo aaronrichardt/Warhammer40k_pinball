@@ -1,5 +1,5 @@
 #config_version=6
-sequence_shots: 
+sequence_shots:
   # base_right_orbit:
   #   switch_sequence: s_right_orbit, s_innerloop_left
   #   sequence_timeout: 3s
