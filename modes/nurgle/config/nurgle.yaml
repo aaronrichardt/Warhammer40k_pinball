@@ -28,13 +28,23 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: false 
-        start_events: 
-        stop_events: 
+        start_events: nurgle_ricochet_enable_lit_hit
+        stop_events: ball_ending
 
 sequence_shots: 
-    
+    nurgle_ricochet_enable:
+        switch_sequence: s_snikt_target, s_innerloop_right, s_innerloop_left 
+        sequence_timeout: 2s
 
 shots:
+    nurgle_ricochet:
+        hit_events: nurgle_ricochet_enable_hit
+        profile: nurgle_major_shot_profile
+        start_enabled: true
+        show_tokens:
+            led: l_nurgle1
+            color: lime
+
     nurgle_bell1:
         switch: s_snikt_target
         profile: nurgle_major_shot_profile
@@ -66,19 +76,25 @@ shots:
              led: l_nurgle5
              color: lime
     nurgle_ricochet_loop:
-        hit_events: 
+        hit_events: nurgle_ricochet_enable
         profile: nurgle_major_shot_profile
         show_tokens:  
             led: l_nurgle2
             color: lime 
+    nurgle_super_jackpot:
+        switch: s_super_jackpot
+        profile:
+        show_tokens:
+            led: l_superjackpot
+            color: lime
 
 shot_groups:
     # Ring the bell via the loop, then the other shots will activate and inner timer will keep track of the 15 seconds given to make shot
     # to burn the garden of nurgle 
     nurgle_bell_loop: 
         shots: 
-            - 
-        enable_events:
+            - nurgle_ricochet
+        enable_events: timer_nurgle_enable_shot_timer_complete
         disable_events: 
 
     nurgle_bells:
@@ -91,6 +107,12 @@ shot_groups:
         enable_events: ModeSelect_nurgle_selected
         disable_events: timer_nurgle_mode_timer_complete
 
+    nurgle_super_jackpot:
+        shots:
+            -nurgle_super_jackpot
+        enable_events: enable_nurgle_superjackpot #from accruals
+        disable_events: 
+
 shot_profiles:
     nurgle_major_shot_profile:
         states:
@@ -99,3 +121,17 @@ shot_profiles:
             - name: hit
               show: "off"
         loop: false
+
+
+counters:
+    nurgle_major_shots:
+        count_events:
+        count_complete_value: 7
+        starting_count: 0
+        
+        
+accurals: 
+    nurgle_major_shots:
+        events: 
+            - 
+        events_when_complete: enable_nurgle_superjackpot
