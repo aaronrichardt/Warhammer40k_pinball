@@ -1,5 +1,8 @@
 #config_version=6
 
+config:
+    - nurgle_sounds.yaml
+
 mode:
   start_events: mission_select_nurgle_selected
   stop_events: timer_khorne_mode_timer_complete
@@ -13,7 +16,7 @@ mode:
 # hitting 3 shots lights ally 
 
 timers:
-    nurgle_mode_timer: 
+    nurgle: 
         start_value: current_player.mode_timer_value # seconds
         end_value: 0
         direction: down 
@@ -28,8 +31,12 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: false 
-        start_events: nurgle_ricochet_enable_lit_hit
-        stop_events: ball_ending
+        control_events:
+            - event: ball_ending
+              action: stop
+            - event: nurgle_ricochet_enable_lit_hit
+              action: restart
+
 
 sequence_shots: 
     nurgle_ricochet_enable:
@@ -82,8 +89,8 @@ shots:
             led: l_nurgle2
             color: lime 
     nurgle_super_jackpot:
-        switch: s_super_jackpot
-        profile:
+        switch: s_jackpot_vuk
+        profile: nurgle_major_shot_profile
         show_tokens:
             led: l_superjackpot
             color: lime
@@ -105,11 +112,11 @@ shot_groups:
             - nurgle_bell4
             - nurgle_bell5
         enable_events: ModeSelect_nurgle_selected
-        disable_events: timer_nurgle_mode_timer_complete
+        disable_events: timer_nurgle_complete
 
     nurgle_super_jackpot:
         shots:
-            -nurgle_super_jackpot
+           - nurgle_super_jackpot
         enable_events: enable_nurgle_superjackpot #from accruals
         disable_events: 
 
@@ -129,9 +136,8 @@ counters:
         count_complete_value: 7
         starting_count: 0
         
+ 
+variable_player:
+    nurgle_ricochet_lit_hit:
+        score: current_player.nurgle_lit_shot_score * current_player.playfield_multiplier
         
-accurals: 
-    nurgle_major_shots:
-        events: 
-            - 
-        events_when_complete: enable_nurgle_superjackpot

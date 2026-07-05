@@ -1,5 +1,8 @@
 #config_version=6
 
+config:
+    - slannesh_sounds.yaml
+
 mode:
   start_events: mission_select_slannesh_selected
   stop_events: timer_slannesh_mode_timer_complete

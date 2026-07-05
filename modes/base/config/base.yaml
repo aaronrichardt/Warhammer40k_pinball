@@ -470,6 +470,8 @@ multiball_locks:
         balls_to_replace: 2
 
 sound_player:
+    
+
     enable_mystery:
         Mystery_award_available:
             action: play

@@ -1,5 +1,8 @@
 #config_version=6
 
+config: 
+    - necron_sounds.yaml
+
 mode:
   start_events: mission_select_necrons_selected
   stop_events: timer_necrons_mode_timer_complete
@@ -15,8 +18,3 @@ timers:
         restart_on_complete: false
         start_running: true
 
-
-shots:
-
-
-shot_groups:     

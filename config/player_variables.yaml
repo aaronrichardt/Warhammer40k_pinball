@@ -57,4 +57,25 @@ player_vars:
     value_type: int
   warp_hurry_up_base_value:
     inital_value: 5000000
+  nurgle_lit_shot_score:
+   initial_value: 100000
+  slannesh_lit_shot_score:
+   initial_value: 100000
+  tzeench_lit_shot_score:
+   initial_value: 100000
+  tyranids_lit_shot_score:
+   initial_value: 100000
+  khnorne_lit_shot_score:
+   initial_value: 100000
+  necrons_lit_shot_score:
+   initial_value: 100000
+  orks_lit_shot_score:
+   initial_value: 100000
+
+
+
+
+
+
+
       
