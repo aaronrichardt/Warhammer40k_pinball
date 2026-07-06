@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c5t82p6fxsj62"
-path="res://.godot/imported/big-ben.wav-175bc31410a1bd014f2afd1c4e5eab0b.sample"
+path="res://.godot/imported/big-ben.wav-a40eec5533db492135eaacbeb0132aa2.sample"
 
 [deps]
 
-source_file="res://addons/mpf-gmc/sounds/big-ben.wav"
-dest_files=["res://.godot/imported/big-ben.wav-175bc31410a1bd014f2afd1c4e5eab0b.sample"]
+source_file="res://addons/mpf-gmc/sounds/sfx/big-ben.wav"
+dest_files=["res://.godot/imported/big-ben.wav-a40eec5533db492135eaacbeb0132aa2.sample"]
 
 [params]
 

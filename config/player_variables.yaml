@@ -65,13 +65,22 @@ player_vars:
    initial_value: 100000
   tyranids_lit_shot_score:
    initial_value: 100000
-  khnorne_lit_shot_score:
-   initial_value: 100000
+
   necrons_lit_shot_score:
    initial_value: 100000
   orks_lit_shot_score:
    initial_value: 100000
 
+
+   ##KHORNE MODE VALUES:
+  khorne_mode_cashout_runs:
+    initial_value: 1
+  khnorne_lit_shot_score:
+    initial_value: 100000
+  khorne_super_jackpot_value:
+    inital_value: 10000000
+
+   
 
 
 

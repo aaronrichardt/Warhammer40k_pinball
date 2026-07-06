@@ -192,11 +192,21 @@ shot_groups:
         enable_events: khorne_final_stage_counter_complete
         #reset_events: khorne_super_jackpot_shot_hit
 
+widget_player:
+    mission_select_khorne_selected: 
+        mode_timer:
+            action: play
+    timer_khorne_mode_timer_complete:
+        mode_timer:
+            action: remove
+    end_khorne_mode:
+        mode_timer:
+            action: remove
 
 variable_player:
 
     khorne_super_jackpot_collected:
-        default: 60
+        score: current_player.khorne_super_jackpot_value + current_player.khorne_mode_cashout_runs * current_player.playfield_multiplier
 
 show_player:
     khorne_center_ramp_shot_lit_hit:
