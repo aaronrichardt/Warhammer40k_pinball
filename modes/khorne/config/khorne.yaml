@@ -193,7 +193,7 @@ shot_groups:
         #reset_events: khorne_super_jackpot_shot_hit
 
 widget_player:
-    mission_select_khorne_selected: 
+    mode_khorne_started: 
         mode_timer:
             action: play
     timer_khorne_mode_timer_complete:

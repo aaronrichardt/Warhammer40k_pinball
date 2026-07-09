@@ -56,9 +56,9 @@ player_vars:
     initial_value: 0
     value_type: int
   warp_hurry_up_base_value:
-    inital_value: 5000000
+    initial_value: 5000000
   nurgle_lit_shot_score:
-   initial_value: 100000
+    initial_value: 100000
   slannesh_lit_shot_score:
    initial_value: 100000
   tzeench_lit_shot_score:
@@ -78,7 +78,7 @@ player_vars:
   khnorne_lit_shot_score:
     initial_value: 100000
   khorne_super_jackpot_value:
-    inital_value: 10000000
+    initial_value: 10000000
 
    
 
