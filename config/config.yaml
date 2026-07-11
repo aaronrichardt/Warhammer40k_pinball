@@ -138,8 +138,8 @@ servos:
         reset_events: ball_starting, ball_ending
     lock_servo:
         platform_settings:
-            home_us: 2400
-            max_us: 2500
+            home_us: 2300
+            max_us: 2370
             max_runtime: 5s
         positions:
             1.0: lock_home
