@@ -102,19 +102,19 @@ lights:
     tags:  Chain1, GI, even, second
   l_xenos_s:
     number: playfield-2-1
-    tags: Chain2, xenos_letter, odd, third
+    tags: Chain2, xenos_letter, odd, third, xenos_skill_shot
   l_xenos_o:
     number: playfield-2-2
-    tags: Chain2, xenos_letter, even, first
+    tags: Chain2, xenos_letter, even, first, xenos_skill_shot
   l_xenos_n:
     number: playfield-2-3
-    tags: Chain2, xenos_letter, odd, second
+    tags: Chain2, xenos_letter, odd, second, xenos_skill_shot
   l_xenos_e:
     number: playfield-2-4
-    tags: Chain2, xenos_letter, even, third
+    tags: Chain2, xenos_letter, even, third, xenos_skill_shot
   l_xenos_x:
     number: playfield-2-5
-    tags: Chain2, xenos_letter, odd, first
+    tags: Chain2, xenos_letter, odd, first,  xenos_skill_shot
   l_orkface1:
     number: playfield-2-6
     tags: Chain2, waagh_face, even, second

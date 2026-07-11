@@ -9,7 +9,7 @@ shots:
   base_warp_hurry_up:
     switch: s_nurgle_redcircle
     profile: generic_flash_profile
-    start_enabled: false
+    start_enabled: true
     disable_events: stop_warp_hurryup, warp_hurryup_collected
     restart_events: start_warp_hurryup
     show_tokens:
@@ -21,7 +21,7 @@ timers:
         start_value: (current_player.warp_hurry_up_base_value) 
         end_value: 100000
         direction: down 
-        tick_interval: .5ms
+        tick_interval: .001ms
         control_events:
          - event: start_warp_hurryup
            action: start 
@@ -32,6 +32,11 @@ variable_player:
   base_warp_hurry_up_hit:
     score: timer_base_hurry_up_warp_ticks
     
+show_player:
+    base_warp_hurry_up_hit:
+        Playfield360rainbowsSweep: 
+            action: play
+
 event_player: 
     base_warp_hurry_up_hit:
-        warp_hurryup_collected|2s 
+        warp_hurryup_collected|3s 

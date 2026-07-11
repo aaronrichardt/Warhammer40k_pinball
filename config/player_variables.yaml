@@ -4,6 +4,8 @@ player_vars:
     initial_value: 0
   xenos_earned:
     initial_value: 0
+  mode_timer_value:
+    initial_value: 40
   bonus_switches:
     initial_value: 0
   bonus_pops_value:
@@ -14,8 +16,8 @@ player_vars:
     initial_value: 0
   pv_warp_mode_counter:
     initial_value: 0
-  pv_necron_lock_count:
-    initial_value: 0
+  necron_lock_count:
+    initial_value: 3
   bonus_multiplier: 
     initial_value: 2
   playfield_multiplier: 
@@ -53,3 +55,36 @@ player_vars:
   titan_multiball_qualifier_lock_count:
     initial_value: 0
     value_type: int
+  warp_hurry_up_base_value:
+    initial_value: 5000000
+  nurgle_lit_shot_score:
+    initial_value: 100000
+  slannesh_lit_shot_score:
+   initial_value: 100000
+  tzeench_lit_shot_score:
+   initial_value: 100000
+  tyranids_lit_shot_score:
+   initial_value: 100000
+
+  necrons_lit_shot_score:
+   initial_value: 100000
+  orks_lit_shot_score:
+   initial_value: 100000
+
+
+   ##KHORNE MODE VALUES:
+  khorne_mode_cashout_runs:
+    initial_value: 1
+  khnorne_lit_shot_score:
+    initial_value: 100000
+  khorne_super_jackpot_value:
+    initial_value: 10000000
+
+   
+
+
+
+
+
+
+      

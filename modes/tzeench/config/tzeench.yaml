@@ -3,6 +3,9 @@
 # Stage 1: Dramatic strobe effect with roaming shot mechanic
 # Stage 2: Batman 66-style progressive ruleset
 
+config:
+    - tzeench_sounds.yaml
+
 mode:
   start_events: mission_select_tzeench_selected
   stop_events: timer_tzeench_mode_timer_complete

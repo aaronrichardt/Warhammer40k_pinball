@@ -1,18 +1,13 @@
 #config_version=6
-sequence_shots: 
-  base_right_orbit:
-    switch_sequence: s_right_orbit, s_innerloop_left
-    sequence_timeout: 3s
-  base_innerloop_right:
+sequence_shots:
+  # base_right_orbit:
+  #   switch_sequence: s_right_orbit, s_innerloop_left
+  #   sequence_timeout: 3s
+  base_innerloop_sequence_right:
     switch_sequence: s_innerloop_right, s_innerloop_left
-    sequence_timeout: 3s
+    sequence_timeout: 2s
+
   base_innerloop_left:
-    switch_sequence: s_innerloop_left, s_innerloop_right
-    sequence_timeout: 3s
-
-
-
-  complete_inner_loop:
     switch_sequence: s_innerloop_left, s_innerloop_right, s_left_outlane
     sequence_timeout: 3s
    #Secret Combo Shots

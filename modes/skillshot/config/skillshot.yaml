@@ -8,6 +8,7 @@
 mode:
   start_events: ball_started, skillshot_restart
   stop_events: 
+    - timer_skill_shot_timeout_complete
     - skill_shot_success
     - skill_shot_failed 
   priority: 500
@@ -15,61 +16,63 @@ mode:
 shots:
     skill_xenos_x:
         switch: s_xenos_x
-        profile: skill_shot_profile
-        #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_xenos_x
-          color: white
+        # profile: skill_shot_profile
+        # enable_events: skillshot_timer_start
+
+        # #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
+        # show_tokens:
+        #   led: l_xenos_x
+        #   color: white
     skill_xenos_e:
         switch: s_xenos_e
-        profile: skill_shot_profile
+        #profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_xenos_e
-          color: white
+        # show_tokens:
+        #   led: l_xenos_e
+        #   color: white
     skill_xenos_n:
         switch: s_xenos_n
-        profile: skill_shot_profile
+        #profile: skill_shot_profile
         # advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_xenos_n
-          color: white
+        # show_tokens:
+        #   led: l_xenos_n
+        #   color: white
     skill_xenos_o:
         switch: s_xenos_o
-        profile: skill_shot_profile
+      #  profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_xenos_o
-          color: white
+        # show_tokens:
+        #   led: l_xenos_o
+        #   color: white
     skill_xenos_s:
         switch: s_xenos_s
-        profile: skill_shot_profile
+       # profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_xenos_s
-          color: white
-
+        # show_tokens:
+        #   led: l_xenos_s
+        #   color: white
     skill_left_inlane:
         switch: s_left_inlane
-        profile: skill_shot_profile
+       # profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_warp_a
-          color: white
+        # show_tokens:
+        #   led: l_warp_a
+        #   color: white
     skill_right_inlane:
         switch: s_right_inlane
-        profile: skill_shot_profile
+        #profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_warp_r
-          color: white
+        # show_tokens:
+        #   led: l_warp_r
+        #   color: white
     skill_right_outlane:
         switch: s_right_outlane
-        profile: skill_shot_profile
+       # profile: skill_shot_profile
         #advance_events: mode_skill_shot_started        # replace "skill_shot" with your mode name
-        show_tokens:
-          led: l_warp_r
-          color: white
+        # show_tokens:
+        #   led: l_warp_r
+        #   color: white
+
     
     skill_lowerloop:
         switch: s_lowerloop
@@ -115,7 +118,6 @@ sequence_shots:
           - s_jackpot_vuk
 
 sequences: 
-
     super_skillshot_selected:
         reset_on_complete: false
         enable_events: super_skill_shot_option
@@ -147,6 +149,7 @@ shot_profiles:
       - name: lit
         show: standard_flash
         speed: 10
+     
   super_skill_shot_profile:
     advance_on_hit: false
     states: 
@@ -162,18 +165,50 @@ shot_profiles:
 
 timers:
   skill_shot_timeout:
-    start_value: 0
-    end_value: 10     # set the timeout of your skill shot here
-    direction: up
+    start_value: 20
+    end_value: 0     # set the timeout of your skill shot here
+    direction: down
     tick_interval: 1s
     start_running: false
     control_events:
       - action: start
-        event: balldevice_bd_plunger_ball_eject_success  # replace "plunger_lane" with the name of your plunger device
+        event: s_autoplunger_inactive  # replace "plunger_lane" with the name of your plunger device
       - action: stop
         event: stop_skill_shot_timer
 
 show_player: 
+    slide_skill_shot_success: 
+        Playfield360rainbowsSweep:
+            speed: 2
+
+    mode_skillshot_started:
+        standard_flash:
+            key: skillshot
+            speed: 5
+            priority: 10
+            show_tokens:
+              led: xenos_skill_shot
+              color: white
+    
+    #increase speed for hurry up
+    timer_skill_shot_timeout_tick{ticks_remaining==10}:
+        standard_flash:
+            key: skillshot
+            speed: 10
+            priority: 20
+            show_tokens:
+              led: xenos_skill_shot
+              color: yellow
+    #Double increase speed for hurry up
+    timer_skill_shot_timeout_tick{ticks_remaining==5}:
+        standard_flash:
+            key: skillshot
+            speed: 15
+            priority: 40
+            show_tokens:
+              led: xenos_skill_shot
+              color: red
+
     enable_superskillshot_lights: 
         skillshot_light_show:
             action: play

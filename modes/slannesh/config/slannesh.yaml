@@ -1,5 +1,8 @@
 #config_version=6
 
+config:
+    - slannesh_sounds.yaml
+
 mode:
   start_events: mission_select_slannesh_selected
   stop_events: timer_slannesh_mode_timer_complete
@@ -12,7 +15,7 @@ mode:
 
 timers:
     slannesh: 
-        start_value: 60 # seconds
+        start_value: current_player.mode_timer_value # seconds
         end_value: 0
         direction: down 
         tick_interval: 1s
@@ -73,19 +76,19 @@ accruals:
 
 shots:
     center_spinner_shot:
-        switch: s_tempholder1
+        hit_events: s_tempholder1_active
         profile: generic_flash
         show_tokens:
              led: l_innerloop_arrow
              color: aqua
     left_spinner_shot:
-        switch: s_tempholder2
+        hit_events: s_tempholder2_active
         profile: generic_flash
         show_tokens:
              led: l_center_ramp_circle, l_center_ramp_arrow
              color: aqua
     right_spinner_shot:
-        switch: s_tempholder3
+        hit_events: s_tempholder3_active    
         profile: generic_flash
         show_tokens:
              led: l_right_orbit_arrow
