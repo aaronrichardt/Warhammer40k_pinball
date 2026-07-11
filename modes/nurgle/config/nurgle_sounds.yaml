@@ -1,0 +1,28 @@
+#config_version=6
+
+sound_player: 
+    timer_nurgle_tick{ticks_remaining==5}:
+        Five:
+            action: play
+            volume: 1
+            bus: voice
+    timer_nurgle_tick{ticks_remaining==4}:
+        Four:
+            action: play
+            volume: 1
+            bus: voice
+    timer_nurgle_tick{ticks_remaining==3}:
+        Three:
+            action: play
+            volume: 1
+            bus: voice
+    timer_nurgle_tick{ticks_remaining==2}:
+        Two:
+           action: play
+           volume: 1
+           bus: voice
+    timer_nurgle_tick{ticks_remaining==1}:
+        One:
+           action: play
+           volume: 1
+           bus: voice
