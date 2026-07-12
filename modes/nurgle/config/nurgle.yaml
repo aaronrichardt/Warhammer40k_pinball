@@ -92,7 +92,7 @@ shots:
         switch: s_jackpot_vuk
         profile: nurgle_major_shot_profile
         show_tokens:
-            led: l_superjackpot
+            led: l_super_jackpot
             color: lime
 
 shot_groups:

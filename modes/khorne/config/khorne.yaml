@@ -85,7 +85,7 @@ shots:
         start_enabled: false
         reset_events:
         show_tokens: 
-            led: l_right_innerloop_arrow
+            led: l_innerloop_arrow
             color: red
 
     khorne_left_orbit_shot:
@@ -95,7 +95,7 @@ shots:
         reset_events:
         hit_events: khorne_left_orbit_shot_hit
         show_tokens:
-            led: l_left_ramp_arrow
+            led: l_left_orbit_arrow
             color: red
 
     khorne_right_orbit_shot:
