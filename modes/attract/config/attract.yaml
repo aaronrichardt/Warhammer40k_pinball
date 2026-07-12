@@ -35,9 +35,47 @@ timers:
         restart_on_complete: true
         start_running: true
 
+    attract_allow_sound:
+        start_value: 30
+        end_value: 0  
+        direction: down
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false
+        control_events:
+            - event: play_attract_button_press
+              action: restart
 
 show_player:
   mode_attract_started:
     attract_light_show:
       manual_advance: false
 
+sound_player:
+  play_attract_button_press:
+    attract_button_press:
+      action: play
+      volume: 1
+      bus: voice
+      ducking:
+        bus: music
+        attack: 0.3 sec
+        attenuation: 0
+        release_point: 2.0 sec
+        release: 1.0 sec
+
+event_player:
+  s_left_flipper_active{device.timers.attract_allow_sound.running==False}: 
+    - play_attract_button_press
+    - ork_left 
+    - ork_right|.4s 
+    - ork_left|.2s 
+    - ork_right|.3s
+    - ork_home|.5s
+  s_right_flipper_active{device.timers.attract_allow_sound.running==False}: 
+    - play_attract_button_press
+    - ork_left 
+    - ork_right|.3s 
+    - ork_left|.5s 
+    - ork_right|.2s
+    - ork_home|.3s
