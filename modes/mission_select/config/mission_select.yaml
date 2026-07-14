@@ -23,3 +23,16 @@ mode_settings:
 slide_player:
     item_highlighted: mission_select
     mode_mission_select_started: mission_select
+
+sound_player:
+    mode_mission_select_started: 
+        choose_a_mission:
+           action: play
+           volume: 1
+           bus: voice
+           ducking:
+               bus: music
+               attack: 0.3 sec
+               attenuation: 0
+               release_point: 2.0 sec
+               release: 1.0 sec

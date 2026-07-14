@@ -1,0 +1,15 @@
+[gd_resource type="AudioStreamRandomizer" load_steps=6 format=3 uid="uid://dp2arm2kk46l6"]
+
+[ext_resource type="AudioStream" uid="uid://bkfme4a4pwbo8" path="res://addons/mpf-gmc/sounds/voice/orks/400233.mp3" id="1_x2326"]
+[ext_resource type="AudioStream" uid="uid://ciuubra4i50cp" path="res://addons/mpf-gmc/sounds/voice/orks/400350.mp3" id="2_58oqw"]
+[ext_resource type="AudioStream" uid="uid://ctoxexdavfdmy" path="res://addons/mpf-gmc/sounds/voice/orks/1070121.mp3" id="3_hcpw3"]
+[ext_resource type="AudioStream" uid="uid://bo7bnu3xf8kt4" path="res://addons/mpf-gmc/sounds/voice/orks/405070.mp3" id="4_0o1w5"]
+[ext_resource type="AudioStream" uid="uid://kn4o242vxvbd" path="res://addons/mpf-gmc/sounds/voice/orks/1070032.mp3" id="5_8t7he"]
+
+[resource]
+streams_count = 5
+stream_0/stream = ExtResource("1_x2326")
+stream_1/stream = ExtResource("2_58oqw")
+stream_2/stream = ExtResource("3_hcpw3")
+stream_3/stream = ExtResource("4_0o1w5")
+stream_4/stream = ExtResource("5_8t7he")

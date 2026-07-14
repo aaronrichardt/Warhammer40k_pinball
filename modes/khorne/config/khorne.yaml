@@ -85,7 +85,7 @@ shots:
         start_enabled: false
         reset_events:
         show_tokens: 
-            led: l_right_innerloop_arrow
+            led: l_innerloop_arrow
             color: red
 
     khorne_left_orbit_shot:
@@ -95,7 +95,7 @@ shots:
         reset_events:
         hit_events: khorne_left_orbit_shot_hit
         show_tokens:
-            led: l_left_ramp_arrow
+            led: l_left_orbit_arrow
             color: red
 
     khorne_right_orbit_shot:
@@ -193,7 +193,7 @@ shot_groups:
         #reset_events: khorne_super_jackpot_shot_hit
 
 widget_player:
-    mission_select_khorne_selected: 
+    mode_khorne_started: 
         mode_timer:
             action: play
     timer_khorne_mode_timer_complete:
@@ -208,82 +208,82 @@ variable_player:
     khorne_super_jackpot_collected:
         score: current_player.khorne_super_jackpot_value + current_player.khorne_mode_cashout_runs * current_player.playfield_multiplier
 
-show_player:
-    khorne_center_ramp_shot_lit_hit:
-        generic_flash:
-            show_tokens: 
-                led: GI
-                color: red
-            speed: 2
-            loops: 0 
-    khorne_left_loop_shot_lit_hit:
-        generic_flash:
-            show_tokens: 
-                led: GI
-                color: red
-            speed: 2
-            loops: 0 
+# show_player:
+#     khorne_center_ramp_shot_lit_hit:
+#         generic_flash:
+#             show_tokens: 
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0 
+#     khorne_left_loop_shot_lit_hit:
+#         generic_flash:
+#             show_tokens: 
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0 
 
-    khorne_right_loop_shot_lit_hit:
-        generic_flash: 
-            show_tokens: 
-                led: GI
-                color: red 
-            speed: 2
-            loops: 0
-    khorne_left_orbit_shot_lit_hit: 
-        generic_flash:
-            show_tokens:
-                led: GI
-                color: red
-            speed: 2
-            loops: 0 
-    khorne_right_orbit_shot_lit_hit: 
-        generic_flash:
-            show_tokens:
-                led: GI
-                color: red
-            speed: 2
-            loops: 0 
-    khorne_ricochet_loop_shot_lit_hit:
-        generic_flash:
-            show_tokens:
-                led: GI
-                color: red
-            speed: 2
-            loops: 0
-    khorne_droptarget_shot_lit_hit:
-        generic_flash:
-            show_tokens:
-                led: GI
-                color: red
-            speed: 2
-            loops: 0 
-    khorne_scoop_shot_hit:
-        generic_flash:
-            show_tokens:
-                led: GI
-                color: red
+#     khorne_right_loop_shot_lit_hit:
+#         generic_flash: 
+#             show_tokens: 
+#                 led: GI
+#                 color: red 
+#             speed: 2
+#             loops: 0
+#     khorne_left_orbit_shot_lit_hit: 
+#         generic_flash:
+#             show_tokens:
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0 
+#     khorne_right_orbit_shot_lit_hit: 
+#         generic_flash:
+#             show_tokens:
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0 
+#     khorne_ricochet_loop_shot_lit_hit:
+#         generic_flash:
+#             show_tokens:
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0
+#     khorne_droptarget_shot_lit_hit:
+#         generic_flash:
+#             show_tokens:
+#                 led: GI
+#                 color: red
+#             speed: 2
+#             loops: 0 
+#     khorne_scoop_shot_hit:
+#         generic_flash:
+#             show_tokens:
+#                 led: GI
+#                 color: red
         
 event_player:
 
     # Final-stage shot-hit behavior -> relight logic (keeps the mode going); counter also increments automatically
-    khorne_center_ramp_shot_hit:
-        - major_shots_relit
-    khorne_left_loop_shot_hit:
-        - major_shots_relit
-    khorne_right_loop_shot_hit:
-        - major_shots_relit
-    khorne_left_orbit_shot_hit:
-        - major_shots_relit
-    khorne_right_orbit_shot_hit:
-        - major_shots_relit
-    khorne_ricochet_loop_shot_hit:
-        - major_shots_relit
-    khorne_droptarget_shot_hit:
-        - major_shots_relit
-    khorne_scoop_shot_hit:
-        - major_shots_relit
+    # khorne_center_ramp_shot_hit:
+    #     - major_shots_relit
+    # khorne_left_loop_shot_hit:
+    #     - major_shots_relit
+    # khorne_right_loop_shot_hit:
+    #     - major_shots_relit
+    # khorne_left_orbit_shot_hit:
+    #     - major_shots_relit
+    # khorne_right_orbit_shot_hit:
+    #     - major_shots_relit
+    # khorne_ricochet_loop_shot_hit:
+    #     - major_shots_relit
+    # khorne_droptarget_shot_hit:
+    #     - major_shots_relit
+    # khorne_scoop_shot_hit:
+    #     - major_shots_relit
 
     # When 5 lit-mode shots have been hit (counter complete), light the Super Jackpot
     khorne_final_stage_counter_complete:

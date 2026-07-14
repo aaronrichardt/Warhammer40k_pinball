@@ -6,23 +6,53 @@ sound_player:
             action: play
             volume: 1
             bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     timer_necron_tick{ticks_remaining==4}:
         Four:
             action: play
             volume: 1
             bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     timer_necron_tick{ticks_remaining==3}:
         Three:
             action: play
             volume: 1
             bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     timer_necron_tick{ticks_remaining==2}:
         Two:
             action: play
             volume: 1
             bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
     timer_necron_tick{ticks_remaining==1}:
         One:
             action: play
             volume: 1
             bus: voice
+            ducking:
+                bus: music
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
