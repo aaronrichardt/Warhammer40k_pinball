@@ -32,8 +32,6 @@ event_player:
   
   ball_hold_mission_select_scoop_held_ball:
    # If NO missions are active, then enable mission scoop
-  - start_mission_select{device.mode.nurgle.enabled=False and device.mode.khorne.enabled=False and device.mode.slannesh.enabled=False and device.mode.tzeench.enabled=False and device.mode.necrons=False}
-  # if a mission is running give shot value reward increase
-  - boost_base_shot_value {device.mode.nurgle.enabled=True or device.mode.khorne.enabled=True or device.mode.slannesh.enabled=True or device.mode.tzeench.enabled=True or device.mode.necrons.enabled=True or device.mode.tyranids.enabled=True}
+  - start_mission_select
   
   mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete

@@ -1,0 +1,25 @@
+#show_version=6
+- time: "+.15"
+  lights:
+    waagh_face: white
+- time: "+.12"
+  lights:
+    waagh_face: off
+- time: "+.15"
+  lights:
+    waagh_face: white
+- time: "+.12"
+  lights:
+    waagh_face: off
+- time: "+.05"
+  lights:
+    waagh_face: white
+- time: "+.12"
+  lights:
+    waagh_face: off
+- time: "+.15"
+  lights:
+    waagh_face: white
+- time: "+.15"
+  lights:
+    waagh_face: off

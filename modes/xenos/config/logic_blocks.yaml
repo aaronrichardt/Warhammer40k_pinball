@@ -11,5 +11,7 @@ accruals:
     reset_on_complete: true
     disable_on_complete: false
     reset_events: reenable_xenos_accrual
-    events_when_complete: reset_xenos_lights, xenos_spotted
-
+    events_when_complete: 
+      - reset_xenos_lights
+      - xenos_spotted {mode.nurgle.active==False and mode.khorne.active==False and mode.slannesh.active==False and mode.tzeench.active==False and mode.necrons.active==False  }
+      - boost_base_shot_value {device.mode.nurgle.enabled=True or device.mode.khorne.enabled=True or device.mode.slannesh.enabled=True or device.mode.tzeench.enabled=True or device.mode.necrons.enabled=True or device.mode.tyranids.enabled=True}
