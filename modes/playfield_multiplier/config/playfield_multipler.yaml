@@ -1,0 +1,101 @@
+#config_version=6
+mode:
+  start_events: ball_started
+  stop_events: disable_playfield_multiplier
+  priority: 200
+
+sequence_shots:
+       playfield_multiplier_combo_sequence:
+        switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
+        sequence_timeout: 2s
+
+shots: 
+    2x_playfield: 
+       hit_events: playfield_multiplier_combo_sequence
+
+
+counters:
+    enable_playfield_multipler:
+        count_events: 2x_playfield_hit
+        starting_count: 0
+        count_interval: 1 
+        count_complete_value: 3
+        events_when_complete: 
+            - restart_playfield_multiplier_2x
+
+timers: 
+    playfield_multiplier: 
+        start_value: (current_player.playfield_multiplier_timer) 
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false
+        control_events:
+            - event: restart_playfield_multiplier_4 
+              action: restart
+            - event: restart_playfield_multiplier_3x
+              action : restart 
+            - event: restart_playfield_multiplier_2x
+              action: restart
+    
+
+variable_player:
+    timer_playfield_multiplier_complete: 
+        playfield_multiplier_value:
+            int: 1 
+            action: set
+    restart_playfield_multiplier_2x:
+        playfield_multiplier_value:
+            int: 2
+            action: set
+    restart_playfield_multiplier_3x: 
+        playfield_multiplier_value:
+            int: 3
+            action: set 
+    restart_playfield_multiplier_4x: 
+            int: 4
+            action: set 
+    
+
+show_player: 
+    restart_playfield_multiplier_2x: 
+        standard_flash:
+            key: multiplier
+            speed: 5
+            action: play 
+            priority: 10
+            show_tokens:
+              led: omega #use the whole omega symbol
+              color: purple
+    restart_playfield_multiplier_3x: 
+        standard_flash:
+            key: multiplier
+            speed: 5
+            action: play 
+            priority: 10
+            show_tokens:
+              led: omega #use the whole omega symbol
+              color: red
+    restart_playfield_multiplier_4x: 
+        standard_flash:
+            key: multiplier
+            speed: 5
+            action: play 
+            priority: 10
+            show_tokens:
+              led: omega #use the whole omega symbol
+              color: gold
+    timer_playfield_multiplier_complete:
+        standard_flash:
+            action: stop 
+    mode_playfield_multiplier_stopping: 
+            standard_flash:
+            key: multiplier
+            action: stop 
+            speed: 5
+            priority: 10
+            show_tokens:
+              led: omega #use the whole omega symbol
+              color: purple
+ 

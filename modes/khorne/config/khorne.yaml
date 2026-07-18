@@ -43,7 +43,7 @@ shot_profiles:
     khorne_major_shot_profile:
         states:
             - name: lit
-              show: "flash"
+              show: "generic_flash"
             - name: hit
               show: "off"
         loop: false
@@ -51,7 +51,7 @@ shot_profiles:
     khorne_super_jackpot_profile:
         states:
             - name: lit
-              show: "pulse_fast"
+              show: "generic_flash"
             - name: collected
               show: "on"
         loop: false

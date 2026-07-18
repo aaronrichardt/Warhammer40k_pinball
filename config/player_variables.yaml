@@ -1,5 +1,7 @@
 #config_version=6
 player_vars:
+  playfield_multiplier_timer:
+    initial_value: 30
   xenos_available:
     initial_value: 0
   xenos_earned:
@@ -20,7 +22,7 @@ player_vars:
     initial_value: 3
   bonus_multiplier: 
     initial_value: 2
-  playfield_multiplier: 
+  playfield_multiplier_value: 
     initial_value: 1
   bonus_total:
     initial_value: 1
@@ -55,6 +57,10 @@ player_vars:
   titan_multiball_qualifier_lock_count:
     initial_value: 0
     value_type: int
+  base_shot_value: 
+    initial_value: 50000
+  base_spinner_value: 
+    initial_value: 1000
   warp_hurry_up_base_value:
     initial_value: 5000000
   nurgle_lit_shot_score:
@@ -71,7 +77,7 @@ player_vars:
   orks_lit_shot_score:
    initial_value: 100000
 
-
+   
    ##KHORNE MODE VALUES:
   khorne_mode_cashout_runs:
     initial_value: 1

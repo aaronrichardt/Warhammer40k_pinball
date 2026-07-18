@@ -105,4 +105,7 @@ variable_player:
     score: 2000 * (current_player.playfield_multiplier)
   base_warp_hurry_up_hit:
     score: timer_base_hurry_up_warp_ticks
-
+  boost_base_shot_value:
+    base_shot_value: 50000
+  boost_base_spinner_value: 
+    base_spinner_value: 1000

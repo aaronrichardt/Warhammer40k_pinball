@@ -1,8 +1,0 @@
-#config_version=6
-
-#Super Skill mode wil activate during the start of play, to activate press and hold left flipper.
-#Dropper ramp will come down to feed to the left flipper which will give rewards based on target hit. 
-
-mode:
-  start_events:
-  stop_events: 

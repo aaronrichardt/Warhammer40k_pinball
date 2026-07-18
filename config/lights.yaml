@@ -6,28 +6,28 @@ light_settings:
 lights:
   l_omega_1:
     number: playfield-1-1
-    tags:  Chain1, odd, first
+    tags:  Chain1, odd, first, omega
   l_omega_2:
     number: playfield-1-2
-    tags:  Chain1, even, second
+    tags:  Chain1, even, second, omega
   l_omega_3:
     number: playfield-1-3
-    tags:  Chain1, odd, third
+    tags:  Chain1, odd, third, omega
   l_omega_4:
     number: playfield-1-4
-    tags:  Chain1, even, first
+    tags:  Chain1, even, first, omega
   l_omega_5:
     number: playfield-1-5
-    tags:  Chain1, odd, second
+    tags:  Chain1, odd, second, omega
   l_omega_6:
     number: playfield-1-6
-    tags:  Chain1, even, third
+    tags:  Chain1, even, third, omega
   l_omega_7:
     number: playfield-1-7
-    tags:  Chain1, odd, first
+    tags:  Chain1, odd, first, omega
   l_omega_8:
     number: playfield-1-8
-    tags:  Chain1, even, second
+    tags:  Chain1, even, second, omega
   l_solemnace_circle:
     number: playfield-1-9
     tags:  Chain1, odd, third

@@ -67,40 +67,40 @@ random_event_player:
 slide_player:
   award_hold_bonus:
     award_hold_bonus_slide:
-      expire: 5s
+      expire: 3s
   award_add_2x_bonus:
     award_add_2x_bonus_slide:
-      expire: 5s
+      expire: 3s
   award_hold_bonus_multiplier:
     award_hold_bonus_multiplier_slide:
-      expire: 5s
+      expire: 3s
   award_light_shot_multipliers:
     award_light_shot_multipliers_slide:
-      expire: 5s
+      expire: 3s
   award_big_points:
     award_big_points_slide:
-      expire: 5s
+      expire: 3s
   award_small_points:
     award_small_points_slide:
-      expire: 5s
+      expire: 3s
   award_light_extra_ball:
     award_light_extra_ball_slide:
-      expire: 5s
+      expire: 3s
   award_increase_warp_hurryup:
     award_increase_warp_hurryup_slide:
-      expire: 5s
+      expire: 3s
   award_light_lock:
     award_light_lock_slide:
-      expire: 5s
+      expire: 3s
   award_light_waagh:
     award_light_waagh_slide:
-      expire: 5s
+      expire: 3s
   award_add_more_time:
     award_add_more_time_slide:
-      expire: 5s
+      expire: 3s
   award_add_a_ball:
     award_add_a_ball_slide:
-      expire: 5s
+      expire: 3s
   award_add_a_ball_and_more_time:
     award_add_a_ball_and_more_time_slide:
-      expire: 5s
+      expire: 3s
