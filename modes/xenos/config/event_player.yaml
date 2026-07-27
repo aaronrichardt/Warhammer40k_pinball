@@ -33,5 +33,5 @@ event_player:
   ball_hold_mission_select_scoop_held_ball:
    # If NO missions are active, then enable mission scoop
   - start_mission_select
-  
+ 
   mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
