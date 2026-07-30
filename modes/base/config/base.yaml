@@ -5,6 +5,7 @@ mode:
   priority: 100
 
 config: 
+  - base_sound_play.yaml
   - base_sequence_shots.yaml
   - base_variable_player.yaml
   - events.yaml
@@ -13,7 +14,6 @@ slide_player:
     mode_skillshot_stopped: base
     #init_done: welcome_slide
     #mode_attract_started: attract
-
 
 ball_holds:
   base_scoop:
@@ -48,7 +48,26 @@ ball_holds:
 #         post: play_scoop_flash_show
 #         wait_for: play_scoop_flash_show_complete
 
-show_player:
+show_player: 
+
+   device.spinner.center_spinner_hit:
+        ##Add show
+        spinner_show:
+            show_token: 
+                led: l_innerloop_flasher
+                color: orange
+   device.spinner.right_spinner_hit:
+   ##Add show
+           spinner_show:
+            show_token: 
+                led: l_
+                color: blue
+   device.spinner.left_spinner_hit:
+    ##Add show
+            spinner_show:
+            show_token: 
+                led:
+                color: white
   mode_base_started:
     base_light_show:
       speed: 1
@@ -248,6 +267,14 @@ shots:
   #       led: l_light_mystery
   #       color: white
   #  #COMBO CENTER RAMP END
+  base_dreadnought_lock:
+    switch: s_nurgle_redcircle
+    profile: generic_flash_profile
+    show_tokens: 
+        led: l_right_innerloop_circle
+        color: orange
+    start_enabled: true
+
 
   mechanicus_scoop_shot:
     switch: s_scoop
@@ -262,14 +289,36 @@ shot_groups:
   right_orbit_combo:
     shots: base_shot_right_orbit, base_shot_innerloop_right, base_shot_jackpot_vuk
     reset_events: timer_base_combo_right_orbit_completed, ball_started, right_orbit_combo_hit_complete
-    enable_events: ball_started
-    disable_events: #Disable duing Multiballs or Modes 
+    enable_events: 
+        - ball_started
+        - mode_knorne_stopped
+        - mode_nurgle_stopped
+        - mode_slannesh_stopped
+        - mode_necrons_stopped
+        - mode_tzeench_stopped
+    disable_events: 
+        - mode_knorne_started
+        - mode_nurgle_started
+        - mode_slannesh_started
+        - mode_necrons_started
+        - mode_tzeench_started
 
   left_orbit_combo:
     shots: base_shot_left_orbit, base_shot_innerloop_left, base_shot_center_ramp
     reset_events: timer_base_combo_left_orbit_completed, ball_started, left_orbit_combo_hit_complete
-    enable_events: ball_started
-    disable_events: #Disable duing Multiballs or Modes 
+    enable_events: 
+        - ball_started
+        - mode_knorne_stopped
+        - mode_nurgle_stopped
+        - mode_slannesh_stopped
+        - mode_necrons_stopped
+        - mode_tzeench_stopped
+    disable_events: 
+        - mode_knorne_started
+        - mode_nurgle_started
+        - mode_slannesh_started
+        - mode_necrons_started
+        - mode_tzeench_started
 
   start_select_mode_group:
     shots: mechanicus_scoop_shot
@@ -319,8 +368,8 @@ shot_profiles:
         show: generic_flash
       - name: hit
         show: solid_color
-
-
+   
+    
 
   generic_flash_profile:
     states:
@@ -351,8 +400,8 @@ timers:
         control_events:
          - event: base_shot_right_orbit_unlit_hit
            action: restart
-            
-           
+
+                    
 sequences:
     triple_combo1: 
         events:
@@ -385,6 +434,16 @@ sequences:
             - award_necron_mission_complete
             
 counters:
+  dreadnought_lock_counter:
+    count_events: base_dreadnought_lock_lit_hit
+    starting_count: 0
+    count_interval: 1
+    direction: up
+    count_complete_value: 3
+    events_when_complete: base_dreadnought_lock_qualified
+    reset_on_complete: true
+    disable_on_complete: false
+
   blood_angels_qualify_counter:
     count_events: left_orbit_hit
     starting_count: 0
@@ -469,373 +528,6 @@ multiball_locks:
         lock_devices: bd_titan
         balls_to_replace: 2
 
-sound_player:
-    
-
-    enable_mystery:
-        Mystery_award_available:
-            action: play
-            volume: 1
-            bus: voice
-            ducking:
-                bus: voice
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    mystery_achieved:
-        Mystery_awards_pool:
-            action: play
-            volume: 1
-            ducking:
-                bus: voice
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    mode_base_started: 
-        Admonition:
-            action: play
-            volume: 0.7
-            bus: music
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    play_welcome_instruction: 
-        WelcomeBattleBrother2:
-            action: play
-            volume: 1
-            bus: voice
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    play_howto_instruction: 
-        hurryUpAndMystery:
-            action: play
-            volume: 1
-            bus: voice
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    waagh_multiball_start:
-        Rise_of_the_WAAAGH:
-            action: play
-            bus: music
-            volume: 1
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-        Admonition:
-            action: stop
-            bus: music
-
-            ducking:
-                bus: music
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    left_drain_hit:
-        big-ben:
-            action: play
-            volume: 2
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_left_slingshot_active:
-        slingshots:
-            action: play
-            volume: 2
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_right_slingshot_active:
-        slingshots:
-            action: play
-            volume: 2
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-      #center ramp
-    s_center_ramp_active:
-        DP_Cinematic_SFX_Stinger_Impact Aware_01:
-            action: play
-            volume: 2
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_left_orbit_active:
-        DP_Cinematic_SFX_Ramp_Enter_Chungus_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_droptarget_lock_active:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    
-    s_pop_top_active:
-        pop_sfx:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_pop_bottom_active:
-        pop_sfx:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    #lower loop
-    s_lower_loop_active:
-        DP_Cinematic_SFX_Stinger_Klaxxon_Klaxxoff:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-      #right orbit
-    s_right_orbit_active:
-        DP_Cinematic_SFX_Ramp Exit_Filtered Exit_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-            #center spinner
-    spinner_center_spinner_hit:
-        lazgun_sfx:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0 sec
-                attenuation: 0
-                release_point: 0.0 sec
-                release: 0.0 sec
-            #left spinner
-    spinner_left_spinner_hit:
-        lazgun_sfx:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-            #right spinner
-    spinner_right_spinner_hit:
-        lazgun_sfx:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_jackpot_vuk_active:
-        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_snikt_target_active:
-        DP_Cinematic_SFX_Standup_Plasmate_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_left_inlane_active:
-        mecha-sound-impact:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    
-    s_right_inlane_active:
-        mecha-sound-impact:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    balldevice_bd_scoop_ejecting_ball:
-        DP_Cinematic_SFX_Scoop_The Eject Sound:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    
-    s_nurgle_redcircle_active:
-        DP_Cinematic_SFX_Stinger_Sub Affair_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_waagh_newton_ball_active:
-        DP_Cinematic_SFX_Slingshot_Atrium Sub_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    multiball_lock_titan_ball_locked:
-        DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_necron_target_active:
-        DP_Cinematic_SFX_Standup_Plasmate_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_scoop_nurgle_target_active:
-        DP_Cinematic_SFX_Drop Target_Thump_01:
-            action: play
-            volume: 1.3
-            ducking:
-                bus: effects
-                attack: 0.3 sec
-                attenuation: 0
-                release_point: 2.0 sec
-                release: 1.0 sec
-    s_light_lock_active:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-                action: play
-                volume: 1.3
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
-    s_bonus_x_active:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-                action: play
-                volume: 1.3
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
-    s_light_mystery_active:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-                action: play
-                volume: 1.3
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
-    s_light_spinners_active:
-        DP_Cinematic_SFX_Drop Target_Clankle Dank_01:
-                action: play
-                volume: 1.3
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
-    imperial_fists_qualified: 
-        imperialFistsJoinTheBattle:
-                action: play
-                volume: 1.5
-                ducking:
-                    bus: effects
-                    attack: 0.3 sec
-                    attenuation: 0
-                    release_point: 2.0 sec
-                    release: 1.0 sec
 
 event_player:
   mode_base_started: warp_traveler

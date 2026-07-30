@@ -19,7 +19,8 @@ sequence_shots:
   #   sequence_timeout: 2s
 
   base_titan_lock_qualifier_1:
-    switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
+    switch_sequence: base_dreadnought_lock_hit
+    #switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
     sequence_timeout: 2s
 
   secret_combo_1:
