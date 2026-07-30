@@ -28,3 +28,6 @@ logs/*.log
 /.vs/Warhammer40k_pinball.slnx/FileContentIndex
 >>>>>>> a6a3b1b0020a0c2fea2c9b1894d57cc791a12956
 /.vs/Warhammer40k_pinball.slnx
+*SemanticSymbols.db
+*SemanticSymbols.db-shm
+*SemanticSymbols.db-wal

@@ -50,6 +50,9 @@ show_player:
   mode_attract_started:
     attract_light_show:
       manual_advance: false
+  play_attract_button_press:
+    ork_attract_button_press:
+      manual_advance: false
 
 sound_player:
   play_attract_button_press:
@@ -79,3 +82,4 @@ event_player:
     - ork_left|.5s 
     - ork_right|.2s
     - ork_home|.3s
+
