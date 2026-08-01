@@ -5,7 +5,7 @@ mode:
   priority: 100
 
 config: 
-  - base_sound_play.yaml
+  - base_sound_player.yaml
   - base_sequence_shots.yaml
   - base_variable_player.yaml
   - events.yaml
@@ -50,49 +50,52 @@ ball_holds:
 
 show_player: 
 
-   device.spinner.center_spinner_hit:
-        ##Add show
+   spinner_center_spinner_hit:
         spinner_show:
-            show_token: 
+            show_tokens: 
                 led: l_innerloop_flasher
                 color: orange
-   device.spinner.right_spinner_hit:
-   ##Add show
-           spinner_show:
-            show_token: 
-                led: l_
-                color: blue
-   device.spinner.left_spinner_hit:
-    ##Add show
-            spinner_show:
-            show_token: 
-                led:
+            speed: 15
+            loops: 0
+   spinner_right_spinner_hit:
+        spinner_show:
+           show_tokens: 
+               led: omega
+               color: blue
+           speed: 15
+           loops: 0
+   spinner_left_spinner_hit:
+        spinner_show:
+            show_tokens: 
+                led: l_warp_w
                 color: white
-  mode_base_started:
-    base_light_show:
-      speed: 1
-  s_pop_top_active:
-    pop_flash:
-      show_tokens:
-        led: top_pop_flasher
-        color: yellow
-      speed: 2
-      loops: 0
-  s_pop_bottom_active:
-    pop_flash:
-      show_tokens:
-        led: bottom_pop_flasher
-        color: yellow
-      speed: 2
-      loops: 0
-  play_scoop_flash_show:
-    generic_flash:
-      speed: 15
-      loops: 0
+            speed: 15
+            loops: 0
+   mode_base_started:
+     base_light_show:
+       speed: 1
+   s_pop_top_active:
+     pop_flash:
+       show_tokens:
+         led: top_pop_flasher
+         color: yellow
+       speed: 2
+       loops: 0
+   s_pop_bottom_active:
+     pop_flash:
+       show_tokens:
+         led: bottom_pop_flasher
+         color: yellow
+       speed: 2
+       loops: 0
+   play_scoop_flash_show:
+     generic_flash:
+       speed: 15
+       loops: 0
       #events_when_completed: play_scoop_flash_show_complete
-      show_tokens:
-        led: right_scoop_flasher
-        color: red
+       show_tokens:
+         led: right_scoop_flasher
+         color: red
 #  balldevice_mystery_select_scoop_ejecting_ball:
 #    generic_flash:
 #      speed: 5
