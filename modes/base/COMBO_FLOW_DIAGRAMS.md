@@ -124,7 +124,7 @@ GAME START (No Ball Lock Qualifying)
     │   ball_lock_qualified_shots: +1
     │   (Can now lock 1 ball)
     │       ▼
-    │   Hit s_titan_lock1/2/3 to lock balls
+    │   Hit s_dreadnought_lock1/2/3 to lock balls
     │
     └─→ When 3 balls locked
         → MULTIBALL STARTS!
@@ -262,7 +262,7 @@ advance_time_and_run 0.1
 ```
 ramp_to_orbit_combo_complete
     ├─ ball_lock_qualification_started
-    │   └─ Enable s_titan_lock1/2/3
+    │   └─ Enable s_dreadnought_lock1/2/3
     │
     ├─ playfield_multiplier_x2
     │   └─ Increase multiplier: x1 → x2
@@ -276,7 +276,7 @@ loop_combo_complete
     │   └─ Start time-limited mode
     │
     ├─ ball_lock_qualification_started
-    │   └─ Enable s_titan_lock1/2/3
+    │   └─ Enable s_dreadnought_lock1/2/3
     │
     └─ loop_combo_qualified
         └─ Trigger loop-specific logic

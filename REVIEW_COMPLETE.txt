@@ -35,7 +35,7 @@ I have completed a **comprehensive examination** of your entire Warhammer 40K Pi
 
 **28 Active Modes:**
 - 5 Chaos God missions (Khorne, Tzeench, Slan'esh, Nurgle, Necrons)
-- 3 Multiball modes (Titan, Waagh, Necron)
+- 3 Multiball modes (dreadnought, Waagh, Necron)
 - 15+ Utility/qualifying modes
 - All integrated with base mode (always running)
 
@@ -264,7 +264,7 @@ Fixes Needed:      ████░░░░░░ 40%
 ### What's Working Perfectly
 - Ramp combo in Khorne mode ✅
 - Tzeench spinner countdown ✅
-- Titan multiball (3-ball) ✅
+- dreadnought multiball (3-ball) ✅
 - Waagh multiball (3-ball) ✅
 - Necron multiball (2-ball) ✅
 - Base mode scoring system ✅

@@ -13,7 +13,7 @@ I performed a comprehensive analysis of your **Warhammer 40K Pinball** game code
    - Fully documented with 6 guides
 
 2. **Multiball Systems** (3 implementations)
-   - Titan Multiball: 3-ball with 3 locks (fully working)
+   - dreadnought Multiball: 3-ball with 3 locks (fully working)
    - Waagh Multiball: 3-ball orc-themed (working)
    - Necron Multiball: 2-ball from drop target (working)
 
@@ -173,10 +173,10 @@ Necrons (Undead)
 
 ### Multiball Modes (3 modes)
 ```
-Titan Multiball
+dreadnought Multiball
   Status: ✅ Complete
   Balls: 3 total
-  Locks: 3 (bd_titan)
+  Locks: 3 (bd_dreadnought)
   Duration: Until drained
   Shoot-again: 20s
   
@@ -198,7 +198,7 @@ Necron Multiball
 ```
 Attract, High Score, Skillshot, Bonus, Ball Save, Tilt
 Mission Select, Mechanicus, Mystery Mode, Weapons Bank
-Qualifiers for: Titan, Waagh, Necron, Warp
+Qualifiers for: dreadnought, Waagh, Necron, Warp
 And more...
 ```
 
@@ -227,7 +227,7 @@ And more...
 - **Trough** (bd_trough): 6 balls max
 - **Plunger** (bd_plunger): Launch device
 - **Scoop** (bd_scoop): Mid-playfield VUK
-- **Titan Locks** (bd_titan): 3-lock multiball
+- **dreadnought Locks** (bd_dreadnought): 3-lock multiball
 - **Right VUK** (bd_right_vuk): Jackpot VUK
 - **Necron Lock** (bd_necron_lock): Secondary lock
 

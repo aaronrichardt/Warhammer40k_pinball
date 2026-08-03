@@ -7,8 +7,8 @@
 - **Playfields:** 1 main playfield
 - **Flippers:** 3 (left, right, upper-left)
 - **Servos:** 2 (Ork animation, lock mechanism)
-- **Ball Locks:** 3 systems (Titan 3x, Necron 1x, Secondary locks)
-- **Multiballs:** 3 types (Titan 3-ball, Waagh 3-ball, Necron 2-ball)
+- **Ball Locks:** 3 systems (dreadnought 3x, Necron 1x, Secondary locks)
+- **Multiballs:** 3 types (dreadnought 3-ball, Waagh 3-ball, Necron 2-ball)
 - **Coils:** 13 solenoids
 - **Switches:** 165+ configured
 - **LEDs:** 50+ configured
@@ -33,7 +33,7 @@ CHAOS GOD MISSIONS:
   ⚠️  Necrons - Drop target trigger (WIP)
 
 MULTIBALL SYSTEMS:
-  ✅ Titan Multiball (3-ball, 3 locks, fully working)
+  ✅ dreadnought Multiball (3-ball, 3 locks, fully working)
   ✅ Waagh Multiball (3-ball, fully working)
   ✅ Necron Multiball (2-ball, working)
 
@@ -83,7 +83,7 @@ config/                    [Core hardware definitions]
 modes/
   ├─ base/               [Main playfield, shot combos]
   ├─ [5 Chaos Modes]     [Khorne, Tzeench, Slan'esh, Nurgle, Necrons]
-  ├─ [3 Multiball Modes] [Titan, Waagh, Necron]
+  ├─ [3 Multiball Modes] [dreadnought, Waagh, Necron]
   └─ [20 Utility Modes]  [Skillshot, bonus, ball save, etc.]
 
 shows/                   [15+ light show definitions]
@@ -96,7 +96,7 @@ code/                    [Custom Python: dead flipper handling]
 
 ```
 Priority 300:
-  ├─ titan_multiball         [Most important when active]
+  ├─ dreadnought_multiball         [Most important when active]
   └─ waagh_multiball
 
 Priority 200:
@@ -124,7 +124,7 @@ Priority ?: [Undefined]
 bd_trough          [6 balls - main collection]
 bd_plunger         [Ball launcher]
 bd_scoop           [Mid-playfield VUK]
-bd_titan           [3 locks - Titan multiball]
+bd_dreadnought           [3 locks - dreadnought multiball]
 bd_right_vuk       [Right side VUK]
 bd_necron_lock     [Secondary lock]
 ```

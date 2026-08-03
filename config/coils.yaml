@@ -48,7 +48,7 @@ coils:
     default_pulse_ms: 18
   c_droptarget_down:
     number: 32082-7
-  c_titan_lock:
+  c_dreadnought_lock:
     number: io0804-2
     default_pulse_ms: 16
     #default_pulse_ms: 200

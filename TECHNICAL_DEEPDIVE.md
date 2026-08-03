@@ -139,27 +139,27 @@ FIX REQUIRED:
 
 ## Multiball System Architecture
 
-### Titan Multiball (Complex)
+### dreadnought Multiball (Complex)
 
 ```yaml
 Configuration:
-  mode/titan_multiball/config/titan_multiball.yaml
+  mode/dreadnought_multiball/config/dreadnought_multiball.yaml
   
 Start Sequence:
-  1. Qualify via titan_multiball_qualifier
+  1. Qualify via dreadnought_multiball_qualifier
      └─ Mode must be active
   
-  2. Hit 3 titan lock shots
-     ├─ s_titan_lock1 → bd_titan ball 1
-     ├─ s_titan_lock2 → bd_titan ball 2
-     └─ s_titan_lock3 → bd_titan ball 3
+  2. Hit 3 dreadnought lock shots
+     ├─ s_dreadnought_lock1 → bd_dreadnought ball 1
+     ├─ s_dreadnought_lock2 → bd_dreadnought ball 2
+     └─ s_dreadnought_lock3 → bd_dreadnought ball 3
   
-  3. multiball_lock_titan_full event posts
-     └─ bd_titan now has 3 balls
+  3. multiball_lock_dreadnought_full event posts
+     └─ bd_dreadnought now has 3 balls
   
-  4. Titan mode starts
+  4. dreadnought mode starts
      ├─ Priority: 300 (highest)
-     ├─ Activates: multiballs/titan_multiball
+     ├─ Activates: multiballs/dreadnought_multiball
      ├─ Starts: 3 balls in play
      └─ Duration: Until balls drain or mode stop
 
@@ -171,9 +171,9 @@ Gameplay:
   - Ends when: balls_in_play reaches 0
 
 Technical:
-  - Ball device: bd_titan
-    ├─ Switches: s_titan_lock1/2/3
-    ├─ Eject coil: c_titan_lock
+  - Ball device: bd_dreadnought
+    ├─ Switches: s_dreadnought_lock1/2/3
+    ├─ Eject coil: c_dreadnought_lock
     ├─ Enable time: 3s
     └─ Timeout: 3s
   
@@ -568,13 +568,13 @@ bd_right_vuk (Right side jackpot)
 ### Multiball Lock
 
 ```
-bd_titan (Titan lock - 3 positions)
-  ├─ Monitors: s_titan_lock1, s_titan_lock2, s_titan_lock3
-  ├─ Eject via: c_titan_lock (16ms pulse)
+bd_dreadnought (dreadnought lock - 3 positions)
+  ├─ Monitors: s_dreadnought_lock1, s_dreadnought_lock2, s_dreadnought_lock3
+  ├─ Eject via: c_dreadnought_lock (16ms pulse)
   ├─ Eject time: 3s
   └─ On ball 3 locked:
       │
-      ├─ Event: multiball_lock_titan_full
+      ├─ Event: multiball_lock_dreadnought_full
       │
       └─ Prepare for multiball
           └─ All 3 balls ready to eject for MB

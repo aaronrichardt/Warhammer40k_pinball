@@ -7,40 +7,38 @@ mode:
 
 event_player:
   award_light_lock: #Comes from the mystery mode event
-    - enable_titan_lock_shot
+    - enable_dreadnought_lock_shot
     - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
-  titan_lock_qualified:
-    - enable_titan_lock_shot
+  dreadnought_lock_qualified:
+    - enable_dreadnought_lock_shot
     - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
 
 #event comes from the ball device when the lock is qualified, which is when the ball enters the lock and the lock is open. This means that the player has successfully locked a ball and qualified for multiball.
-  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count == 0}: 
+  multiball_lock_dreadnought_locked_ball{current_player.dreadnought_multiball_qualifier_lock_count == 0}: 
     - lock_home
-  multiball_lock_titan_locked_ball{current_player.titan_multiball_qualifier_lock_count > 0}: 
-    - lower_titan_lock_count
+  multiball_lock_dreadnought_locked_ball{current_player.dreadnought_multiball_qualifier_lock_count > 0}: 
+    - lower_dreadnought_lock_count
 
 variable_player:
   award_light_lock:
-    titan_multiball_qualifier_lock_count:
+    dreadnought_multiball_qualifier_lock_count:
       action: add
       int: 1
-  titan_lock_qualified:
-    titan_multiball_qualifier_lock_count:
+  dreadnought_lock_qualified:
+    dreadnought_multiball_qualifier_lock_count:
       action: add
       int: 1
-  lower_titan_lock_count:
-    titan_multiball_qualifier_lock_count:
+  lower_dreadnought_lock_count:
+    dreadnought_multiball_qualifier_lock_count:
       action: add
       int: -1
-    
-
 
 shots:
-  titan_lock1:
-    switch: s_titan_lock1
+  dreadnought_lock1:
+    switch: s_dreadnought_lock1
     start_enabled: false
-    profile: titan_lock_profile
-    restart_events: enable_titan_lock_shot
+    profile: dreadnought_lock_profile
+    restart_events: enable_dreadnought_lock_shot
     disable_events: lock_home
     show_tokens:
       shot_color: lime
@@ -49,7 +47,7 @@ shots:
 
 
 sound_player:
-    multiball_lock_titan_locked_ball{total_balls_locked==1}:  
+    multiball_lock_dreadnought_locked_ball{total_balls_locked==1}:  
         BallOneLocked:
             action: play
             volume: 1
@@ -59,7 +57,7 @@ sound_player:
                 attenuation: -30
                 release_point: 2.0 sec
                 release: 1.0 sec
-    multiball_lock_titan_locked_ball{total_balls_locked==2}:   
+    multiball_lock_dreadnought_locked_ball{total_balls_locked==2}:   
         BallTwoLocked:
             action: play
             volume: 1
@@ -69,7 +67,7 @@ sound_player:
                 attenuation: -30
                 release_point: 2.0 sec
                 release: 1.0 sec
-    multiball_lock_titan_full:
+    multiball_lock_dreadnought_full:
         DreadnoughtMultiballVoice:
             action: play
             volume: 1
@@ -82,15 +80,15 @@ sound_player:
         
 
 shot_profiles:
-  titan_lock_profile:
+  dreadnought_lock_profile:
     states:
       - name: lit
-        show: titan_lock_light_show
+        show: dreadnought_lock_light_show
         speed: 10
         loops: -1
 
 show_player:
-  multiball_lock_titan_locked_ball: 
+  multiball_lock_dreadnought_locked_ball: 
     2toneflash:
      action: play
      loops : 1

@@ -285,7 +285,7 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
-    multiball_lock_titan_ball_locked:
+    multiball_lock_dreadnought_ball_locked:
         DP_Cinematic_SFX_Stinger_Tarantular The Destroyer_01:
             action: play
             volume: 1.3

@@ -49,6 +49,8 @@ ball_holds:
 #         wait_for: play_scoop_flash_show_complete
 
 show_player: 
+    
+
 
    spinner_center_spinner_hit:
         spinner_show:
@@ -113,6 +115,17 @@ show_player:
 #        color: red
 
 shots: 
+
+  base_dreadnought_lock_qualifier_1:
+    switch: s_nurgle_redcircle
+    start_enabled: true
+    #switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
+    sequence_timeout: 2s
+    enable_events: ball_started
+    disable_events:
+    restart_events: award_dreadnought_locK
+
+
   base_shot_left_orbit:
     switch: s_left_orbit
     profile: orbit_profile
@@ -443,7 +456,7 @@ counters:
     count_interval: 1
     direction: up
     count_complete_value: 3
-    events_when_complete: base_dreadnought_lock_qualified
+    events_when_complete: dreadnought_lock_qualified
     reset_on_complete: true
     disable_on_complete: false
 
@@ -526,9 +539,9 @@ counters:
   #   disable_on_complete: true
 
 multiball_locks: 
-    titan:
+    dreadnought:
         balls_to_lock: 3
-        lock_devices: bd_titan
+        lock_devices: bd_dreadnought
         balls_to_replace: 2
 
 

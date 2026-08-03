@@ -14,14 +14,10 @@ sequence_shots:
     # Xenos Bank into the innder loop
 
   #This is my ball lock qualifier BUT I also need some form of playfield multiplier enable event
-  # base_titan_lock_qualifier_1:
+  # base_dreadnought_lock_qualifier_1:
   #   switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
   #   sequence_timeout: 2s
 
-  base_titan_lock_qualifier_1:
-    switch_sequence: s_nurgle_redcircle
-    #switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
-    sequence_timeout: 2s
 
   secret_combo_1:
     switch_sequence: s_xenos_x, s_innerloop_right, s_innerloop_left

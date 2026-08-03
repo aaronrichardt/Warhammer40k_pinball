@@ -183,7 +183,7 @@ Repeat for higher scores
 ```
 RAMP COMBO COMPLETE
 ├─ ball_lock_qualification_started
-│  └─ Enable titan_lock shots
+│  └─ Enable dreadnought_lock shots
 │
 ├─ playfield_multiplier_x2
 │  └─ All shots now worth 2x base

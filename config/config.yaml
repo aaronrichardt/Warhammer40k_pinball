@@ -103,9 +103,9 @@ ball_devices:
       eject_coil: c_scoop
       auto_fire_on_unexpected_ball: false
 
-    bd_titan:
-        ball_switches: s_titan_lock1, s_titan_lock2, s_titan_lock3
-        eject_coil: c_titan_lock
+    bd_dreadnought:
+        ball_switches: s_dreadnought_lock1, s_dreadnought_lock2, s_dreadnought_lock3
+        eject_coil: c_dreadnought_lock
         eject_timeouts: 3s
         eject_coil_enable_time: 3s
 

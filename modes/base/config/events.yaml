@@ -59,6 +59,3 @@ event_player:
   ball_hold_base_scoop_full:
     - play_scoop_flash_show
     - release_one_ball|.5s
-
-  logicblock_dreadnought_lock_counter_complete:
-    - titan_lock_qualified ##Call to mode titan qualifier 

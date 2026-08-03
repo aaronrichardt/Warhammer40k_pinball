@@ -91,11 +91,11 @@ variable_player:
     score: 2000 * (current_player.playfield_multiplier)
   s_right_spinner_active:
     score: 2000 * (current_player.playfield_multiplier)
-  s_titan_lock1_active:
+  s_dreadnought_lock1_active:
     score: 2000 * (current_player.playfield_multiplier)
-  s_titan_lock2_active:
+  s_dreadnought_lock2_active:
     score: 2000 * (current_player.playfield_multiplier)
-  s_titan_lock3_active:
+  s_dreadnought_lock3_active:
     score: 2000 * (current_player.playfield_multiplier)
   s_jackpot_vuk_active:
     score: 2000 * (current_player.playfield_multiplier)

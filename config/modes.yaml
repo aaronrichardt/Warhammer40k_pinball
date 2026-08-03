@@ -18,8 +18,8 @@ modes:
   - necrons
   - mystery_mode
   - weapons_bank
-  - titan_multiball
-  - titan_multiball_qualifier
+  - dreadnought_multiball
+  - dreadnought_multiball_qualifier
   - tilt  
   - necron_lock
   #- necron_lock_qualified

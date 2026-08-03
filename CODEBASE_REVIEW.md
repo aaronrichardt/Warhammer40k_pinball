@@ -31,8 +31,8 @@ CHAOS GOD MISSIONS (Primary Content):
 └── warp (priority ?)                - Warp dimension mode
 
 MULTIBALL MODES:
-├── titan_multiball (priority 300)           - 3-ball, Titan lock system
-├── titan_multiball_qualifier (priority ?)   - Titan lock qualification
+├── dreadnought_multiball (priority 300)           - 3-ball, dreadnought lock system
+├── dreadnought_multiball_qualifier (priority ?)   - dreadnought lock qualification
 ├── necron_multiball (priority 100)          - 2-ball, Drop target
 ├── waagh_multiball (priority 300)           - 3-ball, Orc themed
 ├── inquisition_multiball (priority ?)       - WIP - Empty
@@ -77,11 +77,11 @@ DISPLAY/SYSTEM:
 - **32082-0 to 32082-31** (IO Board 1) - Extended playfield
   - Spinners, ramps, orbits, loops
   - VUKs, lock optos, Xenos bank
-  - Titan lock positions (3)
+  - dreadnought lock positions (3)
   
 - **io0804-0 to io0804-5** (IO Board 2) - Upper flipper & specialized
   - Upper flipper coil/hold
-  - Titan lock (multiball lock device)
+  - dreadnought lock (multiball lock device)
   - Temporary placeholders (s_tempholder1-3)
 
 ### Coils (13 Total)
@@ -106,7 +106,7 @@ Playfield Devices (9):
   c_uppost               (32082-5)  [Up-post]
   c_droptarget_reset     (32082-4)  [Drop target reset]
   c_droptarget_down      (32082-7)  [Drop target solenoid]
-  c_titan_lock           (io0804-2) [Multiball lock - Titan]
+  c_dreadnought_lock           (io0804-2) [Multiball lock - dreadnought]
 ```
 
 ### Ball Devices (6 Total)
@@ -126,9 +126,9 @@ bd_scoop                 [Mid-playfield VUK]
   ├─ Switch: s_scoop
   └─ Eject: c_scoop
 
-bd_titan                 [Multiball lock]
-  ├─ Switches: s_titan_lock1, s_titan_lock2, s_titan_lock3 (3 locks)
-  ├─ Eject: c_titan_lock
+bd_dreadnought                 [Multiball lock]
+  ├─ Switches: s_dreadnought_lock1, s_dreadnought_lock2, s_dreadnought_lock3 (3 locks)
+  ├─ Eject: c_dreadnought_lock
   ├─ Enable time: 3s
   └─ Timeout: 3s
 
@@ -199,23 +199,23 @@ right_spinner   [s_right_spinner]   Active: 1000ms
 
 ## 🔄 MULTIBALL SYSTEMS
 
-### Titan Multiball
-**Location:** modes/titan_multiball/
+### dreadnought Multiball
+**Location:** modes/dreadnought_multiball/
 
 ```yaml
 Configuration:
   Ball Count: 3 total
-  Start Event: titan_multiball_start
-  Stop Event: ball_will_end or titan_multiball_stop
+  Start Event: dreadnought_multiball_start
+  Stop Event: ball_will_end or dreadnought_multiball_stop
   Shoot Again: 20 seconds
-  Lock Device: bd_titan (3 locks: s_titan_lock1, s_titan_lock2, s_titan_lock3)
+  Lock Device: bd_dreadnought (3 locks: s_dreadnought_lock1, s_dreadnought_lock2, s_dreadnought_lock3)
   Priority: 300 (High)
 
 Flow:
-  1. Qualify via titan_multiball_qualifier
-  2. Hit 3 titan lock shots
-  3. Trigger multiball_lock_titan_full event
-  4. Titan multiball starts (3 balls)
+  1. Qualify via dreadnought_multiball_qualifier
+  2. Hit 3 dreadnought lock shots
+  3. Trigger multiball_lock_dreadnought_full event
+  4. dreadnought multiball starts (3 balls)
   5. Jackpot available on major shots
   6. 20s shoot-again window on drain
 ```
@@ -265,7 +265,7 @@ Flow:
   - Loop combo (base mode)
   
 - **Tracks:** ball_lock_qualified_shots variable
-- **Result:** Enables bd_titan locks for Titan multiball
+- **Result:** Enables bd_dreadnought locks for dreadnought multiball
 
 ---
 
@@ -540,7 +540,7 @@ modes/
   │  └─ necrons.yaml
   │
   ├─ [Multiball Modes]/
-  │  ├─ titan_multiball.yaml
+  │  ├─ dreadnought_multiball.yaml
   │  ├─ waagh_multiball.yaml
   │  └─ necron_multiball.yaml
   │
@@ -609,7 +609,7 @@ Score Tier 4 (Multiplied by playfield_multiplier):
 | Nurgle | ? | ? | ? | ? |
 
 ### Multiball Scoring
-- **Titan:** Progressive jackpots during 3-ball multiball
+- **dreadnought:** Progressive jackpots during 3-ball multiball
 - **Waagh:** 3-ball escalating awards
 - **Necron:** 2-ball shorter duration awards
 
@@ -656,7 +656,7 @@ GAME START
     │
     └─ MULTIBALL MODES (Priority 300, when active)
        ├─ 2 or 3 balls in play
-       ├─ Titan (3-ball):
+       ├─ dreadnought (3-ball):
        │  ├─ 3 locks needed to start
        │  └─ 20s shoot-again
        ├─ Waagh (3-ball):

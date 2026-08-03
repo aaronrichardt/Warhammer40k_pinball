@@ -537,13 +537,13 @@ switch:
   s_snikt_target:
     x: 0.33396488311362404
     y: 0.2090497737556561
-  s_titan_lock1:
+  s_dreadnought_lock1:
     x: 0.8056666954210026
     y: 0.014389137008928788
-  s_titan_lock2:
+  s_dreadnought_lock2:
     x: 0.7679305504364123
     y: 0.014389137008928788
-  s_titan_lock3:
+  s_dreadnought_lock3:
     x: 0.730194405451822
     y: 0.014389137008928788
   s_trough1:

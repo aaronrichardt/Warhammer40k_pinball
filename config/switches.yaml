@@ -127,13 +127,13 @@ switches:
   s_right_spinner:
     number: 32082-20
     debounce: quick
-  s_titan_lock2:
+  s_dreadnought_lock2:
     number: 32082-21
     type: "NC"
-  s_titan_lock1:
+  s_dreadnought_lock1:
     number: 32082-22
     type: "NC"
-  s_titan_lock3: 
+  s_dreadnought_lock3: 
     number: 32082-23
     type: "NC"
   s_droptarget_lock:

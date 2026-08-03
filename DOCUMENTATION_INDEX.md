@@ -70,7 +70,7 @@ These provide comprehensive analysis of your existing codebase.
 **Reference:** CODEBASE_REVIEW.md "Chaos God Mode Implementation Comparison"
 
 **Multiballs:**
-- Titan (3-ball) ✅
+- dreadnought (3-ball) ✅
 - Waagh (3-ball) ✅
 - Necron (2-ball) ✅
 
