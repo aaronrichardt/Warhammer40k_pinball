@@ -120,7 +120,6 @@ shots:
     switch: s_nurgle_redcircle
     start_enabled: true
     #switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
-    sequence_timeout: 2s
     enable_events: ball_started
     disable_events:
     restart_events: award_dreadnought_locK
