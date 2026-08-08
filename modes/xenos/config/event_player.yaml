@@ -3,10 +3,6 @@
 
 event_player:
   #plus one gadget when accrual is complete
-
-  xenos_spotted:
-    - xenos_earned
-    - xenosspot
     #- gadgets_available
   s_xenos_x_active:
     #if the x is hit, and unlit
@@ -35,3 +31,7 @@ event_player:
   - start_mission_select
  
   mechanicus_scoop_shot_lit_hit: mechanicus_scoop_shot_complete
+
+  reset_xenos_lights:
+      - xenos_spotted{mode.nurgle.active==False and mode.khorne.active==False and mode.slannesh.active==False and mode.tzeench.active==False and mode.necrons.active==False}
+      - boost_base_shot_value{mode.nurgle.active==True or mode.khorne.active==True or mode.slannesh.active==True or mode.tzeench.active==True or mode.necrons.active==True}
