@@ -1,0 +1,48 @@
+#show_version=6
+- time: 0
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): off
+
+- time: "+1"
+  lights:
+    (led2): (color)
+
+- time: "+1"
+  lights:
+    (led2): off
+
+- time: "+1"
+  lights:
+    (led3): (color)
+
+- time: "+1"
+  lights:
+    (led3): off
+
+- time: "+1"
+  lights:
+    (led): (color)
+
+- time: "+1"
+  lights:
+    (led): stop
+
+- time: "+1"
+  lights:
+    (led2): (color)
+
+- time: "+1"
+  lights:
+    (led2): stop
+
+- time: "+1"
+  lights:
+    (led3): (color)
+
+- time: "+1"
+  lights:
+    (led3): stop

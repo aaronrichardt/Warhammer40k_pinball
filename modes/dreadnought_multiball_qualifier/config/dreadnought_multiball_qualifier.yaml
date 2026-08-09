@@ -34,7 +34,7 @@ variable_player:
       int: -1
 
 shots:
-  dreadnought_lock1:
+  dreadnought_lock:
     switch: s_dreadnought_lock1
     start_enabled: false
     profile: dreadnought_lock_profile
@@ -83,7 +83,7 @@ shot_profiles:
   dreadnought_lock_profile:
     states:
       - name: lit
-        show: dreadnought_lock_light_show
+        show: generic_flash #Lock profile Light show
         speed: 10
         loops: -1
 
