@@ -35,7 +35,6 @@ missing_switches:
   s_necron_target: 61
   s_nurgle_redcircle: 1
   s_pop_top: 61
-  s_right_orbit: 23
   s_rollover_gork: 22
   s_rollover_mork: 22
   s_scoop: 8
@@ -67,7 +66,7 @@ shots:
   base_shot_left_slingshot: 29
   base_shot_pop_bottom: 1
   base_shot_right_drain: 2
-  base_shot_right_orbit: 66
+  base_shot_right_orbit: 67
   base_shot_right_slingshot: 39
   khorne_left_orbit_shot: 33896
   left_drain: 1
@@ -144,10 +143,10 @@ switches:
   s_right_eos: 9
   s_right_flipper: 9
   s_right_inlane: 45
-  s_right_orbit: 70
+  s_right_orbit: 71
   s_right_outlane: 2
   s_right_slingshot: 44
-  s_right_spinner: 57
+  s_right_spinner: 80
   s_rollover_gork: 3
   s_rollover_mork: 3
   s_scoop: 19
