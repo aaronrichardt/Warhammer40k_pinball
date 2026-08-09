@@ -8,7 +8,7 @@ config:
 
 mode:
   start_events: mission_select_tzeench_selected
-  stop_events: timer_tzeench_mode_timer_complete
+  stop_events: timer_tzeench_mode_timer_complete, 
   priority: 200
 
 timers:
@@ -247,145 +247,145 @@ variable_player:
       action: add
       int: 50000
 
-  variable_tzeench_shots_hit|ge:9:
-    tzeench_stage:
-      action: set
-      int: 2
+  # variable_tzeench_shots_hit|ge:9:
+  #   tzeench_stage:
+  #     action: set
+  #     int: 2
 
-  tzeench_stage_2_start:
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # tzeench_stage_2_start:
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 250000
-      block: true
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 250000
+  #     block: true
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 250000
-      block: true
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 250000
+  #     block: true
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 250000
-      block: true
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 250000
+  #     block: true
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 250000
-      block: true
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 250000
+  #     block: true
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 250000
-      block: true
-    tzeench_stage2_shots_hit:
-      action: set
-      int: 0
+  # shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 250000
+  #     block: true
+  #   tzeench_stage2_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:2:
-    score:
-      int: 1000000
-      block: true
+  # shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:2:
+  #   score:
+  #     int: 1000000
+  #     block: true
 
-  tzeench_stage_3_start:
-    tzeench_stage:
-      action: set
-      int: 3
-    tzeench_stage3_shots_hit:
-      action: set
-      int: 0
+  # tzeench_stage_3_start:
+  #   tzeench_stage:
+  #     action: set
+  #     int: 3
+  #   tzeench_stage3_shots_hit:
+  #     action: set
+  #     int: 0
 
-  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_droptarget_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_droptarget_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_scoop_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_scoop_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_jackpot_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_jackpot_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_snikt_target_shot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 500000
-      block: true
-    tzeench_stage3_shots_hit:
-      action: add
-      int: 1
+  # shot_tzeench_snikt_target_shot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 500000
+  #     block: true
+  #   tzeench_stage3_shots_hit:
+  #     action: add
+  #     int: 1
 
-  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:3:
-    score:
-      int: 5000000
-      block: true
+  # shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:3:
+  #   score:
+  #     int: 5000000
+  #     block: true
 
 event_player:
   mode_tzeench_started:
@@ -434,69 +434,69 @@ event_player:
     - shot_tzeench_stage2_shots_reset
     - shot_tzeench_stage2_shots_lighting_hit
 
-  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:2:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:2:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:2:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:2:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:2:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:2:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:2:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:2:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:2:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:2:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:2:
-    - tzeench_stage_3_start
+  # shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:2:
+  #   - tzeench_stage_3_start
 
   tzeench_stage_3_start:
     - shot_tzeench_stage3_shots_reset
     - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_center_ramp_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_left_orbit_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_right_orbit_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_inner_loop_left_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_inner_loop_right_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_droptarget_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_droptarget_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_scoop_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_scoop_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_jackpot_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_jackpot_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  shot_tzeench_snikt_target_shot_hit|current_player.tzeench_stage:3:
-    - shot_tzeench_stage3_shots_reset
-    - shot_tzeench_stage3_shots_lighting_hit
+  # shot_tzeench_snikt_target_shot_hit|current_player.tzeench_stage:3:
+  #   - shot_tzeench_stage3_shots_reset
+  #   - shot_tzeench_stage3_shots_lighting_hit
 
-  variable_tzeench_stage3_shots_hit|ge:5:
-    - shot_tzeench_super_jackpot_lighting_hit
+  # variable_tzeench_stage3_shots_hit|ge:5:
+  #   - shot_tzeench_super_jackpot_lighting_hit
 
-  shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:3:
-    - tzeench_mode_complete
+  # shot_tzeench_super_jackpot_hit|current_player.tzeench_stage:3:
+  #   - tzeench_mode_complete
 
   tzeench_reset_roaming_shots:
     - shot_tzeench_roaming_shots_reset
