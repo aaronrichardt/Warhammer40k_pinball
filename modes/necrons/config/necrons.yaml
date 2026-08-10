@@ -17,5 +17,3 @@ timers:
         tick_interval: 1s
         restart_on_complete: false
         start_running: true
-
-        s
