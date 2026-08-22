@@ -22,6 +22,7 @@ logs/*.log
 *db
 *db-shm
 *db-wal
+/.vs/Warhammer40k_pinball/CopilotIndices/*
 <<<<<<< HEAD
 =======
 /.vs/Warhammer40k_pinball.slnx/FileContentIndex/55bae954-4e25-4372-ac39-c1ceeb5eef25.vsidx

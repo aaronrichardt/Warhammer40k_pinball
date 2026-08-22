@@ -1,6 +1,5 @@
 #config_version=6
 variable_player:
-
   s_lower_bigtarget_active:
     score: 3000 * (current_player.playfield_multiplier)
   s_upper_bigtarget_active:

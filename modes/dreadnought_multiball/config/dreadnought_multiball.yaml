@@ -1,11 +1,17 @@
 #config_version=6
 
+
+
+
+#triggering this mode will start up the muliball, 
+# I need the gattling gun motor to start spinnning and the GI should flash along with it.
+# It needs to be a big moment, His main eye should "Wake up", A voice line will go off, then after the voice line the motor will trigger and the balls will drop
+
 mode:
   start_events: multiball_lock_dreadnought_full
   stop_events: ball_will_end
   events_when_started: dreadnought_multiball_start
   events_when_stopped: 
-
   priority: 300
 
 
@@ -19,3 +25,41 @@ multiballs:
       - dreadnought_multiball_start
     stop_events:
       - dreadnought_multiball_stop
+
+
+show_player: 
+    #start dreadnought multiball show
+    #set GI to Red
+    mode_dreadnought_multiball_started:
+        setGI:
+            show_tokens: 
+                led: GI
+                color: red
+   
+sound_player:
+    mode_dreadnought_multiball_started:
+        404363:
+            action: play
+            volume: 1
+            bus: voice
+            ducking:
+                bus: voice
+                attack: 0.0 sec
+                attenuation: 0
+                release_point: 0.0 sec
+                release: 0.0 sec
+
+coil_player: 
+    engage_gattling_cannon: 
+        c_dc_dreadnought_gun:
+            action: enable 
+        
+    disable_gattling_cannon:
+        c_dc_dreadnought_gun:
+            action: disable
+       
+event_player:
+     #Enable Cannon then disable cannon
+    mode_dreadnought_multiball_start:
+        - enable_gattling_cannon
+        - disable_gattling_cannon|5s 

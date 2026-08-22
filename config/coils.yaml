@@ -33,7 +33,9 @@ coils:
   c_pop_bottom:
     number: 32082-2
     default_pulse_ms: 19
-  c_uppost:
+
+   ##DC Motor gattling gun
+  c_dc_dreadnought_gun:
     number: 32082-5
     default_pulse_ms: 17
   c_jackpot_vuk:
@@ -63,4 +65,13 @@ coils:
   c_flipper_upperleft_hold:
     number: io0804-1
     allow_enable: true
+
+    ##DC motor chainsword topper
+  c_DC_chainsword:
+    number: io0804-3
+    allow_enable: true
+
+
+
+
 
