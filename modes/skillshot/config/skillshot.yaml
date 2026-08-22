@@ -260,38 +260,38 @@ event_player:
         - reset_superskillshot_droptarget
         - super_skill_shot_disabled
     #fails
-    s_left_slingshot_active:
-        - stop_skill_shot_timer
-        - skill_shot_failed|3s
-        - slide_skill_shot_failed
-    s_right_slingshot_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_nurgle_ricochet_target_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_scoop_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_right_orbit_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_left_orbit_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_waagh_newton_ball_active:
-        - stop_skill_shot_timer
-        - slide_skill_shot_failed
-        - skill_shot_failed|3s
-    s_center_ramp_active:
-        - slide_skill_shot_failed
-        - stop_skill_shot_timer
-        - skill_shot_failed|3s
+    # s_left_slingshot_active:
+    #     - stop_skill_shot_timer
+    #     - skill_shot_failed|3s
+    #     - slide_skill_shot_failed
+    # s_right_slingshot_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_nurgle_ricochet_target_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_scoop_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_right_orbit_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_left_orbit_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_waagh_newton_ball_active:
+    #     - stop_skill_shot_timer
+    #     - slide_skill_shot_failed
+    #     - skill_shot_failed|3s
+    # s_center_ramp_active:
+    #     - slide_skill_shot_failed
+    #     - stop_skill_shot_timer
+    #     - skill_shot_failed|3s
     #successes
     skill_xenos_x_hit:
         - stop_skill_shot_timer

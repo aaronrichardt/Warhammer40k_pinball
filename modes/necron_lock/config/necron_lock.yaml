@@ -1,6 +1,6 @@
 #config_version=6
 mode:
-  start_events: ball_started , start_necron_lock
+  start_events:  mode_skillshot_stopped, start_necron_lock, disable_necron_lock, enable_necron_lock
   stop_events: stop_necron_lock
   priority: 100
 
@@ -11,7 +11,7 @@ shots:
         profile: base_profile
         start_enabled: true
         disable_events: logicblock_necron_lockup_complete
-        enable_events: ball_started
+        enable_events: start_necron_lock
         restart_events: 
         show_tokens:
             led: l_solemnace_arrow
@@ -31,6 +31,11 @@ shots:
             led1: l_solemnace_circle
             color: lime
 
+event_player:
+    necron_lock_drop_target_lit_hit:
+            - reset_necron_drop
+            # - start_necron_lock_qualified
+            # - stop_necron_lock
 
 shot_profiles:
    base_profile:
@@ -47,8 +52,6 @@ shot_profiles:
            speed: 7
     loop: true
 
-    
-
 counters:
   necron_lockup:
     count_events: 
@@ -60,10 +63,19 @@ counters:
     disable_on_complete: true
 
 
+
 multiball_locks:
   necron_lock: 
     balls_to_lock: 1
     lock_devices: bd_necron_lock
     disable_events: mode_necron_multiball_started
     reset_all_counts_events: multiball_necron_multiball_started
+
+# multiballs:
+#   necron_multiball:
+#     ball_count: 2
+#     ball_count_type: total
+#     shoot_again: 20s
+#     start_events: start_necron_multiball
+#     ball_locks: bd_necron_lock
 
