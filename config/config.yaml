@@ -130,9 +130,11 @@ servos:
         positions:
             0.6: ork_home
             0.4: ork_left
+            0.3: ork_left2
             0.7: ork_right
+            0.8: ork_right2
         number: playfield2-1
-        reset_events: ball_starting, ball_ending
+        reset_events: ball_ending
     lock_servo:
         platform_settings:
             home_us: 2300

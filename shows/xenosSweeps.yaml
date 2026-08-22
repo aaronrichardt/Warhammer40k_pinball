@@ -1,0 +1,143 @@
+#show_version=6
+- time: "+1"
+  lights:
+    l_xenos_x: green
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: green
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: green
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: green
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: green
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: green
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: green
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: green
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+    
+- time: "+1"
+  lights:
+    l_xenos_x: green
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+- time: "+1"
+  lights:
+    l_xenos_x: green
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: green
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: green
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: green
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: green
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: green
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: white
+    l_xenos_n: green
+    l_xenos_o: white
+    l_xenos_s: white
+
+- time: "+1"
+  lights:
+    l_xenos_x: white
+    l_xenos_e: green
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
+    
+- time: "+1"
+  lights:
+    l_xenos_x: green
+    l_xenos_e: white
+    l_xenos_n: white
+    l_xenos_o: white
+    l_xenos_s: white
