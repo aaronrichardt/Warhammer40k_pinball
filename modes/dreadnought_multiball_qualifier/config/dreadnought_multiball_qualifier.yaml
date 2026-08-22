@@ -34,7 +34,7 @@ variable_player:
       int: -1
 
 shots:
-  dreadnought_lock1:
+  dreadnought_lock:
     switch: s_dreadnought_lock1
     start_enabled: false
     profile: dreadnought_lock_profile
@@ -83,19 +83,28 @@ shot_profiles:
   dreadnought_lock_profile:
     states:
       - name: lit
-        show: dreadnought_lock_light_show
+        show: generic_flash #Lock profile Light show
         speed: 10
         loops: -1
 
 show_player:
+  dreadnought_lock_qualified:
+    2toneflash:
+     action: play
+     loops : 1
+     speed: 50
+     show_tokens:
+        even_color: blue
+        odd_color: gold
+
   multiball_lock_dreadnought_locked_ball: 
     2toneflash:
      action: play
      loops : 1
      speed: 50
      show_tokens:
-        even_color: lime
-        odd_color: white
+        even_color: blue
+        odd_color: gold
 
 
 

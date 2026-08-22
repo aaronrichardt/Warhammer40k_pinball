@@ -365,3 +365,13 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
+    boost_base_shot_value: 
+        base_shot_values_boosted:
+                action: play
+                volume: 1.5
+                ducking:
+                    bus: effects
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec

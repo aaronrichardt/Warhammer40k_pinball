@@ -103,7 +103,7 @@ switches:
     number: 32082-10
   s_right_orbit: 
     number: 32082-11 
-  s_nurgle_redcircle:
+  s_4:
     number: 32082-12
   s_rollover_mork:
     number: 32082-13  
@@ -150,7 +150,7 @@ switches:
     number: 32082-28
   s_waagh_newton_ball:
     number: 32082-29
-  s_lockopto3:
+  s_nurgle_redcircle:
     number: 32082-30
   s_snikt_target:
     number: 32082-31
@@ -163,11 +163,11 @@ switches:
     number: io0804-2
   s_tempholder3:
     number: io0804-3 
-  s_4:
+  s_left_inner_loop:
     number: io0804-4  
   s_35:
     number: io0804-5
   s_36:
     number: io0804-6
-  s_37:
+  s_necron_opto_lock:
     number: io0804-7

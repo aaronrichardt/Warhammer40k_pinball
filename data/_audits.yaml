@@ -151,8 +151,8 @@ switches:
   s_nurgle_ricochet_target: 20
   s_pop_bottom: 6
   s_pop_top: 15
-  s_right_eos: 34
-  s_right_flipper: 35
+  s_right_eos: 35
+  s_right_flipper: 36
   s_right_inlane: 54
   s_right_orbit: 73
   s_right_outlane: 3
