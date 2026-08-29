@@ -116,7 +116,8 @@ ball_devices:
 
     bd_necron_lock:
       mechanical_eject: true
-      ball_switches: s_37    
+      ball_switches: s_necron_opto_lock    
+      confirm_eject_event:  start_necron_multiball
 
       
 servos:

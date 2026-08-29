@@ -375,3 +375,13 @@ sound_player:
                     attenuation: 0
                     release_point: 2.0 sec
                     release: 1.0 sec
+    logicblock_necron_lockup_complete: 
+        SolemnaceGalleryLockQualified:
+                action: play
+                volume: 1
+                ducking:
+                    bus: voice
+                    attack: 0.3 sec
+                    attenuation: 0
+                    release_point: 2.0 sec
+                    release: 1.0 sec
