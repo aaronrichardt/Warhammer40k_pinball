@@ -167,17 +167,17 @@ lights:
     number: playfield-2-22
     tags: Chain2, even, third, 54
   l_nurgle2:
-    number: playfield-2-23, 55
-    tags: Chain2, odd, first
+    number: playfield-2-23
+    tags: Chain2, odd, first, 55    
   l_right_innerloop_circle:
-    number: playfield-2-24, 56
-    tags: Chain2, even, second
+    number: playfield-2-24
+    tags: Chain2, even, second, 56
   l_upper_lightingbolt1:
-    number: playfield-2-25, 57
-    tags: Chain2, odd, third, bolt
+    number: playfield-2-25
+    tags: Chain2, odd, third, bolt, 57
   l_upper_lightingbolt2:
-    number: playfield-2-26, 58
-    tags: Chain2, even, first, bolt
+    number: playfield-2-26
+    tags: Chain2, even, first, bolt, 58
   l_lower_lightingbolt:
     number: playfield-2-27
     tags: Chain2, odd, second,bolt, 59
@@ -575,4 +575,4 @@ lights:
   l-8-32:
     number: playfield-8-32
     type: rgb
-    tags: even, second
+    tags: even, second, dreadnought

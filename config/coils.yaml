@@ -34,8 +34,11 @@ coils:
     number: 32082-2
     default_pulse_ms: 19
 
-   ##DC Motor gattling gun
   c_dc_dreadnought_gun:
+    number: 32082-6
+    default_pulse_ms: 17
+   ##DC Motor gattling gun
+  c_uppost:
     number: 32082-5
     default_pulse_ms: 17
   c_jackpot_vuk:

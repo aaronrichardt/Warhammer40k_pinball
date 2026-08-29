@@ -62,14 +62,6 @@ sound_player:
                 release_point: 0.0 sec
                 release: 0.0 sec
 
-coil_player: 
-    engage_gattling_cannon: 
-        c_dc_dreadnought_gun:
-            action: enable 
-        
-    disable_gattling_cannon:
-        c_dc_dreadnought_gun:
-            action: disable
        
 event_player:
      #Enable Cannon then disable cannon

@@ -1,5 +1,5 @@
-#show_version= 6 
-
-- time: "+1"
+#show_version=6
+- time: 0
   lights:
-	
+    (led): (color)
+
