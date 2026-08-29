@@ -63,16 +63,16 @@ sound_player:
                 release: 0.0 sec
 
 coil_player: 
-    engage_gattling_cannon: 
+    enable_dreadnought_gun: 
         c_dc_dreadnought_gun:
             action: enable 
         
-    disable_gattling_cannon:
-        c_dc_dreadnought_gun:
+    disable_dreadnought_gun:
+        c_dc_dreadnought_gu0n:
             action: disable
        
 event_player:
      #Enable Cannon then disable cannon
     mode_dreadnought_multiball_start:
-        - enable_gattling_cannon
-        - disable_gattling_cannon|5s 
+        - enable_dreadnought_gun
+        - disable_dreadnought_gun|5s 
