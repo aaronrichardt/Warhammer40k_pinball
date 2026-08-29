@@ -26,6 +26,19 @@ multiballs:
     stop_events:
       - dreadnought_multiball_stop
 
+shots:
+    dreadnought1:
+        switch: s_nurgle_redcircle
+        start_enabled: true
+        enable_events:
+        disable_events:
+        restart_events: award_dreadnought_locK
+    dreadnought2:
+        switch: s_nurgle_redcircle
+        start_enabled: true
+        enable_events:  
+        disable_events:
+        restart_events: award_dreadnought_locK
 
 show_player: 
     #start dreadnought multiball show
