@@ -1,5 +1,9 @@
 #show_version=6
 ##! show: attract_light_show
+- duration: 10
+  shows: 
+        trace_stay_on:          
+            speed: 8
 
 - duration: 5
   shows: 

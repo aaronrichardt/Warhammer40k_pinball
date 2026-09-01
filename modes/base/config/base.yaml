@@ -579,3 +579,13 @@ widget_player:
   imperial_fists_qualified:
     imperialFistsIcon
   
+
+coil_player: 
+    engage_gattling_cannon: 
+        c_dc_dreadnought_gun:
+            action: pulse 
+            hold_power: .5
+        
+    disable_gattling_cannon:
+        c_dc_dreadnought_gun:
+            action: disable

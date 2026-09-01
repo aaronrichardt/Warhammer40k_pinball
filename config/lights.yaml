@@ -6,321 +6,259 @@ light_settings:
 lights:
   l_omega_1:
     number: playfield-1-1
-    tags:  Chain1, odd, first, omega , 1
+    tags:  Chain1,odd,first,omega,1-1
   l_omega_2:
     number: playfield-1-2
-    tags:  Chain1, even, second, omega, 2
+    tags:  Chain1, even, second, omega,1-2
   l_omega_3:
     number: playfield-1-3
-    tags:  Chain1, odd, third, omega, 3
+    tags:  Chain1, odd, third, omega,1-3
   l_omega_4:
     number: playfield-1-4
-    tags:  Chain1, even, first, omega, 4
+    tags:  Chain1, even, first, omega,1-4
   l_omega_5:
     number: playfield-1-5
-    tags:  Chain1, odd, second, omega, 5
+    tags:  Chain1, odd, second, omega, 1-5
   l_omega_6:
     number: playfield-1-6
-    tags:  Chain1, even, third, omega, 6
+    tags:  Chain1, even, third, omega, 1-6
   l_omega_7:
     number: playfield-1-7
-    tags:  Chain1, odd, first, omega, 7
+    tags:  Chain1, odd, first, omega, 1-7
   l_omega_8:
     number: playfield-1-8
-    tags:  Chain1, even, second, omega, 8
+    tags:  Chain1, even, second, omega, 1-8
   l_solemnace_circle:
     number: playfield-1-9
-    tags:  Chain1, odd, third, 9 
+    tags:  Chain1, odd, third, 1-9 
   l_adeptus_mechanicius:
     number: playfield-1-10
-    tags:  Chain1, even, first, 10 
+    tags:  Chain1, even, first, 1-10 
   l_mystery:
     number: playfield-1-11
-    tags:  Chain1, odd, second, 11
+    tags:  Chain1, odd, second, 1-11
   l_light_outlanes:
     number: playfield-1-12
-    tags:  Chain1, even, third, 12
+    tags:  Chain1, even, third, 1-12
   l_nurgle5:
     number: playfield-1-13
-    tags:  Chain1, odd, first, 13
+    tags:  Chain1, odd, first, 1-13
   l_warp_p:
     number: playfield-1-14
-    tags:  Chain1, even, second, lane , 14
+    tags:  Chain1, even, second, lane , 1-14
   l_warp_r:
     number: playfield-1-15
-    tags:  Chain1, odd, third, lane, 15
+    tags:  Chain1, odd, third, lane, 1-15
   l_2xscoring:
     number: playfield-1-16
-    tags:  Chain1, even, first, 16
+    tags:  Chain1, even, first, 1-16
   l_addaball:
     number: playfield-1-17
-    tags:  Chain1, odd, second, 17
+    tags:  Chain1, odd, second, 1-17
   l_necron_ui:
     number: playfield-1-18
-    tags:  Chain1, even, third , 18
+    tags:  Chain1, even, third , 1-18
   l_nurgle_ui:
     number: playfield-1-19
-    tags:  Chain1, odd, first, 19 
+    tags:  Chain1, odd, first, 1-19 
   l_chaos_ui:
     number: playfield-1-20
-    tags:  Chain1, even, second, 20 
+    tags:  Chain1, even, second, 1-20 
   l_tzeench_ui:
     number: playfield-1-21
-    tags:  Chain1, odd, third, 21
+    tags:  Chain1, odd, third, 1-21
   l_tyranid_ui:
     number: playfield-1-22
-    tags:  Chain1, even, first,22
+    tags:  Chain1, even, first, 1-22
   l_warp_a:
     number: playfield-1-23
-    tags:  Chain1, odd, second, lane, 23
+    tags:  Chain1, odd, second, lane, 1-23
   l_warp_w:
     number: playfield-1-24
-    tags:  Chain1, even, third, lane, 24
+    tags:  Chain1, even, third, lane, 1-24
   l_left_sling_upper:
     number: playfield-1-25
-    tags:  Chain1, GI, odd, first, 25
+    tags:  Chain1, GI, odd, first, 1-25
   l_left_sling_lower:
     number: playfield-1-26
-    tags:  Chain1, GI, even, second, 26
+    tags:  Chain1, GI, even, second, 1-26
   l_left_inlane_upper:
     number: playfield-1-27
-    tags:  Chain1, GI, odd, third, 27
+    tags:  Chain1, GI, odd, third, 1-27
   l_left_inlane_lower:
     number: playfield-1-28
-    tags:  Chain1, GI, even, first, 28
+    tags:  Chain1, GI, even, first, 1-28
   l_ballsave:
     number: playfield-1-29
-    tags:  Chain1, odd, second, 29
+    tags:  Chain1, odd, second, 1-29
   l_right_inlane_lower:
     number: playfield-1-30
-    tags:  Chain1, GI, even, third, 30
+    tags:  Chain1, GI, even, third, 1-30
   l_right_inlane_upper:
     number: playfield-1-31
-    tags:  Chain1, GI, odd, first, 31
+    tags:  Chain1, GI, odd, first, 1-31
   l_right_sling_lower:
     number: playfield-1-32
-    tags:  Chain1, GI, even, second, 32
+    tags:  Chain1, GI, even, second, 1-32
   l_xenos_s:
     number: playfield-2-1
-    tags: Chain2, xenos_letter, odd, third, xenos_skill_shot, 33
+    tags: Chain2, xenos_letter, odd, third, xenos_skill_shot, 2-1
   l_xenos_o:
     number: playfield-2-2
-    tags: Chain2, xenos_letter, even, first, xenos_skill_shot, 34
+    tags: Chain2, xenos_letter, even, first, xenos_skill_shot, 2-2
   l_xenos_n:
     number: playfield-2-3
-    tags: Chain2, xenos_letter, odd, second, xenos_skill_shot, 35
+    tags: Chain2, xenos_letter, odd, second, xenos_skill_shot, 2-3
   l_xenos_e:
     number: playfield-2-4
-    tags: Chain2, xenos_letter, even, third, xenos_skill_shot, 36
+    tags: Chain2, xenos_letter, even, third, xenos_skill_shot, 2-4
   l_xenos_x:
     number: playfield-2-5
-    tags: Chain2, xenos_letter, odd, first,  xenos_skill_shot, 37
+    tags: Chain2, xenos_letter, odd, first,  xenos_skill_shot, 2-5
   l_orkface1:
     number: playfield-2-6
-    tags: Chain2, waagh_face, even, second, 38
+    tags: Chain2, waagh_face, even, second, 2-6
   l_orkface2:
     number: playfield-2-7
-    tags: Chain2, waagh_face, odd, third, 39
+    tags: Chain2, waagh_face, odd, third, 2-7
   l_orkface3:
     number: playfield-2-8
-    tags: Chain2, waagh_face, even, first, 40
+    tags: Chain2, waagh_face, even, first, 2-8
   l_orkface4:
     number: playfield-2-9
-    tags: Chain2, waagh_face, odd, second,41
+    tags: Chain2, waagh_face, odd, second,2-9
   l_left_orbit_circle:
     number: playfield-2-10
-    tags: Chain2, even, third, 42
+    tags: Chain2, even, third, 2-10
   l_left_innerloop_circle:
     number: playfield-2-11
-    tags: Chain2, odd, first, 43
+    tags: Chain2, odd, first, 2-11
   l_left_orbit_arrow:
     number: playfield-2-12
-    tags: Chain2, even, second, 44
+    tags: Chain2, even, second,2-12
   l_left_innerloop_arrow:
     number: playfield-2-13
-    tags: Chain2, odd, third, 45
+    tags: Chain2, odd, third, 2-13
   l_waagh_H:
     number: playfield-2-14
-    tags: Chain2, waagh_letter, even, first, 46
+    tags: Chain2, waagh_letter, even, first, 2-14
   l_waagh_G:
     number: playfield-2-15
-    tags: Chain2, waagh_letter, odd, second, 47
+    tags: Chain2, waagh_letter, odd, second, 2-15
   l_waagh_A2:
     number: playfield-2-16
-    tags: Chain2, waagh_letter, even, third, 48
+    tags: Chain2, waagh_letter, even, third, 2-16
   l_waagh_A:
     number: playfield-2-17
-    tags: Chain2, waagh_letter, odd, first, 49
+    tags: Chain2, waagh_letter, odd, first, 2-17
   l_waagh_W:
     number: playfield-2-18
-    tags: Chain2, waagh_letter, even, second, 50
+    tags: Chain2, waagh_letter, even, second, 2-18
   l_waagh_!:
     number: playfield-2-19
-    tags: Chain2, waagh_letter, odd, third, 51
+    tags: Chain2, waagh_letter, odd, third, 2-19
   l_nurgle1:
     number: playfield-2-20
-    tags: Chain2, even, first, 52
+    tags: Chain2, even, first, 2-20
   l_center_ramp_circle:
     number: playfield-2-21
-    tags: Chain2, odd, second, 53
+    tags: Chain2, odd, second, 2-21
   l_center_ramp_arrow:
     number: playfield-2-22
-    tags: Chain2, even, third, 54
+    tags: Chain2, even, third, 2-22
   l_nurgle2:
-    number: playfield-2-23, 55
-    tags: Chain2, odd, first
+    number: playfield-2-23
+    tags: Chain2, odd, first, 2-23
   l_right_innerloop_circle:
-    number: playfield-2-24, 56
-    tags: Chain2, even, second
+    number: playfield-2-24
+    tags: Chain2, even, second, 2-24
   l_upper_lightingbolt1:
-    number: playfield-2-25, 57
-    tags: Chain2, odd, third, bolt
+    number: playfield-2-25
+    tags: Chain2, odd, third, bolt, 2-25
   l_upper_lightingbolt2:
-    number: playfield-2-26, 58
-    tags: Chain2, even, first, bolt
+    number: playfield-2-26
+    tags: Chain2, even, first, bolt, 2-26
   l_lower_lightingbolt:
     number: playfield-2-27
-    tags: Chain2, odd, second,bolt, 59
+    tags: Chain2, odd, second,bolt, 2-27
   l_lightlock:
     number: playfield-2-28
-    tags: Chain2, even, third, weapon_bank, 60
+    tags: Chain2, even, third, weapon_bank,2-28
   l_light_spinners:
     number: playfield-2-29
-    tags: Chain2, odd, first,weapon_bank, 61
+    tags: Chain2, odd, first,weapon_bank, 2-29
   l_bonusx:
     number: playfield-2-30
-    tags: Chain2, even, second, weapon_bank, 62
+    tags: Chain2, even, second, weapon_bank, 2-30
   l_light_mystery:
     number: playfield-2-31
-    tags: Chain2, odd, third, weapon_bank, 63
+    tags: Chain2, odd, third, weapon_bank, 2-31 
+  l_hmmmm:
+    number: playfield-2-32
+    tags: Chain2, odd, third, weapon_bank, 2-32 
+
   l_solemnace_arrow:
     number: playfield-3-1
-    tags: Chain3, odd, first, 64
+    tags: Chain3, odd, first, 3-1
   l_right_orbit_cicle:
     number: playfield-3-2
-    tags: Chain3, even, second, 65
+    tags: Chain3, even, second,3-2
   l_right_orbit_arrow:
     number: playfield-3-3
-    tags: Chain3, odd, third, 66
+    tags: Chain3, odd, third, 3-3
   l_necron_lock1:
     number: playfield-3-4
-    tags: Chain3, even, first, 67
+    tags: Chain3, even, first, 3-4
   l_necron_lock2:
     number: playfield-3-5
-    tags: Chain3, odd, second, 68
+    tags: Chain3, odd, second, 3-5
   l_nurgle4:
     number: playfield-3-6
-    tags: Chain3, even, third, 69
+    tags: Chain3, even, third, 3-6
   l_pop_flasher:
     number: playfield-3-7
-    tags: Chain3, odd, first, 70
+    tags: Chain3, odd, first, 3-7
   l_jackpot:
     number: playfield-3-8
-    tags: Chain3, even, second, 71
+    tags: Chain3, even, second, 3-8
   l_super_jackpot:
     number: playfield-3-9
-    tags: Chain3, odd, third, 72 
+    tags: Chain3, odd, third, 3-9
   l_rollover_right:
     number: playfield-3-10
-    tags: Chain3, GI, even, first, 73
+    tags: Chain3, GI, even, first, 3-10
   l_rollover_center:
     number: playfield-3-11
-    tags: Chain3, GI, odd, second, 74 
+    tags: Chain3, GI, odd, second, 3-11
   l_rollover_mork:
     number: playfield-3-12
-    tags: Chain3, rollovers, even, third, 75
+    tags: Chain3, rollovers, even, third, 3-12
   l_rollover_gork:
     number: playfield-3-13
-    tags: Chain3, rollovers, odd, first, 76
+    tags: Chain3, rollovers, odd, first, 3-13
   l_rollover_left:
     number: playfield-3-14
-    tags: Chain3, GI, even, second, 77
+    tags: Chain3, GI, even, second, 3-14
   l_idk_yet:
     number: playfield-3-15
-    tags: Chain3, odd, second, 78
+    tags: Chain3, odd, second, 3-15
   l_rollover:
     number: playfield-3-20
-    tags: Chain3, even, first, 79
+    tags: Chain3, even, first, 3-16 
   l_nurgle3:
     number: playfield-3-19
-    tags: Chain3, odd, third, 80 
+    tags: Chain3, odd, third, 3-17
   l_innerloop_flasher:
     number: playfield-3-18
-    tags: Chain3, even, first, 81 
+    tags: Chain3, even, first, 3-18 
   l_innerloop_arrow:
     number: playfield-3-16
-    tags: Chain3, odd, second, 82 
+    tags: Chain3, odd, second, 3-19 
   l_right_ricochet_target:
     number: playfield-3-17
-    tags: Chain3, even, third, 83 
+    tags: Chain3, even, third, 3-20
 
-  l_4-1:
-    number: playfield-4-1
-    tags: Chain4, odd, first, 84
-  l_4-2:
-    number: playfield-4-2
-    tags: Chain4, even, second, 85
-  l_4-3:
-    number: playfield-4-3
-    tags: Chain4, odd, third, 86
-  l_4-4:
-    number: playfield-4-4
-    tags: Chain4, even, first, 87
-  l_4-5:
-    number: playfield-4-5
-    tags: Chain4, odd, second, 88
-  l_4-6:
-    number: playfield-4-6
-    tags: Chain4, even, third, 89
-  l_4-7:
-    number: playfield-4-8
-    tags: Chain4, odd, first, 90
-  l_4-9:
-    number: playfield-4-9
-  l_4-10:
-    number: playfield-4-10
-  l_4-11:
-    number: playfield-4-11
-  l_4-12:
-    number: playfield-4-12
-  l_4-13:
-    number: playfield-4-13
-  l_4-14:
-    number: playfield-4-14
-  l_4-15:
-    number: playfield-4-15
-  l_4-16:
-    number: playfield-4-16
-  l_4-17:
-    number: playfield-4-17
-  l_4-18:
-    number: playfield-4-18
-  l_4-19:
-    number: playfield-4-19
-  l_4-20:
-    number: playfield-4-20
-  l_4-21:
-    number: playfield-4-21
-  l_4-22:
-    number: playfield-4-22
-  l_4-23:
-    number: playfield-4-23
-  l_4-25:
-    number: playfield-4-24
-  l_4-26:
-    number: playfield-4-26
-  l_4-27:
-    number: playfield-4-27
-  l_4-28:
-    number: playfield-4-28
-  l_4-29:
-    number: playfield-4-29
-  l_4-30:
-    number: playfield-4-30
-  l_4-31:
-    number: playfield-4-31
-  l_4-32:
-    number: playfield-4-32
+
 
   l_right_lightbar1:
     number: playfield-5-1
@@ -514,229 +452,131 @@ lights:
   l_left_lightbar32:
     number: playfield-6-32
     tags: left_lightbar, even, first
-
-  l-7-1:
-    number: playfield-7-1
-    tags: odd, first
-  l-7-2:
-    number: playfield-7-2
-    tags: even, second
-  l-7-3:
-    number: playfield-7-3
-    tags: odd, third
-  l-7-4:
-    number: playfield-7-4
-    tags: even, first
-  l-7-5:
-    number: playfield-7-5
-    tags: odd, second 
-  l-7-6:
-    number: playfield-7-6
-    tags: odd, third
-  l-7-7:
-    number: playfield-7-7
-    tags: odd, third
-  l-7-8:
-    number: playfield-7-8
-    tags: odd, third
-  l-7-9:
-    number: playfield-7-9
-    tags: odd, third
-  l-7-10:
-    number: playfield-7-10
-    tags: odd, third
-  l-7-11:
-    number: playfield-7-11
-    tags: odd, third
-  l-7-12:
-    number: playfield-7-12
-    tags: odd, third
-  l-7-13:
-    number: playfield-7-13
-    tags: odd, third
-  l-7-14:
-    number: playfield-7-14
-    tags: odd, third
-  l-7-15:
-    number: playfield-7-15
-    tags: odd, third
-  l-7-16:
-    number: playfield-7-16
-    tags: odd, third
-  l-7-17:
-    number: playfield-7-17
-    tags: odd, third
-  l-7-18:
-    number: playfield-7-18
-    tags: odd, third
-  l-7-19:
-    number: playfield-7-19
-    tags: odd, third
-  l-7-20:
-    number: playfield-7-20
-    tags: odd, third
-  l-7-21:
-    number: playfield-7-21
-    tags: odd, third
-  l-7-22:
-    number: playfield-7-22
-    tags: odd, third
-  l-7-23:
-    number: playfield-7-23
-    tags: Chain7, odd, third
-  l-7-24:
-    number: playfield-7-24
-    tags: Chain7, odd, third
-  l-7-25:
-    number: playfield-7-25
-    tags: Chain7, odd, third
-  l-7-26:
-    number: playfield-7-26
-    tags: Chain7, odd, third
-  l-7-27:
-    number: playfield-7-27
-    tags: Chain7, odd, third
-  l-7-28:
-    number: playfield-7-28
-    tags: Chain7, odd, third
-  l-7-29:
-    number: playfield-7-29
-    tags: Chain7, odd, third
-  l-7-30:
-    number: playfield-7-30
-    tags: Chain7, odd, third
-  l-7-31:
-    number: playfield-7-31
-    tags: Chain7, odd, third
-  l-7-32:
-    number: playfield-7-32
-    tags: Chain7, odd, third
-
   l-8-1:
     number: playfield-8-1
     type: rgb
-    tags: Chain8, odd, first, right_scoop_flasher
+    tags: odd, first, right_scoop_flasher, 8-1
   l-8-2:
     number: playfield-8-2
     type: rgb
-    tags: Chain8, even, second, right_scoop_flasher
+    tags: even, second, right_scoop_flasher,8-2
   l-8-3:
     number: playfield-8-3
     type: rgb
-    tags:  Chain8, odd, third, right_scoop_flasher
+    tags: odd, third, right_scoop_flasher, 8-3
   l-8-4:
     number: playfield-8-4
     type: rgb
-    tags: Chain8, even, first, right_scoop_flasher
+    tags: even, first, right_scoop_flasher, 8-4
   l-8-5:
     number: playfield-8-5
     type: rgb
-    tags: Chain8, odd, second, right_scoop_flasher
+    tags: odd, second, right_scoop_flasher, 8-5
   l-8-6:
     number: playfield-8-6
     type: rgb
-    tags: Chain8, even, third, right_scoop_flasher
+    tags: even, third, right_scoop_flasher, 8-6
   l-8-7:
     number: playfield-8-7
     type: rgb
-    tags: Chain8, odd, first, right_scoop_flasher
+    tags: odd, first, right_scoop_flasher, 8-7
   l-8-8:
     number: playfield-8-8
     type: rgb
-    tags: Chain8, even, second, right_scoop_flasher
+    tags: even, second, right_scoop_flasher, 8-8
   l-8-9:
     number: playfield-8-9
     type: rgb
-    tags: odd, third, bottom_pop_flasher
+    tags: odd, third, bottom_pop_flasher, 8-9
   l-8-10:
     number: playfield-8-10
     type: rgb
-    tags: Chain8,  even, first, bottom_pop_flasher
+    tags: even, first, bottom_pop_flasher, 8-10
   l-8-11:
     number: playfield-8-11
     type: rgb
-    tags: Chain8, odd, second,bottom_pop_flasher
+    tags: odd, second,bottom_pop_flasher, 8-11
   l-8-12:
     number: playfield-8-12
     type: rgb
-    tags: Chain8, even, third,bottom_pop_flasher
+    tags: even, third,bottom_pop_flasher, 8-12
   l-8-13:
     number: playfield-8-13
     type: rgb
-    tags: Chain8, odd, first, bottom_pop_flasher
+    tags: odd, first, bottom_pop_flasher, 8-13
   l-8-14:
     number: playfield-8-14
     type: rgb
-    tags: Chain8, even, second,bottom_pop_flasher
+    tags: even, second,bottom_pop_flasher, 8-14
   l-8-15:
     number: playfield-8-15
     type: rgb
-    tags: Chain8, odd, third,bottom_pop_flasher
+    tags: odd, third,bottom_pop_flasher, 8-15
   l-8-16:
     number: playfield-8-16
     type: rgb
-    tags: Chain8, even, first,bottom_pop_flasher
+    tags: even, first,bottom_pop_flasher, 8-16
   l-8-17:
     number: playfield-8-17
     type: rgb
-    tags: Chain8, odd, second,top_pop_flasher
+    tags: odd, second,top_pop_flasher, 8-17
   l-8-18:
     number: playfield-8-18
     type: rgb
-    tags: Chain8, even, third,top_pop_flasher
+    tags: even, third,top_pop_flasher , 8-18
   l-8-19:
     number: playfield-8-19
     type: rgb
-    tags: Chain8, odd, first,top_pop_flasher
+    tags: odd, first,top_pop_flasher, 8-19
   l-8-20:
     number: playfield-8-20
     type: rgb
-    tags: Chain8, even, second,top_pop_flasher
+    tags: even, second,top_pop_flasher, 8-20
   l-8-21:
     number: playfield-8-21
     type: rgb
-    tags: Chain8, odd, third,top_pop_flasher
+    tags: odd, third,top_pop_flasher, 8-21
   l-8-22:
     number: playfield-8-22
     type: rgb
-    tags: Chain8, even, first,top_pop_flasher
+    tags: even, first,top_pop_flasher, 8-22
   l-8-23:
     number: playfield-8-23
     type: rgb
-    tags: Chain8, odd, second,top_pop_flasher
+    tags: odd, second,top_pop_flasher, 8-23
   l-8-24:
     number: playfield-8-24
     type: rgb
-    tags: Chain8, even, third,top_pop_flasher
+    tags: even, third,top_pop_flasher, 8-24
   l-8-25:
     number: playfield-8-25
     type: rgb
-    tags: Chain8, odd, first
+    tags: odd, first, 8-25
   l-8-26:
     number: playfield-8-26
     type: rgb
-    tags: Chain8, even, second
+    tags: even, second, 8-26
   l-8-27:
     number: playfield-8-27
     type: rgb
-    tags: Chain8, odd, third
+    tags: odd, third, 8-27
   l-8-28:
     number: playfield-8-28
     type: rgb
-    tags: Chain8, even, first
+    tags: even, first, 8-28
   l-8-29:
     number: playfield-8-29
     type: rgb
-    tags: Chain8, odd, second
+    tags: odd, second, 8-29
   l-8-30:
     number: playfield-8-30
     type: rgb
-    tags: Chain8,even, third
+    tags: even, third, 8-30
   l-8-31:
     number: playfield-8-31
     type: rgb
-    tags: Chain8, odd, first, 255
+    tags: odd, first, 8-31
   l-8-32:
     number: playfield-8-32
     type: rgb
-    tags: Chain8, even, second, 256
+    tags: even, second, 8-32
