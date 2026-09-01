@@ -7,8 +7,10 @@
 # I need the gattling gun motor to start spinnning and the GI should flash along with it.
 # It needs to be a big moment, His main eye should "Wake up", A voice line will go off, then after the voice line the motor will trigger and the balls will drop
 
+
+#FULL  BLINKY
 mode:
-  start_events: multiball_lock_dreadnought_full
+  start_events: start_dreadnought_multiball
   stop_events: ball_will_end
   events_when_started: dreadnought_multiball_start
   events_when_stopped: 

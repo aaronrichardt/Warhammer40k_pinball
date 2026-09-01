@@ -19,6 +19,18 @@ event_player:
   multiball_lock_dreadnought_locked_ball{current_player.dreadnought_multiball_qualifier_lock_count > 0}: 
     - lower_dreadnought_lock_count
 
+  multiball_lock_dreadnought_full: 
+    - start_dreadnought_multiball| 5s
+    # Do Light show event here
+
+    # Do sound effects event here
+
+
+
+
+
+
+
 variable_player:
   award_light_lock:
     dreadnought_multiball_qualifier_lock_count:

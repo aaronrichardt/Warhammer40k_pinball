@@ -543,6 +543,7 @@ multiball_locks:
         lock_devices: bd_dreadnought
         balls_to_replace: 2
 
+     #multiball_lock_dreadnought_full
 
 event_player:
   mode_base_started: warp_traveler

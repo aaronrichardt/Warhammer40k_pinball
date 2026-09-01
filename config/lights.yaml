@@ -254,7 +254,73 @@ lights:
     number: playfield-3-17
     tags: Chain3, even, third, 83 
 
-
+  l_4-1:
+    number: playfield-4-1
+    tags: Chain4, odd, first, 84
+  l_4-2:
+    number: playfield-4-2
+    tags: Chain4, even, second, 85
+  l_4-3:
+    number: playfield-4-3
+    tags: Chain4, odd, third, 86
+  l_4-4:
+    number: playfield-4-4
+    tags: Chain4, even, first, 87
+  l_4-5:
+    number: playfield-4-5
+    tags: Chain4, odd, second, 88
+  l_4-6:
+    number: playfield-4-6
+    tags: Chain4, even, third, 89
+  l_4-7:
+    number: playfield-4-8
+    tags: Chain4, odd, first, 90
+  l_4-9:
+    number: playfield-4-9
+  l_4-10:
+    number: playfield-4-10
+  l_4-11:
+    number: playfield-4-11
+  l_4-12:
+    number: playfield-4-12
+  l_4-13:
+    number: playfield-4-13
+  l_4-14:
+    number: playfield-4-14
+  l_4-15:
+    number: playfield-4-15
+  l_4-16:
+    number: playfield-4-16
+  l_4-17:
+    number: playfield-4-17
+  l_4-18:
+    number: playfield-4-18
+  l_4-19:
+    number: playfield-4-19
+  l_4-20:
+    number: playfield-4-20
+  l_4-21:
+    number: playfield-4-21
+  l_4-22:
+    number: playfield-4-22
+  l_4-23:
+    number: playfield-4-23
+  l_4-25:
+    number: playfield-4-24
+  l_4-26:
+    number: playfield-4-26
+  l_4-27:
+    number: playfield-4-27
+  l_4-28:
+    number: playfield-4-28
+  l_4-29:
+    number: playfield-4-29
+  l_4-30:
+    number: playfield-4-30
+  l_4-31:
+    number: playfield-4-31
+  l_4-32:
+    number: playfield-4-32
 
   l_right_lightbar1:
     number: playfield-5-1
@@ -448,38 +514,136 @@ lights:
   l_left_lightbar32:
     number: playfield-6-32
     tags: left_lightbar, even, first
+
+  l-7-1:
+    number: playfield-7-1
+    tags: odd, first
+  l-7-2:
+    number: playfield-7-2
+    tags: even, second
+  l-7-3:
+    number: playfield-7-3
+    tags: odd, third
+  l-7-4:
+    number: playfield-7-4
+    tags: even, first
+  l-7-5:
+    number: playfield-7-5
+    tags: odd, second 
+  l-7-6:
+    number: playfield-7-6
+    tags: odd, third
+  l-7-7:
+    number: playfield-7-7
+    tags: odd, third
+  l-7-8:
+    number: playfield-7-8
+    tags: odd, third
+  l-7-9:
+    number: playfield-7-9
+    tags: odd, third
+  l-7-10:
+    number: playfield-7-10
+    tags: odd, third
+  l-7-11:
+    number: playfield-7-11
+    tags: odd, third
+  l-7-12:
+    number: playfield-7-12
+    tags: odd, third
+  l-7-13:
+    number: playfield-7-13
+    tags: odd, third
+  l-7-14:
+    number: playfield-7-14
+    tags: odd, third
+  l-7-15:
+    number: playfield-7-15
+    tags: odd, third
+  l-7-16:
+    number: playfield-7-16
+    tags: odd, third
+  l-7-17:
+    number: playfield-7-17
+    tags: odd, third
+  l-7-18:
+    number: playfield-7-18
+    tags: odd, third
+  l-7-19:
+    number: playfield-7-19
+    tags: odd, third
+  l-7-20:
+    number: playfield-7-20
+    tags: odd, third
+  l-7-21:
+    number: playfield-7-21
+    tags: odd, third
+  l-7-22:
+    number: playfield-7-22
+    tags: odd, third
+  l-7-23:
+    number: playfield-7-23
+    tags: Chain7, odd, third
+  l-7-24:
+    number: playfield-7-24
+    tags: Chain7, odd, third
+  l-7-25:
+    number: playfield-7-25
+    tags: Chain7, odd, third
+  l-7-26:
+    number: playfield-7-26
+    tags: Chain7, odd, third
+  l-7-27:
+    number: playfield-7-27
+    tags: Chain7, odd, third
+  l-7-28:
+    number: playfield-7-28
+    tags: Chain7, odd, third
+  l-7-29:
+    number: playfield-7-29
+    tags: Chain7, odd, third
+  l-7-30:
+    number: playfield-7-30
+    tags: Chain7, odd, third
+  l-7-31:
+    number: playfield-7-31
+    tags: Chain7, odd, third
+  l-7-32:
+    number: playfield-7-32
+    tags: Chain7, odd, third
+
   l-8-1:
     number: playfield-8-1
     type: rgb
-    tags: odd, first, right_scoop_flasher
+    tags: Chain8, odd, first, right_scoop_flasher
   l-8-2:
     number: playfield-8-2
     type: rgb
-    tags: even, second, right_scoop_flasher
+    tags: Chain8, even, second, right_scoop_flasher
   l-8-3:
     number: playfield-8-3
     type: rgb
-    tags: odd, third, right_scoop_flasher
+    tags:  Chain8, odd, third, right_scoop_flasher
   l-8-4:
     number: playfield-8-4
     type: rgb
-    tags: even, first, right_scoop_flasher
+    tags: Chain8, even, first, right_scoop_flasher
   l-8-5:
     number: playfield-8-5
     type: rgb
-    tags: odd, second, right_scoop_flasher
+    tags: Chain8, odd, second, right_scoop_flasher
   l-8-6:
     number: playfield-8-6
     type: rgb
-    tags: even, third, right_scoop_flasher
+    tags: Chain8, even, third, right_scoop_flasher
   l-8-7:
     number: playfield-8-7
     type: rgb
-    tags: odd, first, right_scoop_flasher
+    tags: Chain8, odd, first, right_scoop_flasher
   l-8-8:
     number: playfield-8-8
     type: rgb
-    tags: even, second, right_scoop_flasher
+    tags: Chain8, even, second, right_scoop_flasher
   l-8-9:
     number: playfield-8-9
     type: rgb
@@ -487,92 +651,92 @@ lights:
   l-8-10:
     number: playfield-8-10
     type: rgb
-    tags: even, first, bottom_pop_flasher
+    tags: Chain8,  even, first, bottom_pop_flasher
   l-8-11:
     number: playfield-8-11
     type: rgb
-    tags: odd, second,bottom_pop_flasher
+    tags: Chain8, odd, second,bottom_pop_flasher
   l-8-12:
     number: playfield-8-12
     type: rgb
-    tags: even, third,bottom_pop_flasher
+    tags: Chain8, even, third,bottom_pop_flasher
   l-8-13:
     number: playfield-8-13
     type: rgb
-    tags: odd, first, bottom_pop_flasher
+    tags: Chain8, odd, first, bottom_pop_flasher
   l-8-14:
     number: playfield-8-14
     type: rgb
-    tags: even, second,bottom_pop_flasher
+    tags: Chain8, even, second,bottom_pop_flasher
   l-8-15:
     number: playfield-8-15
     type: rgb
-    tags: odd, third,bottom_pop_flasher
+    tags: Chain8, odd, third,bottom_pop_flasher
   l-8-16:
     number: playfield-8-16
     type: rgb
-    tags: even, first,bottom_pop_flasher
+    tags: Chain8, even, first,bottom_pop_flasher
   l-8-17:
     number: playfield-8-17
     type: rgb
-    tags: odd, second,top_pop_flasher
+    tags: Chain8, odd, second,top_pop_flasher
   l-8-18:
     number: playfield-8-18
     type: rgb
-    tags: even, third,top_pop_flasher
+    tags: Chain8, even, third,top_pop_flasher
   l-8-19:
     number: playfield-8-19
     type: rgb
-    tags: odd, first,top_pop_flasher
+    tags: Chain8, odd, first,top_pop_flasher
   l-8-20:
     number: playfield-8-20
     type: rgb
-    tags: even, second,top_pop_flasher
+    tags: Chain8, even, second,top_pop_flasher
   l-8-21:
     number: playfield-8-21
     type: rgb
-    tags: odd, third,top_pop_flasher
+    tags: Chain8, odd, third,top_pop_flasher
   l-8-22:
     number: playfield-8-22
     type: rgb
-    tags: even, first,top_pop_flasher
+    tags: Chain8, even, first,top_pop_flasher
   l-8-23:
     number: playfield-8-23
     type: rgb
-    tags: odd, second,top_pop_flasher
+    tags: Chain8, odd, second,top_pop_flasher
   l-8-24:
     number: playfield-8-24
     type: rgb
-    tags: even, third,top_pop_flasher
+    tags: Chain8, even, third,top_pop_flasher
   l-8-25:
     number: playfield-8-25
     type: rgb
-    tags: odd, first
+    tags: Chain8, odd, first
   l-8-26:
     number: playfield-8-26
     type: rgb
-    tags: even, second
+    tags: Chain8, even, second
   l-8-27:
     number: playfield-8-27
     type: rgb
-    tags: odd, third
+    tags: Chain8, odd, third
   l-8-28:
     number: playfield-8-28
     type: rgb
-    tags: even, first
+    tags: Chain8, even, first
   l-8-29:
     number: playfield-8-29
     type: rgb
-    tags: odd, second
+    tags: Chain8, odd, second
   l-8-30:
     number: playfield-8-30
     type: rgb
-    tags: even, third
+    tags: Chain8,even, third
   l-8-31:
     number: playfield-8-31
     type: rgb
-    tags: odd, first
+    tags: Chain8, odd, first, 255
   l-8-32:
     number: playfield-8-32
     type: rgb
-    tags: even, second
+    tags: Chain8, even, second, 256
