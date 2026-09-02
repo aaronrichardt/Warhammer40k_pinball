@@ -20,6 +20,7 @@ event_player:
     - lower_dreadnought_lock_count
 
   multiball_lock_dreadnought_full: 
+    - dreadnought_awaken_show
     - start_dreadnought_multiball| 5s
     # Do Light show event here
 
@@ -59,6 +60,14 @@ shots:
 
 
 sound_player:
+    dreadnought_awaken_show:
+        404443:
+            action: play 
+            volume: 1 
+            ducking: 
+                bus: voice
+                attack: 0.1 sec
+                
     multiball_lock_dreadnought_locked_ball{total_balls_locked==1}:  
         BallOneLocked:
             action: play
@@ -99,7 +108,26 @@ shot_profiles:
         speed: 10
         loops: -1
 
-show_player:
+show_player: 
+  dreadnought_awaken_show: 
+    set_GI:
+     action: play
+     loops: -1
+     speed: 1
+     show_tokens: 
+        led: GI
+        color: red
+    dreadnought_awaken_light_show:
+     action: play 
+     loops: -1
+     speed: 
+     show_tokens: 
+       shot_led1: dreadnought1
+       shot_led2: dreadnought2
+       shot_color: yellow 
+       
+  
+
   dreadnought_lock_qualified:
     2toneflash:
      action: play

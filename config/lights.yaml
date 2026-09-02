@@ -575,8 +575,8 @@ lights:
   l-8-31:
     number: playfield-8-31
     type: rgb
-    tags: odd, first, 8-31
+    tags: odd, first, 8-31 , dreadnought2 
   l-8-32:
     number: playfield-8-32
     type: rgb
-    tags: even, second, 8-32
+    tags: even, second, 8-32, dreadnought1

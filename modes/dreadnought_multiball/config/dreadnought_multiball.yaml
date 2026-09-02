@@ -7,6 +7,8 @@
 # I need the gattling gun motor to start spinnning and the GI should flash along with it.
 # It needs to be a big moment, His main eye should "Wake up", A voice line will go off, then after the voice line the motor will trigger and the balls will drop
 
+#This mode should be about putting balls back into the dreadnought, that will reset the jackpot shots and boost base jackpot values
+# Shooting 5 lit jackpots will light the super jackpot at the upper vuk
 
 #FULL  BLINKY
 mode:
@@ -34,13 +36,27 @@ shots:
         start_enabled: true
         enable_events:
         disable_events:
-        restart_events: award_dreadnought_locK
+        restart_events: dreadnought_multiball_start
+
     dreadnought2:
         switch: s_nurgle_redcircle
         start_enabled: true
         enable_events:  
         disable_events:
-        restart_events: award_dreadnought_locK
+        restart_events: dreadnought_multiball_start
+
+    dreadnought3:
+        switch: s_left_orbit
+        enable_events: 
+        disable_events:
+        restart_events: dreadnought_multiball_start
+        start_enabled: true
+    dreadnought4: 
+        hit_events: base_innerloop_left_hit
+        enable_events:
+        disable_events: 
+        restart_events: dreadnought_multiball_start
+        start_enabled: true
 
 show_player: 
     #start dreadnought multiball show
