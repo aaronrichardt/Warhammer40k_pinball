@@ -71,7 +71,7 @@ shots:
         start_enabled: false 
 
 
-counter:
+counters:
     dreadnought_superjackpot:
         count_events:
         count_complete_value: 5

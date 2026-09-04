@@ -591,100 +591,100 @@ lights:
 
   l_7-1:
     number: playfield-7-1
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-2:
     number: playfield-7-2
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
   l_7-3:
     number: playfield-7-3
-    tags: Chain7, odd, third
+    tags: Chain7, odd, third, GI
   l_7-4:
     number: playfield-7-4
-    tags: Chain7, even, first
+    tags: Chain7, even, first, GI
   l_7-5:
     number: playfield-7-5
-    tags: Chain7, odd, second
+    tags: Chain7, odd, second, GI
   l_7-6:
     number: playfield-7-6
-    tags: Chain7, even, third
+    tags: Chain7, even, third, GI
   l_7-7:
     number: playfield-7-7
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-8:
     number: playfield-7-8
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
   l_7-9:
     number: playfield-7-9
-    tags: Chain7, odd, third
+    tags: Chain7, odd, third, GI
   l_7-10:
     number: playfield-7-10
-    tags: Chain7, even, first
+    tags: Chain7, even, first, GI
   l_7-11:
     number: playfield-7-11
-    tags: Chain7, odd, second
+    tags: Chain7, odd, second, GI
   l_7-12:
     number: playfield-7-12
-    tags: Chain7, even, third
+    tags: Chain7, even, third, GI
   l_7-13:
     number: playfield-7-13
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-14:
     number: playfield-7-14
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
   l_7-15:
     number: playfield-7-15
-    tags: Chain7, odd, third
+    tags: Chain7, odd, third, GI
   l_7-16:
     number: playfield-7-16
-    tags: Chain7, even, first
+    tags: Chain7, even, first, GI
   l_7-17:
     number: playfield-7-17
-    tags: Chain7, odd, second
+    tags: Chain7, odd, second, GI
   l_7-18:
     number: playfield-7-18
-    tags: Chain7, even, third
+    tags: Chain7, even, third, GI
   l_7-19:
     number: playfield-7-19
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-20:
     number: playfield-7-20
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
   l_7-21:
     number: playfield-7-21
-    tags: Chain7, odd, third
+    tags: Chain7, odd, third, GI
   l_7-22:
     number: playfield-7-22
-    tags: Chain7, even, first
+    tags: Chain7, even, first, GI
   l_7-23:
     number: playfield-7-23
-    tags: Chain7, odd, second
+    tags: Chain7, odd, second, GI
   l_7-24:
     number: playfield-7-24
-    tags: Chain7, even, third
+    tags: Chain7, even, third, GI
   l_7-25:
     number: playfield-7-25
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-26:
     number: playfield-7-26
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
   l_7-27:
     number: playfield-7-27
-    tags: Chain7, odd, third
+    tags: Chain7, odd, third, GI
   l_7-28:
     number: playfield-7-28
-    tags: Chain7, even, first
+    tags: Chain7, even, first, GI
   l_7-29:
     number: playfield-7-29
-    tags: Chain7, odd, second
+    tags: Chain7, odd, second, GI
   l_7-30:
     number: playfield-7-30
-    tags: Chain7, even, third
+    tags: Chain7, even, third, GI
   l_7-31:
     number: playfield-7-31
-    tags: Chain7, odd, first
+    tags: Chain7, odd, first, GI
   l_7-32:
     number: playfield-7-32
-    tags: Chain7, even, second
+    tags: Chain7, even, second, GI
 
 
   l-8-1:
@@ -810,8 +810,8 @@ lights:
   l-8-31:
     number: playfield-8-31
     type: rgb
-    tags: odd, first, 8-31 , dreadnought2 
+    tags: odd, first, 8-31 , dreadnought2 ,dreadnought
   l-8-32:
     number: playfield-8-32
     type: rgb
-    tags: even, second, 8-32, dreadnought1
+    tags: even, second, 8-32, dreadnought1,dreadnought
