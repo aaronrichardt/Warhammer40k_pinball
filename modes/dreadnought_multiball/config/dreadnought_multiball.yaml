@@ -57,6 +57,40 @@ shots:
         disable_events: 
         restart_events: dreadnought_multiball_start
         start_enabled: true
+    dreadnought_super_jackpot:
+        restart_events: enable_dreadnought_super_jackpot
+        switch: s_jackpot_vuk
+        start_enabled: 
+    dreadnought_double_super_jackpot: 
+        restart_events: enable_dreadnought_double_super_jackpot
+        switch: s_jackpot_vuk
+        start_enabled: false
+    dreadnought_exterminatus_jackpot:
+        restart_events: enable_dreadnought_exterminatus_jackpot
+        switch: s_jackpot_vuk
+        start_enabled: false 
+
+
+counter:
+    dreadnought_superjackpot:
+        count_events:
+        count_complete_value: 5
+        disable_on_complete: true
+        events_when_complete: enable_dreadnought_super_jackpot, enable_dreadnought_double_super_jackpot_counter
+    dreadnought_double_super_jackpot:
+        count_events:
+        enable_events: enable_dreadnought_double_super_jackpot_counter
+        count_complete_value: 5
+        disable_on_complete: true
+        events_when_complete: 
+    dreadnought_exterminatus_jackpot:
+        count_events:
+        enable_events: enable_dreadnought_exterminatus_jackpot_counter
+        count_complete_value: 5
+        disable_on_complete: true
+
+
+
 
 show_player: 
     #start dreadnought multiball show
