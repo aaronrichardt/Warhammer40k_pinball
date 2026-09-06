@@ -32,3 +32,6 @@ logs/*.log
 *SemanticSymbols.db
 *SemanticSymbols.db-shm
 *SemanticSymbols.db-wal
+/.vs/CopilotSnapshots/*
+/.vs/Warhammer40k_pinball/v18/workspaceFileList.bin
+/.vs/CopilotSnapshots/74CFAD2E23231F40BC3417CFBD950DA4/state.mpack
