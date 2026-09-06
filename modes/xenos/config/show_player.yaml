@@ -46,4 +46,4 @@ show_player:
       show_tokens:
         gadget_letter_made_led: xenos_letter
         gadget_letter_made_color: Yellow
-        gadget_letter_final_color: 000000
+        gadget_letter_final_color: off

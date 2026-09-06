@@ -50,8 +50,6 @@ ball_holds:
 
 show_player: 
     
-
-
    spinner_center_spinner_hit:
         spinner_show:
             show_tokens: 
