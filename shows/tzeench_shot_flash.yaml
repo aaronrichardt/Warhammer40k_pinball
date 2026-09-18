@@ -11,4 +11,3 @@
 - time: "+.2"
   lights:
     (led): off
-    duration: -1

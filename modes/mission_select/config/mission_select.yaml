@@ -37,31 +37,31 @@ sound_player:
                 release_point: 2.0 sec
                 release: 1.0 sec
 
-    'item_highlighted{item=="khorne"}':
+    item_highlighted{item=="khorne"}:
         Khorne:
             action: play
             volume: 1
             bus: voice
 
-    'item_highlighted{item=="nurgle"}':
+    item_highlighted{item=="nurgle"}:
         Nurgle:
             action: play
             volume: 1
             bus: voice
 
-    'item_highlighted{item=="slannesh"}':
+    item_highlighted{item=="slannesh"}:
         Slannesh:
             action: play
             volume: 1
             bus: voice
 
-    'item_highlighted{item=="tzeench"}':
+    item_highlighted{item=="tzeench"}:
         Tzeench:
             action: play
             volume: 1
             bus: voice
 
-    'item_highlighted{item=="necrons"}':
+    item_highlighted{item=="necrons"}:
         Necrons:
             action: play
             volume: 1
