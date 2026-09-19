@@ -20,11 +20,9 @@ event_player:
     - lower_dreadnought_lock_count
 
   multiball_lock_dreadnought_full: 
-    - dreadnought_awaken_show
-    - start_dreadnought_multiball| 5s
-    # Do Light show event here
-
-    # Do sound effects event here
+    - dreadnought_multiball_intro
+  timer_dreadnought_multiball_intro_complete:
+    - dreadnought_multiball_intro_complete
 
 
 
@@ -90,7 +88,7 @@ sound_player:
                 attenuation: -30
                 release_point: 2.0 sec
                 release: 1.0 sec
-    multiball_lock_dreadnought_full:
+    dreadnought_multiball_intro:
         DreadnoughtMultiballVoice:
             action: play
             volume: 1
@@ -100,6 +98,35 @@ sound_player:
                 attenuation: -30
                 release_point: 2.0 sec
                 release: 1.0 sec
+
+timers:
+    dreadnought_multiball_intro:
+        start_value: 8
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        start_running: false
+        restart_on_complete: false
+        control_events:
+            - event: dreadnought_multiball_intro
+              action: restart
+
+queue_event_player:
+    multiball_lock_dreadnought_full:
+        queue_event: dreadnought_multiball_intro_queue
+        events_when_finished: start_dreadnought_multiball
+
+queue_relay_player:
+    dreadnought_multiball_intro_queue:
+        post: dreadnought_multiball_intro
+        wait_for: dreadnought_multiball_intro_complete
+
+slide_player:
+    dreadnought_multiball_intro:
+        dreadnought_multiball_intro
+    dreadnought_multiball_intro_complete:
+        dreadnought_multiball_intro:
+            action: remove
         
 
 shot_profiles:
@@ -138,6 +165,17 @@ show_player:
      show_tokens:
         even_color: blue
         odd_color: gold
+
+  dreadnought_multiball_intro:
+    dreadnought_awaken:
+      action: play
+      loops: 1
+      show_tokens:
+        led: dreadnought
+
+  dreadnought_multiball_intro_complete:
+    dreadnought_awaken:
+      action: stop
 
   multiball_lock_dreadnought_locked_ball: 
     2toneflash:

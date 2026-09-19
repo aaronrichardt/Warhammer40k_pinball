@@ -98,7 +98,7 @@ shots:
   left_drain: 1
   left_orbit: 8
   left_slingshot: 5
-  mechanicus_scoop_shot: 54
+  mechanicus_scoop_shot: 55
   mystery_scoop_shot: 6
   necron_lock_back_target: 6
   necron_lock_drop_target: 43

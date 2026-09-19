@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_intro"]
+
+[node name="MPFSlide" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_intro")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.12, 0.02, 0.02, 1)
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 380.0
+offset_right = 1760.0
+offset_bottom = 560.0
+theme_override_colors/font_color = Color(1, 0.15, 0.05, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 16
+theme_override_font_sizes/font_size = 108
+text = "DREADNOUGHT AWAKENS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 580.0
+offset_right = 1760.0
+offset_bottom = 700.0
+theme_override_colors/font_color = Color(1, 0.75, 0.35, 1)
+theme_override_font_sizes/font_size = 48
+text = "MULTIBALL"
+horizontal_alignment = 1
+vertical_alignment = 1

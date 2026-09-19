@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://daf2wedvyveni"]
+[gd_scene load_steps=10 format=3 uid="uid://daf2wedvyveni"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_0il4v"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_edwlu"]
 [ext_resource type="PackedScene" uid="uid://eckmd4yb5lal" path="res://addons/mpf-gmc/slides/nurgle.tscn" id="3_bvqca"]
 [ext_resource type="PackedScene" uid="uid://bovylwjst15s1" path="res://addons/mpf-gmc/slides/slannesh.tscn" id="4_66jj0"]
@@ -8,13 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://cd1e13qg24kiw" path="res://addons/mpf-gmc/slides/necrons.tscn" id="6_l35u7"]
 [ext_resource type="PackedScene" uid="uid://bp1cdam4grnfo" path="res://addons/mpf-gmc/slides/khorne.tscn" id="7_xumkd"]
 [ext_resource type="PackedScene" uid="uid://q85p3oo6vnhe" path="res://addons/mpf-gmc/slides/backToTheFight.tscn" id="8_uvano"]
+[ext_resource type="Texture2D" uid="uid://dqov1ybpt0k5" path="res://addons/mpf-gmc/images/Necrons-Cover-Art.jpg" id="9_6giu8"]
+[ext_resource type="Script" path="res://addons/mpf-gmc/slides/mission_select.gd" id="9_selector"]
 
 [node name="mission_select" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_0il4v")
+script = ExtResource("9_selector")
 
 [node name="Carousel" type="Control" parent="."]
 layout_mode = 3
@@ -39,3 +40,184 @@ offset_left = 2.0
 offset_top = 1.0
 offset_right = 42.0
 offset_bottom = 41.0
+
+[node name="Selector" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 0
+offset_left = 120.0
+offset_top = 468.0
+offset_right = 1800.0
+offset_bottom = 1056.0
+mouse_filter = 2
+
+[node name="khorne" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 585.0
+pivot_offset = Vector2(120, 100)
+
+[node name="Panel" type="ColorRect" parent="Selector/khorne"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Selector/khorne"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.08, 0.02, 0.02, 1)
+theme_override_font_sizes/font_size = 30
+text = "KHORNE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="nurgle" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_left = 280.0
+offset_right = 520.0
+offset_bottom = 585.0
+
+[node name="Panel" type="TextureRect" parent="Selector/nurgle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_6giu8")
+expand_mode = 5
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Selector/nurgle"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.05, 0.1, 0.06, 1)
+theme_override_font_sizes/font_size = 30
+text = "NURGLE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="slannesh" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_left = 560.0
+offset_right = 800.0
+offset_bottom = 585.0
+pivot_offset = Vector2(120, 100)
+
+[node name="Panel" type="ColorRect" parent="Selector/slannesh"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Selector/slannesh"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.18, 0.03, 0.2, 1)
+theme_override_font_sizes/font_size = 26
+text = "SLANNESH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="tzeench" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_left = 840.0
+offset_right = 1080.0
+offset_bottom = 585.0
+pivot_offset = Vector2(120, 100)
+
+[node name="Panel" type="ColorRect" parent="Selector/tzeench"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Selector/tzeench"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.02, 0.12, 0.2, 1)
+theme_override_font_sizes/font_size = 30
+text = "TZEENCH"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="necrons" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_left = 1120.0
+offset_right = 1360.0
+offset_bottom = 585.0
+pivot_offset = Vector2(120, 100)
+
+[node name="Panel" type="TextureRect" parent="Selector/necrons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_6giu8")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="Selector/necrons"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.1, 0.15, 0.02, 1)
+theme_override_font_sizes/font_size = 27
+text = "NECRONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="backToTheFight" type="Control" parent="Selector"]
+anchors_preset = 0
+offset_left = 1400.0
+offset_right = 1640.0
+offset_bottom = 585.0
+pivot_offset = Vector2(120, 100)
+
+[node name="Panel" type="ColorRect" parent="Selector/backToTheFight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Selector/backToTheFight"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.04, 0.1, 0.2, 1)
+theme_override_font_sizes/font_size = 22
+text = "BACK TO THE FIGHT"
+horizontal_alignment = 1
+vertical_alignment = 1
