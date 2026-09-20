@@ -1,0 +1,82 @@
+#config_version=6
+
+show_player: 
+
+
+    slide_skill_shot_success: 
+        Playfield360rainbowsSweep:
+            speed: 2
+
+    mode_skillshot_started:
+        standard_flash:
+            key: skillshot
+            speed: 5
+            priority: 10
+            show_tokens:
+              led: xenos_skill_shot
+              color: white
+    
+    #increase speed for hurry up
+    timer_skill_shot_timeout_tick{ticks_remaining==10}:
+        standard_flash:
+            key: skillshot
+            speed: 10
+            priority: 20
+            show_tokens:
+              led: xenos_skill_shot
+              color: yellow
+    #Double increase speed for hurry up
+    timer_skill_shot_timeout_tick{ticks_remaining==5}:
+        standard_flash:
+            key: skillshot
+            speed: 15
+            priority: 40
+            show_tokens:
+              led: xenos_skill_shot
+              color: red
+
+    enable_superskillshot_lights: 
+        skillshot_light_show:
+            action: play
+            key: skillshot_super
+            speed: 10
+            show_tokens:
+              skillshotlight1: l_solemnace_circle
+              skillshotlight2: l_solemnace_arrow
+              skillshotlight3: l_necron_lock1
+              skillshotlight4: l_necron_lock2
+              skillshotlight_color: green
+
+        super_skillshot_light_show:
+            action: play
+            key: skillshot_double_super
+            speed: 10
+            show_tokens:
+              skillshotlight1: l_right_orbit_cicle
+              skillshotlight2: l_right_orbit_arrow
+              skillshotlight3: l_left_innerloop_arrow
+              skillshotlight4: l_right_innerloop_circle
+              skillshotlight5: l_innerloop_arrow
+              skillshotlight6: l_innerloop_flasher
+              skillshotlight7: l_left_innerloop_arrow
+              skillshotlight8: l_pop_flasher
+              skillshotlight9: l_jackpot
+              skillshotlight10: l_super_jackpot
+              skillshotlight_color: red
+
+    reset_superskillshot_droptarget:
+        skillshot_light_show:
+            action: stop
+            key: skillshot_super
+        super_skillshot_light_show:
+            action: stop
+            key: skillshot_double_super
+
+    super_skill_necron_combo_hit:
+        necron_rings:
+            action: play
+            loops: 6
+            speed: 40
+        skillshot_light_show:
+            action: stop
+            key: skillshot_super

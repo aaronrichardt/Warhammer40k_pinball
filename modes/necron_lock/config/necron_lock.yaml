@@ -49,7 +49,8 @@ event_player:
     necron_lock_drop_target_lit_hit{device.counters.necron_lockup.value < 2}:
             - reset_necron_drop
 
-    shot_necron_lock_back_target_hit:
+    necron_lock_back_target_lit_hit:
+            - reset_necron_drop
             - necron_lock_captured
 
     necron_start_multiball_shot_lit_hit:
