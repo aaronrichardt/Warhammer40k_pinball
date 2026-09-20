@@ -6,12 +6,24 @@ sound_player:
       action: play
       volume: 0.8
       bus: music
+      ducking:
+        bus: none
+        attack: 0.3 sec
+        attenuation: 0
+        release_point: 2.0 sec
+        release: 1.0 sec
 
   tzeench_target_hit:
     DP_Cinematic_SFX_Orbit_Spectral Trails_01:
       action: play
       volume: 0.8
       bus: sfx
+      ducking:
+        bus: none
+        attack: 0.3 sec
+        attenuation: 0
+        release_point: 2.0 sec
+        release: 1.0 sec
 
   tzeench_targets_complete:
     ShotValuesIncreased:
