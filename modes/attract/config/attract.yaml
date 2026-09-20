@@ -69,8 +69,8 @@ sound_player:
 
 event_player:
   #if ball_devices have balls in them, kick the balls out to reset the game.
-  collecting_balls{device.ball_device.bd_necron_lock.balls > 0}:
-    - eject_necron_lock
+  # collecting_balls{device.ball_device.bd_necron_lock.balls > 0}:
+  #   - eject_necron_lock
 
 
   s_left_flipper_active{device.timers.attract_allow_sound.running==False}: 
