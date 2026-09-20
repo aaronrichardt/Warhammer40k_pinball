@@ -119,16 +119,16 @@ slide_player:
 
 sound_player:
     necron_lock_captured:
-        Necrons:
-            action: play
-            volume: 1
-            bus: voice
-            ducking:
-              bus: none
-              attack: 0.3 sec
-              attenuation: 0
-              release_point: 2.0 sec
-              release: 1.0 sec
+        # Necrons:
+        #     action: play
+        #     volume: 1
+        #     bus: voice
+        #     ducking:
+        #       bus: none
+        #       attack: 0.3 sec
+        #       attenuation: 0
+        #       release_point: 2.0 sec
+        #       release: 1.0 sec
         DP_Cinematic_SFX_Stinger_Charge Up_01:
             action: play
             volume: 1
