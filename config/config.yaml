@@ -115,8 +115,9 @@ ball_devices:
         eject_timeouts: 3s
 
     bd_necron_lock:
-      mechanical_eject: true
+      mechanical_eject: True
       ball_switches: s_necron_opto_lock    
+      #confirm_eject_switches: s_necron_opto_lock
       confirm_eject_event:  start_necron_multiball
 
       

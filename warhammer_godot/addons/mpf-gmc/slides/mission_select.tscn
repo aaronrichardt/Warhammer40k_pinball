@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://daf2wedvyveni"]
+[gd_scene load_steps=9 format=3 uid="uid://daf2wedvyveni"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_edwlu"]
 [ext_resource type="PackedScene" uid="uid://eckmd4yb5lal" path="res://addons/mpf-gmc/slides/nurgle.tscn" id="3_bvqca"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cd1e13qg24kiw" path="res://addons/mpf-gmc/slides/necrons.tscn" id="6_l35u7"]
 [ext_resource type="PackedScene" uid="uid://bp1cdam4grnfo" path="res://addons/mpf-gmc/slides/khorne.tscn" id="7_xumkd"]
 [ext_resource type="PackedScene" uid="uid://q85p3oo6vnhe" path="res://addons/mpf-gmc/slides/backToTheFight.tscn" id="8_uvano"]
-[ext_resource type="Texture2D" uid="uid://dqov1ybpt0k5" path="res://addons/mpf-gmc/images/Necrons-Cover-Art.jpg" id="9_6giu8"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/slides/mission_select.gd" id="9_selector"]
 
 [node name="mission_select" type="Control"]
@@ -83,16 +82,13 @@ offset_left = 280.0
 offset_right = 520.0
 offset_bottom = 585.0
 
-[node name="Panel" type="TextureRect" parent="Selector/nurgle"]
+[node name="Panel" type="ColorRect" parent="Selector/nurgle"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_6giu8")
-expand_mode = 5
-stretch_mode = 1
 
 [node name="Label" type="Label" parent="Selector/nurgle"]
 layout_mode = 1
@@ -170,16 +166,13 @@ offset_right = 1360.0
 offset_bottom = 585.0
 pivot_offset = Vector2(120, 100)
 
-[node name="Panel" type="TextureRect" parent="Selector/necrons"]
+[node name="Panel" type="ColorRect" parent="Selector/necrons"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("9_6giu8")
-expand_mode = 1
-stretch_mode = 1
 
 [node name="Label" type="Label" parent="Selector/necrons"]
 layout_mode = 1

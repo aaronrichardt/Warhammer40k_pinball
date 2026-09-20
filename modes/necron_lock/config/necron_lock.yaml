@@ -10,7 +10,7 @@ shots:
         switch: s_droptarget_down
         profile: base_profile
         start_enabled: true
-        disable_events: logicblock_necron_lockup_complete
+        disable_events: necron_lock_qualified
         enable_events: start_necron_lock
         restart_events: 
         show_tokens:
@@ -21,9 +21,23 @@ shots:
         switch: s_necron_target
         profile: necron_lock_profile
         start_enabled: false
-        disable_events: 
-       # enable_events: counter_necron_lockup_complete
-        restart_events: logicblock_necron_lockup_complete
+        disable_events: necron_lock_captured
+        enable_events: necron_lock_qualified
+        restart_events: necron_lock_qualified
+        show_tokens:
+            led4: l_necron_lock2
+            led3: l_necron_lock1
+            led2: l_solemnace_arrow
+            led1: l_solemnace_circle
+            color: lime
+
+    necron_start_multiball_shot:
+        switch: s_droptarget_down
+        profile: necron_lock_profile
+        start_enabled: false
+        enable_events: 
+        disable_events: multiball_necron_multiball_started
+        restart_events: multiball_lock_necron_lock_full
         show_tokens:
             led4: l_necron_lock2
             led3: l_necron_lock1
@@ -32,10 +46,14 @@ shots:
             color: lime
 
 event_player:
-    necron_lock_drop_target_lit_hit:
+    necron_lock_drop_target_lit_hit{device.counters.necron_lockup.value < 2}:
             - reset_necron_drop
-            # - start_necron_lock_qualified
-            # - stop_necron_lock
+
+    shot_necron_lock_back_target_hit:
+            - necron_lock_captured
+
+    necron_start_multiball_shot_lit_hit:
+            - start_necron_multiball
 
 shot_profiles:
    base_profile:
@@ -61,7 +79,7 @@ counters:
     direction: up
     count_complete_value: current_player.necron_lock_count #3 then 1+ for each time completed
     disable_on_complete: true
-
+    events_when_complete: necron_lock_qualified
 
 
 multiball_locks:
@@ -70,6 +88,44 @@ multiball_locks:
     lock_devices: bd_necron_lock
     disable_events: mode_necron_multiball_started
     reset_all_counts_events: multiball_necron_multiball_started
+    empty_lock_devices_on_ball_end: true
+
+show_player:
+    necron_lock_qualified:
+        necron_lock_show:
+            action: play
+            loops: -1
+            show_tokens:
+                led1: l_necron_lock1
+                led2: l_necron_lock2
+                led3: l_solemnace_arrow
+                led4: l_solemnace_circle
+                color: lime
+
+    necron_lock_captured:
+        necron_lock_show:
+            action: stop
+        necron_rings:
+            action: play
+            loops: 1
+
+slide_player:
+    necron_lock_captured:
+        necrons
+    s_droptarget_down_active:
+        necrons:
+            action: remove
+
+sound_player:
+    necron_lock_captured:
+        Necrons:
+            action: play
+            volume: 1
+            bus: voice
+        DP_Cinematic_SFX_Stinger_Charge Up_01:
+            action: play
+            volume: 1
+            bus: effects
 
 # multiballs:
 #   necron_multiball:

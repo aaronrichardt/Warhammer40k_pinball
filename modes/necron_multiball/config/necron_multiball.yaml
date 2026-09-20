@@ -1,7 +1,7 @@
 #config_version=6
 mode:
-  start_events: multiball_lock_necron_lock_full
-  stop_events: ball_will_end
+  start_events: start_necron_multiball
+  stop_events: ball_will_end, multiball_necron_multiball_ended
   priority: 100
   
 multiballs:
@@ -9,6 +9,7 @@ multiballs:
     ball_count: 2
     ball_count_type: total
     shoot_again: 10s
-    start_events: s_droptarget_down_active
     stop_events: ball_will_end
     ball_locks: bd_necron_lock
+    start_events:
+      - start_necron_multiball
