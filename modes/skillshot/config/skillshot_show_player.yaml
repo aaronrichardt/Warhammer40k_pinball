@@ -36,7 +36,7 @@ show_player:
               color: red
 
     enable_superskillshot_lights: 
-        skillshot_light_show:
+        super_skillshot_light_show:
             action: play
             key: skillshot_super
             speed: 10
@@ -47,36 +47,33 @@ show_player:
               skillshotlight4: l_necron_lock2
               skillshotlight_color: green
 
+    # super_skillshot_light_show:
+    #     action: play
+    #     key: skillshot_double_super
+    #     speed: 10
+    #     show_tokens:
+    #       skillshotlight1: l_right_orbit_cicle
+    #       skillshotlight2: l_right_orbit_arrow
+    #       skillshotlight3: l_left_innerloop_arrow
+    #       skillshotlight4: l_right_innerloop_circle
+    #       skillshotlight5: l_innerloop_arrow
+    #       skillshotlight6: l_innerloop_flasher
+    #       skillshotlight7: l_left_innerloop_arrow
+    #       skillshotlight8: l_pop_flasher
+    #       skillshotlight9: l_jackpot
+    #       skillshotlight10: l_super_jackpot
+    #       skillshotlight_color: red
+    #
+    disable_superskillshot_lights:
         super_skillshot_light_show:
-            action: play
-            key: skillshot_double_super
-            speed: 10
-            show_tokens:
-              skillshotlight1: l_right_orbit_cicle
-              skillshotlight2: l_right_orbit_arrow
-              skillshotlight3: l_left_innerloop_arrow
-              skillshotlight4: l_right_innerloop_circle
-              skillshotlight5: l_innerloop_arrow
-              skillshotlight6: l_innerloop_flasher
-              skillshotlight7: l_left_innerloop_arrow
-              skillshotlight8: l_pop_flasher
-              skillshotlight9: l_jackpot
-              skillshotlight10: l_super_jackpot
-              skillshotlight_color: red
-
-    reset_superskillshot_droptarget:
-        skillshot_light_show:
             action: stop
             key: skillshot_super
-        super_skillshot_light_show:
-            action: stop
-            key: skillshot_double_super
 
-    super_skill_necron_combo_hit:
+    super_skillshot_lit_hit:
         necron_rings:
             action: play
-            loops: 6
-            speed: 40
+            loops: 2
+            speed: 80
         skillshot_light_show:
             action: stop
             key: skillshot_super
