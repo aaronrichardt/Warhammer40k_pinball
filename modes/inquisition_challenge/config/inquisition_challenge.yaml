@@ -1,0 +1,26 @@
+#config_version=6 
+
+mode:
+  start_events: inquisition_challenge_start
+  stop_events: ball_will_end, inqusition_challenge_end
+  priority: 300
+
+
+shots:
+
+shot_groups:
+
+shot_profiles: 
+
+
+timers: 
+    inquisition_mode:
+        start_value: 30
+        end_value: 0
+        direction: down 
+        tick_interval: 1s
+        control_events:
+            - action: start
+              event: mode_inquisition_challenge
+            
+  

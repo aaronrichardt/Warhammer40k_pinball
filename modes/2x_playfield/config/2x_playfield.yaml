@@ -1,0 +1,33 @@
+#config_version= 6 
+mode:
+  start_events: start_2x_playfield
+  stop_events: ball_will_end
+  priority: 500
+
+variable_player:
+    mode_2x_playfield_started:
+        playfield_multiplier: 1
+        action: add
+    mode_2x_playfield_stopping: 
+        playfield_multiplier: -1 
+        action: add
+
+show_player:
+    mode_2x_playfield_started:
+        generic_flash:
+            action: play
+            loops: 0
+            speed: 3
+            show_tokens: 
+                led: omega
+                color: blue
+    mode_2x_playfield_stopping: 
+        generic_flash: 
+            action: stop
+
+sound_player:
+    mode_2x_playfield_started:
+        2xmulti:
+            action: play
+
+        

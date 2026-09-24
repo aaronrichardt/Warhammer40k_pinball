@@ -136,7 +136,10 @@ shot_profiles:
 
 shot_groups: 
     tyranid_bank: 
-        shots: tyranid_bank1,tyranid_bank2,tyranid_bank3,tyranid_bank4, tyranid_bank5
+        shots: tyranid_bank1,tyranid_bank2,tyranid_bank3,tyranid_bank4,tyranid_bank5
         reset_events: 
         enable_events:
-        disable_events: 
+        disable_events: tyranid_bank_lit_hit
+    tyranid_main_shots:
+        shots:
+        reset_events: tyranid_bank_lit_hit
