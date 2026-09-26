@@ -1,0 +1,5 @@
+#config_version=6
+machine_vars:
+  credits_string:
+    initial_value: "CREDITS"
+    

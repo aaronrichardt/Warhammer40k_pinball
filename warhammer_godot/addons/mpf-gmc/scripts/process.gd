@@ -1,5 +1,5 @@
-extends LoggingNode
 class_name GMCProcess
+extends GMCCoreScriptNode
 
 signal mpf_spawned(result)
 signal mpf_log_created(log_file_path)
@@ -12,7 +12,7 @@ var mpf_attempts := 0
 
 func _ready() -> void:
 	var args: PackedStringArray = OS.get_cmdline_args()
-	if OS.has_feature("spawn_mpf") or "--spawn_mpf" in args or MPF.get_config_value("mpf", "spawn_mpf", false):
+	if OS.has_feature("spawn_mpf") or "--spawn_mpf" in args or self.mpf.get_config_value("mpf", "spawn_mpf", false):
 		self._spawn_mpf()
 
 func launch_mpf():
@@ -20,31 +20,31 @@ func launch_mpf():
 
 func _spawn_mpf():
 	self.log.info("Spawning MPF process...")
-	MPF.server.set_status(MPF.server.ServerStatus.LAUNCHING)
+	self.mpf.server.set_status(self.mpf.server.ServerStatus.LAUNCHING)
 	var launch_timer = Timer.new()
 	launch_timer.name = "SpawnMpfLaunchTimer"
 	launch_timer.one_shot = true
 	launch_timer.connect("timeout", self._check_mpf)
 	self.add_child(launch_timer)
-	var exec: String = MPF.get_config_value("mpf", "executable_path", "")
+	var exec: String = self.mpf.get_config_value("mpf", "executable_path", "")
 	if not exec:
-		self.log.error("No executable path defined, unable to spawn MPF.")
-		MPF.server.set_status(MPF.server.ServerStatus.ERROR)
+		self.log.error("No executable path defined, unable to spawn self.mpf.")
+		self.mpf.server.set_status(self.mpf.server.ServerStatus.ERROR)
 		return
 	var args: PackedStringArray = OS.get_cmdline_args()
-	var machine_path: String = MPF.get_config_value("mpf", "machine_path",
+	var machine_path: String = self.mpf.get_config_value("mpf", "machine_path",
 		ProjectSettings.globalize_path("res://") if OS.has_feature("editor") else OS.get_executable_path().get_base_dir())
 
 	var exec_args: PackedStringArray
-	if MPF.get_config_value("mpf", "executable_args", ""):
-		exec_args = PackedStringArray(MPF.get_config_value("mpf", "executable_args").split(" "))
+	if self.mpf.get_config_value("mpf", "executable_args", ""):
+		exec_args = PackedStringArray(self.mpf.get_config_value("mpf", "executable_args").split(" "))
 
 	var mpf_args = PackedStringArray([machine_path, "-t"])
-	if MPF.get_config_value("mpf", "mpf_args", ""):
-		mpf_args.append_array(MPF.get_config_value("mpf", "mpf_args").split(" "))
-	if MPF.get_config_value("mpf", "virtual", false):
+	if self.mpf.get_config_value("mpf", "mpf_args", ""):
+		mpf_args.append_array(self.mpf.get_config_value("mpf", "mpf_args").split(" "))
+	if self.mpf.get_config_value("mpf", "virtual", false):
 		mpf_args.append("-x")
-	if MPF.get_config_value("mpf", "verbose", false):
+	if self.mpf.get_config_value("mpf", "verbose", false):
 		mpf_args.append("-vV")
 
 	# Generate a timestamped MPF log in the same place as the GMC log
@@ -70,7 +70,7 @@ func _spawn_mpf():
 	self.log.info("Executing %s with args [%s]", [exec, ", ".join(mpf_args)])
 	mpf_pid = OS.create_process(exec, mpf_args, false)
 	if mpf_pid == -1:
-		MPF.server.set_status(MPF.server.ServerStatus.ERROR)
+		self.mpf.server.set_status(self.mpf.server.ServerStatus.ERROR)
 		self._debug_mpf(exec, mpf_args)
 		return
 
@@ -85,7 +85,7 @@ func _spawn_mpf():
 	var result = await self.mpf_spawned
 	self.log.debug("MPF spawn returned result %s", result)
 	if result == -1:
-		MPF.server.set_status(MPF.server.ServerStatus.ERROR)
+		self.mpf.server.set_status(self.mpf.server.ServerStatus.ERROR)
 		self._debug_mpf(exec, mpf_args)
 
 func _check_mpf():
@@ -111,15 +111,16 @@ func _check_mpf():
 	if not output:
 		return
 	var result = output[0].strip_edges()
-	if result  == "Z":
+	if result == "Z":
 		mpf_attempts += 1
 		if mpf_attempts <= MAX_MPF_ATTEMPTS:
 			self.log.info("MPF Failed to Start, Retrying (%d/%d)", [mpf_attempts, MAX_MPF_ATTEMPTS])
 			self._spawn_mpf()
 		else:
-			MPF.server.set_status(MPF.server.ServerStatus.ERROR)
+			self.mpf.server.set_status(self.mpf.server.ServerStatus.ERROR)
 			self.mpf_spawned.emit(-1)
-	elif result == "Ss":
+	elif result.begins_with("S"):
+		# Treat "S", "Ss", "Sl" etc. as alive/sleeping
 		self.mpf_spawned.emit(1)
 	else:
 		self.log.warning("Unknown process status '%s'", result)

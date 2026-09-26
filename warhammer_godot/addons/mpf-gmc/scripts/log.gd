@@ -1,10 +1,8 @@
-# Godot BCP Server
+# Godot Log Controller
 # For use with the Mission Pinball Framework https://missionpinball.org
 # Original code © 2021 Anthony van Winkle / Paradigm Tilt
 # Released under the MIT License
 
-# Add this file as an Autoload in your Godot project for MPF-style logging.
-# Override the log() method to change the output formatting.
 
 extends RefCounted
 class_name GMCLogger

@@ -4,8 +4,8 @@
 # Released under the MIT License
 
 
-extends LoggingNode
 class_name GMCGame
+extends GMCCoreScriptNode
 
 # The list of modes currently active in MPF
 var active_modes := []
@@ -42,7 +42,8 @@ signal player_added(total_players)
 signal credits
 signal volume(bus, value, change)
 
-func _init() -> void:
+func _init(mpf_instance: MPFGMC) -> void:
+	super(mpf_instance)
 	randomize()
 
 func add_player(kwargs: Dictionary) -> void:
@@ -154,7 +155,7 @@ func update_settings(result: Dictionary) -> void:
 		s.priority = option[2]
 		s.variable = option[3]
 		# Convert the setting value to the appropriate data type
-		var cvrt = Callable(MPF.util, "to_float") if s.variable in self.settings_with_floats else Callable(MPF.util, "to_int")
+		var cvrt = Callable(self.mpf.util, "to_float") if s.variable in self.settings_with_floats else Callable(self.mpf.util, "to_int")
 		s.default = cvrt.call(option[4])
 		# Watch for true/false passed as strings, and convert to int 1 or 0
 		if typeof(s.default) == TYPE_STRING and s.default == "True":

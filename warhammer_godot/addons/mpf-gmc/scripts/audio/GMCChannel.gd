@@ -4,11 +4,13 @@ class_name GMCChannel
 
 var tweens: Array[Tween]
 var markers: Array[SoundMarker]
+var mpf: MPFGMC
 
 @warning_ignore("shadowed_global_identifier")
 var log: GMCLogger
 
-func _init(n: String, b: GMCBus):
+func _init(mpf_instance: MPFGMC, n: String, b: GMCBus):
+	self.mpf = mpf_instance
 	self.name = n
 	# This sets the AudioStreamPlayer.bus property to control its playback,
 	# and must be set to the StringName of the bus being used.
@@ -67,9 +69,9 @@ func play_with_settings(settings: Dictionary) -> AudioStream:
 			self._connect_loop(settings["loops"])
 
 	# TODO: Support marker events
-	if settings.get("events_when_started"):
-		for e in settings["events_when_started"]:
-			MPF.server.send_event(e)
+	if settings.get("events_when_played"):
+		for e in settings["events_when_played"]:
+			self.mpf.server.send_event(e)
 	if settings.get("events_when_stopped"):
 		# Store a reference to the callable so it can be disconnected
 		var callable = self._trigger_events.bind("stopped", settings["events_when_stopped"] as Array[String])
@@ -208,7 +210,7 @@ func _on_loop() -> void:
 
 func _trigger_events(state: String, events: Array) -> void:
 	for e in events:
-		MPF.server.send_event(e)
+		self.mpf.server.send_event(e)
 	self.finished.disconnect(self.stream.get_meta("events_when_%s" % state))
 	self.stream.remove_meta("events_when_%s" % state)
 

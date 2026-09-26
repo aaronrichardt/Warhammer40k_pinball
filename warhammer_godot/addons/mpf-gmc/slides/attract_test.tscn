@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://dy4e1o3rmypa1"]
+
+[ext_resource type="Script" uid="uid://i8olrqjr44kx" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
+[ext_resource type="Script" uid="uid://bemwhehqnlh63" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
+
+[node name="attract_test" type="Control" unique_id=1867707587]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_2wi4k")
+
+[node name="MPFCarousel" type="Control" parent="." unique_id=1300378767]
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("2_hhxni")
+carousel_name = "attract_test"
+
+[node name="ColorRect" type="ColorRect" parent="MPFCarousel" unique_id=1795869525]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.403922, 0.203922, 0.784314, 1)
+
+[node name="title" type="Node2D" parent="MPFCarousel" unique_id=533798259]
+
+[node name="Label" type="Label" parent="MPFCarousel/title" unique_id=1410626753]
+offset_left = 760.0
+offset_top = 498.0
+offset_right = 1161.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 80
+text = "Witchcraft"
+
+[node name="credits" type="Node2D" parent="MPFCarousel" unique_id=1314868148]
+
+[node name="Label" type="Label" parent="MPFCarousel/credits" unique_id=19140154]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 896.0
+offset_top = 352.0
+offset_right = 1054.0
+offset_bottom = 443.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "TEST"
+horizontal_alignment = 1
+vertical_alignment = 1

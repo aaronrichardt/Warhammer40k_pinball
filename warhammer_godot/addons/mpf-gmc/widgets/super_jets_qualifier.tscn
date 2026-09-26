@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cg04u7o1d16u2"]
+
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_widget"]
+[ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_theme"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_variable"]
+
+[node name="SuperJetsQualifier" type="Control" unique_id=2011589742]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -345.5
+offset_top = -331.0
+offset_right = 367.5
+offset_bottom = -181.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("1_widget")
+
+[node name="Remaining" type="Label" parent="." unique_id=1465733500]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.5
+offset_top = -44.0
+offset_right = 320.5
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = 8
+theme_override_constants/outline_size = 14
+theme_override_font_sizes/font_size = 64
+text = "SUPER JETS: 100 HITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_variable")
+variable_name = "super_jets_remaining"
+comma_separate = true
+template_string = "SUPER JETS: %s HITS"
+initialize_empty = false

@@ -1,4 +1,5 @@
 class_name GMCUtil
+extends Node
 
 ## Traverse a node and find all MPFVariable nodes within it
 static func find_variables(n: Node, acc: Array[Node] = []) -> Array[Node]:
