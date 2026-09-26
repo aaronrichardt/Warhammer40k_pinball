@@ -1,0 +1,16 @@
+#config_version=6
+##! mode:super_jets
+mode: 
+    start_events: enable_super_jets, re-enable_super_jets
+    stop_events: ball_ending 
+    priority: 300
+
+variable_player: 
+    s_top_bumper_active:
+        score: 100000|block 
+    s_bottom_bumper_active:
+        score: 100000|block
+
+show_player:
+    
+

@@ -1,0 +1,37 @@
+#config_version=6
+
+
+mode: 
+   start_evets: ball_starting
+   stop_events: ball_will_end, mode_super_jets_starting, multiball_start
+   priority: 300
+
+counters:
+   super_jets:
+    count_events: jets_hit
+    starting_value: 0
+    count_complete_value: 100
+    count_interval: 1
+    events_when_complete: enable_super_jets
+    persist_state: true
+   super_jets_resume:
+    enable_events:
+    count_events: jets_hit
+    starting_count: 0
+    count_complete_value: 25
+    count_interval: 1
+    direction: up
+    persist_state: false
+    events_when_complete: re-enable_super_jets
+    reset_on_complete: true
+
+shots:
+    jets:
+        switch: s_top_bumper, s_bottom_bumper
+variable_player: 
+    s_top_bumper_active:
+        score: 
+    s_bottom_bumper_active:
+        score: 
+
+        
