@@ -27,12 +27,13 @@ coils:
   c_flipper_right_hold:
     number: 3208-7
     allow_enable: true
-  c_pop_top:
+  c_jet_top:
     number: 32082-0
-    default_pulse_ms: 19
-  c_pop_bottom:
+    default_pulse_ms: current_player.jet_power
+  c_jet_bottom:
     number: 32082-2
-    default_pulse_ms: 19
+    default_pulse_ms: current_player.jet_power
+ 
 
   c_dc_dreadnought_gun:
     number: 32082-6

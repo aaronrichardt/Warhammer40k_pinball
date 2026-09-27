@@ -64,9 +64,3 @@ slide_player:
       bonus:
           action: update
 
-
-combo_switches:
-    double_flippers:
-        tag_1: left_flipper
-        tag_2: right_flipper
-        events_when_both: flipper_cancel

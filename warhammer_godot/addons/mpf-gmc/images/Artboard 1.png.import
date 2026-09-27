@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6g8gmrlmn307"
-path="res://.godot/imported/circle-outline.svg-ec1c616350511f820444786259086142.ctex"
+uid="uid://c54x7tkjn0knv"
+path="res://.godot/imported/Artboard 1.png-92d34526bec1f47f264dfcbd5fbecb53.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/gmc-toolbox/show_creator/shapes/circle-outline.svg"
-dest_files=["res://.godot/imported/circle-outline.svg-ec1c616350511f820444786259086142.ctex"]
+source_file="res://addons/mpf-gmc/images/Artboard 1.png"
+dest_files=["res://.godot/imported/Artboard 1.png-92d34526bec1f47f264dfcbd5fbecb53.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

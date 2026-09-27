@@ -4,7 +4,7 @@ config:
     - nurgle_sounds.yaml
 
 mode:
-  start_events: mission_select_nurgle_selected
+  start_events: carousel_item_selected{item == "nurgle"}
   stop_events:  timer_nurgle_complete
   priority: 200
 

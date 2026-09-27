@@ -4,6 +4,16 @@ mode:
   events_when_started: enable_base_scoop
   priority: 100
 
+
+
+combo_switches:
+    double_flippers:
+        tag_1: left_flipper
+        tag_2: right_flipper
+        events_when_both: 
+          - flipper_cancel
+          - start_mission
+
 config: 
   - base_sound_player.yaml
   - base_sequence_shots.yaml
@@ -73,17 +83,17 @@ show_player:
    mode_base_started:
      base_light_show:
        speed: 1
-   s_pop_top_active:
+   s_jet_top_active:
      pop_flash:
        show_tokens:
-         led: top_pop_flasher
+         led: top_jet_flasher
          color: yellow
        speed: 2
        loops: 0
-   s_pop_bottom_active:
+   s_jet_bottom_active:
      pop_flash:
        show_tokens:
-         led: bottom_pop_flasher
+         led: bottom_jet_flasher
          color: yellow
        speed: 2
        loops: 0
@@ -148,10 +158,10 @@ shots:
   base_shot_right_slingshot:
     switch: s_right_slingshot
   base_shot_pop_top:
-    switch: s_pop_top
+    switch: s_jet_top
     profile: pop_profile
   base_shot_pop_bottom:
-    switch: s_pop_bottom
+    switch: s_jet_bottom
     profile: pop_profile
   base_shot_left_drain:
     switch: s_left_outlane

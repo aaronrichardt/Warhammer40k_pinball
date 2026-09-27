@@ -2,9 +2,9 @@
 
 mode:
   start_events: start_mission_select
-  stop_events: mission_select_item_selected, mission_select_item_cancelled
+  stop_events: carousel_item_selected
   code: mpf.modes.carousel.code.carousel.Carousel
-  events_when_stopped: mission_select_item_selected
+  #events_when_stopped: mission_select_item_selected
   game_mode: true
   priority: 1501
 
@@ -16,13 +16,15 @@ mode_settings:
     - tzeench 
     - necrons
     - backToTheFight
-  select_item_events: s_start_button_active
-  next_item_events: s_right_flipper_active
-  previous_item_events: s_left_flipper_active
+  select_item_events:
+    - start_mission
+  next_item_events: s_right_flipper_inactive
+  previous_item_events: s_left_flipper_inactive
 
 slide_player:
-    carousel_item_highlighted: mission_select
+   #carousel_item_highlighted: mission_select
     mode_mission_select_started: mission_select
+
 
 sound_player:
     mode_mission_select_started:

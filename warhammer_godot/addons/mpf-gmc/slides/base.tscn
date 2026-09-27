@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwbqg1bdq2vbl"]
+[gd_scene format=3 uid="uid://bwbqg1bdq2vbl"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ifiep"]
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ifiep"]
 [ext_resource type="Texture2D" uid="uid://dnhn62e7esmpr" path="res://addons/mpf-gmc/images/Warhammer-Logo.png" id="2_av2di"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_4w4lw"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_4w4lw"]
+[ext_resource type="Texture2D" uid="uid://c54x7tkjn0knv" path="res://addons/mpf-gmc/images/Artboard 1.png" id="3_vohua"]
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="4_c4bpu"]
 
-[node name="base" type="Control"]
+[node name="base" type="Control" unique_id=1127048819]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
@@ -13,7 +14,7 @@ offset_bottom = 1080.0
 script = ExtResource("1_ifiep")
 mask_from_active = null
 
-[node name="ColorRect5" type="ColorRect" parent="."]
+[node name="ColorRect5" type="ColorRect" parent="." unique_id=551788356]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 10.078
@@ -22,7 +23,7 @@ offset_right = -17429.8
 offset_bottom = -1839.24
 color = Color(0.74978, 0.74978, 0.74978, 1)
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1109675303]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -35,8 +36,17 @@ grow_horizontal = 2
 texture = ExtResource("2_av2di")
 expand_mode = 1
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 2
+[node name="TextureRect2" type="TextureRect" parent="TextureRect" unique_id=1580046013]
+layout_mode = 0
+offset_left = -359.5
+offset_top = -6.10352e-05
+offset_right = 1560.5
+offset_bottom = 1079.9999
+texture = ExtResource("3_vohua")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=731610200]
+visible = false
+layout_mode = 0
 anchor_right = 10.078
 anchor_bottom = 2.703
 offset_left = 2.0
@@ -46,8 +56,9 @@ offset_bottom = -1869.24
 scale = Vector2(5.44, 1.32)
 color = Color(0.270222, 0.270222, 0.270222, 1)
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-layout_mode = 2
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=537139582]
+visible = false
+layout_mode = 0
 anchor_right = 10.078
 anchor_bottom = 2.703
 offset_left = 1483.0
@@ -57,7 +68,8 @@ offset_bottom = -1869.24
 scale = Vector2(5.44, 1.32)
 color = Color(0.270588, 0.270588, 0.270588, 1)
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="ColorRect3" type="ColorRect" parent="." unique_id=1159818680]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 10.078
@@ -69,7 +81,8 @@ offset_bottom = -1869.24
 scale = Vector2(5.44, 1.32)
 color = Color(0.270588, 0.270588, 0.270588, 1)
 
-[node name="ColorRect4" type="ColorRect" parent="."]
+[node name="ColorRect4" type="ColorRect" parent="." unique_id=1663700194]
+visible = false
 layout_mode = 1
 offset_left = 492.0
 offset_top = 965.0
@@ -78,12 +91,12 @@ offset_bottom = 1050.0
 scale = Vector2(5.44, 1.32)
 color = Color(0.270588, 0.270588, 0.270588, 1)
 
-[node name="Player 1 score" type="Label" parent="."]
+[node name="Player 1 score" type="Label" parent="." unique_id=1308917646]
 layout_mode = 0
 offset_left = -20.0
-offset_top = 970.0
+offset_top = 822.0
 offset_right = 311.0
-offset_bottom = 1044.0
+offset_bottom = 895.99994
 scale = Vector2(1.43693, 1.34795)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(7.31587e-06, 0.877747, 0.981933, 1)
@@ -100,12 +113,12 @@ variable_name = "score"
 comma_separate = true
 min_digits = 2
 
-[node name="Player 2 score" type="Label" parent="."]
+[node name="Player 2 score" type="Label" parent="." unique_id=2041300700]
 layout_mode = 0
 offset_left = 472.0
-offset_top = 970.0
+offset_top = 822.0
 offset_right = 798.0
-offset_bottom = 1045.0
+offset_bottom = 941.0
 scale = Vector2(1.43693, 1.34795)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(7.31587e-06, 0.877747, 0.981933, 1)
@@ -124,12 +137,12 @@ comma_separate = true
 min_digits = 2
 min_players = 2
 
-[node name="Player 3 score" type="Label" parent="."]
+[node name="Player 3 score" type="Label" parent="." unique_id=961869671]
 layout_mode = 0
 offset_left = 984.0
-offset_top = 969.0
+offset_top = 821.0
 offset_right = 1310.0
-offset_bottom = 1044.0
+offset_bottom = 940.0
 scale = Vector2(1.43693, 1.34795)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(7.31587e-06, 0.877747, 0.981933, 1)
@@ -148,12 +161,12 @@ comma_separate = true
 min_digits = 2
 min_players = 3
 
-[node name="Player 4 score" type="Label" parent="."]
+[node name="Player 4 score" type="Label" parent="." unique_id=1979225532]
 layout_mode = 0
 offset_left = 1491.0
-offset_top = 967.0
+offset_top = 819.0
 offset_right = 1784.0
-offset_bottom = 1050.0
+offset_bottom = 938.0
 scale = Vector2(1.43938, 1.35193)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(7.31587e-06, 0.877747, 0.981933, 1)
@@ -172,11 +185,12 @@ comma_separate = true
 min_digits = 2
 min_players = 4
 
-[node name="MPFVariable" type="Label" parent="."]
+[node name="MPFVariable" type="Label" parent="." unique_id=1894509992]
 layout_mode = 1
-offset_top = 73.0
-offset_right = 308.0
-offset_bottom = 130.0
+offset_left = 14.0
+offset_top = 600.99994
+offset_right = 322.0
+offset_bottom = 717.99994
 scale = Vector2(1.43693, 1.34795)
 theme_override_font_sizes/font_size = 41
 text = "Bonus : 2X 
@@ -186,11 +200,11 @@ script = ExtResource("3_4w4lw")
 variable_name = "bonus_multiplier"
 template_string = "BONUS : %sX"
 
-[node name="ball" type="Label" parent="."]
-layout_mode = 2
-offset_left = 1645.0
+[node name="ball" type="Label" parent="." unique_id=1846428263]
+layout_mode = 0
+offset_left = 1365.0
 offset_top = -3.0
-offset_right = 1908.0
+offset_right = 1628.0
 offset_bottom = 134.0
 theme = ExtResource("4_c4bpu")
 theme_override_font_sizes/font_size = 0
@@ -199,11 +213,11 @@ script = ExtResource("3_4w4lw")
 variable_name = "ball"
 template_string = "Ball %s"
 
-[node name="player" type="Label" parent="."]
-layout_mode = 2
-offset_left = 1053.0
+[node name="player" type="Label" parent="." unique_id=1523279995]
+layout_mode = 0
+offset_left = 773.0
 offset_top = 2.0
-offset_right = 1546.0
+offset_right = 1266.0
 offset_bottom = 139.0
 scale = Vector2(0.997939, 0.952303)
 theme = ExtResource("4_c4bpu")
@@ -214,10 +228,12 @@ template_string = "Player %s "
 min_players = 1
 max_players = 4
 
-[node name="ball2" type="Label" parent="."]
+[node name="ball2" type="Label" parent="." unique_id=798383661]
 layout_mode = 1
-offset_right = 579.0
-offset_bottom = 72.0
+offset_left = 14.0
+offset_top = 528.0
+offset_right = 593.0
+offset_bottom = 600.0
 theme = ExtResource("4_c4bpu")
 theme_override_font_sizes/font_size = 50
 text = "RANK: Space Marine"
@@ -226,7 +242,7 @@ script = ExtResource("3_4w4lw")
 variable_name = "rank"
 template_string = "RANK: %s"
 
-[node name="score" type="Label" parent="."]
+[node name="score" type="Label" parent="." unique_id=1563877301]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -244,8 +260,3 @@ script = ExtResource("3_4w4lw")
 variable_name = "score"
 comma_separate = true
 min_digits = 2
-
-[node name="TextureRect2" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0

@@ -1289,7 +1289,7 @@ texture_pressed = ExtResource("6_41o5i")
 stretch_mode = 4
 script = ExtResource("4_iyige")
 
-[node name="s_pop_top" type="TextureButton" parent="switches"]
+[node name="s_jet_top" type="TextureButton" parent="switches"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0
@@ -1443,7 +1443,7 @@ texture_pressed = ExtResource("6_41o5i")
 stretch_mode = 4
 script = ExtResource("4_iyige")
 
-[node name="s_pop_bottom" type="TextureButton" parent="switches"]
+[node name="s_jet_bottom" type="TextureButton" parent="switches"]
 layout_mode = 0
 offset_left = -1.0
 offset_top = -1.0

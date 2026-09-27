@@ -719,70 +719,70 @@ lights:
     number: playfield-8-8
     type: rgb
     tags: even, second, right_scoop_flasher, 8-8
-  l-8-9:
+  l-bottom_jet_flasher1:
     number: playfield-8-9
     type: rgb
-    tags: odd, third, bottom_pop_flasher, 8-9
-  l-8-10:
+    tags: odd, third, bottom_jet_flasher, 8-9
+  l-bottom_jet_flasher2:
     number: playfield-8-10
     type: rgb
-    tags: even, first, bottom_pop_flasher, 8-10
-  l-8-11:
+    tags: even, first, bottom_jet_flasher, 8-10
+  l-bottom_jet_flasher3:
     number: playfield-8-11
     type: rgb
-    tags: odd, second,bottom_pop_flasher, 8-11
-  l-8-12:
+    tags: odd, second,bottom_jet_flasher, 8-11
+  l-bottom_jet_flasher4:
     number: playfield-8-12
     type: rgb
-    tags: even, third,bottom_pop_flasher, 8-12
-  l-8-13:
+    tags: even, third,bottom_jet_flasher, 8-12
+  l-bottom_jet_flasher5:
     number: playfield-8-13
     type: rgb
-    tags: odd, first, bottom_pop_flasher, 8-13
-  l-8-14:
+    tags: odd, first, bottom_jet_flasher, 8-13
+  l-bottom_jet_flasher6:
     number: playfield-8-14
     type: rgb
-    tags: even, second,bottom_pop_flasher, 8-14
-  l-8-15:
+    tags: even, second,bottom_jet_flasher, 8-14
+  l-bottom_jet_flasher7:
     number: playfield-8-15
     type: rgb
-    tags: odd, third,bottom_pop_flasher, 8-15
-  l-8-16:
+    tags: odd, third,bottom_jet_flasher, 8-15
+  l-bottom_jet_flasher8:
     number: playfield-8-16
     type: rgb
-    tags: even, first,bottom_pop_flasher, 8-16
+    tags: even, first,bottom_jet_flasher, 8-16
   l-8-17:
     number: playfield-8-17
     type: rgb
-    tags: odd, second,top_pop_flasher, 8-17
+    tags: odd, second,top_jet_flasher, 8-17
   l-8-18:
     number: playfield-8-18
     type: rgb
-    tags: even, third,top_pop_flasher , 8-18
+    tags: even, third,top_jet_flasher , 8-18
   l-8-19:
     number: playfield-8-19
     type: rgb
-    tags: odd, first,top_pop_flasher, 8-19
+    tags: odd, first,top_jet_flasher, 8-19
   l-8-20:
     number: playfield-8-20
     type: rgb
-    tags: even, second,top_pop_flasher, 8-20
+    tags: even, second,top_jet_flasher, 8-20
   l-8-21:
     number: playfield-8-21
     type: rgb
-    tags: odd, third,top_pop_flasher, 8-21
+    tags: odd, third,top_jet_flasher, 8-21
   l-8-22:
     number: playfield-8-22
     type: rgb
-    tags: even, first,top_pop_flasher, 8-22
+    tags: even, first,top_jet_flasher, 8-22
   l-8-23:
     number: playfield-8-23
     type: rgb
-    tags: odd, second,top_pop_flasher, 8-23
+    tags: odd, second,top_jet_flasher, 8-23
   l-8-24:
     number: playfield-8-24
     type: rgb
-    tags: even, third,top_pop_flasher, 8-24
+    tags: even, third,top_jet_flasher, 8-24
   l-8-25:
     number: playfield-8-25
     type: rgb

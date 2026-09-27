@@ -4,7 +4,7 @@ config:
     - necron_sounds.yaml
 
 mode:
-  start_events: mission_select_necrons_selected
+  start_events: carousel_item_selected{item == "necrons"}
   stop_events: timer_necrons_complete
   priority: 200
   

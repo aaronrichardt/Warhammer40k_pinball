@@ -155,13 +155,12 @@ autofire_coils:
   ac_slingshot_right:
     coil: c_right_slingshot
     switch: s_right_slingshot
-  ac_popbumper_top:
-    coil: c_pop_top
-    switch: s_pop_top
-  ac_popbumper_bottom:
-    coil: c_pop_bottom
-    switch: s_pop_bottom
-
+  ac_jet_top:
+    coil: c_jet_top
+    switch: s_jet_top
+  ac_jet_bottom:
+    coil: c_jet_bottom
+    switch: s_jet_bottom
 
 spinners:
   center_spinner:

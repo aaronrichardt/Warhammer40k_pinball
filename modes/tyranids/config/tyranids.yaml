@@ -48,7 +48,7 @@
 
 # starting this mode will actually disable the 5 bank as its going to become a target. 
 mode:
-  start_events: mission_select_tyranids_selected
+  start_events: carousel_item_selected{item == "tyranids"}
   stop_events: timer_tyranids_complete
   priority: 200
  

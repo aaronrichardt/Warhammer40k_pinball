@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_theme"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_variable"]
 
-[node name="SuperJetsQualifier" type="Control" unique_id=2011589742]
+[node name="SuperJetsQualifier" type="Control" unique_id=88735045]
 layout_mode = 3
 anchors_preset = 7
 anchor_left = 0.5
@@ -20,17 +20,17 @@ grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("1_widget")
 
-[node name="Remaining" type="Label" parent="." unique_id=1465733500]
+[node name="Remaining" type="Label" parent="." unique_id=765463650]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -320.5
-offset_top = -44.0
-offset_right = 320.5
-offset_bottom = 44.0
+offset_left = 9.0
+offset_top = -62.0
+offset_right = 807.0
+offset_bottom = 26.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_theme")
@@ -41,11 +41,12 @@ theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 64
-text = "SUPER JETS: 100 HITS"
+text = "Super Jets: 100 Remaining"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("3_variable")
-variable_name = "super_jets_remaining"
+variable_type = 1
+variable_name = "counter_super_jets_qualifier_hit{remaining}"
 comma_separate = true
-template_string = "SUPER JETS: %s HITS"
+template_string = "SUPER JETS: %s Remaining"
 initialize_empty = false

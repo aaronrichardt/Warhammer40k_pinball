@@ -184,8 +184,8 @@ lock_servo              [Ball lock mechanism animation]
 ```
 ac_slingshot_left       (s_left_slingshot   → c_left_slingshot)
 ac_slingshot_right      (s_right_slingshot  → c_right_slingshot)
-ac_popbumper_top        (s_pop_top          → c_pop_top)
-ac_popbumper_bottom     (s_pop_bottom       → c_pop_bottom)
+ac_popbumper_top        (s_jet_top          → c_pop_top)
+ac_popbumper_bottom     (s_jet_bottom       → c_pop_bottom)
 ```
 
 ### Spinners (3 Total)

@@ -5,7 +5,7 @@ config:
   - khorne_sounds.yaml
 
 mode: 
-  start_events: mission_select_khorne_selected
+  start_events: carousel_item_selected{item == "khorne"}
   stop_events: timer_khorne_complete, end_khorne_mode
   priority: 200 
 

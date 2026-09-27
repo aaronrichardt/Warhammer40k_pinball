@@ -98,7 +98,13 @@ player_vars:
     initial_value: "Recruit"
     value_type: str
 
-   
+  super_jets_remaining:
+    initial_value: 100
+  jet_power:
+    initial_value: 20
+  sj_active:
+    initial_value: 0
+    
 
 
 

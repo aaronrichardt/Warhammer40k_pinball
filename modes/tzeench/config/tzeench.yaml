@@ -8,7 +8,7 @@ config:
   - tzeench_sounds.yaml
 
 mode:
-  start_events: mission_select_tzeench_selected
+  start_events: carousel_item_selected{item == "tzeench"}
   stop_events: timer_tzeench_complete, tzeench_targets_complete
   priority: 200
 

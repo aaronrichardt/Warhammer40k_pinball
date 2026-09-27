@@ -97,9 +97,9 @@ switches:
     number: 32082-7 
   s_necron_target:
     number: 32082-8
-  s_pop_bottom:
+  s_jet_bottom:
     number: 32082-9
-  s_pop_top:
+  s_jet_top:
     number: 32082-10
   s_right_orbit: 
     number: 32082-11 
