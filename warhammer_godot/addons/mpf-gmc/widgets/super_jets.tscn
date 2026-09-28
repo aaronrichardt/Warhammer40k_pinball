@@ -2,35 +2,29 @@
 
 [ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_r3ptn"]
 
-[node name="super_jets" type="Control" unique_id=2011589742]
+[node name="super_jets" type="Control" unique_id=102200195]
 layout_mode = 3
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -345.5
-offset_top = -331.0
-offset_right = 367.5
-offset_bottom = -181.0
-grow_horizontal = 2
-grow_vertical = 0
-mouse_filter = 2
-script = ExtResource("1_r3ptn")
-
-[node name="Label" type="Label" parent="." unique_id=1347447079]
-layout_mode = 1
-anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -582.5
-offset_top = -159.0
-offset_right = 582.5
-offset_bottom = 247.0
+offset_left = 129.75
+offset_top = 276.0
+offset_right = 958.25
+offset_bottom = 420.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset = Vector2(938.25, -41)
+mouse_filter = 2
+script = ExtResource("1_r3ptn")
+metadata/_custom_type_script = "uid://d4ky3s4bg1ouq"
+
+[node name="Label" type="Label" parent="." unique_id=1347447079]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 280.0
+offset_right = 990.0
+offset_bottom = 368.0
 theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
@@ -38,7 +32,6 @@ theme_override_constants/shadow_offset_x = 8
 theme_override_constants/shadow_offset_y = 8
 theme_override_constants/outline_size = 14
 theme_override_font_sizes/font_size = 64
-text = "SUPER JETS ENABLED
-"
+text = "SUPER JETS ENABLED"
 horizontal_alignment = 1
 vertical_alignment = 1

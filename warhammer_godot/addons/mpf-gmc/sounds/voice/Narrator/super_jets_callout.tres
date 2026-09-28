@@ -1,0 +1,9 @@
+[gd_resource type="AudioStreamRandomizer" format=3 uid="uid://7wnpam36o4rf"]
+
+[ext_resource type="AudioStream" uid="uid://bnjhqw64tslwe" path="res://addons/mpf-gmc/sounds/voice/Narrator/SuperJets1.wav" id="1_b2ft7"]
+[ext_resource type="AudioStream" uid="uid://b7xv2agqlcyk1" path="res://addons/mpf-gmc/sounds/voice/Narrator/SuperJets2.wav" id="2_in28t"]
+
+[resource]
+streams_count = 2
+stream_0/stream = ExtResource("1_b2ft7")
+stream_1/stream = ExtResource("2_in28t")

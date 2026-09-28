@@ -26,6 +26,8 @@ widget_player:
     mode_slannesh_started: 
         slannesh_mode_timer:
             action: play
+            x: 0
+            y: 0
     timer_slannesh_complete:
         slannesh_mode_timer:
             action: remove

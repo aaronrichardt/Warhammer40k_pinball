@@ -50,6 +50,10 @@ widget_player:
     mode_super_jets_qualifier_started:
         super_jets_qualifier:
             action: play
+            x: 38.25
+            y: 10.5
+            slide: base
+            priority: 300
     mode_super_jets_qualifier_stopping:
         super_jets_qualifier:
             action: remove

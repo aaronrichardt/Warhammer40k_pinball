@@ -4,17 +4,16 @@
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_theme"]
 [ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_variable"]
 
-[node name="SuperJetsQualifier" type="Control" unique_id=88735045]
+[node name="super_jets_qualifier" type="Control" unique_id=88735045]
 layout_mode = 3
-anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -345.5
-offset_top = -331.0
-offset_right = 367.5
-offset_bottom = -181.0
+offset_left = 129.75
+offset_top = -264.0
+offset_right = 958.25
+offset_bottom = -120.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -27,10 +26,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 9.0
-offset_top = -62.0
-offset_right = 807.0
-offset_bottom = 26.0
+offset_left = -399.0
+offset_top = -44.0
+offset_right = 399.0
+offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_theme")

@@ -20,8 +20,10 @@ timers:
 
 widget_player:
     mode_necrons_started: 
-        necrons_mode_timer:
+        necron_mode_timer:
             action: play
+            x: 0
+            y: 0
     timer_necrons_complete:
         necrons_mode_timer:
             action: remove

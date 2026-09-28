@@ -25,6 +25,8 @@ widget_player:
   mode_tzeench_started:
     tzeench_mode_timer:
       action: play
+      x: 0
+      y: 0
   timer_tzeench_complete:
     tzeench_mode_timer:
       action: remove

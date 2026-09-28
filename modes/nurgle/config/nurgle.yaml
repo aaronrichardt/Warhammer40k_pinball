@@ -41,6 +41,8 @@ widget_player:
     mode_nurgle_started: 
         nurgle_mode_timer:
             action: play
+            x: 0
+            y: 0
     timer_nurgle_complete:
         nurgle_mode_timer:
             action: remove

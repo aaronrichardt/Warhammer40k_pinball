@@ -22,6 +22,17 @@ sound_player:
                 attenuation: 0
                 release_point: 2.0 sec
                 release: 1.0 sec
+    mode_necron_multiball_ended: 
+        Immortal_Imperium:
+            action: play
+            volume: 1
+            bus: music
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec  
     mode_base_started: 
         Admonition:
             action: play
