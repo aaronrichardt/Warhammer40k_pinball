@@ -6,6 +6,7 @@ mode:
 
 counters:
    super_jets_qualifier:
+    enable_events: mode_base_started{current_player.sj_active == 0}
     count_events: jets_hit
     starting_count: 0
     count_complete_value: 50
@@ -13,8 +14,9 @@ counters:
     events_when_complete: enable_super_jets
     persist_state: true
 
+
    super_jets_resume:
-    enable_events: mode_base_started{current_player.sj_active>0}
+    enable_events: mode_base_started{current_player.sj_active == 1 }
     count_events: jets_hit
     starting_count: 0
     count_complete_value: 25

@@ -751,15 +751,15 @@ lights:
     number: playfield-8-16
     type: rgb
     tags: even, first,bottom_jet_flasher, 8-16
-  l-8-17:
+  l-top_jet_flasher1:
     number: playfield-8-17
     type: rgb
     tags: odd, second,top_jet_flasher, 8-17
-  l-8-18:
+  l-top-jet-flasher2:
     number: playfield-8-18
     type: rgb
     tags: even, third,top_jet_flasher , 8-18
-  l-8-19:
+  l-top_jet_flasher3:
     number: playfield-8-19
     type: rgb
     tags: odd, first,top_jet_flasher, 8-19
