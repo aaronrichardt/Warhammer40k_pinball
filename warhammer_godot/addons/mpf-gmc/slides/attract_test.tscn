@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dy4e1o3rmypa1"]
+[gd_scene format=3 uid="uid://dy4e1o3rmypa1"]
 
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_2wi4k"]
 [ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]

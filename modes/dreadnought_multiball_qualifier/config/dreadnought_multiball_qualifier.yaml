@@ -5,9 +5,8 @@ mode:
   stop_events: ball_will_end
   priority: 300
 
-seqeunce_shots:
-  #This is my ball lock qualifier BUT I also need some form of playfield multiplier enable event
-    dreadnought_lock_sequence:
+sequence_shots:
+  dreadnought_lock_sequence:
     switch_sequence: s_nurgle_ricochet_target, s_jackpot_vuk
     sequence_timeout: 2s
 
@@ -34,12 +33,6 @@ event_player:
   timer_dreadnought_multiball_intro_complete:
     - dreadnought_multiball_intro_complete
 
-
-
-
-
-
-
 variable_player:
   award_light_lock:
     dreadnought_multiball_qualifier_lock_count:
@@ -58,7 +51,7 @@ shots:
   dreadnought_qualify_lock:
     hit_events: dreadnought_lock_sequence_hit
     start_enabled: true 
-    profile: dreadnougt_lock_profile
+    profile: dreadnought_lock_profile
     show_tokens: 
         shot_color: lime 
         shot_led1: l_right_ricochet_target

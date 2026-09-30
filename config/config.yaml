@@ -33,14 +33,13 @@ fast:
     link_sub_to_main: false
 
   exp:
-    #port: com5
     boards: 
       playfield:
         model: FP-EXP-0081
       playfield2:        
         model: FP-EXP-0071
-      neuron:
-        model: FP-EXP-2000
+      # neuron:
+      #   model: FP-EXP-2000
 
 game: 
   balls_per_game: 3
