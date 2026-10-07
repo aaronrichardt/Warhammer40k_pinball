@@ -30,4 +30,11 @@ sound_player:
         2xmulti:
             action: play
 
-        
+coil_player: 
+    mode_2x_playfield_started: 
+        c_DC_chainsword: 
+            action: enable
+            hold_power: .5
+    mode_start_2x_playfield_stopping: 
+        c_DC_chainsword: 
+            action: disable 
