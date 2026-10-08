@@ -5,8 +5,18 @@ mode:
   priority: 100
 
 
+##Add controll to stop game,
+
+
 
 combo_switches:
+    end_game_trigger: 
+        tag_1: left_flipper
+        tag_2: start
+        hold_time: 3s
+        events_when_both:
+            - end_game
+
     double_flippers:
         tag_1: left_flipper
         tag_2: right_flipper
