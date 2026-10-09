@@ -621,11 +621,20 @@ widget_player:
   
 
 coil_player: 
-    engage_gattling_cannon: 
+    enable_gattling_cannon: 
         c_dc_dreadnought_gun:
             action: enable 
-            #hold_power: .5
+            hold_power: .5
         
     disable_gattling_cannon:
         c_dc_dreadnought_gun:
             action: disable
+    enable_chainsword:
+        c_chainsword:
+            action: enable
+            hold_power: .8
+    disable_chainsword:
+        c_chainsword:
+            action: disable
+ 
+

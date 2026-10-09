@@ -73,7 +73,7 @@ coils:
     allow_enable: true
 
     ##DC motor chainsword topper
-  c_DC_chainsword:
+  c_chainsword:
     number: io0804-3
     allow_enable: true
 
