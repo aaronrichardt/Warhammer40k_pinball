@@ -116,6 +116,7 @@ ball_devices:
     bd_necron_lock:
       mechanical_eject: True
       ball_switches: s_necron_opto_lock    
+      eject_coil: c_droptarget_knockdown
       #confirm_eject_switches: s_necron_opto_lock
       confirm_eject_event:  start_necron_multiball
 

@@ -82,9 +82,13 @@ sound_player:
         release: 1.0 sec
 
 event_player:
-  #if ball_devices have balls in them, kick the balls out to reset the game.
-  # collecting_balls{device.ball_device.bd_necron_lock.balls > 0}:
-  #   - eject_necron_lock
+  
+  # If the necron lock has a ball when the game ends or when attract starts,
+  # eject it by pulsing the droptarget knockdown coil.
+  game_ended{device.switches.s_necron_opto_lock.state == 1}:
+    - eject_necron_lock
+  mode_attract_started{device.switches.s_necron_opto_lock.state == 1}:
+    - eject_necron_lock
 
 
   s_left_flipper_active{device.timers.attract_allow_sound.running==False}: 
@@ -101,4 +105,3 @@ event_player:
     - ork_left|.5s 
     - ork_right|.2s
     - ork_home|.3s
-

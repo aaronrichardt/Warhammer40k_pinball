@@ -58,7 +58,7 @@ ball_holds:
       balls_to_hold: 1
       hold_devices: bd_scoop
       enable_events: xenos_spotted
-      disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled 
+      disable_events: ball_started,mission_select_item_selected, mission_select_item_cancelled, dreadnought_multiball_started, necron_multiball_started, waagh_multiball_started
       release_all_events: release_one_ball, 
       priority: 1
       # release_one_events: release_one_ball
@@ -315,6 +315,7 @@ shots:
         color: lime 
     start_enabled: false
     enable_events: xenos_spotted
+    #disable_events: mechanicus_scoop_shot_hit_complete
 
 shot_groups:
   right_orbit_combo:
@@ -354,8 +355,10 @@ shot_groups:
   start_select_mode_group:
     shots: mechanicus_scoop_shot
     reset_events: 
-    enable_events: xenos_spotted
-    disable_events: mechanicus_scoop_shot_hit_complete
+    enable_events: 
+        - xenos_spotted
+    ## all multiballs and modes should disable this shot, so that it is only available when no other mode or multiball is active
+    disable_events: mechanicus_scoop_shot_hit_complete, multiball_waagh_multiball_started,multiball_dreadnought_multiball_started,multiball_necron_multiball_started
     restart_events: xenos_spotted
 
 shot_profiles: 
@@ -636,5 +639,15 @@ coil_player:
     disable_chainsword:
         c_chainsword:
             action: disable
+
+    game_will_end:
+       c_droptarget_knockdown:
+          action: pulse
+          pulse_ms: 10
+ 
+    eject_necron_lock: 
+        c_droptarget_knockdown:
+            action: pulse 
+   
  
 
