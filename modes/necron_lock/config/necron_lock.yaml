@@ -5,6 +5,7 @@ mode:
   priority: 100
 
 
+
 shots:
     necron_lock_drop_target:
         switch: s_droptarget_down
@@ -46,6 +47,8 @@ shots:
             color: lime
 
 event_player:
+    mode_necron_lock_started:
+      -reset_necron_drop
     necron_lock_drop_target_lit_hit{device.counters.necron_lockup.value < 2}:
             - reset_necron_drop
 
@@ -118,15 +121,17 @@ show_player:
 #             action: remove
 
 sound_player:
-    necron_lock_captured: DP_Cinematic_SFX_Stinger_Charge Up_01
-
-            # ducking:
-            #  bus: none
-            #  attack: 0.3 sec
-            #  attenuation: 0
-            #  release_point: 2.0 sec
-            #  release: 1.0 sec
-# multiballs:
+    necron_lock_captured:
+      DP_Cinematic_SFX_Stinger_Charge_Up_01:
+            action: play
+            volume: 1
+            bus: effects
+            ducking:
+                bus: voice
+                attack: 0.3 sec
+                attenuation: 0
+                release_point: 2.0 sec
+                release: 1.0 sec
 #   necron_multiball:
 #     ball_count: 2
 #     ball_count_type: total

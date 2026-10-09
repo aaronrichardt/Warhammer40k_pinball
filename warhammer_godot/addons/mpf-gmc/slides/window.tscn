@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://ds4gduf8660uj"]
+[gd_scene format=3 uid="uid://ds4gduf8660uj"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_ixxnq"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/virtual_dmd.gdshader" id="2_cbmcr"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_display.gd" id="2_clr31"]
+[ext_resource type="Script" uid="uid://c72rut5m3ic4r" path="res://addons/mpf-gmc/classes/mpf_window.gd" id="1_ixxnq"]
+[ext_resource type="Shader" uid="uid://b31fv1v0xy4y" path="res://addons/mpf-gmc/resources/virtual_dmd.gdshader" id="2_cbmcr"]
+[ext_resource type="Script" uid="uid://cnc7dblwai6nd" path="res://addons/mpf-gmc/classes/mpf_display.gd" id="2_clr31"]
 [ext_resource type="PackedScene" uid="uid://belkug6sa4arr" path="res://addons/mpf-gmc/slides/startup.tscn" id="3_8nbga"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/dmd_dots.gdshader" id="5_0sixv"]
-[ext_resource type="Shader" path="res://addons/mpf-gmc/resources/pixelate.gdshader" id="5_m6y8w"]
+[ext_resource type="Shader" uid="uid://dbw8rh8bpfp5y" path="res://addons/mpf-gmc/resources/dmd_dots.gdshader" id="5_0sixv"]
+[ext_resource type="Shader" uid="uid://4j1si5lmy54a" path="res://addons/mpf-gmc/resources/pixelate.gdshader" id="5_m6y8w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vnlqf"]
 shader = ExtResource("2_cbmcr")
@@ -30,7 +30,7 @@ shader_parameter/rows = 36.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_t6y31"]
 
-[node name="MPFWindow" type="Control"]
+[node name="MPFWindow" type="Control" unique_id=1571570251]
 custom_minimum_size = Vector2(1920, 720)
 layout_mode = 3
 anchors_preset = 15
@@ -42,7 +42,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_ixxnq")
 
-[node name="DefaultDisplay" type="Control" parent="."]
+[node name="DefaultDisplay" type="Control" parent="." unique_id=974517758]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,7 +53,7 @@ script = ExtResource("2_clr31")
 is_default = true
 initial_slide = ExtResource("3_8nbga")
 
-[node name="filters" type="Control" parent="."]
+[node name="filters" type="Control" parent="." unique_id=1764520553]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -62,7 +62,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="virtual_dmd" type="ColorRect" parent="filters"]
+[node name="virtual_dmd" type="ColorRect" parent="filters" unique_id=924719193]
 z_index = 4096
 material = SubResource("ShaderMaterial_vnlqf")
 layout_mode = 1
@@ -72,7 +72,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="pixelate" type="ColorRect" parent="filters"]
+[node name="pixelate" type="ColorRect" parent="filters" unique_id=29803142]
 visible = false
 z_index = 4096
 material = SubResource("ShaderMaterial_gmaen")
@@ -83,7 +83,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="dmd_dots" type="ColorRect" parent="filters"]
+[node name="dmd_dots" type="ColorRect" parent="filters" unique_id=902277375]
 visible = false
 top_level = true
 z_index = 4096
@@ -95,7 +95,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="custom" type="ColorRect" parent="filters"]
+[node name="custom" type="ColorRect" parent="filters" unique_id=2015995890]
 visible = false
 top_level = true
 z_index = 4096

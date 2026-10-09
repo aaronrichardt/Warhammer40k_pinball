@@ -12,7 +12,7 @@ multiballs:
     stop_events: ball_will_end
     ball_locks: bd_necron_lock
     start_events:
-      - start_necron_multiball
+      - mode_necron_multiball_started
 
 sound_player:
   mode_necron_multiball_started:

@@ -619,7 +619,7 @@ lock_servo:
     max_runtime: 5s
 
   positions:
-    0.2: lock_open     # 20% = open (ball can enter)
+    0.2: lock_away     # 20% = open (ball can enter)
     1.0: lock_home     # 100% = closed (locked)
 
   reset_events:
@@ -627,7 +627,7 @@ lock_servo:
     - ball_ending
 
 Usage:
-  servo_lock_open:    # Release ball
+  servo_lock_away:    # Release ball
   servo_lock_home:    # Catch ball
 ```
 
