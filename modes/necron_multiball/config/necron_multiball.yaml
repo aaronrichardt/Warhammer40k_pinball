@@ -15,7 +15,7 @@ multiballs:
       - start_necron_multiball
 
 sound_player:
-  start_necron_multiball:
+  mode_necron_multiball_started:
     Nightsider:
       action: play
       volume: 1.3

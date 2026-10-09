@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://0hx34m7niyum"]
+
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_ibrnk"]
+[ext_resource type="Texture2D" uid="uid://csguqfkldh53x" path="res://addons/mpf-gmc/images/aquila.png" id="2_gi4xe"]
+
+[node name="IncomingTransmission" type="Control" unique_id=1942164166]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_ibrnk")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=66576371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.0012573432
+texture = ExtResource("2_gi4xe")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1749479675]
+visibility_layer = 524288
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.1764706, 1, 0.1764706, 0.18039216)
+
+[node name="Label" type="Label" parent="." unique_id=553124675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -571.0
+offset_top = 239.0
+offset_right = 571.0
+offset_bottom = 349.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2901961, 0.023529412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 0
+theme_override_constants/shadow_outline_size = 19
+theme_override_font_sizes/font_size = 80
+text = "INCOMING TRANSMISSION....."
