@@ -116,6 +116,7 @@ ball_devices:
     bd_necron_lock:
       mechanical_eject: True
       ball_switches: s_necron_opto_lock    
+      eject_coil: c_droptarget_knockdown
       #confirm_eject_switches: s_necron_opto_lock
       confirm_eject_event:  start_necron_multiball
 
@@ -137,12 +138,12 @@ servos:
         reset_events: ball_ending
     lock_servo:
         platform_settings:
-            home_us: 2300
-            max_us: 2370
-            max_runtime: 5s
+            home_us: 2200
+            max_us: 2340
+            max_runtime: 2s
         positions:
+            0.28: lock_away
             1.0: lock_home
-            0.2: lock_open
 
         number: playfield2-2
         reset_events: ball_starting, ball_ending

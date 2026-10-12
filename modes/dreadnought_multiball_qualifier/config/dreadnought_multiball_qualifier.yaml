@@ -17,10 +17,10 @@ event_player:
     - dreadnought_lock_qualified
   award_light_lock: #Comes from the mystery mode event
     - enable_dreadnought_lock_shot
-    - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
+    - lock_away #opens lock servo, allowing the ball to enter the lock and qualify for multiball
   dreadnought_lock_qualified:
     - enable_dreadnought_lock_shot
-    - lock_open #opens lock servo, allowing the ball to enter the lock and qualify for multiball
+    - lock_away #opens lock servo, allowing the ball to enter the lock and qualify for multiball
 
 #event comes from the ball device when the lock is qualified, which is when the ball enters the lock and the lock is open. This means that the player has successfully locked a ball and qualified for multiball.
   multiball_lock_dreadnought_locked_ball{current_player.dreadnought_multiball_qualifier_lock_count == 0}: 

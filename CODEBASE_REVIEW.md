@@ -174,7 +174,7 @@ ork_servo               [Playfield mechanical animation]
 lock_servo              [Ball lock mechanism animation]
   ├─ Platform: playfield2-2
   ├─ Positions:
-  │  ├─ 0.2 (open):   lock_open
+  │  ├─ 0.2 (open):   lock_away
   │  └─ 1.0 (home):   lock_home
   ├─ Timing: 5s max runtime
   └─ Reset: ball_starting, ball_ending
