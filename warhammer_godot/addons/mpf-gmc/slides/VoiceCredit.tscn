@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1uady1t8h1rh"]
+[gd_scene format=3 uid="uid://d1uady1t8h1rh"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_reks8"]
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_reks8"]
 
-[node name="MPFSlide" type="Control"]
+[node name="MPFSlide" type="Control" unique_id=42263329]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -10,7 +10,7 @@ offset_bottom = 40.0
 script = ExtResource("1_reks8")
 mask_from_active = null
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=497630135]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 48.0
@@ -19,7 +19,7 @@ offset_right = -0.00012207
 offset_bottom = -0.00012207
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1807404649]
 layout_mode = 0
 offset_left = 185.0
 offset_top = 55.0
@@ -31,8 +31,7 @@ text = "
 Callouts by: 
 
 David Giltian 
- Matthew Glover
- Aaron Richardt 
+Aaron Richardt 
 
 "
 horizontal_alignment = 1

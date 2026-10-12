@@ -1,64 +1,143 @@
-[gd_scene load_steps=3 format=3 uid="uid://belkug6sa4arr"]
+[gd_scene format=3 uid="uid://0hx34m7niyum"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
+[ext_resource type="Script" uid="uid://ujpd25534tqk" path="res://addons/mpf-gmc/slides/startup.gd" id="1_cfjlx"]
+[ext_resource type="Texture2D" uid="uid://bngf5ym00ey8f" path="res://addons/mpf-gmc/images/green_aquila.png" id="2_exbxk"]
 [ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="2_v374h"]
+[ext_resource type="FontFile" uid="uid://csgdfvbaqoldy" path="res://addons/mpf-gmc/fonts/ITC Serif Gothic Std Heavy.otf" id="3_k2m2f"]
 
-[node name="MPFSlide" type="Control"]
+[node name="IncomingTransmission" type="Control" unique_id=1942164166]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+script = ExtResource("1_cfjlx")
+metadata/_custom_type_script = "uid://dru3usokwlhd3"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1749479675]
+visibility_layer = 524288
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
 script = ExtResource("1_cfjlx")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 1)
-
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=66576371]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -137.0
-offset_right = 110.0
-offset_bottom = 137.0
+offset_left = -1061.0
+offset_top = -586.0
+offset_right = 859.0
+offset_bottom = 494.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.0012573432
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_exbxk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+[node name="Label3" type="Label" parent="." unique_id=103141870]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -609.0
+offset_top = -100.5
+offset_right = 609.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.003921569, 0.5137255, 0.1764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2901961, 0.023529412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k2m2f")
+theme_override_font_sizes/font_size = 72
+text = " + + + PRAISE BE THE OMNISSIAH+ + +"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1813595560]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -859.0
+offset_top = 357.75
+offset_right = 859.0
+offset_bottom = 458.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.003921569, 0.5137255, 0.1764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2901961, 0.023529412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k2m2f")
+theme_override_font_sizes/font_size = 72
+text = " + + + MACHINE SPIRIT CONNECTION IMMINENT + + +"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=553124675]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -627.0
+offset_top = 286.5
+offset_right = 627.0
+offset_bottom = 369.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.003921569, 0.5137255, 0.1764706, 1)
+theme_override_colors/font_shadow_color = Color(0, 0.2901961, 0.023529412, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k2m2f")
+theme_override_font_sizes/font_size = 72
+text = "+ + + INCOMING TRANSMISSION + + + "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1599663677]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -251.0
+offset_top = -46.0
+offset_right = -31.0
+offset_bottom = 445.0
+grow_horizontal = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=1960488746]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer" unique_id=92869808]
 custom_minimum_size = Vector2(2.08165e-12, 300)
 layout_mode = 2
 texture = ExtResource("2_v374h")
 stretch_mode = 3
 
-[node name="status_main" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="status_main" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1957694219]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
 text = "Loading Stuff"
 horizontal_alignment = 1
 
-[node name="status_sub" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="status_sub" type="Label" parent="CenterContainer/VBoxContainer" unique_id=1213315693]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 24
 text = "Loading Stuff"
 horizontal_alignment = 1
 
-[node name="error_main" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="error_main" type="Label" parent="CenterContainer/VBoxContainer" unique_id=125817210]
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -66,7 +145,7 @@ theme_override_font_sizes/font_size = 32
 text = "Loading Stuff"
 horizontal_alignment = 1
 
-[node name="error_sub" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="error_sub" type="Label" parent="CenterContainer/VBoxContainer" unique_id=430663693]
 visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -74,7 +153,7 @@ theme_override_font_sizes/font_size = 24
 text = "Loading Stuff"
 horizontal_alignment = 1
 
-[node name="version" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="version" type="Label" parent="CenterContainer/VBoxContainer" unique_id=109734310]
 custom_minimum_size = Vector2(2.08165e-12, 100)
 layout_mode = 2
 horizontal_alignment = 1
