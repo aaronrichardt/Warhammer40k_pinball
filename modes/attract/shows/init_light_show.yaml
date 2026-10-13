@@ -1,0 +1,828 @@
+#show_version=6
+##! show: init_light_show
+
+# This show cycles through the playfield chains, enabling one light every "+.33"s.
+# Starts with Chain 1 (1-1 .. 1-32) then Chain 2 (2-1 .. 2-32). Extend as needed.
+
+- duration: "+.33"
+  lights:
+    l_omega_1: white
+- duration: "+.33"
+  lights:
+    l_omega_2: white
+- duration: "+.33"
+  lights:
+    l_omega_3: white
+- duration: "+.33"
+  lights:
+    l_omega_4: white
+- duration: "+.33"
+  lights:
+    l_omega_5: white
+- duration: "+.33"
+  lights:
+    l_omega_6: white
+- duration: "+.33"
+  lights:
+    l_omega_7: white
+- duration: "+.33"
+  lights:
+    l_omega_8: white
+- duration: "+.33"
+  lights:
+    l_solemnace_circle: white
+- duration: "+.33"
+  lights:
+    l_adeptus_mechanicius: white
+- duration: "+.33"
+  lights:
+    l_mystery: white
+- duration: "+.33"
+  lights:
+    l_light_outlanes: white
+- duration: "+.33"
+  lights:
+    l_nurgle5: white
+- duration: "+.33"
+  lights:
+    l_warp_p: white
+- duration: "+.33"
+  lights:
+    l_warp_r: white
+- duration: "+.33"
+  lights:
+    l_2xscoring: white
+- duration: "+.33"
+  lights:
+    l_addaball: white
+- duration: "+.33"
+  lights:
+    l_necron_ui: white
+- duration: "+.33"
+  lights:
+    l_nurgle_ui: white
+- duration: "+.33"
+  lights:
+    l_chaos_ui: white
+- duration: "+.33"
+  lights:
+    l_tzeench_ui: white
+- duration: "+.33"
+  lights:
+    l_tyranid_ui: white
+- duration: "+.33"
+  lights:
+    l_warp_a: white
+- duration: "+.33"
+  lights:
+    l_warp_w: white
+- duration: "+.33"
+  lights:
+    l_left_sling_upper: white
+- duration: "+.33"
+  lights:
+    l_left_sling_lower: white
+- duration: "+.33"
+  lights:
+    l_left_inlane_upper: white
+- duration: "+.33"
+  lights:
+    l_left_inlane_lower: white
+- duration: "+.33"
+  lights:
+    l_ballsave: white
+- duration: "+.33"
+  lights:
+    l_right_inlane_lower: white
+- duration: "+.33"
+  lights:
+    l_right_inlane_upper: white
+- duration: "+.33"
+  lights:
+    l_right_sling_lower: white
+
+# Chain 2 (2-1 .. 2-32)
+- duration: "+.33"
+  lights:
+    l_xenos_s: white
+- duration: "+.33"
+  lights:
+    l_xenos_o: white
+- duration: "+.33"
+  lights:
+    l_xenos_n: white
+- duration: "+.33"
+  lights:
+    l_xenos_e: white
+- duration: "+.33"
+  lights:
+    l_xenos_x: white
+- duration: "+.33"
+  lights:
+    l_orkface1: white
+- duration: "+.33"
+  lights:
+    l_orkface2: white
+- duration: "+.33"
+  lights:
+    l_orkface3: white
+- duration: "+.33"
+  lights:
+    l_orkface4: white
+- duration: "+.33"
+  lights:
+    l_left_orbit_circle: white
+- duration: "+.33"
+  lights:
+    l_left_innerloop_circle: white
+- duration: "+.33"
+  lights:
+    l_left_orbit_arrow: white
+- duration: "+.33"
+  lights:
+    l_left_innerloop_arrow: white
+- duration: "+.33"
+  lights:
+    l_waagh_H: white
+- duration: "+.33"
+  lights:
+    l_waagh_G: white
+- duration: "+.33"
+  lights:
+    l_waagh_A2: white
+- duration: "+.33"
+  lights:
+    l_waagh_A: white
+- duration: "+.33"
+  lights:
+    l_waagh_W: white
+- duration: "+.33"
+  lights:
+    l_waagh_!: white
+- duration: "+.33"
+  lights:
+    l_nurgle1: white
+- duration: "+.33"
+  lights:
+    l_center_ramp_circle: white
+- duration: "+.33"
+  lights:
+    l_center_ramp_arrow: white
+- duration: "+.33"
+  lights:
+    l_nurgle2: white
+- duration: "+.33"
+  lights:
+    l_right_innerloop_circle: white
+- duration: "+.33"
+  lights:
+    l_upper_lightingbolt1: white
+- duration: "+.33"
+  lights:
+    l_upper_lightingbolt2: white
+- duration: "+.33"
+  lights:
+    l_lower_lightingbolt: white
+- duration: "+.33"
+  lights:
+    l_lightlock: white
+- duration: "+.33"
+  lights:
+    l_light_spinners: white
+- duration: "+.33"
+  lights:
+    l_bonusx: white
+- duration: "+.33"
+  lights:
+    l_light_mystery: white
+- duration: "+.33"
+  lights:
+    l_hmmmm: white
+
+#Chain3 (3-1 .. 3-32)
+- duration: "+.33"
+  lights:
+    3-1: white
+
+- duration: "+.33"
+  lights:
+    3-2: white
+- duration: "+.33"
+  lights:
+    3-3: white
+- duration: "+.33"
+  lights:
+    3-4: white
+- duration: "+.33"
+  lights:
+    3-5: white
+- duration: "+.33"
+  lights:
+    3-6: white
+
+- duration: "+.33"
+  lights:
+    3-7: white
+- duration: "+.33"
+  lights:
+    3-8: white
+- duration: "+.33"
+  lights:
+    3-9: white
+- duration: "+.33"
+  lights:
+    3-10: white
+
+- duration: "+.33"
+  lights:
+    3-11: white
+
+- duration: "+.33"
+  lights:
+    3-12: white
+- duration: "+.33"
+  lights:
+    3-13: white
+- duration: "+.33"
+  lights:
+    3-14: white
+- duration: "+.33"
+  lights:
+    3-15: white
+- duration: "+.33"
+  lights:
+    3-16: white
+
+- duration: "+.33"
+  lights:
+    3-17: white
+- duration: "+.33"
+  lights:
+    3-18: white
+- duration: "+.33"
+  lights:
+    3-19: white
+- duration: "+.33"
+  lights:
+    3-20: white
+- duration: "+.33"
+  lights:
+    3-21: white
+
+- duration: "+.33"
+  lights:
+    3-22: white
+- duration: "+.33"
+  lights:
+    3-23: white
+- duration: "+.33"
+  lights:
+    3-24: white
+- duration: "+.33"
+  lights:
+    3-25: white
+- duration: "+.33"
+  lights:
+    3-26: white
+
+- duration: "+.33"
+  lights:
+    3-27: white
+- duration: "+.33"
+  lights:
+    3-28: white
+- duration: "+.33"
+  lights:
+    3-29: white
+- duration: "+.33"
+  lights:
+    3-30: white
+- duration: "+.33"
+  lights:
+    3-31: white
+- duration: "+.33"
+  lights:
+    3-32: white
+
+#Chain4 (4-1 .. 4-32)
+- duration: "+.33"
+  lights:
+    4-1: white
+
+- duration: "+.33"
+  lights:
+    4-2: white
+- duration: "+.33"
+  lights:
+    4-3: white
+- duration: "+.33"
+  lights:
+    4-4: white
+- duration: "+.33"
+  lights:
+    4-5: white
+- duration: "+.33"
+  lights:
+    4-6: white
+
+- duration: "+.33"
+  lights:
+    4-7: white
+- duration: "+.33"
+  lights:
+    4-8: white
+- duration: "+.33"
+  lights:
+    4-9: white
+- duration: "+.33"
+  lights:
+    4-10: white
+
+- duration: "+.33"
+  lights:
+    4-11: white
+
+- duration: "+.33"
+  lights:
+    4-12: white
+- duration: "+.33"
+  lights:
+    4-13: white
+- duration: "+.33"
+  lights:
+    4-14: white
+- duration: "+.33"
+  lights:
+    4-15: white
+- duration: "+.33"
+  lights:
+    4-16: white
+
+- duration: "+.33"
+  lights:
+    4-17: white
+- duration: "+.33"
+  lights:
+    4-18: white
+- duration: "+.33"
+  lights:
+    4-19: white
+- duration: "+.33"
+  lights:
+    4-20: white
+- duration: "+.33"
+  lights:
+    4-21: white
+
+- duration: "+.33"
+  lights:
+    4-22: white
+- duration: "+.33"
+  lights:
+    4-23: white
+- duration: "+.33"
+  lights:
+    4-24: white
+- duration: "+.33"
+  lights:
+    4-25: white
+- duration: "+.33"
+  lights:
+    4-26: white
+
+- duration: "+.33"
+  lights:
+    4-27: white
+- duration: "+.33"
+  lights:
+    4-28: white
+- duration: "+.33"
+  lights:
+    4-29: white
+- duration: "+.33"
+  lights:
+    4-30: white
+- duration: "+.33"
+  lights:
+    4-31: white
+- duration: "+.33"
+  lights:
+    4-32: white
+
+#Chain5 (5-1 .. 5-32)
+- duration: "+.33"
+  lights:
+    5-1: white
+
+- duration: "+.33"
+  lights:
+    5-2: white
+- duration: "+.33"
+  lights:
+    5-3: white
+- duration: "+.33"
+  lights:
+    5-4: white
+- duration: "+.33"
+  lights:
+    5-5: white
+- duration: "+.33"
+  lights:
+    5-6: white
+
+- duration: "+.33"
+  lights:
+    5-7: white
+- duration: "+.33"
+  lights:
+    5-8: white
+- duration: "+.33"
+  lights:
+    5-9: white
+- duration: "+.33"
+  lights:
+    5-10: white
+
+- duration: "+.33"
+  lights:
+    5-11: white
+
+- duration: "+.33"
+  lights:
+    5-12: white
+- duration: "+.33"
+  lights:
+    5-13: white
+- duration: "+.33"
+  lights:
+    5-14: white
+- duration: "+.33"
+  lights:
+    5-15: white
+- duration: "+.33"
+  lights:
+    5-16: white
+
+- duration: "+.33"
+  lights:
+    5-17: white
+- duration: "+.33"
+  lights:
+    5-18: white
+- duration: "+.33"
+  lights:
+    5-19: white
+- duration: "+.33"
+  lights:
+    5-20: white
+- duration: "+.33"
+  lights:
+    5-21: white
+
+- duration: "+.33"
+  lights:
+    5-22: white
+- duration: "+.33"
+  lights:
+    5-23: white
+- duration: "+.33"
+  lights:
+    5-24: white
+- duration: "+.33"
+  lights:
+    5-25: white
+- duration: "+.33"
+  lights:
+    5-26: white
+
+- duration: "+.33"
+  lights:
+    5-27: white
+- duration: "+.33"
+  lights:
+    5-28: white
+- duration: "+.33"
+  lights:
+    5-29: white
+- duration: "+.33"
+  lights:
+    5-30: white
+- duration: "+.33"
+  lights:
+    5-31: white
+- duration: "+.33"
+  lights:
+    5-32: white
+#Chain6 (6-1 .. 6-32)
+- duration: "+.33"
+  lights:
+    6-1: white
+
+- duration: "+.33"
+  lights:
+    6-2: white
+- duration: "+.33"
+  lights:
+    6-3: white
+- duration: "+.33"
+  lights:
+    6-4: white
+- duration: "+.33"
+  lights:
+    6-5: white
+- duration: "+.33"
+  lights:
+    6-6: white
+
+- duration: "+.33"
+  lights:
+    6-7: white
+- duration: "+.33"
+  lights:
+    6-8: white
+- duration: "+.33"
+  lights:
+    6-9: white
+- duration: "+.33"
+  lights:
+    6-10: white
+
+- duration: "+.33"
+  lights:
+    6-11: white
+
+- duration: "+.33"
+  lights:
+    6-12: white
+- duration: "+.33"
+  lights:
+    6-13: white
+- duration: "+.33"
+  lights:
+    6-14: white
+- duration: "+.33"
+  lights:
+    6-15: white
+- duration: "+.33"
+  lights:
+    6-16: white
+
+- duration: "+.33"
+  lights:
+    6-17: white
+- duration: "+.33"
+  lights:
+    6-18: white
+- duration: "+.33"
+  lights:
+    6-19: white
+- duration: "+.33"
+  lights:
+    6-20: white
+- duration: "+.33"
+  lights:
+    6-21: white
+
+- duration: "+.33"
+  lights:
+    6-22: white
+- duration: "+.33"
+  lights:
+    6-23: white
+- duration: "+.33"
+  lights:
+    6-24: white
+- duration: "+.33"
+  lights:
+    6-25: white
+- duration: "+.33"
+  lights:
+    6-26: white
+
+- duration: "+.33"
+  lights:
+    6-27: white
+- duration: "+.33"
+  lights:
+    6-28: white
+- duration: "+.33"
+  lights:
+    6-29: white
+- duration: "+.33"
+  lights:
+    6-30: white
+- duration: "+.33"
+  lights:
+    6-31: white
+- duration: "+.33"
+  lights:
+    6-32: white
+#Chain7 (7-1 .. 7-32)
+- duration: "+.33"
+  lights:
+    7-1: white
+
+- duration: "+.33"
+  lights:
+    7-2: white
+- duration: "+.33"
+  lights:
+    7-3: white
+- duration: "+.33"
+  lights:
+    7-4: white
+- duration: "+.33"
+  lights:
+    7-5: white
+- duration: "+.33"
+  lights:
+    7-6: white
+
+- duration: "+.33"
+  lights:
+    7-7: white
+- duration: "+.33"
+  lights:
+    7-8: white
+- duration: "+.33"
+  lights:
+    7-9: white
+- duration: "+.33"
+  lights:
+    7-10: white
+
+- duration: "+.33"
+  lights:
+    7-11: white
+
+- duration: "+.33"
+  lights:
+    7-12: white
+- duration: "+.33"
+  lights:
+    7-13: white
+- duration: "+.33"
+  lights:
+    7-14: white
+- duration: "+.33"
+  lights:
+    7-15: white
+- duration: "+.33"
+  lights:
+    7-16: white
+
+- duration: "+.33"
+  lights:
+    7-17: white
+- duration: "+.33"
+  lights:
+    7-18: white
+- duration: "+.33"
+  lights:
+    7-19: white
+- duration: "+.33"
+  lights:
+    7-20: white
+- duration: "+.33"
+  lights:
+    7-21: white
+
+- duration: "+.33"
+  lights:
+    7-22: white
+- duration: "+.33"
+  lights:
+    7-23: white
+- duration: "+.33"
+  lights:
+    7-24: white
+- duration: "+.33"
+  lights:
+    7-25: white
+- duration: "+.33"
+  lights:
+    7-26: white
+
+- duration: "+.33"
+  lights:
+    7-27: white
+- duration: "+.33"
+  lights:
+    7-28: white
+- duration: "+.33"
+  lights:
+    7-29: white
+- duration: "+.33"
+  lights:
+    7-30: white
+- duration: "+.33"
+  lights:
+    7-31: white
+- duration: "+.33"
+  lights:
+    7-32: white
+
+#Chain8 (8-1 .. 8-32)
+- duration: "+.33"
+  lights:
+    8-1: white
+
+- duration: "+.33"
+  lights:
+    8-2: white
+- duration: "+.33"
+  lights:
+    8-3: white
+- duration: "+.33"
+  lights:
+    8-4: white
+- duration: "+.33"
+  lights:
+    8-5: white
+- duration: "+.33"
+  lights:
+    8-6: white
+
+- duration: "+.33"
+  lights:
+    8-7: white
+- duration: "+.33"
+  lights:
+    8-8: white
+- duration: "+.33"
+  lights:
+    8-9: white
+- duration: "+.33"
+  lights:
+    8-10: white
+
+- duration: "+.33"
+  lights:
+    8-11: white
+
+- duration: "+.33"
+  lights:
+    8-12: white
+- duration: "+.33"
+  lights:
+    8-13: white
+- duration: "+.33"
+  lights:
+    8-14: white
+- duration: "+.33"
+  lights:
+    8-15: white
+- duration: "+.33"
+  lights:
+    8-16: white
+
+- duration: "+.33"
+  lights:
+    8-17: white
+- duration: "+.33"
+  lights:
+    8-18: white
+- duration: "+.33"
+  lights:
+    8-19: white
+- duration: "+.33"
+  lights:
+    8-20: white
+- duration: "+.33"
+  lights:
+    8-21: white
+
+- duration: "+.33"
+  lights:
+    8-22: white
+- duration: "+.33"
+  lights:
+    8-23: white
+- duration: "+.33"
+  lights:
+    8-24: white
+- duration: "+.33"
+  lights:
+    8-25: white
+- duration: "+.33"
+  lights:
+    8-26: white
+
+- duration: "+.33"
+  lights:
+    8-27: white
+- duration: "+.33"
+  lights:
+    8-28: white
+- duration: "+.33"
+  lights:
+    8-29: white
+- duration: "+.33"
+  lights:
+    8-30: white
+- duration: "+.33"
+  lights:
+    8-31: white
+- duration: "+.33"
+  lights:
+    8-32: white
