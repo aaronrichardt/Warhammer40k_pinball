@@ -1,25 +1,36 @@
-#config_version= 6 
+#config_version=6
 mode:
-  start_events: start_2x_playfield
-  stop_events: ball_will_end
+  start_events: base_2x_shot_center_ramp_lit_hit
+  stop_events: timer_2x_playfield_complete, ball_will_end
   priority: 500
+
+timers:
+    2x_playfield:
+        start_value: 30
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: true
 
 variable_player:
     mode_2x_playfield_started:
-        playfield_multiplier: 1
-        action: add
-    mode_2x_playfield_stopping: 
-        playfield_multiplier: -1 
-        action: add
+        playfield_multiplier:
+            int: 2
+            action: set
+    mode_2x_playfield_stopping:
+        playfield_multiplier:
+            int: 1
+            action: set
 
 show_player:
     mode_2x_playfield_started:
         generic_flash:
             action: play
-            loops: 0
+            loops: -1
             speed: 3
             show_tokens: 
-                led: omega
+                led: omega, inlanes
                 color: blue
     mode_2x_playfield_stopping: 
         generic_flash: 
@@ -30,11 +41,3 @@ sound_player:
         2xmulti:
             action: play
 
-coil_player: 
-    mode_2x_playfield_started: 
-        c_DC_chainsword: 
-            action: enable
-            hold_power: .5
-    mode_start_2x_playfield_stopping: 
-        c_DC_chainsword: 
-            action: disable 

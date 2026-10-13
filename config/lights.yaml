@@ -78,28 +78,28 @@ lights:
     tags:  Chain1, even, third, lane, 1-24
   l_left_sling_upper:
     number: playfield-1-25
-    tags:  Chain1, GI, odd, first, 1-25
+    tags:  Chain1, GI, odd, first, 1-25, inlanes
   l_left_sling_lower:
     number: playfield-1-26
-    tags:  Chain1, GI, even, second, 1-26
+    tags:  Chain1, GI, even, second, 1-,inlanes
   l_left_inlane_upper:
     number: playfield-1-27
-    tags:  Chain1, GI, odd, third, 1-27
+    tags:  Chain1, GI, odd, third, 1-27,inlanes
   l_left_inlane_lower:
     number: playfield-1-28
-    tags:  Chain1, GI, even, first, 1-28
+    tags:  Chain1, GI, even, first, 1-28,inlanes
   l_ballsave:
     number: playfield-1-29
     tags:  Chain1, odd, second, 1-29
   l_right_inlane_lower:
     number: playfield-1-30
-    tags:  Chain1, GI, even, third, 1-30
+    tags:  Chain1, GI, even, third, 1-30,inlanes
   l_right_inlane_upper:
     number: playfield-1-31
-    tags:  Chain1, GI, odd, first, 1-31
+    tags:  Chain1, GI, odd, first, 1-31,inlanes
   l_right_sling_lower:
     number: playfield-1-32
-    tags:  Chain1, GI, even, second, 1-32
+    tags:  Chain1, GI, even, second, 1-32,inlanes
 
 
   l_xenos_s:

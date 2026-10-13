@@ -203,29 +203,35 @@ shots:
         color: white 
 
   base_shot_innerloop_left:
-    #advance_events: base_innerloop_sequence_right_hit
     hit_events: base_innerloop_left_hit
     profile: sequence_combo_profile
-    enable_events: base_shot_left_orbit_lit_solid_hit
+    enable_events: ball_started, mode_knorne_stopped, mode_nurgle_stopped, mode_slannesh_stopped, mode_necrons_stopped, mode_tzeench_stopped
+    #disable_events: timer_base_combo_left_orbit_complete, left_orbit_combo_hit_complete
+    restart_events: ball_started, mode_knorne_stopped, mode_nurgle_stopped, mode_slannesh_stopped, mode_necrons_stopped, mode_tzeench_stopped
+    start_enabled: true
+    #show_tokens:
+    #    led: l_left_innerloop_arrow
+    #    color: orange
+
+  base_shot_center_ramp:
+    switch: s_center_ramp
+    profile: sequence_combo_profile
     disable_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
-    restart_events: timer_base_combo_left_orbit_started
+    restart_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
     start_enabled: false
     show_tokens:
         led: l_left_innerloop_arrow
         color: white
 
-  base_shot_center_ramp:
-    #advance_events: base_innerloop_sequence_right_hit
+  base_2x_shot_center_ramp:
     switch: s_center_ramp
     profile: sequence_combo_profile
-    enable_events: timer_base_combo_left_orbit_started, base_shot_innerloop_left_sequence_combo_profile_lit_hit
-    disable_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
-    restart_events: timer_base_combo_left_orbit_started
+    disable_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete, timer_base_2x_playfield_combo_complete
+    restart_events: base_shot_innerloop_left_hit
     start_enabled: false
     show_tokens:
-        led: l_left_innerloop_arrow
-        color: white
-  
+        led:   l_center_ramp_arrow
+        color: orange
   #COMBO RIGHT ORBIT START
   # starting_combo_right_orbit:
   #   switch: s_right_orbit
@@ -336,8 +342,8 @@ shot_groups:
         - mode_tzeench_started
 
   left_orbit_combo:
-    shots: base_shot_left_orbit, base_shot_innerloop_left, base_shot_center_ramp
-    reset_events: timer_base_combo_left_orbit_completed, ball_started, left_orbit_combo_hit_complete
+    shots: base_shot_innerloop_left, base_shot_center_ramp
+    reset_events: timer_base_combo_left_orbit_complete, ball_started, left_orbit_combo_hit_complete
     enable_events: 
         - ball_started
         - mode_knorne_stopped
@@ -351,6 +357,7 @@ shot_groups:
         - mode_slannesh_started
         - mode_necrons_started
         - mode_tzeench_started
+        - mode_2x_playfield_started
 
   start_select_mode_group:
     shots: mechanicus_scoop_shot
@@ -426,6 +433,27 @@ shot_profiles:
         loops: -1
 
 timers: 
+    base_2x_playfield_combo:
+        start_value: 2
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false
+        control_events:
+         - event: disable_2x_combo
+           action: restart
+    base_combo_left_orbit:
+        start_value: 2
+        end_value: 0
+        direction: down
+        tick_interval: 1s
+        restart_on_complete: false
+        start_running: false
+        control_events:
+         - event: base_shot_innerloop_left_hit
+           action: restart
+
     base_combo_right_orbit:
         start_value: 6
         end_value: 0
@@ -648,6 +676,19 @@ coil_player:
     eject_necron_lock: 
         c_droptarget_knockdown:
             action: pulse 
-   
+
+    mode_2x_playfield_started: 
+        c_chainsword: 
+            action: enable
+            hold_power: .7
+    mode_2x_playfield_stopping:
+        c_chainsword: 
+            action: disable 
+    ball_ending:
+        c_chainsword: 
+            action: disable
+        c_dc_dreadnought_gun:
+            action: disable
+
  
 
