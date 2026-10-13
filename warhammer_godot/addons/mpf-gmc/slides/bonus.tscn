@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://cado054cg40cv"]
+[gd_scene format=3 uid="uid://cado054cg40cv"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_524xj"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_6rn1m"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_ted12"]
+[ext_resource type="Script" uid="uid://dru3usokwlhd3" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_524xj"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="2_6rn1m"]
+[ext_resource type="Script" uid="uid://808knhb8e2nn" path="res://addons/mpf-gmc/classes/mpf_conditional_children.gd" id="3_ted12"]
 
-[node name="Bonus" type="Control"]
+[node name="Bonus" type="Control" unique_id=687339946]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
-offset_bottom = 720.0
+offset_bottom = 1080.0
 script = ExtResource("1_524xj")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=44087922]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,15 +20,18 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="MPFConditionalChildren" type="Control" parent="."]
+[node name="MPFConditionalChildren" type="Control" parent="." unique_id=2129883119]
+anchors_preset = 0
 script = ExtResource("3_ted12")
 variable_type = 1
 variable_name = "entry"
 
-[node name="initial" type="Control" parent="MPFConditionalChildren"]
+[node name="initial" type="Control" parent="MPFConditionalChildren" unique_id=1727373005]
 visible = false
+anchors_preset = 0
 
-[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/initial"]
+[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/initial" unique_id=964016728]
+layout_mode = 0
 offset_top = 253.0
 offset_right = 1920.0
 offset_bottom = 430.0
@@ -39,10 +42,12 @@ script = ExtResource("2_6rn1m")
 variable_name = "ball"
 template_string = "End of Ball %s"
 
-[node name="__default__" type="Control" parent="MPFConditionalChildren"]
+[node name="__default__" type="Control" parent="MPFConditionalChildren" unique_id=276402375]
 visible = false
+anchors_preset = 0
 
-[node name="bonus_entry_name" type="Label" parent="MPFConditionalChildren/__default__"]
+[node name="bonus_entry_name" type="Label" parent="MPFConditionalChildren/__default__" unique_id=1727511444]
+layout_mode = 0
 offset_top = 133.0
 offset_right = 1920.0
 offset_bottom = 310.0
@@ -54,7 +59,8 @@ script = ExtResource("2_6rn1m")
 variable_type = 1
 variable_name = "text"
 
-[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/__default__"]
+[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/__default__" unique_id=1674282822]
+layout_mode = 0
 offset_top = 351.0
 offset_right = 1920.0
 offset_bottom = 528.0
@@ -67,10 +73,12 @@ variable_type = 1
 variable_name = "score"
 comma_separate = true
 
-[node name="subtotal" type="Control" parent="MPFConditionalChildren"]
+[node name="subtotal" type="Control" parent="MPFConditionalChildren" unique_id=1054138264]
 visible = false
+anchors_preset = 0
 
-[node name="Label" type="Label" parent="MPFConditionalChildren/subtotal"]
+[node name="Label" type="Label" parent="MPFConditionalChildren/subtotal" unique_id=1620593251]
+layout_mode = 0
 offset_top = 133.0
 offset_right = 1920.0
 offset_bottom = 310.0
@@ -79,7 +87,8 @@ text = "Bonus Subtotal"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/subtotal"]
+[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/subtotal" unique_id=999320222]
+layout_mode = 0
 offset_top = 351.0
 offset_right = 1920.0
 offset_bottom = 528.0
@@ -92,10 +101,12 @@ variable_type = 1
 variable_name = "score"
 comma_separate = true
 
-[node name="multiplier" type="Control" parent="MPFConditionalChildren"]
+[node name="multiplier" type="Control" parent="MPFConditionalChildren" unique_id=2017623996]
 visible = false
+anchors_preset = 0
 
-[node name="Label" type="Label" parent="MPFConditionalChildren/multiplier"]
+[node name="Label" type="Label" parent="MPFConditionalChildren/multiplier" unique_id=1231326573]
+layout_mode = 0
 offset_top = 133.0
 offset_right = 1920.0
 offset_bottom = 310.0
@@ -104,7 +115,8 @@ text = "Bonus Multiplier"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/multiplier"]
+[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/multiplier" unique_id=1658269786]
+layout_mode = 0
 offset_top = 351.0
 offset_right = 1920.0
 offset_bottom = 528.0
@@ -117,10 +129,12 @@ variable_type = 1
 variable_name = "score"
 template_string = "%sX"
 
-[node name="total" type="Control" parent="MPFConditionalChildren"]
+[node name="total" type="Control" parent="MPFConditionalChildren" unique_id=2088985999]
 visible = false
+anchors_preset = 0
 
-[node name="Label" type="Label" parent="MPFConditionalChildren/total"]
+[node name="Label" type="Label" parent="MPFConditionalChildren/total" unique_id=724827203]
+layout_mode = 0
 offset_top = 133.0
 offset_right = 1920.0
 offset_bottom = 310.0
@@ -129,7 +143,8 @@ text = "Total Bonus"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/total"]
+[node name="bonus_entry_score" type="Label" parent="MPFConditionalChildren/total" unique_id=1435530039]
+layout_mode = 0
 offset_top = 351.0
 offset_right = 1920.0
 offset_bottom = 528.0

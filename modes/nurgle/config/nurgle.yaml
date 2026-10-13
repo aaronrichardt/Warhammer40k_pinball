@@ -38,7 +38,7 @@ timers:
               action: restart
 
 widget_player:
-    mode_nurgle_started: 
+    slide_mission_select_removed: 
         nurgle_mode_timer:
             action: play
             x: 0
@@ -127,7 +127,7 @@ shot_groups:
         enable_events: ModeSelect_nurgle_selected
         disable_events: timer_nurgle_complete
 
-    nurgle_super_jackpot:
+    nurgle_super_jackpot_group:
         shots:
            - nurgle_super_jackpot
         enable_events: enable_nurgle_superjackpot #from accruals

@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://d04cwwb8nx3jw"]
+[gd_scene format=3 uid="uid://d04cwwb8nx3jw"]
 
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_idlty"]
+[ext_resource type="Script" uid="uid://d4ky3s4bg1ouq" path="res://addons/mpf-gmc/classes/mpf_widget.gd" id="1_idlty"]
 [ext_resource type="Theme" uid="uid://c5x41h6sfr2a6" path="res://addons/mpf-gmc/body_md.tres" id="2_ea4wu"]
-[ext_resource type="Script" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_ytfu1"]
+[ext_resource type="Script" uid="uid://bfvhmv2eirpua" path="res://addons/mpf-gmc/classes/mpf_variable.gd" id="3_ytfu1"]
 
-[node name="MPFWidget" type="Control"]
+[node name="MPFWidget" type="Control" unique_id=1284388933]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 script = ExtResource("1_idlty")
 
-[node name="MPFVariable" type="Label" parent="."]
+[node name="MPFVariable" type="Label" parent="." unique_id=63623791]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = -0.41
@@ -33,4 +33,4 @@ variable_name = "ticks_remaining"
 comma_separate = true
 template_string = "Timer: %ss"
 initialize_empty = false
-update_event = "timer_khorne_mode_timer_tick"
+update_event = "timer_nurgle_tick"

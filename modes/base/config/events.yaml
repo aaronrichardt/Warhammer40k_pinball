@@ -47,10 +47,10 @@ event_player:
   # # balldevice_bd_scoop_ball_entered:
   # #   play_scoop_flash_show
   # #   release_one_ball|.5s
-  mission_select_item_selected:
+  carousel_item_selected:
     - play_scoop_flash_show
     - release_one_ball|.5s
-  mission_select_item_cancelled:
+  carousel_item_cancelled:
     - play_scoop_flash_show
     - release_one_ball|.5s
   mystery_achieved:

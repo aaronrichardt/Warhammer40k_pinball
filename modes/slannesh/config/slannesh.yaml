@@ -20,7 +20,7 @@ timers:
         direction: down 
         tick_interval: 1s
         restart_on_complete: false
-        start_running: false
+        start_running: true
 
 widget_player:
     mode_slannesh_started: 
